@@ -1,0 +1,8 @@
+fastapi==0.115.6
+uvicorn==0.32.1
+transformers==4.46.3
+huggingface_hub==0.26.2
+accelerate==1.1.1
+torch>=2.2.0
+requests>=2.32.0
+beautifulsoup4>=4.12.0

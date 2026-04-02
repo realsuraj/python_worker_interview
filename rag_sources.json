@@ -1,0 +1,26 @@
+{
+  "default": {
+    "keywords": [],
+    "sources": []
+  },
+  "java": {
+    "keywords": ["java", "spring", "jvm", "backend"],
+    "sources": []
+  },
+  "python": {
+    "keywords": ["python", "django", "fastapi", "flask"],
+    "sources": []
+  },
+  "flutter": {
+    "keywords": ["flutter", "dart", "mobile"],
+    "sources": []
+  },
+  "sales": {
+    "keywords": ["sales", "crm", "lead", "prospecting", "pipeline", "negotiation", "closing"],
+    "sources": []
+  },
+  "cctv": {
+    "keywords": ["cctv", "rtsp", "onvif", "surveillance"],
+    "sources": []
+  }
+}

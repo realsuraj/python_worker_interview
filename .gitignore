@@ -1,0 +1,32 @@
+# Large model files - never push
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.gguf
+*.ggml
+
+# HuggingFace cache - contains large models (DeepSeek 3.4GB etc)
+.hf_cache/
+hf_cache/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+_pydeps/
+venv/
+.venv/
+
+# Logs
+*.log
+
+# PID
+worker.pid
+
+# OS
+.DS_Store
+Thumbs.db
+
+# voice.onnx (60MB) and voice.onnx.json are intentionally tracked
+# whisper-tiny.en is downloaded on server at deploy time
