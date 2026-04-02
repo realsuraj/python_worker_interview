@@ -34,20 +34,30 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install sshpass
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq sshpass rsync
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y sshpass rsync
 
       - name: Trust remote host
+        shell: bash
         run: |
+          set -euo pipefail
           mkdir -p ~/.ssh
           ssh-keyscan -p "$SSH_PORT" -H "$SSH_HOST" >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
 
       - name: Ensure deploy directory exists
+        shell: bash
         run: |
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
-            "mkdir -p '$DEPLOY_PATH/models/piper'"
+          set -euo pipefail
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "mkdir -p '$DEPLOY_PATH/models/piper'"
 
       - name: Upload worker source + models from git
+        shell: bash
         run: |
+          set -euo pipefail
           sshpass -e rsync -az --delete \
             --exclude '.git/' \
             --exclude '.github/' \
@@ -65,21 +75,23 @@ jobs:
           echo "✓ Source + models/piper/voice.onnx uploaded from git"
 
       - name: Install Python dependencies
+        shell: bash
         run: |
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
-            "PYTHON_BIN='$PYTHON_BIN' DEPLOY_PATH='$DEPLOY_PATH' bash -s" <<'ENDSSH'
+          set -euo pipefail
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "PYTHON_BIN='$PYTHON_BIN' DEPLOY_PATH='$DEPLOY_PATH' bash -s" <<'EOF'
           set -euo pipefail
           cd "$DEPLOY_PATH"
           "$PYTHON_BIN" -m venv .venv
           . .venv/bin/activate
           pip install --upgrade pip -q
           pip install -r requirements.txt -q
-          ENDSSH
+          EOF
 
       - name: Check and download Whisper STT model if missing
+        shell: bash
         run: |
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
-            "DEPLOY_PATH='$DEPLOY_PATH' STT_MODEL_ID='$STT_MODEL_ID' bash -s" <<'ENDSSH'
+          set -euo pipefail
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "DEPLOY_PATH='$DEPLOY_PATH' STT_MODEL_ID='$STT_MODEL_ID' bash -s" <<'EOF'
           set -euo pipefail
           cd "$DEPLOY_PATH"
           . .venv/bin/activate
@@ -103,12 +115,13 @@ jobs:
           print('✓ Whisper download complete')
           "
           fi
-          ENDSSH
+          EOF
 
       - name: Check and install Piper binary if missing
+        shell: bash
         run: |
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
-            "DEPLOY_PATH='$DEPLOY_PATH' bash -s" <<'ENDSSH'
+          set -euo pipefail
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "DEPLOY_PATH='$DEPLOY_PATH' bash -s" <<'EOF'
           set -euo pipefail
           cd "$DEPLOY_PATH"
           . .venv/bin/activate
@@ -129,24 +142,26 @@ jobs:
             echo "↓ Piper binary not found — installing via pip ..."
             pip install piper-tts -q && echo "✓ piper-tts installed"
           fi
-          ENDSSH
+          EOF
 
       - name: Stop existing worker
+        shell: bash
         run: |
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
-            "DEPLOY_PATH='$DEPLOY_PATH' bash -s" <<'ENDSSH'
+          set -euo pipefail
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "DEPLOY_PATH='$DEPLOY_PATH' bash -s" <<'EOF'
           if [ -f "$DEPLOY_PATH/worker.pid" ]; then
             kill "$(cat $DEPLOY_PATH/worker.pid)" 2>/dev/null || true
             rm -f "$DEPLOY_PATH/worker.pid"
           fi
           pkill -f "$DEPLOY_PATH/main.py" 2>/dev/null || true
           sleep 1
-          ENDSSH
+          EOF
 
       - name: Start worker
+        shell: bash
         run: |
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
-            "DEPLOY_PATH='$DEPLOY_PATH' WORKER_HOST='$WORKER_HOST' WORKER_PORT='$WORKER_PORT' ENABLE_STT='$ENABLE_STT' ENABLE_TTS='$ENABLE_TTS' STT_MODEL_ID='$STT_MODEL_ID' STT_LANGUAGE='$STT_LANGUAGE' PIPER_BIN='$PIPER_BIN' bash -s" <<'ENDSSH'
+          set -euo pipefail
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "DEPLOY_PATH='$DEPLOY_PATH' WORKER_HOST='$WORKER_HOST' WORKER_PORT='$WORKER_PORT' ENABLE_STT='$ENABLE_STT' ENABLE_TTS='$ENABLE_TTS' STT_MODEL_ID='$STT_MODEL_ID' STT_LANGUAGE='$STT_LANGUAGE' PIPER_BIN='$PIPER_BIN' bash -s" <<'EOF'
           set -euo pipefail
           cd "$DEPLOY_PATH"
           . .venv/bin/activate
@@ -164,12 +179,13 @@ jobs:
           sleep 3
           ps -p "$(cat worker.pid)" > /dev/null || { echo "✗ Worker failed to start"; tail -30 worker.err.log; exit 1; }
           echo "✓ Worker started (pid=$(cat worker.pid))"
-          ENDSSH
+          EOF
 
       - name: Health check
+        shell: bash
         run: |
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
-            "WORKER_PORT='$WORKER_PORT' DEPLOY_PATH='$DEPLOY_PATH' bash -s" <<'ENDSSH'
+          set -euo pipefail
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "WORKER_PORT='$WORKER_PORT' DEPLOY_PATH='$DEPLOY_PATH' bash -s" <<'EOF'
           for i in {1..30}; do
             if curl -fsS "http://127.0.0.1:${WORKER_PORT}/health" > /dev/null 2>&1; then
               echo "✓ Worker is healthy"
@@ -181,4 +197,4 @@ jobs:
           echo "✗ Health check failed"
           tail -30 "$DEPLOY_PATH/worker.err.log" 2>/dev/null
           exit 1
-          ENDSSH
+          EOF
