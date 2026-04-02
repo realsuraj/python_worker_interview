@@ -28,5 +28,5 @@ worker.pid
 .DS_Store
 Thumbs.db
 
-# voice.onnx (60MB) and voice.onnx.json are intentionally tracked
-# whisper-tiny.en is downloaded on server at deploy time
+# voice model downloaded at Docker build time — do not track
+models/
