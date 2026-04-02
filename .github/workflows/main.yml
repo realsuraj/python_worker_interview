@@ -54,6 +54,22 @@ jobs:
           set -euo pipefail
           sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "mkdir -p '$DEPLOY_PATH/models/piper'"
 
+      - name: Install Python venv package
+        shell: bash
+        run: |
+          set -euo pipefail
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "PYTHON_BIN='$PYTHON_BIN' bash -s" <<'EOF'
+          set -euo pipefail
+          PYTHON_VERSION=$($PYTHON_BIN --version 2>&1 | grep -oP '\d+\.\d+' | head -1)
+          if ! dpkg -l | grep -q "python${PYTHON_VERSION}-venv"; then
+            echo "Installing python${PYTHON_VERSION}-venv..."
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq "python${PYTHON_VERSION}-venv"
+          else
+            echo "python${PYTHON_VERSION}-venv already installed"
+          fi
+          EOF
+
       - name: Upload worker source + models from git
         shell: bash
         run: |
