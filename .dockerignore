@@ -1,0 +1,13 @@
+.git/
+.github/
+.hf_cache/
+__pycache__/
+*.pyc
+*.pyo
+_pydeps/
+.venv/
+venv/
+*.log
+worker.pid
+.DS_Store
+Thumbs.db
