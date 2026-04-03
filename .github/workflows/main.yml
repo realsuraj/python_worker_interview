@@ -25,9 +25,6 @@ jobs:
       PYTHON_BIN: ${{ secrets.PYTHON_BIN || 'python3' }}
       ENABLE_STT: ${{ secrets.ENABLE_STT || 'true' }}
       ENABLE_TTS: ${{ secrets.ENABLE_TTS || 'true' }}
-      STT_MODEL_ID: ${{ secrets.STT_MODEL_ID || 'openai/whisper-tiny.en' }}
-      STT_LANGUAGE: 'en'
-      PIPER_BIN: ${{ secrets.PIPER_BIN || 'piper' }}
 
     steps:
       - name: Checkout
@@ -52,7 +49,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "mkdir -p '$DEPLOY_PATH/models/piper'"
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "mkdir -p '$DEPLOY_PATH'"
 
       - name: Install Python venv package
         shell: bash
@@ -88,7 +85,7 @@ jobs:
             --exclude '*.pyc' \
             -e "ssh -p $SSH_PORT" \
             "./" "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
-          echo "✓ Source + models/piper/voice.onnx uploaded from git"
+          echo "Source uploaded from git"
 
       - name: Install Python dependencies
         shell: bash
@@ -101,63 +98,6 @@ jobs:
           . .venv/bin/activate
           pip install --upgrade pip -q
           pip install -r requirements.txt -q
-          EOF
-
-      - name: Check and download Whisper STT model if missing
-        shell: bash
-        run: |
-          set -euo pipefail
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "DEPLOY_PATH='$DEPLOY_PATH' STT_MODEL_ID='$STT_MODEL_ID' bash -s" <<'EOF'
-          set -euo pipefail
-          cd "$DEPLOY_PATH"
-          . .venv/bin/activate
-
-          # Check if whisper model already exists in HF cache
-          MODEL_CACHE_DIR="$HOME/.cache/huggingface/hub/models--$(echo $STT_MODEL_ID | tr '/' '--')"
-          if [ -d "$MODEL_CACHE_DIR" ] && [ "$(find "$MODEL_CACHE_DIR" -name 'model.safetensors' -o -name 'pytorch_model.bin' 2>/dev/null | wc -l)" -gt 0 ]; then
-            echo "✓ Whisper model already present: $MODEL_CACHE_DIR — skipping download"
-          else
-            echo "↓ Whisper model not found — downloading $STT_MODEL_ID (~40MB) ..."
-            python -c "
-          from huggingface_hub import snapshot_download
-          snapshot_download(
-              repo_id='$STT_MODEL_ID',
-              allow_patterns=['config.json','generation_config.json','preprocessor_config.json',
-                              'tokenizer.json','tokenizer_config.json','special_tokens_map.json',
-                              'vocab.json','merges.txt','normalizer.json','*.model',
-                              'model.safetensors','pytorch_model.bin'],
-              ignore_patterns=['*.h5','*.msgpack','*.onnx','*.tflite','*.ckpt']
-          )
-          print('✓ Whisper download complete')
-          "
-          fi
-          EOF
-
-      - name: Check and install Piper binary if missing
-        shell: bash
-        run: |
-          set -euo pipefail
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "DEPLOY_PATH='$DEPLOY_PATH' bash -s" <<'EOF'
-          set -euo pipefail
-          cd "$DEPLOY_PATH"
-          . .venv/bin/activate
-
-          # voice.onnx comes from git — just verify it arrived
-          VOICE_ONNX="$DEPLOY_PATH/models/piper/voice.onnx"
-          if [ -f "$VOICE_ONNX" ]; then
-            echo "✓ voice.onnx present from git ($(du -sh $VOICE_ONNX | cut -f1))"
-          else
-            echo "✗ voice.onnx missing — something went wrong with rsync"
-            exit 1
-          fi
-
-          # Check piper binary
-          if command -v piper > /dev/null 2>&1; then
-            echo "✓ Piper binary already installed — skipping"
-          else
-            echo "↓ Piper binary not found — installing via pip ..."
-            pip install piper-tts -q && echo "✓ piper-tts installed"
-          fi
           EOF
 
       - name: Stop existing worker
@@ -177,7 +117,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "DEPLOY_PATH='$DEPLOY_PATH' WORKER_HOST='$WORKER_HOST' WORKER_PORT='$WORKER_PORT' ENABLE_STT='$ENABLE_STT' ENABLE_TTS='$ENABLE_TTS' STT_MODEL_ID='$STT_MODEL_ID' STT_LANGUAGE='$STT_LANGUAGE' PIPER_BIN='$PIPER_BIN' bash -s" <<'EOF'
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "DEPLOY_PATH='$DEPLOY_PATH' WORKER_HOST='$WORKER_HOST' WORKER_PORT='$WORKER_PORT' ENABLE_STT='$ENABLE_STT' ENABLE_TTS='$ENABLE_TTS' bash -s" <<'EOF'
           set -euo pipefail
           cd "$DEPLOY_PATH"
           . .venv/bin/activate
@@ -186,10 +126,6 @@ jobs:
             WORKER_PORT="$WORKER_PORT" \
             ENABLE_STT="$ENABLE_STT" \
             ENABLE_TTS="$ENABLE_TTS" \
-            STT_MODEL_ID="$STT_MODEL_ID" \
-            STT_LANGUAGE="$STT_LANGUAGE" \
-            PIPER_BIN="$PIPER_BIN" \
-            PIPER_VOICE_MODEL="$DEPLOY_PATH/models/piper/voice.onnx" \
             python main.py > worker.out.log 2> worker.err.log < /dev/null &
           echo $! > worker.pid
           sleep 3

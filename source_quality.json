@@ -25,124 +25,124 @@
       "lastTs": 1775186699
     },
     "https://www.interviewbit.com/java-interview-questions/": {
-      "pass": 50,
+      "pass": 53,
       "fail": 3,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775199545
+      "lastTs": 1775208188
     },
     "https://www.geeksforgeeks.org/java-interview-questions/": {
-      "pass": 43,
+      "pass": 45,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775199545
+      "lastTs": 1775208188
     },
     "https://www.javatpoint.com/corejava-interview-questions": {
       "pass": 0,
-      "fail": 44,
+      "fail": 46,
       "domain": "java",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775199545
+      "lastTs": 1775208189
     },
     "https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions": {
-      "pass": 43,
+      "pass": 45,
       "fail": 3,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775199545
+      "lastTs": 1775208189
     },
     "https://www.edureka.co/blog/interview-questions/java-interview-questions/": {
-      "pass": 47,
+      "pass": 50,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775199545
+      "lastTs": 1775208189
     },
     "https://www.digitalocean.com/community/tutorials/java-interview-questions-and-answers": {
       "pass": 0,
-      "fail": 48,
+      "fail": 50,
       "domain": "java",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775199545
+      "lastTs": 1775208189
     },
     "https://www.baeldung.com/java-interview-questions": {
-      "pass": 2,
-      "fail": 44,
-      "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775199545
-    },
-    "https://www.geeksforgeeks.org/java/java-interview-questions/": {
-      "pass": 47,
-      "fail": 3,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199545
-    },
-    "https://www.guru99.com/java-interview-questions-answers.html": {
-      "pass": 46,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199546
-    },
-    "https://www.tpointtech.com/corejava-interview-questions": {
-      "pass": 43,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199546
-    },
-    "https://www.datacamp.com/blog/java-interview-questions": {
       "pass": 3,
       "fail": 46,
       "domain": "java",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775199546
+      "lastTs": 1775208189
+    },
+    "https://www.geeksforgeeks.org/java/java-interview-questions/": {
+      "pass": 50,
+      "fail": 3,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208189
+    },
+    "https://www.guru99.com/java-interview-questions-answers.html": {
+      "pass": 49,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208189
+    },
+    "https://www.tpointtech.com/corejava-interview-questions": {
+      "pass": 46,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208190
+    },
+    "https://www.datacamp.com/blog/java-interview-questions": {
+      "pass": 4,
+      "fail": 48,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775208190
     },
     "https://www.w3schools.com/java/java_interview_questions.asp": {
-      "pass": 47,
+      "pass": 50,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775199546
+      "lastTs": 1775208190
     },
     "https://codegnan.com/java-interview-questions/": {
-      "pass": 47,
+      "pass": 50,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775199546
+      "lastTs": 1775208190
     },
     "https://codefinity.com/blog/The-80-Top-Java-Interview-Questions-and-Answers": {
-      "pass": 47,
+      "pass": 50,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775199546
+      "lastTs": 1775208190
     },
     "https://interviewquestions.guru/core-java-interview-questions-answers/": {
-      "pass": 47,
+      "pass": 50,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775199546
+      "lastTs": 1775208190
     },
     "https://duckduckgo.com/feedback.html": {
       "pass": 0,
@@ -153,596 +153,596 @@
       "lastTs": 1775190018
     },
     "https://www.digitalocean.com/community/tutorials/java-programming-interview-questions": {
-      "pass": 46,
+      "pass": 49,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775199546
+      "lastTs": 1775208190
     },
     "https://interviewprep.org/java-interview-questions/": {
+      "pass": 50,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208190
+    },
+    "https://www.simplilearn.com/java-interview-questions-article": {
+      "pass": 49,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208190
+    },
+    "https://www.javaguides.net/2026/02/top-50-java-interview-questions-and-answers.html": {
+      "pass": 45,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208191
+    },
+    "https://www.geeksforgeeks.org/java/java/": {
+      "pass": 49,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208191
+    },
+    "https://www.geeksforgeeks.org/advance-java/advanced-java/": {
+      "pass": 49,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208191
+    },
+    "https://www.geeksforgeeks.org/java/java-exercises/": {
+      "pass": 49,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208191
+    },
+    "https://www.geeksforgeeks.org/java/java-programming-examples/": {
+      "pass": 49,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208191
+    },
+    "https://www.geeksforgeeks.org/java/java-quiz/": {
+      "pass": 48,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208191
+    },
+    "https://www.geeksforgeeks.org/blogs/java-projects/": {
+      "pass": 48,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208191
+    },
+    "https://www.geeksforgeeks.org/java/java-cheat-sheet/": {
+      "pass": 48,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208191
+    },
+    "https://www.geeksforgeeks.org/dsa/dsa-in-java/": {
+      "pass": 48,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208191
+    },
+    "https://www.geeksforgeeks.org/java/java-collection-tutorial/": {
+      "pass": 45,
+      "fail": 3,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208192
+    },
+    "https://www.geeksforgeeks.org/java/introduction-to-java/": {
+      "pass": 48,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208192
+    },
+    "https://www.geeksforgeeks.org/java/java-programming-basics/": {
+      "pass": 48,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208192
+    },
+    "https://www.geeksforgeeks.org/java/methods-in-java/": {
+      "pass": 48,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208192
+    },
+    "https://www.geeksforgeeks.org/java/access-modifiers-java/": {
       "pass": 47,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775199546
-    },
-    "https://www.simplilearn.com/java-interview-questions-article": {
-      "pass": 46,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199546
-    },
-    "https://www.javaguides.net/2026/02/top-50-java-interview-questions-and-answers.html": {
-      "pass": 43,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199546
-    },
-    "https://www.geeksforgeeks.org/java/java/": {
-      "pass": 46,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199547
-    },
-    "https://www.geeksforgeeks.org/advance-java/advanced-java/": {
-      "pass": 46,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199547
-    },
-    "https://www.geeksforgeeks.org/java/java-exercises/": {
-      "pass": 46,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199547
-    },
-    "https://www.geeksforgeeks.org/java/java-programming-examples/": {
-      "pass": 46,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199547
-    },
-    "https://www.geeksforgeeks.org/java/java-quiz/": {
-      "pass": 45,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "expanded_link",
-      "lastTs": 1775199436
-    },
-    "https://www.geeksforgeeks.org/blogs/java-projects/": {
-      "pass": 45,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "expanded_link",
-      "lastTs": 1775199436
-    },
-    "https://www.geeksforgeeks.org/java/java-cheat-sheet/": {
-      "pass": 45,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "expanded_link",
-      "lastTs": 1775199436
-    },
-    "https://www.geeksforgeeks.org/dsa/dsa-in-java/": {
-      "pass": 45,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "expanded_link",
-      "lastTs": 1775199436
-    },
-    "https://www.geeksforgeeks.org/java/java-collection-tutorial/": {
-      "pass": 42,
-      "fail": 3,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "expanded_link",
-      "lastTs": 1775199436
-    },
-    "https://www.geeksforgeeks.org/java/introduction-to-java/": {
-      "pass": 45,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "expanded_link",
-      "lastTs": 1775199436
-    },
-    "https://www.geeksforgeeks.org/java/java-programming-basics/": {
-      "pass": 45,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "expanded_link",
-      "lastTs": 1775199436
-    },
-    "https://www.geeksforgeeks.org/java/methods-in-java/": {
-      "pass": 45,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "expanded_link",
-      "lastTs": 1775199436
-    },
-    "https://www.geeksforgeeks.org/java/access-modifiers-java/": {
-      "pass": 45,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "expanded_link",
-      "lastTs": 1775199436
+      "lastTs": 1775208192
     },
     "https://www.geeksforgeeks.org/java/arrays-in-java/": {
-      "pass": 45,
+      "pass": 47,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "expanded_link",
-      "lastTs": 1775199436
+      "lastReason": "fetched",
+      "lastTs": 1775208192
     },
     "https://www.geeksforgeeks.org/java/strings-in-java/": {
-      "pass": 45,
+      "pass": 47,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "expanded_link",
-      "lastTs": 1775199436
+      "lastReason": "fetched",
+      "lastTs": 1775208192
     },
     "https://www.geeksforgeeks.org/java/regular-expressions-in-java/": {
+      "pass": 47,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208192
+    },
+    "https://www.geeksforgeeks.org/java/classes-objects-java/": {
+      "pass": 46,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208192
+    },
+    "https://www.geeksforgeeks.org/java/constructors-in-java/": {
       "pass": 45,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "expanded_link",
-      "lastTs": 1775199436
+      "lastReason": "fetched",
+      "lastTs": 1775208193
     },
-    "https://www.geeksforgeeks.org/java/classes-objects-java/": {
+    "https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/": {
+      "pass": 45,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208193
+    },
+    "https://www.geeksforgeeks.org/java/packages-in-java/": {
       "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198848
-    },
-    "https://www.geeksforgeeks.org/java/constructors-in-java/": {
-      "pass": 43,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775198848
-    },
-    "https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/": {
-      "pass": 43,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775198848
-    },
-    "https://www.geeksforgeeks.org/java/packages-in-java/": {
-      "pass": 42,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775198849
+      "lastTs": 1775208193
     },
     "https://www.geeksforgeeks.org/java/interfaces-in-java/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198849
+      "lastTs": 1775208193
     },
     "https://www.geeksforgeeks.org/java/collections-in-java-2/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198849
+      "lastTs": 1775208193
     },
     "https://www.geeksforgeeks.org/java/collections-class-in-java/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198850
+      "lastTs": 1775208193
     },
     "https://www.geeksforgeeks.org/java/collection-interface-in-java-with-examples/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198850
+      "lastTs": 1775208193
     },
     "https://www.geeksforgeeks.org/java/iterators-in-java/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198850
+      "lastTs": 1775208193
     },
     "https://www.geeksforgeeks.org/java/java-comparator-interface/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198851
+      "lastTs": 1775208193
     },
     "https://www.geeksforgeeks.org/java/exceptions-in-java/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198851
+      "lastTs": 1775208193
     },
     "https://www.geeksforgeeks.org/java/java-try-catch-block/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198851
+      "lastTs": 1775208194
     },
     "https://www.geeksforgeeks.org/java/java-final-finally-and-finalize/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198852
+      "lastTs": 1775208194
     },
     "https://www.geeksforgeeks.org/java/chained-exceptions-in-java/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198852
+      "lastTs": 1775208194
     },
     "https://www.geeksforgeeks.org/java/null-pointer-exception-in-java/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198852
+      "lastTs": 1775208194
     },
     "https://www.geeksforgeeks.org/java/exception-handling-with-method-overriding-in-java/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198852
+      "lastTs": 1775208194
     },
     "https://www.geeksforgeeks.org/java/java-multithreading-tutorial/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198853
+      "lastTs": 1775208194
     },
     "https://www.geeksforgeeks.org/java/synchronization-in-java/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198853
+      "lastTs": 1775208194
     },
     "https://www.geeksforgeeks.org/java/file-handling-in-java/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198853
+      "lastTs": 1775208194
     },
     "https://www.geeksforgeeks.org/java/java-method-references/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198853
+      "lastTs": 1775208194
     },
     "https://www.geeksforgeeks.org/java/java-8-stream-tutorial/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198854
+      "lastTs": 1775208195
     },
     "https://www.geeksforgeeks.org/java/java-networking/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198854
+      "lastTs": 1775208195
     },
     "https://www.geeksforgeeks.org/java/jdbc-tutorial/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198855
+      "lastTs": 1775208195
     },
     "https://www.geeksforgeeks.org/java/java-memory-management/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198855
+      "lastTs": 1775208195
     },
     "https://www.geeksforgeeks.org/java/garbage-collection-in-java/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198855
+      "lastTs": 1775208195
     },
     "https://www.geeksforgeeks.org/java/memory-leaks-in-java/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198855
+      "lastTs": 1775208195
     },
     "https://www.geeksforgeeks.org/courses/Java-backend-live": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198856
+      "lastTs": 1775208195
     },
     "https://www.geeksforgeeks.org/java/java-fundamentals-interview-questions/": {
-      "pass": 42,
+      "pass": 44,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198856
+      "lastTs": 1775208195
     },
     "https://www.geeksforgeeks.org/java/java-core-concepts-interview-questions/": {
+      "pass": 45,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208195
+    },
+    "https://www.geeksforgeeks.org/java/oops-interview-questions-java-programming/": {
+      "pass": 44,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208196
+    },
+    "https://www.geeksforgeeks.org/java/collections-generics-interview-questions-java-programming/": {
+      "pass": 44,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208196
+    },
+    "https://www.geeksforgeeks.org/java/advanced-topics-interview-questions-java-programming/": {
+      "pass": 44,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208196
+    },
+    "https://www.geeksforgeeks.org/java/variables-in-java/": {
+      "pass": 44,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208196
+    },
+    "https://www.geeksforgeeks.org/java/java-data-types/": {
+      "pass": 44,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208196
+    },
+    "https://www.geeksforgeeks.org/java/string-class-in-java/": {
+      "pass": 44,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208196
+    },
+    "https://www.geeksforgeeks.org/java/deep-shallow-lazy-copy-java-examples/": {
+      "pass": 44,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208196
+    },
+    "https://www.geeksforgeeks.org/java/mutable-and-immutable-objects-in-java-1/": {
       "pass": 43,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198856
-    },
-    "https://www.geeksforgeeks.org/java/oops-interview-questions-java-programming/": {
-      "pass": 42,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775198856
-    },
-    "https://www.geeksforgeeks.org/java/collections-generics-interview-questions-java-programming/": {
-      "pass": 42,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775198857
-    },
-    "https://www.geeksforgeeks.org/java/advanced-topics-interview-questions-java-programming/": {
-      "pass": 42,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775198857
-    },
-    "https://www.geeksforgeeks.org/java/variables-in-java/": {
-      "pass": 42,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775198858
-    },
-    "https://www.geeksforgeeks.org/java/java-data-types/": {
-      "pass": 42,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775198858
-    },
-    "https://www.geeksforgeeks.org/java/string-class-in-java/": {
-      "pass": 42,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775198858
-    },
-    "https://www.geeksforgeeks.org/java/deep-shallow-lazy-copy-java-examples/": {
-      "pass": 42,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775198858
-    },
-    "https://www.geeksforgeeks.org/java/mutable-and-immutable-objects-in-java-1/": {
-      "pass": 41,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775198859
+      "lastTs": 1775208196
     },
     "https://www.geeksforgeeks.org/java/inheritance-in-java/": {
-      "pass": 41,
+      "pass": 43,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198859
+      "lastTs": 1775208196
     },
     "https://www.geeksforgeeks.org/java/polymorphism-in-java/": {
-      "pass": 41,
+      "pass": 43,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198859
+      "lastTs": 1775208197
     },
     "https://www.geeksforgeeks.org/java/abstraction-in-java-2/": {
-      "pass": 41,
+      "pass": 43,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198860
+      "lastTs": 1775208197
     },
     "https://www.geeksforgeeks.org/java/encapsulation-in-java/": {
-      "pass": 41,
+      "pass": 43,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198860
+      "lastTs": 1775208197
     },
     "https://www.geeksforgeeks.org/java/generics-in-java/": {
-      "pass": 41,
+      "pass": 43,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198860
+      "lastTs": 1775208197
     },
     "https://www.geeksforgeeks.org/java/multithreading-in-java/": {
-      "pass": 41,
+      "pass": 43,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198861
+      "lastTs": 1775208197
     },
     "https://www.geeksforgeeks.org/java/lambda-expressions-java-8/": {
-      "pass": 41,
+      "pass": 43,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198861
+      "lastTs": 1775208197
     },
     "https://www.geeksforgeeks.org/java/java-functional-interfaces/": {
-      "pass": 41,
+      "pass": 43,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198861
+      "lastTs": 1775208197
     },
     "https://www.geeksforgeeks.org/java/stream-in-java/": {
-      "pass": 41,
+      "pass": 43,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198862
+      "lastTs": 1775208197
     },
     "https://www.geeksforgeeks.org/java/annotations-in-java/": {
-      "pass": 40,
+      "pass": 42,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198862
+      "lastTs": 1775208198
     },
     "https://www.geeksforgeeks.org/java/reflection-in-java/": {
-      "pass": 40,
+      "pass": 42,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198862
+      "lastTs": 1775208198
     },
     "https://www.geeksforgeeks.org/system-design/java-design-patterns/": {
-      "pass": 40,
+      "pass": 42,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198862
+      "lastTs": 1775208198
     },
     "https://www.geeksforgeeks.org/java/singleton-class-java/": {
-      "pass": 40,
+      "pass": 42,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198863
+      "lastTs": 1775208198
     },
     "https://www.geeksforgeeks.org/system-design/observer-method-design-pattern-in-java/": {
-      "pass": 40,
+      "pass": 42,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198863
+      "lastTs": 1775208198
     },
     "https://www.geeksforgeeks.org/java/java-8-features-tutorial/": {
-      "pass": 40,
+      "pass": 42,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198863
+      "lastTs": 1775208198
     },
     "https://www.geeksforgeeks.org/interview-prep/interview-corner/": {
-      "pass": 40,
+      "pass": 42,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198864
+      "lastTs": 1775208199
     },
     "https://www.geeksforgeeks.org/aptitude/aptitude-questions-and-answers/": {
-      "pass": 40,
+      "pass": 42,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198864
+      "lastTs": 1775208199
     },
     "https://www.interviewbit.com/api/v3/redirect/scaler_auth/?redirect_url=aHR0cHM6Ly9zY2FsZXIuY29tL3RvcGljcy9jb3Vyc2VzP3V0bV9zb3VyY2U9aWI=": {
       "pass": 0,
@@ -754,91 +754,91 @@
     },
     "https://www.turing.com/interview-questions/java": {
       "pass": 0,
-      "fail": 18,
+      "fail": 19,
       "domain": "java",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775199545
+      "lastTs": 1775208189
     },
     "https://www.geeksforgeeks.org/category/programming-language/java/": {
       "pass": 1,
-      "fail": 14,
+      "fail": 15,
       "domain": "java",
       "lastStatus": "fail",
-      "lastReason": "fetch_exception",
-      "lastTs": 1775190080
+      "lastReason": "fetch_empty",
+      "lastTs": 1775208198
     },
     "https://www.geeksforgeeks.org/category/interview-preparation/interview-questions/": {
       "pass": 1,
-      "fail": 14,
+      "fail": 15,
       "domain": "java",
       "lastStatus": "fail",
-      "lastReason": "fetch_exception",
-      "lastTs": 1775190080
+      "lastReason": "fetch_empty",
+      "lastTs": 1775208198
     },
     "https://www.geeksforgeeks.org/tag/interview-preparation/": {
       "pass": 1,
-      "fail": 14,
+      "fail": 15,
       "domain": "java",
       "lastStatus": "fail",
-      "lastReason": "fetch_exception",
-      "lastTs": 1775190080
+      "lastReason": "fetch_empty",
+      "lastTs": 1775208199
     },
     "https://www.geeksforgeeks.org/tag/java-interview/": {
       "pass": 1,
-      "fail": 14,
+      "fail": 15,
       "domain": "java",
       "lastStatus": "fail",
-      "lastReason": "fetch_exception",
-      "lastTs": 1775190080
+      "lastReason": "fetch_empty",
+      "lastTs": 1775208199
     },
     "https://www.geeksforgeeks.org/tag/interview-questions/": {
       "pass": 1,
-      "fail": 14,
+      "fail": 15,
       "domain": "java",
       "lastStatus": "fail",
-      "lastReason": "fetch_exception",
-      "lastTs": 1775190080
+      "lastReason": "fetch_empty",
+      "lastTs": 1775208199
     },
     "https://www.interviewbit.com/": {
-      "pass": 36,
+      "pass": 38,
       "fail": 3,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775198865
+      "lastTs": 1775208199
     },
     "https://www.interviewbit.com/practice/": {
-      "pass": 11,
+      "pass": 13,
       "fail": 4,
       "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190006
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208201
     },
     "https://www.interviewbit.com/technical-interview-questions/": {
-      "pass": 11,
+      "pass": 13,
       "fail": 4,
       "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190006
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208202
     },
     "https://www.interviewbit.com/coding-interview-questions/": {
       "pass": 1,
-      "fail": 14,
+      "fail": 15,
       "domain": "java",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775190007
+      "lastTs": 1775208203
     },
     "https://www.interviewbit.com/courses/fast-track/": {
-      "pass": 10,
+      "pass": 12,
       "fail": 4,
       "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190007
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208204
     },
     "https://www.interviewbit.com/blog/": {
       "pass": 12,
@@ -1345,12 +1345,12 @@
       "lastTs": 1775147194
     },
     "https://intellipaat.com/blog/interview-question/java-interview-questions/": {
-      "pass": 5,
+      "pass": 6,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775198909
+      "lastTs": 1775207652
     },
     "https://www.softwaretestingmaterial.com/java-interview-questions/": {
       "pass": 4,
@@ -1601,12 +1601,12 @@
       "lastTs": 1775200182
     },
     "https://www.salesforce.com/blog/sales-interview-questions/": {
-      "pass": 5,
+      "pass": 6,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200184
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208471
     },
     "https://www.zendesk.com/blog/sales-interview-questions/": {
       "pass": 4,
@@ -1625,12 +1625,12 @@
       "lastTs": 1775190010
     },
     "https://www.coursera.org/articles/sales-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775199748
+      "lastTs": 1775208341
     },
     "https://www.betterteam.com/sales-interview-questions": {
       "pass": 2,
@@ -1649,36 +1649,36 @@
       "lastTs": 1775190010
     },
     "https://salestalentinc.com/blog/26-sales-interview-questions-beginner-experienced/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775199549
+      "lastTs": 1775208207
     },
     "https://blog.theinterviewguys.com/top-15-sales-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775199748
+      "lastTs": 1775208341
     },
     "https://interviewprep.org/sales-representative-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775199582
+      "lastTs": 1775208241
     },
     "https://www.indeed.com/career-advice/interviewing/sales-interview-questions-to-ask-candidates": {
-      "pass": 1,
+      "pass": 2,
       "fail": 4,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775199781
+      "lastTs": 1775208570
     },
     "https://timespro.com/blog/sales-interview-questions-and-answers": {
       "pass": 3,
@@ -1697,36 +1697,36 @@
       "lastTs": 1775199781
     },
     "https://mailshake.com/blog/sales-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775199748
+      "lastTs": 1775208341
     },
     "https://topresume.com/career-advice/job-interview-questions-for-sales": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775199914
+      "lastTs": 1775208438
     },
     "https://www.zippia.com/advice/sales-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775199782
+      "lastTs": 1775208341
     },
     "https://www.indeed.com/career-advice/interviewing/top-sales-representative-interview-questions-and-answers": {
-      "pass": 1,
+      "pass": 2,
       "fail": 4,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775199582
+      "lastTs": 1775208241
     },
     "https://www.indeed.com/career-advice/interviewing/business-development-interview-questions": {
       "pass": 0,
@@ -2129,92 +2129,92 @@
       "lastTs": 1775190032
     },
     "https://www.softwaretestinghelp.com/core-java-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199441
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207752
     },
     "https://www.java-success.com/java-scenarios-based-interview-questions-answers/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199443
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207685
     },
     "https://medium.com/@rinkibansal2022/250-scenario-based-java-questions-0fd663f736c6": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775199445
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207685
     },
     "https://jinaldesai.com/50-java-interview-questions-30-scenario-based-qa/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199446
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207685
     },
     "https://crsinfosolutions.com/scenario-based-java-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199450
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207685
     },
     "https://resumedesign.ai/interview-questions/java-scenario-based/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199451
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207685
     },
     "https://dreamsarthi.com/30-scenario-based-java-microservices-interview-questions-with-answers/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199453
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207685
     },
     "https://www.c-sharpcorner.com/article/top-java-spring-boot-scenario-based-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199453
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207686
     },
     "https://nareshjobs.com/java-real-time-scenario-based-interview-questions-and-answers/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199457
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207685
     },
     "https://quescol.com/interview-preparation/scenario-based-java-8-coding-interview-questions": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199454
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207686
     },
     "https://www.interviewplus.ai/additional-question-types/scenario-based-questions/java": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199459
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207685
     },
     "https://www.youtube.com/watch?v=C0HWpab1V-c": {
       "pass": 0,
@@ -2233,28 +2233,28 @@
       "lastTs": 1775199461
     },
     "https://climbtheladder.com/java-project-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199463
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207719
     },
     "https://huntr.co/interview-questions/java": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199464
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207719
     },
     "https://www.toptal.com/developers/java/interview-questions": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775199464
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207719
     },
     "https://btechgeeks.com/project-management-interview-questions-in-java/": {
       "pass": 4,
@@ -2265,44 +2265,44 @@
       "lastTs": 1775199465
     },
     "https://www.igmguru.com/blog/java-interview-questions": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775199466
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207652
     },
     "https://interviewkickstart.com/blogs/interview-questions/java-interview-questions": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199468
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207685
     },
     "https://www.codesubmit.io/interview/java": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199474
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207719
     },
     "https://medium.com/javarevisited/top-300-essential-java-interview-questions-and-answers-db3c2a734f68": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775199468
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207719
     },
     "https://www.javacodegeeks.com/java-interview-questions.html": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199513
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207720
     },
     "https://www.scholarhat.com/tutorial/java/java-interview-questions-and-answers": {
       "pass": 1,
@@ -2321,20 +2321,20 @@
       "lastTs": 1775194007
     },
     "https://www.wecreateproblems.com/interview-questions/java-interview-questions": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199470
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207752
     },
     "https://sites.google.com/talenttitan.com/beyond-the-resume/blogs/hr-round-questions-java-developers-must-prepare-for": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199473
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207786
     },
     "https://www.linkedin.com/pulse/hr-interview-questions-core-java-preeti-rajora": {
       "pass": 0,
@@ -2353,28 +2353,28 @@
       "lastTs": 1775199479
     },
     "https://blog.mettl.com/java-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199472
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207786
     },
     "https://sourcebae.com/blog/what-question-hr-mostly-ask-for-java-interview/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199477
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207786
     },
     "https://www.javaguides.net/p/top-java-interview-questions-and-answers.html": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199438
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207619
     },
     "https://prepinsta.com/interview-preparation/technical-interview-questions/java/": {
       "pass": 1,
@@ -2385,60 +2385,60 @@
       "lastTs": 1775194075
     },
     "https://medium.com/@arulpiruthiviraj/behavioral-interview-questions-and-answers-for-senior-java-developers-showcasing-technical-and-dbbb90a96027": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775199483
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207856
     },
     "https://moldstud.com/articles/p-key-behavioral-questions-for-java-developer-interviews": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199485
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207856
     },
     "https://resumekraft.com/java-developer-interview-questions-and-answers/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199486
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207856
     },
     "https://github.com/kishore0323/java-interview-questions/blob/master/Behavioral_Interview_Questions.md": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199487
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207856
     },
     "https://aspect-hq.com/interview-questions-9/unlocking-potential-5-java-developer-behavioral-interview-questions-that-work": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199489
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207856
     },
     "https://www.yardstick.team/interview-questions-by-role/java-developer": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199489
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207856
     },
     "https://www.vervecopilot.com/interview-questions/top-30-most-common-interview-questions-on-java-you-should-prepare-for": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199491
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207857
     },
     "https://www.mockinterviewpro.com/interview-questions/java-developer": {
       "pass": 1,
@@ -2457,100 +2457,100 @@
       "lastTs": 1775194110
     },
     "https://quescol.com/interview-preparation/java-interview-question-experienced": {
-      "pass": 4,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199496
-    },
-    "https://medium.com/@antonyalfredmk/70-interview-questions-for-experienced-java-developer-1842d0557e30": {
-      "pass": 2,
-      "fail": 2,
-      "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775199496
-    },
-    "https://www.javaspring.net/blog/interview-questions-in-java-for-experienced/": {
-      "pass": 4,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199500
-    },
-    "https://techvidvan.com/tutorials/java-interview-questions-for-experienced/": {
-      "pass": 2,
-      "fail": 2,
-      "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775199497
-    },
-    "https://dev.to/bsanju/java-interview-questions-for-experienced-full-stack-engineers-2025-edition-h47": {
-      "pass": 4,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199498
-    },
-    "https://www.indeed.com/career-advice/interviewing/java-interview-questions-for-experienced": {
-      "pass": 2,
-      "fail": 2,
-      "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775199501
-    },
-    "https://www.instanceofjava.com/2025/01/java-interview-questions-for-experienced.html": {
-      "pass": 1,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775194144
+      "lastTs": 1775207889
+    },
+    "https://medium.com/@antonyalfredmk/70-interview-questions-for-experienced-java-developer-1842d0557e30": {
+      "pass": 3,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207889
+    },
+    "https://www.javaspring.net/blog/interview-questions-in-java-for-experienced/": {
+      "pass": 5,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207889
+    },
+    "https://techvidvan.com/tutorials/java-interview-questions-for-experienced/": {
+      "pass": 3,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207889
+    },
+    "https://dev.to/bsanju/java-interview-questions-for-experienced-full-stack-engineers-2025-edition-h47": {
+      "pass": 5,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207889
+    },
+    "https://www.indeed.com/career-advice/interviewing/java-interview-questions-for-experienced": {
+      "pass": 3,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207889
+    },
+    "https://www.instanceofjava.com/2025/01/java-interview-questions-for-experienced.html": {
+      "pass": 4,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208169
     },
     "https://interviewquestions.guru/java-interview-questions-for-freshers/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199502
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207925
     },
     "https://www.guvi.in/blog/40-java-interview-questions-for-freshers/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199507
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207925
     },
     "https://www.interviewyatra.com/2025/09/top-20-java-interview-questions-and.html": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199508
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207925
     },
     "https://javainterviewquestionspro.com/java-interview-questions-for-freshers/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199505
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207925
     },
     "https://talentsprint.com/blog/java-interview-questions-freshers": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199504
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207925
     },
     "https://visiblecampus.com/java-interview-questions-freshers-2025.html": {
       "pass": 1,
@@ -2577,44 +2577,44 @@
       "lastTs": 1775194211
     },
     "https://himalayas.app/interview-questions/java-engineer": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199519
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207992
     },
     "https://www.coursera.org/articles/java-interview-questions": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199471
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207959
     },
     "https://www.cvowl.com/blog/java-engineer-interview-questions-answers": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199518
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207992
     },
     "https://www.mockinterviewpro.com/interview-questions/java-software-engineer": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199517
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207991
     },
     "https://www.terminal.io/blog/15-java-interview-questions-and-answers-for-hiring-java-engineers": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775199523
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208058
     },
     "https://hackr.io/blog/java-interview-questions": {
       "pass": 1,
@@ -2625,28 +2625,28 @@
       "lastTs": 1775194279
     },
     "https://dev.to/fpaghar/25-hr-interview-questions-for-developer-with-sample-12c9": {
-      "pass": 4,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199520
-    },
-    "https://www.geeksforgeeks.org/hr/hr-interview-questions/": {
       "pass": 5,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775200749
+      "lastTs": 1775208058
     },
-    "https://aspect-hq.com/interview-questions-10/the-hiring-manager-s-secret-weapon-15-essential-java-developer-interview-questions": {
-      "pass": 4,
+    "https://www.geeksforgeeks.org/hr/hr-interview-questions/": {
+      "pass": 6,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199521
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208059
+    },
+    "https://aspect-hq.com/interview-questions-10/the-hiring-manager-s-secret-weapon-15-essential-java-developer-interview-questions": {
+      "pass": 5,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208058
     },
     "https://blog.emb.global/senior-java-developer-interview-questions/": {
       "pass": 1,
@@ -2657,164 +2657,164 @@
       "lastTs": 1775194313
     },
     "https://medium.com/@bhangalekunal2631996/100-java-streams-interview-questions-with-solutions-and-outputs-2afb0713ceec": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775199524
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208092
     },
     "https://www.javaguides.net/2021/11/java-stream-api-interview-questions-and-answers.html": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199525
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208092
     },
     "https://seoinfotech.com/top-50-java-stream-api-coding-questions-asked-in-interviews/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199526
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208093
     },
     "https://climbtheladder.com/java-stream-api-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199533
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208093
     },
     "https://techoral.com/java/java-interview-streams.html": {
-      "pass": 3,
+      "pass": 4,
       "fail": 1,
       "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775199531
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208093
     },
     "https://www.javaspring.net/blog/java-stream-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199530
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208093
     },
     "https://mindmajix.com/java-stream-interview-questions": {
       "pass": 0,
-      "fail": 16,
+      "fail": 20,
       "domain": "java",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775199367
+      "lastTs": 1775208093
     },
     "https://medium.com/@bhangalekunal2631996/java-stream-api-coding-interview-questions-and-answers-2a212505e1c6": {
-      "pass": 2,
-      "fail": 2,
-      "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775199533
-    },
-    "https://testbook.com/interview/java-stream-api-interview-questions": {
-      "pass": 4,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199531
-    },
-    "https://www.interviewgrid.com/interview_questions/java/java_streams": {
-      "pass": 1,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775194347
-    },
-    "https://www.studocu.com/in/document/shri-dharmasthala-manjunatheshwara-college-of-engineering-and-technology/object-oriented-concepts-in-java/25-must-know-java-stream-interview-coding-questions-solutions/141545594": {
-      "pass": 2,
-      "fail": 2,
-      "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775199527
-    },
-    "https://javatechonline.com/java-stream-api-interview-questions/": {
-      "pass": 1,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775194348
-    },
-    "https://www.indeed.com/career-advice/interviewing/sample-engineering-interview-questions": {
       "pass": 3,
       "fail": 2,
-      "domain": "business_development",
+      "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775200814
+      "lastTs": 1775208093
+    },
+    "https://testbook.com/interview/java-stream-api-interview-questions": {
+      "pass": 5,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208093
+    },
+    "https://www.interviewgrid.com/interview_questions/java/java_streams": {
+      "pass": 4,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208172
+    },
+    "https://www.studocu.com/in/document/shri-dharmasthala-manjunatheshwara-college-of-engineering-and-technology/object-oriented-concepts-in-java/25-must-know-java-stream-interview-coding-questions-solutions/141545594": {
+      "pass": 3,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208094
+    },
+    "https://javatechonline.com/java-stream-api-interview-questions/": {
+      "pass": 4,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208184
+    },
+    "https://www.indeed.com/career-advice/interviewing/sample-engineering-interview-questions": {
+      "pass": 4,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208126
     },
     "https://www.intuit.com/blog/innovative-thinking/60-engineering-interview-questions-to-expect-and-12-to-ask-during-your-job-search/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200983
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208126
     },
     "https://interviewprep.org/engineering-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200982
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208126
     },
     "https://status.net/articles/common-engineering-interview-questions-sample-answers/": {
-      "pass": 5,
+      "pass": 6,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775200814
+      "lastTs": 1775208126
     },
     "https://www.apollotechnical.com/engineering-interview-questions/": {
-      "pass": 4,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199544
-    },
-    "https://huntr.co/interview-questions/engineer": {
       "pass": 5,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775200814
+      "lastTs": 1775208128
     },
-    "https://interviewbaba.com/common-engineering-interview-questions/": {
-      "pass": 1,
+    "https://huntr.co/interview-questions/engineer": {
+      "pass": 6,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775194381
+      "lastTs": 1775208126
     },
-    "https://www.cvowl.com/blog/engineering-interview-questions-answers": {
+    "https://interviewbaba.com/common-engineering-interview-questions/": {
       "pass": 4,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775200985
+      "lastTs": 1775208187
+    },
+    "https://www.cvowl.com/blog/engineering-interview-questions-answers": {
+      "pass": 5,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208126
     },
     "https://www.contractengineeringstaffing.com/common-engineering-interview-questions/": {
       "pass": 1,
@@ -2825,20 +2825,20 @@
       "lastTs": 1775194381
     },
     "https://www.vervecopilot.com/interview-questions/top-30-most-common-engineering-interview-questions-you-should-prepare-for": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200984
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208126
     },
     "https://www.evinex.com/resources/articles/100-interview-questions-for-engineers/": {
       "pass": 0,
-      "fail": 16,
-      "domain": "business_development",
+      "fail": 20,
+      "domain": "java",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775200816
+      "lastTs": 1775208127
     },
     "https://globalcareerconsultants.us/common-engineering-interview-questions/": {
       "pass": 4,
@@ -2849,28 +2849,28 @@
       "lastTs": 1775200992
     },
     "https://resume.co/blog/engineering-interview-questions": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200989
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208127
     },
     "https://builtin.com/software-engineering-perspectives/java-interview-questions": {
+      "pass": 5,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207959
+    },
+    "https://carreersupport.com/java-scenario-based-interview-questions-for-experienced-professionals/": {
       "pass": 4,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199514
-    },
-    "https://carreersupport.com/java-scenario-based-interview-questions-for-experienced-professionals/": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199455
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207685
     },
     "https://www.linkedin.com/pulse/50-core-java-interview-questions-asked-top-mncs-google-naveen-kumar-uxwdc": {
       "pass": 0,
@@ -2889,12 +2889,12 @@
       "lastTs": 1775199471
     },
     "https://www.wscubetech.com/blog/java-interview-questions-answers/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199478
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207787
     },
     "https://blog.imocha.io/java-interview-questions-for-experienced-java-developers": {
       "pass": 3,
@@ -2913,12 +2913,12 @@
       "lastTs": 1775199481
     },
     "https://javatechonline.com/java-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199483
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207821
     },
     "https://moldstud.com/articles/p-maximize-your-hiring-process-effective-behavioral-questions-for-java-developers": {
       "pass": 3,
@@ -2929,20 +2929,20 @@
       "lastTs": 1775199493
     },
     "https://www.techinterviewhandbook.org/behavioral-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199493
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207857
     },
     "https://starmethod.org/java-developer/star-interview": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199494
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207856
     },
     "https://www.geeksforgeeks.org/blogs/behavioral-interview-questions-and-answers/": {
       "pass": 3,
@@ -2953,12 +2953,12 @@
       "lastTs": 1775199495
     },
     "https://javainfotech.com/advanced-java-interview-questions-answers-2025/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199497
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207891
     },
     "https://internshala.com/blog/java-coding-interview-questions/": {
       "pass": 3,
@@ -2969,36 +2969,36 @@
       "lastTs": 1775199500
     },
     "https://www.upgrad.com/blog/java-interview-questions-answers/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199509
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207926
     },
     "https://talentclarity.in/java-interview-questions-for-freshers/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199510
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207926
     },
     "https://techannouncer.com/master-your-next-java-role-essential-top-interview-questions-and-answers-for-2025/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775199512
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775207959
     },
     "https://www.glassdoor.co.in/Interview/JAVA-Interview-Questions-E1065418.htm": {
-      "pass": 1,
+      "pass": 2,
       "fail": 2,
       "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775199523
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208058
     },
     "https://interviewprep.org/engineering-director-interview-questions/": {
       "pass": 3,
@@ -3049,76 +3049,76 @@
       "lastTs": 1775199545
     },
     "https://interviewprep.org/sales-executive-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200016
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208207
     },
     "https://www.indeed.com/career-advice/interviewing/sales-executive-interview-questions": {
-      "pass": 1,
+      "pass": 2,
       "fail": 2,
       "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775200017
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208207
     },
     "https://factohr.com/sales-executive-interview-questions-answers/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200017
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208207
     },
     "https://resumedesign.ai/interview-questions/sales-executive/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200019
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208207
     },
     "https://resources.workable.com/sales-executive-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200020
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208207
     },
     "https://resumekraft.com/sales-executive-interview-questions-and-answers/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200021
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208207
     },
     "https://www.cvowl.com/blog/sales-executive-interview-questions-answers": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200022
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208207
     },
     "https://www.skilr.com/blog/top-50-sales-executive-interview-questions-and-answers/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200025
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208208
     },
     "https://www.pmapstest.com/blog/sales-executive-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200027
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208208
     },
     "https://x0pa.com/hiring/sales-executive-interview-questions/": {
       "pass": 3,
@@ -3137,116 +3137,116 @@
       "lastTs": 1775200032
     },
     "https://www.coursera.org/articles/sales-representative-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200034
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208241
     },
     "https://www.pearltalent.com/resources/sales-representative-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200037
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208241
     },
     "https://careersidekick.com/15-most-common-sales-representative-interview-questions-and-answers/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200040
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208241
     },
     "https://interviewpro.net/resources/job-interview-guides/sales-representative/interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200044
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208241
     },
     "https://www.interviewgrid.com/interview_questions/sales_representative": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200046
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208242
     },
     "https://resources.workable.com/sales-representative-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200047
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208241
     },
     "https://resumecat.com/career/sales-representative/interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200048
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208241
     },
     "https://www.indeed.com/career-advice/interviewing/questions-for-inside-sales-interview": {
-      "pass": 1,
+      "pass": 2,
       "fail": 2,
       "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775200048
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208274
     },
     "https://interviewprep.org/inside-sales-representative-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200050
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208274
     },
     "https://www.cvowl.com/blog/inside-sales-rep-interview-questions-answers": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200051
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208274
     },
     "https://resumedesign.ai/interview-questions/inside-sales-representative/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200053
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208274
     },
     "https://resources.workable.com/inside-sales-representative-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200054
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208274
     },
     "https://guide.resumegemini.com/interviews/top-10-questions-for-inside-sales-person-interview/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200055
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208274
     },
     "https://www.zenzap.co/blog-posts/12-crucial-inside-sales-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200057
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208274
     },
     "https://resumecat.com/career/inside-sales-representative/interview-questions": {
       "pass": 3,
@@ -3265,84 +3265,84 @@
       "lastTs": 1775200063
     },
     "https://ca.indeed.com/career-advice/interviewing/inside-sales-representative-interview-questions": {
-      "pass": 1,
+      "pass": 2,
       "fail": 2,
       "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775200064
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208274
     },
     "https://interviewprep.org/outside-sales-representative-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200067
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208307
     },
     "https://www.indeed.com/hire/interview-questions/outside-sales-representative": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200068
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208308
     },
     "https://www.finalroundai.com/blog/outside-sales-representative-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200070
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208308
     },
     "https://www.cvowl.com/blog/outside-sales-representative-interview-questions-answers": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200072
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208308
     },
     "https://guide.resumegemini.com/interviews/top-10-questions-for-outside-sales-interview/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200073
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208308
     },
     "https://coverlettersandresume.com/sales/outside-sales-rep-interview-questions-and-answers/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200074
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208308
     },
     "https://www.zenzap.co/blog-posts/12-crucial-outside-sales-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200075
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208308
     },
     "https://resumecat.com/career/outside-sales-rep/interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200076
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208308
     },
     "https://avahr.com/outside-sales-representative-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200078
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208308
     },
     "https://climbtheladder.com/outside-sales-representative-interview-questions/": {
       "pass": 3,
@@ -3369,60 +3369,60 @@
       "lastTs": 1775200082
     },
     "https://www.indeed.com/career-advice/interviewing/situational-interview-questions-for-sales": {
-      "pass": 1,
+      "pass": 2,
       "fail": 2,
       "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775200082
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208373
     },
     "https://revpilots.com/guide/situational-questions-in-sales-interviews/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200085
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208373
     },
     "https://salestalentinc.com/blog/portfolio-items/sales-situational-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200086
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208373
     },
     "https://interviewbaba.com/sales-situational-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200088
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208373
     },
     "https://globalcareerconsultants.us/sales-situational-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200091
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208373
     },
     "https://www.linkedin.com/advice/3/how-do-you-answer-scenario-based-questions-sales-p9lfc": {
       "pass": 0,
-      "fail": 8,
+      "fail": 12,
       "domain": "sales",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775199715
+      "lastTs": 1775208373
     },
     "https://www.cgaa.org/article/situational-interview-questions-for-sales": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200092
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208374
     },
     "https://www.insidesalesexpert.com/blog/Situational-Questions-for-Salesperson-Interviews-and-Best-Answers": {
       "pass": 3,
@@ -3457,12 +3457,12 @@
       "lastTs": 1775200097
     },
     "https://resources.workable.com/sales-project-consultant-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200099
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208406
     },
     "https://blog.fhyzics.net/sales-jobs-interview-questions/sales-interview-questions-for-sales-project-manager-salesiq-093": {
       "pass": 3,
@@ -3473,12 +3473,12 @@
       "lastTs": 1775200100
     },
     "https://www.interviewplus.ai/blog/2024-11/essential-project-sales-executive-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200103
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208407
     },
     "https://www.glassdoor.com/Interview/sales-project-manager-interview-questions-SRCH_KO0,21.htm": {
       "pass": 1,
@@ -3489,52 +3489,52 @@
       "lastTs": 1775200103
     },
     "https://goodmeetings.ai/blog/40-sales-interview-questions-and-answers-to-expect-in-your-next-job-interview/": {
-      "pass": 1,
+      "pass": 2,
       "fail": 2,
       "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775200103
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208406
     },
     "https://www.leadsquared.com/learn/sales/sales-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200105
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208406
     },
     "https://interviewprep.org/salesperson-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200106
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208438
     },
     "https://www.naukri.com/blog/sales-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200107
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208471
     },
     "https://www.cvowl.com/blog/sales-person-interview-questions-answers": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200108
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208438
     },
     "https://www.interviewgrid.com/interview_questions/sales_personal": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200109
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208438
     },
     "https://futureofworking.com/sales-interview-questions/": {
       "pass": 3,
@@ -3545,28 +3545,28 @@
       "lastTs": 1775200111
     },
     "https://status.net/articles/smart-answers-to-common-sales-job-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200113
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208341
     },
     "https://www.indeed.com/career-advice/interviewing/hr-interview-questions": {
-      "pass": 1,
+      "pass": 2,
       "fail": 2,
       "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775200113
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208471
     },
     "https://www.multiplymii.com/interview-repository/sales-representative": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200114
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208471
     },
     "https://blog.hubspot.com/sales/25-sales-interview-questions-to-recruit-the-best-reps": {
       "pass": 3,
@@ -3577,92 +3577,92 @@
       "lastTs": 1775200117
     },
     "https://resources.biginterview.com/industry-specific/sales-interview-questions-answers/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200119
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208406
     },
     "https://internshala.com/blog/sales-interview-question/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200120
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208341
     },
     "https://interviewprep.org/technical-sales-representative-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200122
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208503
     },
     "https://www.springboard.com/blog/sales/technical-sales-interview-questions/": {
-      "pass": 1,
+      "pass": 2,
       "fail": 2,
       "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775200123
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208503
     },
     "https://www.tealhq.com/career-paths/technical-sales-interview-questions": {
-      "pass": 1,
+      "pass": 2,
       "fail": 2,
       "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775200123
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208503
     },
     "https://resumecat.com/career/technical-sales/interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200124
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208503
     },
     "https://digitaldefynd.com/IQ/top-technical-sales-interview-questions-and-answers/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200126
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208503
     },
     "https://www.crosschq.com/blog/technical-sales-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200128
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208503
     },
     "https://www.cvowl.com/blog/technical-sales-representative-interview-questions-answers": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200128
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208503
     },
     "https://www.finalroundai.com/blog/technical-sales-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200131
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208503
     },
     "https://cvblade.com/interview/technical-sales/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200133
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208503
     },
     "https://www.usecanyon.com/interview-questions/technical-sales": {
       "pass": 3,
@@ -3673,52 +3673,52 @@
       "lastTs": 1775200135
     },
     "https://www.indeed.com/career-advice/interviewing/sales-behavioral-interview-questions": {
-      "pass": 1,
+      "pass": 2,
       "fail": 2,
       "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775200135
-    },
-    "https://www.themuse.com/advice/behavioral-interview-questions-answers-examples": {
-      "pass": 4,
-      "fail": 0,
-      "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775200552
+      "lastTs": 1775208536
+    },
+    "https://www.themuse.com/advice/behavioral-interview-questions-answers-examples": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208537
     },
     "https://learn.salesfolks.com/essential-sales-behavioral-interview-questions-and-answers/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200138
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208537
     },
     "https://www.testgorilla.com/blog/sales-aptitude-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200139
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208537
     },
     "https://www.poised.com/blog/list-of-behavioral-interview-questions-for-sales-managers": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200140
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208537
     },
     "https://www.best-job-interview.com/sales-interview-questions.html": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200142
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208537
     },
     "https://www.insidesalesexpert.com/blog/Salesperson-Behavioral-Interview-Questions-and-Best-Answers": {
       "pass": 3,
@@ -3737,12 +3737,12 @@
       "lastTs": 1775200144
     },
     "https://www.cvowl.com/blog/sales-interview-questions-answers": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200145
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208341
     },
     "https://www.upgrad.com/blog/sales-interview-questions-answers/": {
       "pass": 3,
@@ -3769,12 +3769,12 @@
       "lastTs": 1775200152
     },
     "https://www.geeksforgeeks.org/marketing/sales-interview-questions-and-answers/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200152
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208207
     },
     "https://www.linkedin.com/pulse/job-interview-question-answer-sales-position-fresher": {
       "pass": 0,
@@ -4225,12 +4225,12 @@
       "lastTs": 1775200912
     },
     "https://www.navero.me/blog/scenario-based-interview-questions": {
-      "pass": 3,
+      "pass": 5,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200913
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208373
     },
     "https://techcanvass.com/blogs/what-are-some-scenario-based-and-logical-questions-that-are-asked-in-a-business-analyst-interview": {
       "pass": 3,
@@ -4249,12 +4249,12 @@
       "lastTs": 1775200917
     },
     "https://www.hipeople.io/interview-questions/scenario-based-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200918
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201229
     },
     "https://interviewprep.org/business-developer-interview-questions/": {
       "pass": 3,
@@ -4497,20 +4497,20 @@
       "lastTs": 1775200980
     },
     "https://engineersnotebook.com/interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200987
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208127
     },
     "https://www.mockinterviewpro.com/interview-questions/engineer": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200991
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208128
     },
     "https://www.ambitionbox.com/profiles/business-development-engineer/interview-questions": {
       "pass": 0,
@@ -5167,6 +5167,478 @@
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
       "lastTs": 1775201130
+    },
+    "https://internshala.com/blog/telecaller-interview-questions/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201163
+    },
+    "https://callyzer.co/blog/top-telecaller-interview-questions-and-answers-for-freshers-to-experts/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201163
+    },
+    "https://in.indeed.com/career-advice/interviewing/telecaller-interview-questions": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201163
+    },
+    "https://jobifyindia.com/wp-content/uploads/2025/08/Common-Telecaller-Interview-Questions-With-Sample-Answers.pdf": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201163
+    },
+    "https://neodove.com/telecalling-interview-questions/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201163
+    },
+    "https://www.jobhai.com/blog/learning/telecaller-job-interview-questions-and-answers": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201163
+    },
+    "https://resumedesign.ai/interview-questions/telecaller-job/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201163
+    },
+    "https://www.cvowl.com/blog/telecaller-interview-questions-answers": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201163
+    },
+    "https://www.hellointern.in/blog/top-interview-questions-and-answers-for-telecaller-74155": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201163
+    },
+    "https://www.ambitionbox.com/profiles/voice-process-executive/interview-questions": {
+      "pass": 0,
+      "fail": 28,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775201499
+    },
+    "https://credmark.ai/practice/top-voice-query-processing-interview-questions-and-answers": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201196
+    },
+    "https://www.theknowledgeacademy.com/in/interview-questions/voice-process-interview-questions/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201198
+    },
+    "https://www.joinhgs.com/in/en/insights/blogs/screening-interview-tips-voice-non-voice-process-jobs": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201230
+    },
+    "https://www.glassdoor.com/Interview/Genpact-Voice-Process-Interview-Questions-EI_IE42613.0,7_KO8,21.htm": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201262
+    },
+    "https://www.ambitionbox.com/interviews/amazon-interview-questions/voice-process-executive": {
+      "pass": 0,
+      "fail": 4,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775201262
+    },
+    "https://www.glassdoor.co.in/Interview/TP-Voice-Process-Interview-Questions-EI_IE9779.0,2_KO3,16.htm": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201263
+    },
+    "https://nodeflair.com/companies/tata-consultancy-services/interviews/bpo-voice-process": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201263
+    },
+    "https://www.theknowledgeacademy.com/us/interview-questions/voice-process-interview-questions/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201263
+    },
+    "https://www.founditgulf.com/career-advice/voice-process-interview-questions/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201295
+    },
+    "https://no50.com/brief-shots/ace-your-voice-process-interview-top-questions-and-answers-1764799820": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201296
+    },
+    "https://www.ambitionbox.com/interviews/cognizant-interview-questions/voice-process-executive": {
+      "pass": 0,
+      "fail": 4,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775201329
+    },
+    "https://cvscreener.co/jobs/Voice-process.html": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201329
+    },
+    "https://internshala.com/blog/tech-mahindra-voice-process-interview-questions/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201361
+    },
+    "https://nodeflair.com/companies/concentrix/interviews/technical-support-voice-process": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201361
+    },
+    "https://superworks.com/interview-questions/technical-support-voice-process/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201361
+    },
+    "https://interviewprep.org/voice-engineer-interview-questions/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201363
+    },
+    "https://www.ambitionbox.com/profiles/voice-process/interview-questions/fresher-candidates": {
+      "pass": 0,
+      "fail": 8,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775201464
+    },
+    "https://www.mockinterviewpro.com/interview-questions/voice-engineer": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201532
+    },
+    "https://www.cvowl.com/blog/voice-engineer-interview-questions-answers": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201532
+    },
+    "https://resumecat.com/blog/voice-engineer-interview-questions": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201532
+    },
+    "https://careerhelp.resumegemini.com/interviews/top-10-questions-for-voice-engineer-interview/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201532
+    },
+    "https://www.glassdoor.com/Interview/voice-engineer-interview-questions-SRCH_KO0,14.htm": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201532
+    },
+    "https://himalayas.app/interview-questions/voice-engineer": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775201533
+    },
+    "https://www.scribd.com/document/935956073/30-Must-Know-Java-Scenario-Based-Interview-Questions": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208166
+    },
+    "https://www.interview-copilot.com/blog/java-interview-questions-and-answers": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208167
+    },
+    "https://www.cvowl.com/blog/java-interview-questions-answers": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208170
+    },
+    "https://javaconceptoftheday.com/java-8-interview-sample-coding-questions/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208174
+    },
+    "https://javacodepoint.com/logical-programs/java-stream-api-coding-interview-questions-on-integers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208176
+    },
+    "https://www.acte.in/java-stream-interview-questions-and-answers": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208179
+    },
+    "https://www.geeksforgeeks.org/java/java-stream-lambda-expression-coding-practice-problems/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775208182
+    },
+    "https://www.studocu.com/in/document/university-of-calicut/civil-engineering/java-interview-questions-comprehensive-guide-for-all-levels/157670163": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775208188
+    },
+    "https://jobdescriptionandresumeexamples.com/sample-interview-questions-for-sales-executives-with-answers/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208207
+    },
+    "https://zillasales.com/blog/sales-rep-interview-questions": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208241
+    },
+    "https://resumecat.com/career/inside-sales-associate/interview-questions": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208274
+    },
+    "https://www.jobcopy.ai/resources/interview-questions/outside-sales-representative-interview-questions": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208308
+    },
+    "https://resources.workable.com/outside-sales-representative-interview-questions": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208309
+    },
+    "https://www.mockquestions.com/interview/Scenario+Based/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208374
+    },
+    "https://huntr.co/interview-questions/sales": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208406
+    },
+    "https://www.lavendo.io/post/mastering-sales-interviews-100-essential-questions-and-tips-to-succeed": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208406
+    },
+    "https://www.projectmanager.com/blog/the-23-best-project-manager-interview-questions": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208407
+    },
+    "https://resources.workable.com/sales-interview-questions": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208471
+    },
+    "https://www.hipeople.io/interview-questions/sales-interview-questions": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208471
+    },
+    "https://www.interviewbit.com/hr-interview-questions/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208472
+    },
+    "https://interviewprep.org/sales-manager-interview-questions/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208472
+    },
+    "https://www.linkedin.com/business/talent/blog/talent-acquisition/interview-questions-to-ask-every-sales-candidate": {
+      "pass": 0,
+      "fail": 4,
+      "domain": "sales",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775208472
+    },
+    "https://www.careercontessa.com/advice/tech-sales-interview-questions/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208503
+    },
+    "https://carreersupport.com/technical-sales-representative-interview-questions/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208504
+    },
+    "https://apttones.com/sales-interview-questions-answers/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208570
+    },
+    "https://interviewprep.org/sales-interview-questions/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208570
     }
   }
 }
