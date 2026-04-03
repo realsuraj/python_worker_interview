@@ -1,0 +1,555 @@
+{
+  "trainedAt": "2026-04-03T04:18:53Z",
+  "domains": {
+    "java": {
+      "trainedAt": "2026-04-03T04:18:53Z",
+      "role": "java engineer",
+      "department": "engineering",
+      "stream": "java",
+      "sources": [
+        "https://www.interviewbit.com/java-interview-questions/",
+        "https://www.geeksforgeeks.org/java-interview-questions/",
+        "https://www.javatpoint.com/corejava-interview-questions",
+        "https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions",
+        "https://www.turing.com/interview-questions/java",
+        "https://www.edureka.co/blog/interview-questions/java-interview-questions/",
+        "https://www.digitalocean.com/community/tutorials/java-interview-questions-and-answers",
+        "https://www.baeldung.com/java-interview-questions",
+        "https://www.geeksforgeeks.org/java/java-interview-questions/",
+        "https://www.guru99.com/java-interview-questions-answers.html",
+        "https://www.tpointtech.com/corejava-interview-questions",
+        "https://www.datacamp.com/blog/java-interview-questions",
+        "https://www.w3schools.com/java/java_interview_questions.asp",
+        "https://codegnan.com/java-interview-questions/",
+        "https://codefinity.com/blog/The-80-Top-Java-Interview-Questions-and-Answers",
+        "https://interviewquestions.guru/core-java-interview-questions-answers/",
+        "https://www.digitalocean.com/community/tutorials/java-programming-interview-questions",
+        "https://interviewprep.org/java-interview-questions/",
+        "https://www.simplilearn.com/java-interview-questions-article",
+        "https://www.javaguides.net/2026/02/top-50-java-interview-questions-and-answers.html",
+        "https://www.geeksforgeeks.org/java/java/",
+        "https://www.geeksforgeeks.org/advance-java/advanced-java/",
+        "https://www.geeksforgeeks.org/java/java-exercises/",
+        "https://www.geeksforgeeks.org/java/java-programming-examples/",
+        "https://www.geeksforgeeks.org/java/java-quiz/",
+        "https://www.geeksforgeeks.org/blogs/java-projects/",
+        "https://www.geeksforgeeks.org/java/java-cheat-sheet/",
+        "https://www.geeksforgeeks.org/dsa/dsa-in-java/",
+        "https://www.geeksforgeeks.org/java/java-collection-tutorial/",
+        "https://www.geeksforgeeks.org/java/introduction-to-java/",
+        "https://www.geeksforgeeks.org/java/java-programming-basics/",
+        "https://www.geeksforgeeks.org/java/methods-in-java/",
+        "https://www.geeksforgeeks.org/java/access-modifiers-java/",
+        "https://www.geeksforgeeks.org/java/arrays-in-java/",
+        "https://www.geeksforgeeks.org/java/strings-in-java/",
+        "https://www.geeksforgeeks.org/java/regular-expressions-in-java/",
+        "https://www.geeksforgeeks.org/java/classes-objects-java/",
+        "https://www.geeksforgeeks.org/java/constructors-in-java/",
+        "https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/",
+        "https://www.geeksforgeeks.org/java/packages-in-java/",
+        "https://www.geeksforgeeks.org/java/interfaces-in-java/",
+        "https://www.geeksforgeeks.org/java/collections-in-java-2/",
+        "https://www.geeksforgeeks.org/java/collections-class-in-java/",
+        "https://www.geeksforgeeks.org/java/collection-interface-in-java-with-examples/",
+        "https://www.geeksforgeeks.org/java/iterators-in-java/",
+        "https://www.geeksforgeeks.org/java/java-comparator-interface/",
+        "https://www.geeksforgeeks.org/java/exceptions-in-java/",
+        "https://www.geeksforgeeks.org/java/java-try-catch-block/",
+        "https://www.geeksforgeeks.org/java/java-final-finally-and-finalize/",
+        "https://www.geeksforgeeks.org/java/chained-exceptions-in-java/",
+        "https://www.geeksforgeeks.org/java/null-pointer-exception-in-java/",
+        "https://www.geeksforgeeks.org/java/exception-handling-with-method-overriding-in-java/",
+        "https://www.geeksforgeeks.org/java/java-multithreading-tutorial/",
+        "https://www.geeksforgeeks.org/java/synchronization-in-java/",
+        "https://www.geeksforgeeks.org/java/file-handling-in-java/",
+        "https://www.geeksforgeeks.org/java/java-method-references/",
+        "https://www.geeksforgeeks.org/java/java-8-stream-tutorial/",
+        "https://www.geeksforgeeks.org/java/java-networking/",
+        "https://www.geeksforgeeks.org/java/jdbc-tutorial/",
+        "https://www.geeksforgeeks.org/java/java-memory-management/",
+        "https://www.geeksforgeeks.org/java/garbage-collection-in-java/",
+        "https://www.geeksforgeeks.org/java/memory-leaks-in-java/",
+        "https://www.geeksforgeeks.org/courses/Java-backend-live",
+        "https://www.geeksforgeeks.org/java/java-fundamentals-interview-questions/",
+        "https://www.geeksforgeeks.org/java/java-core-concepts-interview-questions/",
+        "https://www.geeksforgeeks.org/java/oops-interview-questions-java-programming/",
+        "https://www.geeksforgeeks.org/java/collections-generics-interview-questions-java-programming/",
+        "https://www.geeksforgeeks.org/java/advanced-topics-interview-questions-java-programming/",
+        "https://www.geeksforgeeks.org/java/variables-in-java/",
+        "https://www.geeksforgeeks.org/java/java-data-types/",
+        "https://www.geeksforgeeks.org/java/string-class-in-java/",
+        "https://www.geeksforgeeks.org/java/deep-shallow-lazy-copy-java-examples/",
+        "https://www.geeksforgeeks.org/java/mutable-and-immutable-objects-in-java-1/",
+        "https://www.geeksforgeeks.org/java/inheritance-in-java/",
+        "https://www.geeksforgeeks.org/java/polymorphism-in-java/",
+        "https://www.geeksforgeeks.org/java/abstraction-in-java-2/",
+        "https://www.geeksforgeeks.org/java/encapsulation-in-java/",
+        "https://www.geeksforgeeks.org/java/generics-in-java/",
+        "https://www.geeksforgeeks.org/java/multithreading-in-java/",
+        "https://www.geeksforgeeks.org/java/lambda-expressions-java-8/",
+        "https://www.geeksforgeeks.org/java/java-functional-interfaces/",
+        "https://www.geeksforgeeks.org/java/stream-in-java/",
+        "https://www.geeksforgeeks.org/java/annotations-in-java/",
+        "https://www.geeksforgeeks.org/java/reflection-in-java/",
+        "https://www.geeksforgeeks.org/system-design/java-design-patterns/",
+        "https://www.geeksforgeeks.org/java/singleton-class-java/",
+        "https://www.geeksforgeeks.org/system-design/observer-method-design-pattern-in-java/",
+        "https://www.geeksforgeeks.org/java/java-8-features-tutorial/",
+        "https://www.geeksforgeeks.org/category/programming-language/java/",
+        "https://www.geeksforgeeks.org/category/interview-preparation/interview-questions/",
+        "https://www.geeksforgeeks.org/tag/interview-preparation/",
+        "https://www.geeksforgeeks.org/tag/java-interview/",
+        "https://www.geeksforgeeks.org/tag/interview-questions/",
+        "https://www.geeksforgeeks.org/interview-prep/interview-corner/",
+        "https://www.geeksforgeeks.org/aptitude/aptitude-questions-and-answers/",
+        "https://www.interviewbit.com/",
+        "https://www.interviewbit.com/practice/",
+        "https://www.interviewbit.com/technical-interview-questions/",
+        "https://www.interviewbit.com/coding-interview-questions/",
+        "https://www.interviewbit.com/courses/fast-track/",
+        "https://www.interviewbit.com/blog/",
+        "https://www.interviewbit.com/interview-preparation-kit/",
+        "https://www.interviewbit.com/contests/",
+        "https://www.interviewbit.com/online-cpp-compiler/",
+        "https://www.interviewbit.com/online-c-compiler/",
+        "https://www.interviewbit.com/online-python-compiler/",
+        "https://www.interviewbit.com/online-java-compiler/",
+        "https://www.interviewbit.com/online-javascript-compiler/",
+        "https://www.interviewbit.com/mock-interview/",
+        "https://www.interviewbit.com/peer-mock-interview/",
+        "https://www.interviewbit.com/events/",
+        "https://www.interviewbit.com/help_requests/",
+        "https://www.interviewbit.com/practice",
+        "https://www.interviewbit.com/technical-interview-questions",
+        "https://www.interviewbit.com/java-cheat-sheet/",
+        "https://www.scaler.com/topics/java/",
+        "https://www.interviewbit.com/java-interview-questions/#freshers",
+        "https://www.interviewbit.com/java-interview-questions/#intermediate",
+        "https://www.interviewbit.com/java-interview-questions/#experienced",
+        "https://www.interviewbit.com/java-interview-questions/#java-programming",
+        "https://www.interviewbit.com/discussion/",
+        "https://www.scaler.com/topics/why-java-is-platform-independent/",
+        "https://www.interviewbit.com/oops-interview-questions/",
+        "https://www.simplilearn.com/resources/project-management",
+        "https://www.simplilearn.com/tutorials/java-tutorial/what-is-java",
+        "https://www.simplilearn.com/tutorials/java-tutorial/java-classes-and-objects",
+        "https://www.simplilearn.com/tutorials/java-tutorial/java-programming",
+        "https://www.simplilearn.com/tutorials/java-tutorial/jdk-in-java",
+        "https://www.simplilearn.com/java-full-stack-developer-certification?source=GhPreviewCTAText",
+        "https://www.simplilearn.com/tutorials/java-tutorial/java-interface",
+        "https://www.simplilearn.com/tutorials/javascript-tutorial/scope-of-variables-in-javascript",
+        "https://www.simplilearn.com/tutorials/java-tutorial/exception-handling-in-java",
+        "https://www.zippia.com/salaries/java-developer/#:~:text=Per%20Year-,%2442.54%20hourly%20rate,-Entry%2DLevel%20Java",
+        "https://www.simplilearn.com/mobile-and-software-development/java-javaee-soa-development-training?source=GhPreviewCTAText",
+        "https://www.zippia.com/salaries/java-developer/#:~:text=%2468%2C000%20yearly%20salary",
+        "https://www.simplilearn.com/popular-java-applications-article",
+        "https://www.simplilearn.com/tutorials/java-tutorial/constructor-in-java",
+        "https://www.simplilearn.com/tutorials/java-tutorial/static-keyword-in-java",
+        "https://www.simplilearn.com/tutorials/java-tutorial/linked-list-in-java",
+        "https://www.simplilearn.com/tutorials/java-tutorial/enum-in-java",
+        "https://www.simplilearn.com/coding-interview-questions-article",
+        "https://www.simplilearn.com/tutorials/programming-tutorial/front-end-developer-interview-questions",
+        "https://www.simplilearn.com/python-interview-questions-article",
+        "https://www.edureka.co/blog/interview-questions/top-tableau-interview-questions-and-answers/",
+        "https://www.edureka.co/blog/interview-questions/top-informatica-interview-questions-2016/",
+        "https://www.edureka.co/blog/interview-questions/power-bi-interview-questions/",
+        "https://www.edureka.co/blog/interview-questions/top-hadoop-interview-questions",
+        "https://www.edureka.co/blog/interview-questions/top-apache-spark-interview-questions-2016/",
+        "https://www.edureka.co/blog/interview-questions/azure-interview-questions/",
+        "https://www.edureka.co/blog/interview-questions/salesforce-interview-questions/",
+        "https://www.edureka.co/blog/machine-learning-projects/",
+        "https://www.edureka.co/blog/interview-questions/machine-learning-interview-questions/",
+        "https://www.edureka.co/blog/data-science-projects/",
+        "https://www.edureka.co/blog/interview-questions/data-science-interview-questions/",
+        "https://www.edureka.co/blog/interview-questions/data-warehousing-interview-questions-and-answers/",
+        "https://www.edureka.co/blog/interview-questions/talend-interview-questions/",
+        "https://www.edureka.co/blog/mongodb-interview-questions-for-beginners-and-professionals",
+        "https://www.edureka.co/blog/interview-questions/sql-interview-questions",
+        "https://www.edureka.co/blog/interview-questions/mysql-interview-questions/",
+        "https://www.edureka.co/blog/interview-questions/top-devops-interview-questions/",
+        "https://www.edureka.co/blog/interview-questions/docker-interview-questions/",
+        "https://www.edureka.co/blog/what-is-javascript/",
+        "https://www.edureka.co/blog/javascript-tutorial/"
+      ],
+      "cachedLineCount": 1129,
+      "discoveredSourceCount": 8,
+      "questions": [
+        "Why is Java a platform independent language?",
+        "Why is Java not a pure object oriented language?",
+        "Difference between Heap and Stack Memory in java. And how java utilizes this?",
+        "Can java be said to be the complete object-oriented programming language?",
+        "Pointers are used in C/ C++. Why does Java not make use of pointers?",
+        "What do you understand by an instance variable and a local variable?",
+        "What are the default values assigned to variables and instances in java?",
+        "Can you tell the difference between equals() method and equality operator (==) in Java?",
+        "How is an infinite loop declared in Java?",
+        "Why is\u00c2 Java\u00c2 a platform independent language?",
+        "What are the differences between C++ and Java?",
+        "Why is\u00c2 Java\u00c2 not a pure object oriented language?",
+        "List the features of the Java Programming language?",
+        "What are the Memory Allocations available in Java?",
+        "What are the differences between Heap and Stack Memory in Java?",
+        "What Is Java? A Beginner's Guide to Java and Its Evolution?",
+        "What is the basic Structure of a Java Program?",
+        "What is the difference between C, C++ and Java?",
+        "Netbeans Tutorial: What is NetBeans IDE and how to get started?",
+        "How to Compile and Run your first Java Program?",
+        "What is for loop in java and how to implement it?",
+        "What is a While Loop in Java and how to use it?",
+        "What is a Do while loop in Java and how to use it?"
+      ],
+      "qaBank": [
+        {
+          "question": "Why is Java a platform independent language?",
+          "answer": "1. Why is Java a platform independent language? Why is\u00c2 Java\u00c2 a platform independent language? 2. Why is Java not a pure object oriented language? 4. Can java be said to be the complete object-oriented programming language?"
+        },
+        {
+          "question": "Why is Java not a pure object oriented language?",
+          "answer": "2. Why is Java not a pure object oriented language? Why is\u00c2 Java\u00c2 not a pure object oriented language? 1. Why is Java a platform independent language? 4. Can java be said to be the complete object-oriented programming language?"
+        },
+        {
+          "question": "Difference between Heap and Stack Memory in java. And how java utilizes this?",
+          "answer": "3. Difference between Heap and Stack Memory in java. And how java utilizes this. What are the differences between Heap and Stack Memory in Java? 11. Can you tell the difference between equals() method and equality operator (==) in Java? Variables & Data Types , Arrays , Strings & String Classes , Interfaces , Memory Model (Stack vs Heap) , Garbage Collection , Shallow vs Deep Copy , Immutable Objects"
+        },
+        {
+          "question": "Can java be said to be the complete object-oriented programming language?",
+          "answer": "4. Can java be said to be the complete object-oriented programming language? Java is the most widely used programming language \u00c2 in the current IT industry. One major reason for the vast number of beginners and professionals in the field of programming List the features of the Java Programming language? 1. Why is Java a platform independent language?"
+        },
+        {
+          "question": "Pointers are used in C/ C++. Why does Java not make use of pointers?",
+          "answer": "6. Pointers are used in C/ C++. Why does Java not make use of pointers? What are the differences between C++ and Java? 1. Why is Java a platform independent language? 2. Why is Java not a pure object oriented language?"
+        },
+        {
+          "question": "What do you understand by an instance variable and a local variable?",
+          "answer": "7. What do you understand by an instance variable and a local variable? To do well in interviews, you need to understand core syntax, OOP concepts, Collections Framework, memory handling and advanced features. 1. Why is Java a platform independent language? 2. Why is Java not a pure object oriented language?"
+        },
+        {
+          "question": "What are the default values assigned to variables and instances in java?",
+          "answer": "8. What are the default values assigned to variables and instances in java? 1. Why is Java a platform independent language? 2. Why is Java not a pure object oriented language? 3. Difference between Heap and Stack Memory in java. And how java utilizes this."
+        },
+        {
+          "question": "Can you tell the difference between equals() method and equality operator (==) in Java?",
+          "answer": "11. Can you tell the difference between equals() method and equality operator (==) in Java? 3. Difference between Heap and Stack Memory in java. And how java utilizes this. What are the differences between C++ and Java? What are the differences between Heap and Stack Memory in Java?"
+        },
+        {
+          "question": "How is an infinite loop declared in Java?",
+          "answer": "12. How is an infinite loop declared in Java? 1. Why is Java a platform independent language? 2. Why is Java not a pure object oriented language? 3. Difference between Heap and Stack Memory in java. And how java utilizes this."
+        },
+        {
+          "question": "Why is\u00c2 Java\u00c2 a platform independent language?",
+          "answer": "1. Why is Java a platform independent language? Why is\u00c2 Java\u00c2 a platform independent language? 2. Why is Java not a pure object oriented language? 4. Can java be said to be the complete object-oriented programming language?"
+        },
+        {
+          "question": "What are the differences between C++ and Java?",
+          "answer": "What are the differences between C++ and Java? What are the differences between Heap and Stack Memory in Java? 3. Difference between Heap and Stack Memory in java. And how java utilizes this. 6. Pointers are used in C/ C++. Why does Java not make use of pointers?"
+        },
+        {
+          "question": "Why is\u00c2 Java\u00c2 not a pure object oriented language?",
+          "answer": "2. Why is Java not a pure object oriented language? Why is\u00c2 Java\u00c2 not a pure object oriented language? 1. Why is Java a platform independent language? 4. Can java be said to be the complete object-oriented programming language?"
+        },
+        {
+          "question": "List the features of the Java Programming language?",
+          "answer": "List the features of the Java Programming language? 4. Can java be said to be the complete object-oriented programming language? Java is the most used language in top companies such as Uber, Airbnb, Google, Netflix, Instagram, Spotify, Amazon, and many more because of its features and performance. In this article, Java is the most widely used programming language \u00c2 in the current IT industry. One major reason for the vast number of beginners and professionals in the field of programming"
+        },
+        {
+          "question": "What are the Memory Allocations available in Java?",
+          "answer": "What are the Memory Allocations available in Java? 3. Difference between Heap and Stack Memory in java. And how java utilizes this. What are the differences between Heap and Stack Memory in Java? 1. Why is Java a platform independent language?"
+        },
+        {
+          "question": "What are the differences between Heap and Stack Memory in Java?",
+          "answer": "What are the differences between Heap and Stack Memory in Java? 3. Difference between Heap and Stack Memory in java. And how java utilizes this. Variables & Data Types , Arrays , Strings & String Classes , Interfaces , Memory Model (Stack vs Heap) , Garbage Collection , Shallow vs Deep Copy , Immutable Objects What are the differences between C++ and Java?"
+        },
+        {
+          "question": "What Is Java? A Beginner's Guide to Java and Its Evolution?",
+          "answer": "What Is Java? A Beginner's Guide to Java and Its Evolution 1. Why is Java a platform independent language? 2. Why is Java not a pure object oriented language? 3. Difference between Heap and Stack Memory in java. And how java utilizes this."
+        },
+        {
+          "question": "What is the basic Structure of a Java Program?",
+          "answer": "17. A single try block and multiple catch blocks can co-exist in a Java Program. Explain. So let\u00e2\u0080\u0099s get started with the first set of basic core Java technical interview questions which is primarly useful for freshers. 1. Why is Java a platform independent language? 2. Why is Java not a pure object oriented language?"
+        },
+        {
+          "question": "What is the difference between C, C++ and Java?",
+          "answer": "3. Difference between Heap and Stack Memory in java. And how java utilizes this. 11. Can you tell the difference between equals() method and equality operator (==) in Java? What are the differences between C++ and Java? 6. Pointers are used in C/ C++. Why does Java not make use of pointers?"
+        },
+        {
+          "question": "Netbeans Tutorial: What is NetBeans IDE and how to get started?",
+          "answer": "So let\u00e2\u0080\u0099s get started with the first set of basic core Java technical interview questions which is primarly useful for freshers. 1. Why is Java a platform independent language? 2. Why is Java not a pure object oriented language? 3. Difference between Heap and Stack Memory in java. And how java utilizes this."
+        },
+        {
+          "question": "How to Compile and Run your first Java Program?",
+          "answer": "17. A single try block and multiple catch blocks can co-exist in a Java Program. Explain. So let\u00e2\u0080\u0099s get started with the first set of basic core Java technical interview questions which is primarly useful for freshers. 1. Why is Java a platform independent language? 2. Why is Java not a pure object oriented language?"
+        },
+        {
+          "question": "What is for loop in java and how to implement it?",
+          "answer": "12. How is an infinite loop declared in Java? 1. Why is Java a platform independent language? 2. Why is Java not a pure object oriented language? 3. Difference between Heap and Stack Memory in java. And how java utilizes this."
+        },
+        {
+          "question": "What is a While Loop in Java and how to use it?",
+          "answer": "6. Pointers are used in C/ C++. Why does Java not make use of pointers? 12. How is an infinite loop declared in Java? 1. Why is Java a platform independent language? 2. Why is Java not a pure object oriented language?"
+        },
+        {
+          "question": "What is a Do while loop in Java and how to use it?",
+          "answer": "6. Pointers are used in C/ C++. Why does Java not make use of pointers? 12. How is an infinite loop declared in Java? 1. Why is Java a platform independent language? 2. Why is Java not a pure object oriented language?"
+        }
+      ],
+      "qaBankUpdatedAt": "2026-04-03T06:32:52Z"
+    },
+    "sales": {
+      "trainedAt": "2026-04-03T04:18:53Z",
+      "role": "sales engineer",
+      "department": "engineering",
+      "stream": "sales",
+      "sources": [
+        "https://blog.hubspot.com/sales/interview-questions-for-sales-position",
+        "https://www.indeed.com/career-advice/interviewing/sales-interview-questions",
+        "https://www.salesforce.com/blog/sales-interview-questions/",
+        "https://www.zendesk.com/blog/sales-interview-questions/",
+        "https://www.glassdoor.com/blog/guide/sales-interview-questions/",
+        "https://www.coursera.org/articles/sales-interview-questions",
+        "https://www.betterteam.com/sales-interview-questions",
+        "https://www.gong.io/blog/sales-interview-questions/",
+        "https://salestalentinc.com/blog/26-sales-interview-questions-beginner-experienced/",
+        "https://blog.theinterviewguys.com/top-15-sales-interview-questions/",
+        "https://interviewprep.org/sales-representative-interview-questions/",
+        "https://www.indeed.com/career-advice/interviewing/sales-interview-questions-to-ask-candidates",
+        "https://timespro.com/blog/sales-interview-questions-and-answers",
+        "https://x0pa.com/hiring/salesman-interview-questions/",
+        "https://mailshake.com/blog/sales-interview-questions/",
+        "https://topresume.com/career-advice/job-interview-questions-for-sales",
+        "https://www.zippia.com/advice/sales-interview-questions/",
+        "https://www.indeed.com/career-advice/interviewing/top-sales-representative-interview-questions-and-answers"
+      ],
+      "cachedLineCount": 293,
+      "discoveredSourceCount": 8,
+      "questions": [
+        "Can you tell me about your sales experience?",
+        "What kind of sales environment motivates you?",
+        "What kind of sales cycles are you used to?",
+        "What does a normal sales day look like for you?",
+        "Can you walk us through your resume from start to finish?",
+        "How would you describe the last product you sold?",
+        "Explains why the product is valuable to customers?",
+        "What books, blogs, or podcasts do you follow to educate yourself outside of work?",
+        "How do you stay informed about your target market?",
+        "Research the industry thoroughly. Examples include medical sales , pharmaceutical sales , and retail . What are the top brands? Who are the buyers? What are the industry trends? How fast is this industry growing?",
+        "What interests you most about selling our products?\u00c2?",
+        "Wholesale Account Manager Interview Questions?",
+        "When I ask [your former boss] about your strengths and weaknesses, what am I going to hear?",
+        "Would you be willing to do a mock sales call with me right now?",
+        "How do you think this interview is going right now?",
+        "What was the last sales book, blog, or podcast you took in?",
+        "What\u2019s the most meaningful failure you\u2019ve had and what did you learn from it?",
+        "What\u2019s the most difficult feedback you\u2019ve received and how did it change you?",
+        "If you had a mentor, what kind of things would they help you with?",
+        "Your whole team uses the same sales process, so what sets you apart to consistently hit the quota you said you hit?",
+        "How have you turned around a losing streak?",
+        "What skill have you had to develop and how has it helped you do your job well?",
+        "How do you give back to your community outside of work?"
+      ],
+      "qaBank": [
+        {
+          "question": "Can you tell me about your sales experience?",
+          "answer": "2. Can you tell me about your sales experience? 10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Knowing common sales interview questions, understanding why they\u2019re asked, and having good answers prepared can make all the difference. We\u2019ll dig into what to expect and how to prepare so 10 common questions and answers for a sales interview"
+        },
+        {
+          "question": "What kind of sales environment motivates you?",
+          "answer": "3. What kind of sales environment motivates you? 4. What kind of sales cycles are you used to? A one-of-a kind business with an unbeatable product can\u2019t succeed on its own\u2014that\u2019s where sales reps come in. Salespeople do more than draw in customers; they also represent your business. 10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job"
+        },
+        {
+          "question": "What kind of sales cycles are you used to?",
+          "answer": "4. What kind of sales cycles are you used to? 3. What kind of sales environment motivates you? A one-of-a kind business with an unbeatable product can\u2019t succeed on its own\u2014that\u2019s where sales reps come in. Salespeople do more than draw in customers; they also represent your business. 10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job"
+        },
+        {
+          "question": "What does a normal sales day look like for you?",
+          "answer": "5. What does a normal sales day look like for you? Get the Sales Productivity Workbook and avoid pitfalls like bloated tech stacks and approval bottlenecks. Finding the perfect fit is all about asking the right sales interview questions and knowing what to look for in the answers. 10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job"
+        },
+        {
+          "question": "Can you walk us through your resume from start to finish?",
+          "answer": "After sifting through resumes and cover letters , learning a candidate\u2019s personality from just a 30-minute interview may feel like a tall order. To help you pick the best candidate, 10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Prep for these common questions and nail your next job interview. Few things are more thrilling \u2014 or nerve-racking \u2014 than seeing an email in your inbox that says, \u201cWe\u2019d like to schedule an interview.\u201d Standing out in a sea of"
+        },
+        {
+          "question": "How would you describe the last product you sold?",
+          "answer": "A one-of-a kind business with an unbeatable product can\u2019t succeed on its own\u2014that\u2019s where sales reps come in. Salespeople do more than draw in customers; they also represent your business. 10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Prep for these common questions and nail your next job interview. Few things are more thrilling \u2014 or nerve-racking \u2014 than seeing an email in your inbox that says, \u201cWe\u2019d like to schedule an interview.\u201d Standing out in a sea of"
+        },
+        {
+          "question": "Explains why the product is valuable to customers?",
+          "answer": "A one-of-a kind business with an unbeatable product can\u2019t succeed on its own\u2014that\u2019s where sales reps come in. Salespeople do more than draw in customers; they also represent your business. 10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Prep for these common questions and nail your next job interview. Few things are more thrilling \u2014 or nerve-racking \u2014 than seeing an email in your inbox that says, \u201cWe\u2019d like to schedule an interview.\u201d Standing out in a sea of"
+        },
+        {
+          "question": "What books, blogs, or podcasts do you follow to educate yourself outside of work?",
+          "answer": "Interviews are an exciting chance to set yourself apart, and preparation is key. Here are 10 typical questions to help you approach your next interview with confidence. 10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Prep for these common questions and nail your next job interview. Few things are more thrilling \u2014 or nerve-racking \u2014 than seeing an email in your inbox that says, \u201cWe\u2019d like to schedule an interview.\u201d Standing out in a sea of"
+        },
+        {
+          "question": "How do you stay informed about your target market?",
+          "answer": "How to answer : Your answer should demonstrate your knowledge about the company, its products or services, market position, and priorities. Focus on their culture, values, and sales philosophy \u2014 10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Prep for these common questions and nail your next job interview. Few things are more thrilling \u2014 or nerve-racking \u2014 than seeing an email in your inbox that says, \u201cWe\u2019d like to schedule an interview.\u201d Standing out in a sea of"
+        },
+        {
+          "question": "Research the industry thoroughly. Examples include medical sales , pharmaceutical sales , and retail . What are the top brands? Who are the buyers? What are the industry trends? How fast is this industry growing?",
+          "answer": "Why they ask : Interviewers want to know if you know what a sales cycle is and how they work. It signals how familiar you are with the industry. They 10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Knowing common sales interview questions, understanding why they\u2019re asked, and having good answers prepared can make all the difference. We\u2019ll dig into what to expect and how to prepare so 10 common questions and answers for a sales interview"
+        },
+        {
+          "question": "What interests you most about selling our products?\u00c2?",
+          "answer": "Yes, I would like to receive the Salesblazer newsletter as well as marketing emails regarding Salesforce products, services, and events. I can unsubscribe at any time. How to answer : Your answer should demonstrate your knowledge about the company, its products or services, market position, and priorities. Focus on their culture, values, and sales philosophy \u2014 10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Prep for these common questions and nail your next job interview."
+        },
+        {
+          "question": "Wholesale Account Manager Interview Questions?",
+          "answer": "10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Prep for these common questions and nail your next job interview. Knowing common sales interview questions, understanding why they\u2019re asked, and having good answers prepared can make all the difference. We\u2019ll dig into what to expect and how to prepare so 10 common questions and answers for a sales interview"
+        },
+        {
+          "question": "When I ask [your former boss] about your strengths and weaknesses, what am I going to hear?",
+          "answer": "6 questions to ask during your sales interview Why they ask : This sales interview question aims to find out if you\u2019ve taken the initiative to prepare \u2014 a key part of any sales role. Interviewers are looking Why they ask : Interviewers want to learn about your background in sales: what you studied, where you\u2019ve worked, training programs you\u2019ve completed, and sales methodologies you\u2019ve learned. They\u2019re looking Why they ask : Interviewers want to know if you know what a sales cycle is and how they work. It signals how familiar you are with the industry. They"
+        },
+        {
+          "question": "Would you be willing to do a mock sales call with me right now?",
+          "answer": "Finding the perfect fit is all about asking the right sales interview questions and knowing what to look for in the answers. 10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Knowing common sales interview questions, understanding why they\u2019re asked, and having good answers prepared can make all the difference. We\u2019ll dig into what to expect and how to prepare so 10 common questions and answers for a sales interview"
+        },
+        {
+          "question": "How do you think this interview is going right now?",
+          "answer": "Finding the perfect fit is all about asking the right sales interview questions and knowing what to look for in the answers. 10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Prep for these common questions and nail your next job interview. Few things are more thrilling \u2014 or nerve-racking \u2014 than seeing an email in your inbox that says, \u201cWe\u2019d like to schedule an interview.\u201d Standing out in a sea of"
+        },
+        {
+          "question": "What was the last sales book, blog, or podcast you took in?",
+          "answer": "10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Knowing common sales interview questions, understanding why they\u2019re asked, and having good answers prepared can make all the difference. We\u2019ll dig into what to expect and how to prepare so 10 common questions and answers for a sales interview 6 questions to ask during your sales interview"
+        },
+        {
+          "question": "What\u2019s the most meaningful failure you\u2019ve had and what did you learn from it?",
+          "answer": "Why they ask : Interviewers want to learn about your background in sales: what you studied, where you\u2019ve worked, training programs you\u2019ve completed, and sales methodologies you\u2019ve learned. They\u2019re looking 10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Prep for these common questions and nail your next job interview. Few things are more thrilling \u2014 or nerve-racking \u2014 than seeing an email in your inbox that says, \u201cWe\u2019d like to schedule an interview.\u201d Standing out in a sea of"
+        },
+        {
+          "question": "What\u2019s the most difficult feedback you\u2019ve received and how did it change you?",
+          "answer": "10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Prep for these common questions and nail your next job interview. Few things are more thrilling \u2014 or nerve-racking \u2014 than seeing an email in your inbox that says, \u201cWe\u2019d like to schedule an interview.\u201d Standing out in a sea of Knowing common sales interview questions, understanding why they\u2019re asked, and having good answers prepared can make all the difference. We\u2019ll dig into what to expect and how to prepare so"
+        },
+        {
+          "question": "If you had a mentor, what kind of things would they help you with?",
+          "answer": "Few things are more thrilling \u2014 or nerve-racking \u2014 than seeing an email in your inbox that says, \u201cWe\u2019d like to schedule an interview.\u201d Standing out in a sea of Interviews are an exciting chance to set yourself apart, and preparation is key. Here are 10 typical questions to help you approach your next interview with confidence. 3. What kind of sales environment motivates you? 4. What kind of sales cycles are you used to?"
+        },
+        {
+          "question": "Your whole team uses the same sales process, so what sets you apart to consistently hit the quota you said you hit?",
+          "answer": "10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Knowing common sales interview questions, understanding why they\u2019re asked, and having good answers prepared can make all the difference. We\u2019ll dig into what to expect and how to prepare so 10 common questions and answers for a sales interview 6 questions to ask during your sales interview"
+        },
+        {
+          "question": "How have you turned around a losing streak?",
+          "answer": "10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Prep for these common questions and nail your next job interview. Few things are more thrilling \u2014 or nerve-racking \u2014 than seeing an email in your inbox that says, \u201cWe\u2019d like to schedule an interview.\u201d Standing out in a sea of Knowing common sales interview questions, understanding why they\u2019re asked, and having good answers prepared can make all the difference. We\u2019ll dig into what to expect and how to prepare so"
+        },
+        {
+          "question": "What skill have you had to develop and how has it helped you do your job well?",
+          "answer": "Yes, I would like to receive the Salesblazer newsletter as well as marketing emails regarding Salesforce products, services, and events. I can unsubscribe at any time. 10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Prep for these common questions and nail your next job interview. Few things are more thrilling \u2014 or nerve-racking \u2014 than seeing an email in your inbox that says, \u201cWe\u2019d like to schedule an interview.\u201d Standing out in a sea of"
+        },
+        {
+          "question": "How do you give back to your community outside of work?",
+          "answer": "10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Prep for these common questions and nail your next job interview. Few things are more thrilling \u2014 or nerve-racking \u2014 than seeing an email in your inbox that says, \u201cWe\u2019d like to schedule an interview.\u201d Standing out in a sea of Knowing common sales interview questions, understanding why they\u2019re asked, and having good answers prepared can make all the difference. We\u2019ll dig into what to expect and how to prepare so"
+        }
+      ]
+    },
+    "flutter": {
+      "trainedAt": "2026-04-03T04:18:53Z",
+      "role": "flutter engineer",
+      "department": "engineering",
+      "stream": "flutter",
+      "sources": [
+        "https://www.interviewbit.com/flutter-interview-questions/",
+        "https://www.geeksforgeeks.org/flutter-interview-questions-and-answers/",
+        "https://www.turing.com/interview-questions/flutter",
+        "https://www.simplilearn.com/flutter-interview-questions-article",
+        "https://www.javatpoint.com/flutter-interview-questions",
+        "https://www.edureka.co/blog/interview-questions/flutter-interview-questions/",
+        "https://www.scholarhat.com/tutorial/flutter/flutter-interview-questions-and-answers",
+        "https://www.fullstack.cafe/blog/flutter-interview-questions",
+        "https://www.geeksforgeeks.org/flutter/flutter-interview-questions/",
+        "https://medium.com/@anandgaur2207/top-flutter-interview-questions-and-answers-e7fbe9db7390",
+        "https://www.wecreateproblems.com/interview-questions/flutter-interview-questions",
+        "https://github.com/justsandip/flutter-interview-questions",
+        "https://www.tpointtech.com/flutter-interview-questions",
+        "https://wordsatease.com/flutter-interview-questions-answers/",
+        "https://interviewprep.org/flutter-interview-questions/",
+        "https://multiverseapp.com/blog/flutter-interview-questions-and-answers"
+      ],
+      "cachedLineCount": 0,
+      "discoveredSourceCount": 8,
+      "questions": [],
+      "qaBank": []
+    },
+    "react": {
+      "trainedAt": "2026-04-03T04:18:53Z",
+      "role": "react engineer",
+      "department": "engineering",
+      "stream": "react",
+      "sources": [
+        "https://www.interviewbit.com/react-interview-questions/",
+        "https://www.geeksforgeeks.org/reactjs-interview-questions/",
+        "https://react.dev/learn",
+        "https://www.simplilearn.com/tutorials/reactjs-tutorial/reactjs-interview-questions",
+        "https://www.javatpoint.com/react-interview-questions",
+        "https://www.edureka.co/blog/interview-questions/react-interview-questions/",
+        "https://www.turing.com/interview-questions/react-js",
+        "https://www.fullstack.cafe/blog/react-interview-questions",
+        "https://www.geeksforgeeks.org/reactjs/react-interview-questions/",
+        "https://www.greatfrontend.com/blog/50-reactjs-interview-questions-for-experienced-developers",
+        "https://hackr.io/blog/react-interview-questions",
+        "https://interviewquestions.guru/react-interview-questions-answers/",
+        "https://namastedev.com/blog/top-react-interview-questions-2025/",
+        "https://internshala.com/blog/top-react-coding-interview-questions/",
+        "https://mimo.org/blog/react-interview-questions",
+        "https://www.guru99.com/react-js-interview-questions.html",
+        "https://interviewkickstart.com/blogs/interview-questions/react-interview-questions",
+        "https://medium.com/@krishsurya1249/100-react-interview-question-and-answer-5bd834f42cbb"
+      ],
+      "cachedLineCount": 0,
+      "discoveredSourceCount": 8,
+      "questions": [],
+      "qaBank": []
+    },
+    "business_development": {
+      "trainedAt": "2026-04-03T04:18:53Z",
+      "role": "business_development engineer",
+      "department": "engineering",
+      "stream": "business_development",
+      "sources": [
+        "https://www.indeed.com/career-advice/interviewing/business-development-interview-questions",
+        "https://www.glassdoor.com/blog/guide/business-development-interview-questions/",
+        "https://www.turing.com/interview-questions/business-development",
+        "https://www.coursera.org/articles/business-development-manager-interview-questions",
+        "https://www.betterteam.com/business-development-manager-interview-questions",
+        "https://resources.workable.com/business-development-manager-interview-questions"
+      ],
+      "cachedLineCount": 0,
+      "discoveredSourceCount": 6,
+      "questions": [],
+      "qaBank": []
+    },
+    "voice_process": {
+      "trainedAt": "2026-04-03T04:18:53Z",
+      "role": "voice_process engineer",
+      "department": "engineering",
+      "stream": "voice_process",
+      "sources": [
+        "https://www.indeed.com/career-advice/interviewing/call-center-interview-questions",
+        "https://www.naukri.com/blog/bpo-interview-questions-and-answers/",
+        "https://www.simplilearn.com/customer-service-interview-questions-and-answers-article",
+        "https://www.glassdoor.com/blog/guide/customer-service-interview-questions/",
+        "https://www.foundit.in/career-advice/customer-service-interview-questions/"
+      ],
+      "cachedLineCount": 0,
+      "discoveredSourceCount": 5,
+      "questions": [],
+      "qaBank": []
+    },
+    "chat_process": {
+      "trainedAt": "2026-04-03T04:18:53Z",
+      "role": "chat_process engineer",
+      "department": "engineering",
+      "stream": "chat_process",
+      "sources": [
+        "https://www.indeed.com/career-advice/interviewing/customer-service-interview-questions",
+        "https://www.interviewbit.com/customer-service-interview-questions/",
+        "https://www.zendesk.com/blog/customer-service-interview-questions/",
+        "https://www.glassdoor.com/blog/guide/customer-support-interview-questions/",
+        "https://www.freshworks.com/customer-service/help-desk/customer-service-interview-questions-blog/"
+      ],
+      "cachedLineCount": 0,
+      "discoveredSourceCount": 5,
+      "questions": [],
+      "qaBank": []
+    }
+  }
+}

@@ -9,17 +9,17 @@ services:
     environment:
       WORKER_HOST: "0.0.0.0"
       WORKER_PORT: "${WORKER_PORT:-8099}"
-      DEEPSEEK_MODEL_NAME: "${DEEPSEEK_MODEL_NAME:-deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B}"
-      HF_HOME: "/app/.hf_cache"
+      ENABLE_LLM: "${ENABLE_LLM:-false}"
+      LLM_MODEL_NAME: "${LLM_MODEL_NAME:-external-api}"
+      LLM_API_URL: "${LLM_API_URL:-}"
+      LLM_API_KEY: "${LLM_API_KEY:-}"
+      LLM_API_TIMEOUT_SECONDS: "${LLM_API_TIMEOUT_SECONDS:-45}"
       ENABLE_STT: "${ENABLE_STT:-false}"
       ENABLE_TTS: "${ENABLE_TTS:-false}"
       RAG_FETCH_ONLINE: "${RAG_FETCH_ONLINE:-true}"
       COUNTER_Q_ENABLED: "${COUNTER_Q_ENABLED:-true}"
       PIPER_BIN: "/usr/local/bin/piper"
       PIPER_VOICE_MODEL: "/app/models/piper/voice.onnx"
-    volumes:
-      # Persist HF model cache so container restarts don't re-download
-      - hf_cache:/app/.hf_cache
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-fsS", "http://localhost:8099/health"]
@@ -27,6 +27,3 @@ services:
       timeout: 5s
       retries: 5
       start_period: 30s
-
-volumes:
-  hf_cache:

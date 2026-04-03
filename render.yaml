@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: interview-ai-worker
+    runtime: docker
+    autoDeployTrigger: commit
+    envVars:
+      - key: WORKER_HOST
+        value: 0.0.0.0
+      - key: WORKER_PORT
+        value: 10000
+      - key: DEEPSEEK_MODEL_NAME
+        value: python-interview-worker

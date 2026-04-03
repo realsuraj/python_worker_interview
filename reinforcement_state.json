@@ -1,0 +1,584 @@
+{
+  "roles": {
+    "java": {
+      "questions": {
+        "why is java a platform independent language?": {
+          "shown": 4,
+          "good": 0,
+          "bad": 4,
+          "reward": -0.3439,
+          "lastScore": 0,
+          "lastUpdated": "2026-04-03T06:38:18Z"
+        },
+        "why is java not a pure object oriented language?": {
+          "shown": 4,
+          "good": 0,
+          "bad": 4,
+          "reward": -0.3439,
+          "lastScore": 0,
+          "lastUpdated": "2026-04-03T06:38:18Z"
+        },
+        "difference between heap and stack memory in java. and how java utilizes this?": {
+          "shown": 4,
+          "good": 0,
+          "bad": 4,
+          "reward": -0.2439,
+          "lastScore": 50,
+          "lastUpdated": "2026-04-03T06:38:18Z"
+        },
+        "can java be said to be the complete object-oriented programming language?": {
+          "shown": 4,
+          "good": 0,
+          "bad": 4,
+          "reward": -0.3439,
+          "lastScore": 0,
+          "lastUpdated": "2026-04-03T06:38:18Z"
+        },
+        "how is java different from c++?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.1,
+          "lastScore": 0,
+          "lastUpdated": "2026-04-03T03:58:30Z"
+        },
+        "pointers are used in c/ c++. why does java not make use of pointers?": {
+          "shown": 3,
+          "good": 0,
+          "bad": 3,
+          "reward": -0.2116,
+          "lastScore": 27,
+          "lastUpdated": "2026-04-03T06:38:17Z"
+        },
+        "what do you understand by an instance variable and a local variable?": {
+          "shown": 3,
+          "good": 0,
+          "bad": 3,
+          "reward": -0.247,
+          "lastScore": 12,
+          "lastUpdated": "2026-04-03T06:38:17Z"
+        },
+        "what are the default values assigned to variables and instances in java?": {
+          "shown": 3,
+          "good": 0,
+          "bad": 3,
+          "reward": -0.241,
+          "lastScore": 15,
+          "lastUpdated": "2026-04-03T06:38:17Z"
+        },
+        "can you tell the difference between equals() method and equality operator (==) in java?": {
+          "shown": 3,
+          "good": 0,
+          "bad": 3,
+          "reward": -0.219,
+          "lastScore": 26,
+          "lastUpdated": "2026-04-03T06:38:17Z"
+        },
+        "how is an infinite loop declared in java?": {
+          "shown": 3,
+          "good": 0,
+          "bad": 3,
+          "reward": -0.239,
+          "lastScore": 16,
+          "lastUpdated": "2026-04-03T06:38:17Z"
+        },
+        "why is\u00e2 java\u00e2 a platform independent language?": {
+          "shown": 3,
+          "good": 0,
+          "bad": 3,
+          "reward": -0.271,
+          "lastScore": 0,
+          "lastUpdated": "2026-04-03T06:38:17Z"
+        },
+        "what are the differences between c++ and java?": {
+          "shown": 3,
+          "good": 0,
+          "bad": 3,
+          "reward": -0.271,
+          "lastScore": 0,
+          "lastUpdated": "2026-04-03T06:38:17Z"
+        },
+        "why is\u00e2 java\u00e2 not a pure object oriented language?": {
+          "shown": 3,
+          "good": 0,
+          "bad": 3,
+          "reward": -0.271,
+          "lastScore": 0,
+          "lastUpdated": "2026-04-03T06:38:18Z"
+        },
+        "list the features of the java programming language?": {
+          "shown": 3,
+          "good": 0,
+          "bad": 3,
+          "reward": -0.245,
+          "lastScore": 13,
+          "lastUpdated": "2026-04-03T06:38:18Z"
+        },
+        "what are the memory allocations available in java?": {
+          "shown": 3,
+          "good": 0,
+          "bad": 3,
+          "reward": -0.235,
+          "lastScore": 18,
+          "lastUpdated": "2026-04-03T06:38:18Z"
+        }
+      },
+      "sources": {},
+      "questionText": {
+        "why is java a platform independent language?": "Why is Java a platform independent language?",
+        "why is java not a pure object oriented language?": "Why is Java not a pure object oriented language?",
+        "difference between heap and stack memory in java. and how java utilizes this?": "Difference between Heap and Stack Memory in java. And how java utilizes this?",
+        "can java be said to be the complete object-oriented programming language?": "Can java be said to be the complete object-oriented programming language?",
+        "how is java different from c++?": "How is Java different from C++?",
+        "pointers are used in c/ c++. why does java not make use of pointers?": "Pointers are used in C/ C++. Why does Java not make use of pointers?",
+        "what do you understand by an instance variable and a local variable?": "What do you understand by an instance variable and a local variable?",
+        "what are the default values assigned to variables and instances in java?": "What are the default values assigned to variables and instances in java?",
+        "can you tell the difference between equals() method and equality operator (==) in java?": "Can you tell the difference between equals() method and equality operator (==) in Java?",
+        "how is an infinite loop declared in java?": "How is an infinite loop declared in Java?",
+        "why is\u00e2 java\u00e2 a platform independent language?": "Why is\u00c2 Java\u00c2 a platform independent language?",
+        "what are the differences between c++ and java?": "What are the differences between C++ and Java?",
+        "why is\u00e2 java\u00e2 not a pure object oriented language?": "Why is\u00c2 Java\u00c2 not a pure object oriented language?",
+        "list the features of the java programming language?": "List the features of the Java Programming language?",
+        "what are the memory allocations available in java?": "What are the Memory Allocations available in Java?"
+      },
+      "questionDaily": {
+        "why is java a platform independent language?": {
+          "2026-04-03": {
+            "count": 4,
+            "scoreSum": 0.0,
+            "correctSum": 0
+          }
+        },
+        "why is java not a pure object oriented language?": {
+          "2026-04-03": {
+            "count": 4,
+            "scoreSum": 0.0,
+            "correctSum": 0
+          }
+        },
+        "difference between heap and stack memory in java. and how java utilizes this?": {
+          "2026-04-03": {
+            "count": 4,
+            "scoreSum": 50.0,
+            "correctSum": 0
+          }
+        },
+        "can java be said to be the complete object-oriented programming language?": {
+          "2026-04-03": {
+            "count": 4,
+            "scoreSum": 0.0,
+            "correctSum": 0
+          }
+        },
+        "how is java different from c++?": {
+          "2026-04-03": {
+            "count": 1,
+            "scoreSum": 0.0,
+            "correctSum": 0
+          }
+        },
+        "pointers are used in c/ c++. why does java not make use of pointers?": {
+          "2026-04-03": {
+            "count": 3,
+            "scoreSum": 30.0,
+            "correctSum": 0
+          }
+        },
+        "what do you understand by an instance variable and a local variable?": {
+          "2026-04-03": {
+            "count": 3,
+            "scoreSum": 12.0,
+            "correctSum": 0
+          }
+        },
+        "what are the default values assigned to variables and instances in java?": {
+          "2026-04-03": {
+            "count": 3,
+            "scoreSum": 15.0,
+            "correctSum": 0
+          }
+        },
+        "can you tell the difference between equals() method and equality operator (==) in java?": {
+          "2026-04-03": {
+            "count": 3,
+            "scoreSum": 26.0,
+            "correctSum": 0
+          }
+        },
+        "how is an infinite loop declared in java?": {
+          "2026-04-03": {
+            "count": 3,
+            "scoreSum": 16.0,
+            "correctSum": 0
+          }
+        },
+        "why is\u00e2 java\u00e2 a platform independent language?": {
+          "2026-04-03": {
+            "count": 3,
+            "scoreSum": 0.0,
+            "correctSum": 0
+          }
+        },
+        "what are the differences between c++ and java?": {
+          "2026-04-03": {
+            "count": 3,
+            "scoreSum": 0.0,
+            "correctSum": 0
+          }
+        },
+        "why is\u00e2 java\u00e2 not a pure object oriented language?": {
+          "2026-04-03": {
+            "count": 3,
+            "scoreSum": 0.0,
+            "correctSum": 0
+          }
+        },
+        "list the features of the java programming language?": {
+          "2026-04-03": {
+            "count": 3,
+            "scoreSum": 13.0,
+            "correctSum": 0
+          }
+        },
+        "what are the memory allocations available in java?": {
+          "2026-04-03": {
+            "count": 3,
+            "scoreSum": 18.0,
+            "correctSum": 0
+          }
+        }
+      },
+      "events": [
+        {
+          "ts": 1775188710,
+          "role": "java",
+          "question": "Why is Java a platform independent language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775188710,
+          "role": "java",
+          "question": "Why is Java not a pure object oriented language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775188710,
+          "role": "java",
+          "question": "Difference between Heap and Stack Memory in java. And how java utilizes this?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775188710,
+          "role": "java",
+          "question": "Can java be said to be the complete object-oriented programming language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775188710,
+          "role": "java",
+          "question": "How is Java different from C++?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775194297,
+          "role": "java",
+          "question": "Pointers are used in C/ C++. Why does Java not make use of pointers?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775194297,
+          "role": "java",
+          "question": "What do you understand by an instance variable and a local variable?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775194297,
+          "role": "java",
+          "question": "What are the default values assigned to variables and instances in java?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775194297,
+          "role": "java",
+          "question": "Can you tell the difference between equals() method and equality operator (==) in Java?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775194297,
+          "role": "java",
+          "question": "How is an infinite loop declared in Java?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775194297,
+          "role": "java",
+          "question": "Why is\u00c2 Java\u00c2 a platform independent language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775194297,
+          "role": "java",
+          "question": "What are the differences between C++ and Java?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775194297,
+          "role": "java",
+          "question": "Why is\u00c2 Java\u00c2 not a pure object oriented language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775194297,
+          "role": "java",
+          "question": "List the features of the Java Programming language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775194297,
+          "role": "java",
+          "question": "What are the Memory Allocations available in Java?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775194297,
+          "role": "java",
+          "question": "Why is Java a platform independent language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775194297,
+          "role": "java",
+          "question": "Why is Java not a pure object oriented language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775194297,
+          "role": "java",
+          "question": "Difference between Heap and Stack Memory in java. And how java utilizes this?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775194297,
+          "role": "java",
+          "question": "Can java be said to be the complete object-oriented programming language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775195419,
+          "role": "java",
+          "question": "Pointers are used in C/ C++. Why does Java not make use of pointers?",
+          "score": 3,
+          "correct": false
+        },
+        {
+          "ts": 1775195419,
+          "role": "java",
+          "question": "What do you understand by an instance variable and a local variable?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775195419,
+          "role": "java",
+          "question": "What are the default values assigned to variables and instances in java?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775195419,
+          "role": "java",
+          "question": "Can you tell the difference between equals() method and equality operator (==) in Java?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775195419,
+          "role": "java",
+          "question": "How is an infinite loop declared in Java?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775195419,
+          "role": "java",
+          "question": "Why is\u00c2 Java\u00c2 a platform independent language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775195419,
+          "role": "java",
+          "question": "What are the differences between C++ and Java?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775195419,
+          "role": "java",
+          "question": "Why is\u00c2 Java\u00c2 not a pure object oriented language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775195419,
+          "role": "java",
+          "question": "List the features of the Java Programming language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775195419,
+          "role": "java",
+          "question": "What are the Memory Allocations available in Java?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775195419,
+          "role": "java",
+          "question": "Why is Java a platform independent language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775195419,
+          "role": "java",
+          "question": "Why is Java not a pure object oriented language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775195419,
+          "role": "java",
+          "question": "Difference between Heap and Stack Memory in java. And how java utilizes this?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775195419,
+          "role": "java",
+          "question": "Can java be said to be the complete object-oriented programming language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775198297,
+          "role": "java",
+          "question": "Pointers are used in C/ C++. Why does Java not make use of pointers?",
+          "score": 27,
+          "correct": false
+        },
+        {
+          "ts": 1775198297,
+          "role": "java",
+          "question": "What do you understand by an instance variable and a local variable?",
+          "score": 12,
+          "correct": false
+        },
+        {
+          "ts": 1775198297,
+          "role": "java",
+          "question": "What are the default values assigned to variables and instances in java?",
+          "score": 15,
+          "correct": false
+        },
+        {
+          "ts": 1775198297,
+          "role": "java",
+          "question": "Can you tell the difference between equals() method and equality operator (==) in Java?",
+          "score": 26,
+          "correct": false
+        },
+        {
+          "ts": 1775198297,
+          "role": "java",
+          "question": "How is an infinite loop declared in Java?",
+          "score": 16,
+          "correct": false
+        },
+        {
+          "ts": 1775198297,
+          "role": "java",
+          "question": "Why is\u00c2 Java\u00c2 a platform independent language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775198297,
+          "role": "java",
+          "question": "What are the differences between C++ and Java?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775198298,
+          "role": "java",
+          "question": "Why is\u00c2 Java\u00c2 not a pure object oriented language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775198298,
+          "role": "java",
+          "question": "List the features of the Java Programming language?",
+          "score": 13,
+          "correct": false
+        },
+        {
+          "ts": 1775198298,
+          "role": "java",
+          "question": "What are the Memory Allocations available in Java?",
+          "score": 18,
+          "correct": false
+        },
+        {
+          "ts": 1775198298,
+          "role": "java",
+          "question": "Why is Java a platform independent language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775198298,
+          "role": "java",
+          "question": "Why is Java not a pure object oriented language?",
+          "score": 0,
+          "correct": false
+        },
+        {
+          "ts": 1775198298,
+          "role": "java",
+          "question": "Difference between Heap and Stack Memory in java. And how java utilizes this?",
+          "score": 50,
+          "correct": false
+        },
+        {
+          "ts": 1775198298,
+          "role": "java",
+          "question": "Can java be said to be the complete object-oriented programming language?",
+          "score": 0,
+          "correct": false
+        }
+      ]
+    }
+  }
+}

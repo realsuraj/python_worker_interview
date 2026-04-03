@@ -110,6 +110,10 @@ VECTOR_CACHE_FILE         = Path(os.getenv("VECTOR_CACHE_FILE", str(Path(__file_
 VECTOR_CACHE_MAX_BYTES    = _env_int("VECTOR_CACHE_MAX_BYTES", 25 * 1024 * 1024, 1_048_576)
 RL_ENABLED                = _env_bool("RL_ENABLED", "true")
 SMALL_MODEL_ENABLED       = _env_bool("SMALL_MODEL_ENABLED", "true")
+SMALL_MODEL_AUTO_TRAIN_ENABLED = _env_bool("SMALL_MODEL_AUTO_TRAIN_ENABLED", "true")
+SMALL_MODEL_AUTO_TRAIN_WINDOW_DAYS = _env_int("SMALL_MODEL_AUTO_TRAIN_WINDOW_DAYS", 365, 7)
+SMALL_MODEL_AUTO_TRAIN_MIN_SAMPLES = _env_int("SMALL_MODEL_AUTO_TRAIN_MIN_SAMPLES", 80, 20)
+SMALL_MODEL_AUTO_TRAIN_GAP_SECONDS = _env_int("SMALL_MODEL_AUTO_TRAIN_GAP_SECONDS", 21600, 900)
 STRICT_CANDIDATE_IDENTITY = _env_bool("STRICT_CANDIDATE_IDENTITY", "true")
 RL_RAW_EVENT_RETENTION_DAYS = _env_int("RL_RAW_EVENT_RETENTION_DAYS", 90, 7)
 LEARNING_LOG_MAX_ITEMS    = _env_int("LEARNING_LOG_MAX_ITEMS", 5000, 100)
@@ -190,6 +194,7 @@ SEMANTIC_MODEL_HANDLE = None
 SEMANTIC_EMBED_CACHE: Dict[str, Any] = {}
 LAST_ACTIVITY_TS      = time.time()
 LAST_AUTO_TRAIN_TS    = 0.0
+LAST_SMALL_MODEL_TRAIN_TS = 0.0
 ACTIVE_STT_WS_COUNT   = 0
 ACTIVE_INTERVIEW_SESSIONS: Dict[str, int] = {}
 LAST_DISCOVERY_TS: Dict[str, float] = {}
@@ -1756,7 +1761,7 @@ def _small_model_predict(role_key: str, question: str) -> float:
         return 0.0
 
 def _train_small_model(window_days: int = 365, min_samples: int = 80) -> Dict[str, Any]:
-    global SMALL_MODEL_HANDLE, REINFORCEMENT_STATE_MAP
+    global SMALL_MODEL_HANDLE, REINFORCEMENT_STATE_MAP, LAST_SMALL_MODEL_TRAIN_TS
     if not SMALL_MODEL_ENABLED:
         return {"ok": False, "reason": "small model disabled"}
     if HashingVectorizer is None or SGDRegressor is None:
@@ -1851,6 +1856,7 @@ def _train_small_model(window_days: int = 365, min_samples: int = 80) -> Dict[st
     }
     with SMALL_MODEL_FILE.open("wb") as f:
         pickle.dump(SMALL_MODEL_HANDLE, f)
+    LAST_SMALL_MODEL_TRAIN_TS = time.time()
     return {
         "ok": True,
         "trainedAt": SMALL_MODEL_HANDLE["trainedAt"],
@@ -1860,6 +1866,30 @@ def _train_small_model(window_days: int = 365, min_samples: int = 80) -> Dict[st
         "limits": limits,
         "modelPath": str(SMALL_MODEL_FILE),
     }
+
+def _maybe_auto_train_small_model(trigger: str = "auto", force: bool = False) -> Dict[str, Any]:
+    global LAST_SMALL_MODEL_TRAIN_TS, WORKER_STARTUP_STATUS
+    if not SMALL_MODEL_AUTO_TRAIN_ENABLED and not force:
+        return {"ok": False, "reason": "auto train disabled"}
+    now = time.time()
+    if not force and LAST_SMALL_MODEL_TRAIN_TS > 0 and (now - LAST_SMALL_MODEL_TRAIN_TS) < SMALL_MODEL_AUTO_TRAIN_GAP_SECONDS:
+        return {"ok": False, "reason": "gap_not_elapsed"}
+    result = _train_small_model(
+        window_days=max(7, SMALL_MODEL_AUTO_TRAIN_WINDOW_DAYS),
+        min_samples=max(20, SMALL_MODEL_AUTO_TRAIN_MIN_SAMPLES),
+    )
+    if result.get("ok"):
+        WORKER_STARTUP_STATUS["smallModelReady"] = True
+        WORKER_STARTUP_STATUS["smallModelReason"] = (
+            f"Small model trained ({trigger}): {result.get('sampleCount', 0)} samples"
+        )
+        logger.info(
+            "[SMALL_MODEL][%s] trained samples=%s path=%s",
+            trigger, result.get("sampleCount", 0), result.get("modelPath", str(SMALL_MODEL_FILE))
+        )
+    else:
+        logger.info("[SMALL_MODEL][%s] skipped: %s", trigger, result.get("reason", "unknown"))
+    return result
 
 def _learning_stats() -> Dict[str, Any]:
     data = _load_reinforcement_state()
@@ -3526,7 +3556,7 @@ def _ensure_piper() -> tuple[bool, str]:
 
 def _bootstrap_models() -> None:
     global RAG_SOURCE_MAP, TRAINING_STORE_MAP, QUESTION_STATE_MAP, REINFORCEMENT_STATE_MAP
-    global SOURCE_QUALITY_MAP, LEARNING_LOG_MAP, LEARNING_POLICY_MAP
+    global SOURCE_QUALITY_MAP, LEARNING_LOG_MAP, LEARNING_POLICY_MAP, LAST_SMALL_MODEL_TRAIN_TS
     RAG_SOURCE_MAP = _load_source_map()
     TRAINING_STORE_MAP = _load_training_store()
     training_clean = _sanitize_training_store(TRAINING_STORE_MAP)
@@ -3561,6 +3591,13 @@ def _bootstrap_models() -> None:
     small_model_loaded = _load_small_model()
     sm_ok = bool(small_model_loaded)
     sm_reason = (f"Small model loaded: {SMALL_MODEL_FILE}" if sm_ok else "Small model not trained yet")
+    if SMALL_MODEL_FILE.exists():
+        try:
+            LAST_SMALL_MODEL_TRAIN_TS = SMALL_MODEL_FILE.stat().st_mtime
+        except Exception:
+            LAST_SMALL_MODEL_TRAIN_TS = 0.0
+    else:
+        LAST_SMALL_MODEL_TRAIN_TS = 0.0
     stt_ok, stt_reason = _ensure_whisper()
     tts_ok, tts_reason = _ensure_piper()
     WORKER_STARTUP_STATUS.update(llmReady=llm_ok, sttReady=stt_ok, ttsReady=tts_ok, semanticReady=sem_ok, smallModelReady=sm_ok,
@@ -3569,6 +3606,7 @@ def _bootstrap_models() -> None:
     logger.info("LLM: %s", llm_reason)
     logger.info("SEMANTIC: %s", sem_reason)
     logger.info("SMALL_MODEL: %s", sm_reason)
+    _maybe_auto_train_small_model(trigger="startup")
     logger.info("STT priority mode: %s", STT_PRIORITY_MODE)
     logger.info("STT: %s", stt_reason); logger.info("TTS: %s", tts_reason)
 
@@ -3641,6 +3679,7 @@ def _auto_train_loop() -> None:
             )
             result = rag_train_once(req)
             LAST_AUTO_TRAIN_TS = now
+            _maybe_auto_train_small_model(trigger="auto-idle")
             logger.info(
                 "[TRAIN][auto-idle] completed domains=%s durationMs=%s mode=%s knowledge=%.2f",
                 req.domains, result.get("durationMs", 0), policy.get("mode", "slow"), _safe_float(policy.get("knowledgeScore"), 0.0)
@@ -3686,6 +3725,10 @@ def health() -> Dict[str, Any]:
         "trainingStorePath": str(TRAINING_STORE_FILE),
         "reinforcementStatePath": str(REINFORCEMENT_STATE_FILE),
         "smallModelPath": str(SMALL_MODEL_FILE),
+        "smallModelAutoTrainEnabled": SMALL_MODEL_AUTO_TRAIN_ENABLED,
+        "smallModelAutoTrainGapSeconds": SMALL_MODEL_AUTO_TRAIN_GAP_SECONDS,
+        "smallModelAutoTrainMinSamples": SMALL_MODEL_AUTO_TRAIN_MIN_SAMPLES,
+        "smallModelAutoTrainWindowDays": SMALL_MODEL_AUTO_TRAIN_WINDOW_DAYS,
         "vectorCacheEnabled": VECTOR_CACHE_ENABLED,
         "vectorCacheDir": str(VECTOR_CACHE_DIR),
         "vectorCacheFile": str(VECTOR_CACHE_FILE),

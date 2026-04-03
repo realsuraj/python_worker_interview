@@ -28,16 +28,6 @@ RUN mkdir -p /app/models/piper \
 # Copy source
 COPY . .
 
-# Pre-download HuggingFace DeepSeek model into image
-ENV HF_HOME=/app/.hf_cache
-RUN python - <<'EOF'
-from huggingface_hub import snapshot_download
-snapshot_download(
-    repo_id="deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
-    ignore_patterns=["*.h5","*.msgpack","*.onnx","*.tflite","*.ckpt"],
-)
-EOF
-
 EXPOSE 8099
 
 ENV WORKER_HOST=0.0.0.0
@@ -46,6 +36,6 @@ ENV PIPER_BIN=/usr/local/bin/piper
 ENV PIPER_VOICE_MODEL=/app/models/piper/voice.onnx
 
 HEALTHCHECK --interval=15s --timeout=5s --start-period=30s --retries=5 \
-    CMD curl -fsS http://localhost:8099/health || exit 1
+    CMD curl -fsS "http://localhost:${WORKER_PORT}/health" || exit 1
 
 CMD ["python", "main.py"]
