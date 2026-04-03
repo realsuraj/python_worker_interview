@@ -1681,12 +1681,12 @@
       "lastTs": 1775208570
     },
     "https://timespro.com/blog/sales-interview-questions-and-answers": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775199946
+      "lastTs": 1775208602
     },
     "https://x0pa.com/hiring/salesman-interview-questions/": {
       "pass": 3,
@@ -3729,12 +3729,12 @@
       "lastTs": 1775200143
     },
     "https://intellipaat.com/blog/interview-question/sales-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200144
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208603
     },
     "https://www.cvowl.com/blog/sales-interview-questions-answers": {
       "pass": 4,
@@ -3753,20 +3753,20 @@
       "lastTs": 1775200145
     },
     "https://www.vervecopilot.com/interview-questions/top-30-most-common-sales-interview-questions-and-answers-for-freshers-you-should-prepare-for": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200149
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208602
     },
     "https://www.jobhai.com/blog/learning/top-40-sales-interview-questions-and-answers": {
-      "pass": 1,
+      "pass": 2,
       "fail": 2,
       "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775200152
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208602
     },
     "https://www.geeksforgeeks.org/marketing/sales-interview-questions-and-answers/": {
       "pass": 4,
@@ -3778,19 +3778,19 @@
     },
     "https://www.linkedin.com/pulse/job-interview-question-answer-sales-position-fresher": {
       "pass": 0,
-      "fail": 4,
+      "fail": 12,
       "domain": "sales",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775199946
+      "lastTs": 1775208603
     },
     "https://www.careers360.com/courses-certifications/articles/sales-interview-questions-answers": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200154
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208602
     },
     "https://www.indeed.com/career-advice/interviewing/sales-role-play-interview": {
       "pass": 1,
@@ -5639,6 +5639,22 @@
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
       "lastTs": 1775208570
+    },
+    "https://www.mindgroom.in/blogs/15-essential-sales-interview-questions-and-answers-for-freshers": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208602
+    },
+    "https://www.simplilearn.com/sales-interview-questions-answers-article": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775208602
     }
   }
 }
