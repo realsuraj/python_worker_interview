@@ -8266,11 +8266,11 @@
     },
     "https://www.ambitionbox.com/profiles/chat-process/interview-questions": {
       "pass": 0,
-      "fail": 80,
+      "fail": 88,
       "domain": "chat_process",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775288795
+      "lastTs": 1775288828
     },
     "https://www.pmapstest.com/blog/chat-support-interview-questions": {
       "pass": 1,
@@ -8599,6 +8599,38 @@
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
       "lastTs": 1775288762
+    },
+    "https://interviewprep.org/process-engineer-interview-questions/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775288826
+    },
+    "https://www.indeed.com/career-advice/interviewing/process-engineer-interview-questions": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775288826
+    },
+    "https://resumedesign.ai/interview-questions/process-engineer/": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775288826
+    },
+    "https://www.tealhq.com/career-paths/process-engineer-interview-questions": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775288826
     }
   }
 }
