@@ -25,12 +25,12 @@
       "lastTs": 1775283713
     },
     "https://www.interviewbit.com/java-interview-questions/": {
-      "pass": 69,
+      "pass": 70,
       "fail": 4,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775293408
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298278
     },
     "https://www.geeksforgeeks.org/java-interview-questions/": {
       "pass": 59,
@@ -57,12 +57,12 @@
       "lastTs": 1775293408
     },
     "https://www.edureka.co/blog/interview-questions/java-interview-questions/": {
-      "pass": 66,
+      "pass": 67,
       "fail": 1,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775293409
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298278
     },
     "https://www.digitalocean.com/community/tutorials/java-interview-questions-and-answers": {
       "pass": 0,
@@ -81,36 +81,36 @@
       "lastTs": 1775293409
     },
     "https://www.geeksforgeeks.org/java/java-interview-questions/": {
-      "pass": 67,
+      "pass": 68,
       "fail": 4,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775293409
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298278
     },
     "https://www.guru99.com/java-interview-questions-answers.html": {
-      "pass": 67,
+      "pass": 68,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775293409
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298278
     },
     "https://www.tpointtech.com/corejava-interview-questions": {
-      "pass": 63,
+      "pass": 64,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775293409
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298278
     },
     "https://www.datacamp.com/blog/java-interview-questions": {
-      "pass": 7,
+      "pass": 8,
       "fail": 63,
       "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775293410
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298278
     },
     "https://www.w3schools.com/java/java_interview_questions.asp": {
       "pass": 67,
@@ -121,28 +121,28 @@
       "lastTs": 1775293410
     },
     "https://codegnan.com/java-interview-questions/": {
-      "pass": 68,
+      "pass": 69,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775293410
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298278
     },
     "https://codefinity.com/blog/The-80-Top-Java-Interview-Questions-and-Answers": {
-      "pass": 68,
+      "pass": 69,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775293410
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298278
     },
     "https://interviewquestions.guru/core-java-interview-questions-answers/": {
-      "pass": 68,
+      "pass": 69,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775293411
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298316
     },
     "https://duckduckgo.com/feedback.html": {
       "pass": 0,
@@ -161,12 +161,12 @@
       "lastTs": 1775293411
     },
     "https://interviewprep.org/java-interview-questions/": {
-      "pass": 68,
+      "pass": 69,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775293411
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298278
     },
     "https://www.simplilearn.com/java-interview-questions-article": {
       "pass": 66,
@@ -729,28 +729,28 @@
       "lastTs": 1775292084
     },
     "https://www.geeksforgeeks.org/interview-prep/interview-corner/": {
-      "pass": 53,
+      "pass": 54,
       "fail": 0,
-      "domain": "java",
+      "domain": "react",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775292091
+      "lastReason": "expanded_link",
+      "lastTs": 1775298069
     },
     "https://www.geeksforgeeks.org/aptitude/aptitude-questions-and-answers/": {
-      "pass": 53,
+      "pass": 54,
       "fail": 0,
-      "domain": "java",
+      "domain": "react",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775292093
+      "lastReason": "expanded_link",
+      "lastTs": 1775298069
     },
     "https://www.interviewbit.com/api/v3/redirect/scaler_auth/?redirect_url=aHR0cHM6Ly9zY2FsZXIuY29tL3RvcGljcy9jb3Vyc2VzP3V0bV9zb3VyY2U9aWI=": {
       "pass": 0,
-      "fail": 15,
-      "domain": "java",
+      "fail": 16,
+      "domain": "react",
       "lastStatus": "fail",
       "lastReason": "blocked_path",
-      "lastTs": 1775283713
+      "lastTs": 1775298070
     },
     "https://www.turing.com/interview-questions/java": {
       "pass": 0,
@@ -769,12 +769,12 @@
       "lastTs": 1775283724
     },
     "https://www.geeksforgeeks.org/category/interview-preparation/interview-questions/": {
-      "pass": 1,
+      "pass": 2,
       "fail": 18,
-      "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775283724
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "expanded_link",
+      "lastTs": 1775298069
     },
     "https://www.geeksforgeeks.org/tag/interview-preparation/": {
       "pass": 1,
@@ -793,76 +793,76 @@
       "lastTs": 1775283725
     },
     "https://www.geeksforgeeks.org/tag/interview-questions/": {
-      "pass": 1,
+      "pass": 2,
       "fail": 18,
-      "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775283725
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "expanded_link",
+      "lastTs": 1775298069
     },
     "https://www.interviewbit.com/": {
-      "pass": 49,
+      "pass": 50,
       "fail": 3,
-      "domain": "java",
+      "domain": "react",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775292096
+      "lastReason": "expanded_link",
+      "lastTs": 1775298070
     },
     "https://www.interviewbit.com/practice/": {
-      "pass": 19,
+      "pass": 20,
       "fail": 4,
-      "domain": "java",
+      "domain": "react",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775283727
+      "lastReason": "expanded_link",
+      "lastTs": 1775298070
     },
     "https://www.interviewbit.com/technical-interview-questions/": {
-      "pass": 19,
+      "pass": 20,
       "fail": 4,
-      "domain": "java",
+      "domain": "react",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775283728
+      "lastReason": "expanded_link",
+      "lastTs": 1775298070
     },
     "https://www.interviewbit.com/coding-interview-questions/": {
-      "pass": 1,
+      "pass": 2,
       "fail": 18,
-      "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775283729
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "expanded_link",
+      "lastTs": 1775298070
     },
     "https://www.interviewbit.com/courses/fast-track/": {
-      "pass": 18,
+      "pass": 19,
       "fail": 4,
-      "domain": "java",
+      "domain": "react",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775283730
+      "lastReason": "expanded_link",
+      "lastTs": 1775298070
     },
     "https://www.interviewbit.com/blog/": {
-      "pass": 18,
+      "pass": 19,
       "fail": 0,
-      "domain": "java",
+      "domain": "react",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775283731
+      "lastReason": "expanded_link",
+      "lastTs": 1775298070
     },
     "https://www.interviewbit.com/interview-preparation-kit/": {
-      "pass": 16,
+      "pass": 17,
       "fail": 4,
-      "domain": "java",
+      "domain": "react",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775283732
+      "lastReason": "expanded_link",
+      "lastTs": 1775298070
     },
     "https://www.interviewbit.com/contests/": {
-      "pass": 0,
+      "pass": 1,
       "fail": 17,
-      "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775283733
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "expanded_link",
+      "lastTs": 1775298070
     },
     "https://www.interviewbit.com/online-cpp-compiler/": {
       "pass": 18,
@@ -1778,443 +1778,443 @@
     },
     "https://www.indeed.com/career-advice/interviewing/call-center-interview-questions": {
       "pass": 3,
-      "fail": 6,
+      "fail": 8,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295088
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295761
     },
     "https://www.naukri.com/blog/bpo-interview-questions-and-answers/": {
-      "pass": 2,
+      "pass": 4,
       "fail": 4,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288159
+      "lastTs": 1775295762
     },
     "https://www.simplilearn.com/customer-service-interview-questions-and-answers-article": {
       "pass": 0,
-      "fail": 6,
+      "fail": 8,
       "domain": "voice_process",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775288160
+      "lastTs": 1775295762
     },
     "https://www.glassdoor.com/blog/guide/customer-service-interview-questions/": {
       "pass": 0,
-      "fail": 6,
+      "fail": 8,
       "domain": "voice_process",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775288161
+      "lastTs": 1775295763
     },
     "https://www.foundit.in/career-advice/customer-service-interview-questions/": {
-      "pass": 2,
+      "pass": 4,
       "fail": 4,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288162
+      "lastTs": 1775295764
     },
     "https://www.indeed.com/career-advice/interviewing/customer-service-interview-questions": {
       "pass": 0,
-      "fail": 4,
+      "fail": 6,
       "domain": "chat_process",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775190015
+      "lastTs": 1775296608
     },
     "https://www.interviewbit.com/customer-service-interview-questions/": {
       "pass": 0,
-      "fail": 4,
+      "fail": 6,
       "domain": "chat_process",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775190015
+      "lastTs": 1775296610
     },
     "https://www.zendesk.com/blog/customer-service-interview-questions/": {
       "pass": 0,
-      "fail": 4,
+      "fail": 6,
       "domain": "chat_process",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775190016
+      "lastTs": 1775296614
     },
     "https://www.glassdoor.com/blog/guide/customer-support-interview-questions/": {
       "pass": 0,
-      "fail": 4,
+      "fail": 6,
       "domain": "chat_process",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775190016
+      "lastTs": 1775296615
     },
     "https://www.freshworks.com/customer-service/help-desk/customer-service-interview-questions-blog/": {
       "pass": 0,
-      "fail": 4,
+      "fail": 6,
       "domain": "chat_process",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775190016
+      "lastTs": 1775296618
     },
     "https://www.interviewbit.com/flutter-interview-questions/": {
-      "pass": 0,
-      "fail": 4,
+      "pass": 1,
+      "fail": 6,
       "domain": "flutter",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775190016
+      "lastTs": 1775297335
     },
     "https://www.geeksforgeeks.org/flutter-interview-questions-and-answers/": {
-      "pass": 0,
+      "pass": 2,
       "fail": 4,
       "domain": "flutter",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190016
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297336
     },
     "https://www.turing.com/interview-questions/flutter": {
-      "pass": 0,
-      "fail": 4,
+      "pass": 1,
+      "fail": 5,
       "domain": "flutter",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775190016
+      "lastTs": 1775297337
     },
     "https://www.simplilearn.com/flutter-interview-questions-article": {
-      "pass": 0,
+      "pass": 3,
       "fail": 4,
       "domain": "flutter",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190017
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297340
     },
     "https://www.javatpoint.com/flutter-interview-questions": {
       "pass": 0,
-      "fail": 4,
+      "fail": 6,
       "domain": "flutter",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775190017
+      "lastTs": 1775297342
     },
     "https://www.edureka.co/blog/interview-questions/flutter-interview-questions/": {
-      "pass": 0,
+      "pass": 2,
       "fail": 4,
       "domain": "flutter",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190017
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297344
     },
     "https://www.scholarhat.com/tutorial/flutter/flutter-interview-questions-and-answers": {
-      "pass": 0,
+      "pass": 2,
       "fail": 4,
       "domain": "flutter",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190017
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297345
     },
     "https://www.fullstack.cafe/blog/flutter-interview-questions": {
       "pass": 0,
-      "fail": 4,
+      "fail": 5,
       "domain": "flutter",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775190017
+      "lastTs": 1775297347
     },
     "https://www.geeksforgeeks.org/flutter/flutter-interview-questions/": {
-      "pass": 0,
+      "pass": 3,
       "fail": 4,
       "domain": "flutter",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190017
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297348
     },
     "https://medium.com/@anandgaur2207/top-flutter-interview-questions-and-answers-e7fbe9db7390": {
-      "pass": 0,
-      "fail": 4,
+      "pass": 1,
+      "fail": 6,
       "domain": "flutter",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775190017
+      "lastTs": 1775297349
     },
     "https://www.wecreateproblems.com/interview-questions/flutter-interview-questions": {
-      "pass": 0,
+      "pass": 3,
       "fail": 4,
       "domain": "flutter",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190017
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297350
     },
     "https://github.com/justsandip/flutter-interview-questions": {
-      "pass": 0,
+      "pass": 3,
       "fail": 4,
       "domain": "flutter",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190018
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297354
     },
     "https://www.tpointtech.com/flutter-interview-questions": {
-      "pass": 0,
+      "pass": 3,
       "fail": 4,
       "domain": "flutter",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190018
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297357
     },
     "https://wordsatease.com/flutter-interview-questions-answers/": {
-      "pass": 0,
+      "pass": 3,
       "fail": 4,
       "domain": "flutter",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190018
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297361
     },
     "https://interviewprep.org/flutter-interview-questions/": {
-      "pass": 0,
+      "pass": 3,
       "fail": 4,
       "domain": "flutter",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190018
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297363
     },
     "https://multiverseapp.com/blog/flutter-interview-questions-and-answers": {
-      "pass": 0,
+      "pass": 3,
       "fail": 4,
       "domain": "flutter",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190018
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297366
     },
     "https://www.interviewbit.com/react-interview-questions/": {
-      "pass": 0,
+      "pass": 3,
       "fail": 2,
       "domain": "react",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190019
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298072
     },
     "https://www.geeksforgeeks.org/reactjs-interview-questions/": {
-      "pass": 0,
+      "pass": 2,
       "fail": 2,
       "domain": "react",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190019
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298073
     },
     "https://react.dev/learn": {
-      "pass": 0,
+      "pass": 2,
       "fail": 2,
       "domain": "react",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190019
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298074
     },
     "https://www.simplilearn.com/tutorials/reactjs-tutorial/reactjs-interview-questions": {
-      "pass": 0,
+      "pass": 3,
       "fail": 2,
       "domain": "react",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190030
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298076
     },
     "https://www.javatpoint.com/react-interview-questions": {
       "pass": 0,
-      "fail": 2,
+      "fail": 4,
       "domain": "react",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775190030
+      "lastTs": 1775298080
     },
     "https://www.edureka.co/blog/interview-questions/react-interview-questions/": {
-      "pass": 0,
+      "pass": 2,
       "fail": 2,
       "domain": "react",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190030
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298083
     },
     "https://www.turing.com/interview-questions/react-js": {
       "pass": 0,
-      "fail": 2,
+      "fail": 3,
       "domain": "react",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775190031
+      "lastTs": 1775298084
     },
     "https://www.fullstack.cafe/blog/react-interview-questions": {
       "pass": 0,
-      "fail": 2,
+      "fail": 3,
       "domain": "react",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775190031
+      "lastTs": 1775298085
     },
     "https://www.geeksforgeeks.org/reactjs/react-interview-questions/": {
-      "pass": 0,
-      "fail": 2,
-      "domain": "react",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190031
-    },
-    "https://www.greatfrontend.com/blog/50-reactjs-interview-questions-for-experienced-developers": {
-      "pass": 0,
-      "fail": 2,
-      "domain": "react",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190031
-    },
-    "https://hackr.io/blog/react-interview-questions": {
-      "pass": 0,
-      "fail": 2,
-      "domain": "react",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190031
-    },
-    "https://interviewquestions.guru/react-interview-questions-answers/": {
-      "pass": 0,
-      "fail": 2,
-      "domain": "react",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190031
-    },
-    "https://namastedev.com/blog/top-react-interview-questions-2025/": {
-      "pass": 0,
-      "fail": 2,
-      "domain": "react",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190031
-    },
-    "https://internshala.com/blog/top-react-coding-interview-questions/": {
       "pass": 3,
       "fail": 2,
-      "domain": "voice_process",
+      "domain": "react",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288306
+      "lastTs": 1775298086
+    },
+    "https://www.greatfrontend.com/blog/50-reactjs-interview-questions-for-experienced-developers": {
+      "pass": 3,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298088
+    },
+    "https://hackr.io/blog/react-interview-questions": {
+      "pass": 3,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298092
+    },
+    "https://interviewquestions.guru/react-interview-questions-answers/": {
+      "pass": 3,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298094
+    },
+    "https://namastedev.com/blog/top-react-interview-questions-2025/": {
+      "pass": 1,
+      "fail": 4,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298095
+    },
+    "https://internshala.com/blog/top-react-coding-interview-questions/": {
+      "pass": 8,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298266
     },
     "https://mimo.org/blog/react-interview-questions": {
-      "pass": 0,
+      "pass": 3,
       "fail": 2,
       "domain": "react",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190032
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298097
     },
     "https://www.guru99.com/react-js-interview-questions.html": {
-      "pass": 0,
+      "pass": 3,
       "fail": 2,
       "domain": "react",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190032
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298099
     },
     "https://interviewkickstart.com/blogs/interview-questions/react-interview-questions": {
-      "pass": 0,
+      "pass": 3,
       "fail": 2,
       "domain": "react",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775190032
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298103
     },
     "https://medium.com/@krishsurya1249/100-react-interview-question-and-answer-5bd834f42cbb": {
-      "pass": 0,
-      "fail": 2,
+      "pass": 1,
+      "fail": 4,
       "domain": "react",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775190032
+      "lastTs": 1775298104
     },
     "https://www.softwaretestinghelp.com/core-java-interview-questions/": {
+      "pass": 11,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298282
+    },
+    "https://www.java-success.com/java-scenarios-based-interview-questions-answers/": {
       "pass": 10,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775292622
-    },
-    "https://www.java-success.com/java-scenarios-based-interview-questions-answers/": {
-      "pass": 9,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292471
+      "lastTs": 1775298354
     },
     "https://medium.com/@rinkibansal2022/250-scenario-based-java-questions-0fd663f736c6": {
-      "pass": 5,
+      "pass": 6,
       "fail": 4,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775292471
+      "lastTs": 1775298354
     },
     "https://jinaldesai.com/50-java-interview-questions-30-scenario-based-qa/": {
-      "pass": 9,
+      "pass": 10,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775292471
+      "lastTs": 1775298354
     },
     "https://crsinfosolutions.com/scenario-based-java-interview-questions/": {
-      "pass": 9,
+      "pass": 10,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775292471
+      "lastTs": 1775298354
     },
     "https://resumedesign.ai/interview-questions/java-scenario-based/": {
-      "pass": 9,
+      "pass": 10,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775292472
+      "lastTs": 1775298354
     },
     "https://dreamsarthi.com/30-scenario-based-java-microservices-interview-questions-with-answers/": {
-      "pass": 8,
+      "pass": 9,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775285881
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298354
     },
     "https://www.c-sharpcorner.com/article/top-java-spring-boot-scenario-based-interview-questions/": {
-      "pass": 9,
+      "pass": 10,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775292472
+      "lastTs": 1775298354
     },
     "https://nareshjobs.com/java-real-time-scenario-based-interview-questions-and-answers/": {
-      "pass": 5,
+      "pass": 6,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775207685
+      "lastTs": 1775298354
     },
     "https://quescol.com/interview-preparation/scenario-based-java-8-coding-interview-questions": {
-      "pass": 9,
+      "pass": 10,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775292472
+      "lastTs": 1775298354
     },
     "https://www.interviewplus.ai/additional-question-types/scenario-based-questions/java": {
-      "pass": 9,
+      "pass": 10,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775292472
+      "lastTs": 1775298356
     },
     "https://www.youtube.com/watch?v=C0HWpab1V-c": {
       "pass": 0,
@@ -2233,12 +2233,12 @@
       "lastTs": 1775293217
     },
     "https://climbtheladder.com/java-project-interview-questions/": {
-      "pass": 9,
+      "pass": 10,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775292550
+      "lastTs": 1775298388
     },
     "https://huntr.co/interview-questions/java": {
       "pass": 6,
@@ -2249,12 +2249,12 @@
       "lastTs": 1775293221
     },
     "https://www.toptal.com/developers/java/interview-questions": {
-      "pass": 5,
+      "pass": 6,
       "fail": 4,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775292558
+      "lastTs": 1775298390
     },
     "https://btechgeeks.com/project-management-interview-questions-in-java/": {
       "pass": 4,
@@ -2289,20 +2289,20 @@
       "lastTs": 1775207719
     },
     "https://medium.com/javarevisited/top-300-essential-java-interview-questions-and-answers-db3c2a734f68": {
-      "pass": 5,
+      "pass": 6,
       "fail": 4,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775292558
+      "lastTs": 1775298390
     },
     "https://www.javacodegeeks.com/java-interview-questions.html": {
-      "pass": 8,
+      "pass": 9,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775285867
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298388
     },
     "https://www.scholarhat.com/tutorial/java/java-interview-questions-and-answers": {
       "pass": 1,
@@ -2369,12 +2369,12 @@
       "lastTs": 1775293101
     },
     "https://www.javaguides.net/p/top-java-interview-questions-and-answers.html": {
-      "pass": 8,
+      "pass": 9,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775293223
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298388
     },
     "https://prepinsta.com/interview-preparation/technical-interview-questions/java/": {
       "pass": 1,
@@ -2585,12 +2585,12 @@
       "lastTs": 1775293208
     },
     "https://www.coursera.org/articles/java-interview-questions": {
-      "pass": 9,
+      "pass": 10,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775292623
+      "lastTs": 1775298390
     },
     "https://www.cvowl.com/blog/java-engineer-interview-questions-answers": {
       "pass": 9,
@@ -2625,12 +2625,12 @@
       "lastTs": 1775194279
     },
     "https://dev.to/fpaghar/25-hr-interview-questions-for-developer-with-sample-12c9": {
-      "pass": 9,
+      "pass": 12,
       "fail": 0,
-      "domain": "java",
+      "domain": "react",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775293101
+      "lastReason": "fetched",
+      "lastTs": 1775298269
     },
     "https://www.geeksforgeeks.org/hr/hr-interview-questions/": {
       "pass": 15,
@@ -2753,92 +2753,92 @@
       "lastTs": 1775208184
     },
     "https://www.indeed.com/career-advice/interviewing/sample-engineering-interview-questions": {
-      "pass": 10,
-      "fail": 8,
-      "domain": "business_development",
+      "pass": 14,
+      "fail": 10,
+      "domain": "react",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775295008
+      "lastTs": 1775298269
     },
     "https://www.intuit.com/blog/innovative-thinking/60-engineering-interview-questions-to-expect-and-12-to-ask-during-your-job-search/": {
-      "pass": 17,
+      "pass": 23,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "react",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775295012
+      "lastTs": 1775298269
     },
     "https://interviewprep.org/engineering-interview-questions/": {
-      "pass": 17,
+      "pass": 23,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "react",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775295011
+      "lastTs": 1775298269
     },
     "https://status.net/articles/common-engineering-interview-questions-sample-answers/": {
-      "pass": 18,
+      "pass": 24,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "react",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775295013
+      "lastTs": 1775298270
     },
     "https://www.apollotechnical.com/engineering-interview-questions/": {
-      "pass": 14,
+      "pass": 19,
       "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775295017
-    },
-    "https://huntr.co/interview-questions/engineer": {
-      "pass": 18,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775295023
-    },
-    "https://interviewbaba.com/common-engineering-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775284469
-    },
-    "https://www.cvowl.com/blog/engineering-interview-questions-answers": {
-      "pass": 15,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775295016
-    },
-    "https://www.contractengineeringstaffing.com/common-engineering-interview-questions/": {
-      "pass": 1,
-      "fail": 0,
-      "domain": "java",
+      "domain": "react",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775194381
+      "lastTs": 1775298033
     },
-    "https://www.vervecopilot.com/interview-questions/top-30-most-common-engineering-interview-questions-you-should-prepare-for": {
-      "pass": 17,
+    "https://huntr.co/interview-questions/engineer": {
+      "pass": 22,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775297286
+    },
+    "https://interviewbaba.com/common-engineering-interview-questions/": {
+      "pass": 12,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775297288
+    },
+    "https://www.cvowl.com/blog/engineering-interview-questions-answers": {
+      "pass": 21,
+      "fail": 0,
+      "domain": "react",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775295014
+      "lastTs": 1775298270
+    },
+    "https://www.contractengineeringstaffing.com/common-engineering-interview-questions/": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775297288
+    },
+    "https://www.vervecopilot.com/interview-questions/top-30-most-common-engineering-interview-questions-you-should-prepare-for": {
+      "pass": 23,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298270
     },
     "https://www.evinex.com/resources/articles/100-interview-questions-for-engineers/": {
       "pass": 0,
-      "fail": 64,
-      "domain": "business_development",
+      "fail": 96,
+      "domain": "react",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775294836
+      "lastTs": 1775298033
     },
     "https://globalcareerconsultants.us/common-engineering-interview-questions/": {
       "pass": 7,
@@ -2849,12 +2849,12 @@
       "lastTs": 1775285981
     },
     "https://resume.co/blog/engineering-interview-questions": {
-      "pass": 12,
+      "pass": 14,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "react",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775295021
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298031
     },
     "https://builtin.com/software-engineering-perspectives/java-interview-questions": {
       "pass": 9,
@@ -3553,12 +3553,12 @@
       "lastTs": 1775294090
     },
     "https://www.indeed.com/career-advice/interviewing/hr-interview-questions": {
-      "pass": 5,
-      "fail": 6,
-      "domain": "sales",
+      "pass": 6,
+      "fail": 7,
+      "domain": "chat_process",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775294128
+      "lastTs": 1775296780
     },
     "https://www.multiplymii.com/interview-repository/sales-representative": {
       "pass": 10,
@@ -3681,12 +3681,12 @@
       "lastTs": 1775294154
     },
     "https://www.themuse.com/advice/behavioral-interview-questions-answers-examples": {
-      "pass": 17,
+      "pass": 22,
       "fail": 0,
-      "domain": "voice_process",
+      "domain": "react",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295418
+      "lastReason": "fetched",
+      "lastTs": 1775298269
     },
     "https://learn.salesfolks.com/essential-sales-behavioral-interview-questions-and-answers/": {
       "pass": 10,
@@ -3825,12 +3825,12 @@
       "lastTs": 1775293875
     },
     "https://phponline.in/blog/role-play-interview-questions-and-answers/": {
-      "pass": 4,
+      "pass": 7,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288794
+      "lastReason": "fetched",
+      "lastTs": 1775296694
     },
     "https://www.hyperbound.ai/blog/sales-roleplay-playbook": {
       "pass": 7,
@@ -3929,12 +3929,12 @@
       "lastTs": 1775293909
     },
     "https://interviewprep.org/": {
-      "pass": 6,
+      "pass": 7,
       "fail": 1,
-      "domain": "sales",
+      "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "expanded_link",
-      "lastTs": 1775293913
+      "lastTs": 1775295740
     },
     "https://www.indeed.com/career-advice/interviewing/business-development-manager-interview-questions": {
       "pass": 4,
@@ -4217,20 +4217,20 @@
       "lastTs": 1775294958
     },
     "https://www.indeed.com/career-advice/interviewing/situational-interview-questions-and-answers": {
-      "pass": 4,
-      "fail": 6,
-      "domain": "business_development",
+      "pass": 5,
+      "fail": 7,
+      "domain": "chat_process",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775294958
+      "lastTs": 1775296780
     },
     "https://www.navero.me/blog/scenario-based-interview-questions": {
-      "pass": 16,
+      "pass": 19,
       "fail": 0,
-      "domain": "voice_process",
+      "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295252
+      "lastReason": "fetched",
+      "lastTs": 1775296780
     },
     "https://techcanvass.com/blogs/what-are-some-scenario-based-and-logical-questions-that-are-asked-in-a-business-analyst-interview": {
       "pass": 10,
@@ -4249,12 +4249,12 @@
       "lastTs": 1775294968
     },
     "https://www.hipeople.io/interview-questions/scenario-based-interview-questions": {
-      "pass": 18,
+      "pass": 21,
       "fail": 0,
-      "domain": "voice_process",
+      "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295252
+      "lastReason": "fetched",
+      "lastTs": 1775296780
     },
     "https://interviewprep.org/business-developer-interview-questions/": {
       "pass": 10,
@@ -4497,20 +4497,20 @@
       "lastTs": 1775200980
     },
     "https://engineersnotebook.com/interview-questions/": {
-      "pass": 10,
+      "pass": 12,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "react",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775295020
+      "lastTs": 1775298270
     },
     "https://www.mockinterviewpro.com/interview-questions/engineer": {
-      "pass": 9,
+      "pass": 13,
       "fail": 0,
-      "domain": "voice_process",
+      "domain": "react",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288107
+      "lastReason": "fetched",
+      "lastTs": 1775298272
     },
     "https://www.ambitionbox.com/profiles/business-development-engineer/interview-questions": {
       "pass": 0,
@@ -4890,139 +4890,139 @@
     },
     "https://www.indeed.com/career-advice/interviewing/voice-process-interview-questions": {
       "pass": 3,
-      "fail": 2,
+      "fail": 4,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295055
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295765
     },
     "https://timespro.com/blog/voice-process-interview-questions-and-answers-for-freshers-and-experts": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295055
+      "lastReason": "fetched",
+      "lastTs": 1775295769
     },
     "https://www.vervecopilot.com/interview-questions/top-30-most-common-voice-process-interview-questions-you-should-prepare-for": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295055
+      "lastReason": "fetched",
+      "lastTs": 1775295770
     },
     "https://concentrixcareers.blogspot.com/2025/07/how-to-prepare-for-voice-process-job.html": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295057
+      "lastReason": "fetched",
+      "lastTs": 1775295781
     },
     "https://www.foundit.in/career-advice/voice-process-interview-questions/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295055
+      "lastReason": "fetched",
+      "lastTs": 1775295771
     },
     "https://jobifyindia.com/blog/voice-process-interview-questions-and-answer/": {
       "pass": 5,
-      "fail": 0,
+      "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295122
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295801
     },
     "https://www.cvowl.com/blog/customer-support-for-voice-process-interview-questions-answers": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295055
+      "lastReason": "fetched",
+      "lastTs": 1775295778
     },
     "https://www.theknowledgeacademy.com/interview-questions/voice-process-interview-questions/": {
       "pass": 3,
-      "fail": 2,
+      "fail": 4,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295055
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295772
     },
     "https://yourcareersupport.com/voice-process-interview-questions/": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775201029
+      "lastReason": "fetched",
+      "lastTs": 1775295753
     },
     "https://internshala.com/blog/genpact-voice-process-interview-questions/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295057
+      "lastReason": "fetched",
+      "lastTs": 1775295782
     },
     "https://jobifyindia.com/wp-content/uploads/2025/04/Common-Voice-Process-Interview-Questions-and-Best-Ways-to-Answer.pdf": {
       "pass": 3,
-      "fail": 2,
+      "fail": 4,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295055
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295772
     },
     "https://in.indeed.com/career-advice/interviewing/voice-process-interview-questions": {
       "pass": 3,
-      "fail": 2,
+      "fail": 4,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295121
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295800
     },
     "https://interviewprep.org/customer-service-call-center-interview-questions/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295088
+      "lastReason": "fetched",
+      "lastTs": 1775295784
     },
     "https://career.guru99.com/top-25-call-center-job-interview-questions/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295088
+      "lastReason": "fetched",
+      "lastTs": 1775295785
     },
     "https://dailyremote.com/advice/call-center-interview-questions": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295088
+      "lastReason": "fetched",
+      "lastTs": 1775295786
     },
     "https://careersidekick.com/15-most-common-call-center-interview-questions-and-answers/": {
-      "pass": 3,
+      "pass": 5,
       "fail": 2,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295088
+      "lastReason": "fetched",
+      "lastTs": 1775295789
     },
     "https://www.softwaretestinghelp.com/call-center-interview-questions/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295088
+      "lastReason": "fetched",
+      "lastTs": 1775295795
     },
     "https://www.cvowl.com/blog/call-center-customer-service-representative-interview-questions-answers": {
       "pass": 1,
@@ -5034,19 +5034,19 @@
     },
     "https://www.mockquestions.com/position/Call+Center/": {
       "pass": 3,
-      "fail": 2,
+      "fail": 4,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295088
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295791
     },
     "https://www.verint.com/blog/21-interview-questions-to-ask-when-hiring-all-star-call-center-agents/": {
-      "pass": 2,
+      "pass": 4,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295090
+      "lastReason": "fetched",
+      "lastTs": 1775295745
     },
     "https://atsresume.ai/blog/call-center-interview-questions": {
       "pass": 1,
@@ -5057,84 +5057,84 @@
       "lastTs": 1775201063
     },
     "https://topinterview.com/interview-advice/12-common-call-center-interview-questions-and-the-right-way-to-answer-them": {
-      "pass": 2,
+      "pass": 4,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295088
+      "lastReason": "fetched",
+      "lastTs": 1775295744
     },
     "https://interviewprep.org/customer-support-interview-questions/": {
-      "pass": 6,
+      "pass": 10,
       "fail": 0,
-      "domain": "voice_process",
+      "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295121
+      "lastReason": "fetched",
+      "lastTs": 1775296779
     },
     "https://www.glassdoor.com/Interview/customer-support-executive-voice-interview-questions-SRCH_KO0,32.htm": {
       "pass": 3,
-      "fail": 2,
+      "fail": 4,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295121
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295800
     },
     "https://resumedesign.ai/interview-questions/voice-of-the/": {
-      "pass": 2,
+      "pass": 4,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295121
+      "lastReason": "fetched",
+      "lastTs": 1775295748
     },
     "https://dailyremote.com/advice/customer-support-interview-questions": {
-      "pass": 3,
+      "pass": 7,
       "fail": 0,
-      "domain": "voice_process",
+      "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295121
+      "lastReason": "fetched",
+      "lastTs": 1775296779
     },
     "https://www.pmapstest.com/blog/bpo-interview-questions": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295153
+      "lastReason": "fetched",
+      "lastTs": 1775295804
     },
     "https://interviewquestionshub.com/bpo-interview-questions-and-answers/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295154
+      "lastReason": "fetched",
+      "lastTs": 1775295811
     },
     "https://screeninghive.com/interview-questions/bpo/voice-process-agent": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295153
+      "lastReason": "fetched",
+      "lastTs": 1775295806
     },
     "https://www.dailyrecruitment.in/bpo-interview-questions-and-answer-pdf/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295154
+      "lastReason": "fetched",
+      "lastTs": 1775295810
     },
     "https://internshala.com/blog/bpo-interview-questions/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295154
+      "lastReason": "fetched",
+      "lastTs": 1775295808
     },
     "https://www.wecreateproblems.com/interview-questions/bpo-interview-questions": {
       "pass": 4,
@@ -5153,12 +5153,12 @@
       "lastTs": 1775288209
     },
     "https://www.vervecopilot.com/interview-questions/top-30-most-common-international-voice-process-interview-questions-you-should-prepare-for": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295154
+      "lastReason": "fetched",
+      "lastTs": 1775295809
     },
     "https://career.guru99.com/top-25-bpo-interview-questions/": {
       "pass": 1,
@@ -5169,108 +5169,108 @@
       "lastTs": 1775201130
     },
     "https://internshala.com/blog/telecaller-interview-questions/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295186
+      "lastReason": "fetched",
+      "lastTs": 1775295813
     },
     "https://callyzer.co/blog/top-telecaller-interview-questions-and-answers-for-freshers-to-experts/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295186
+      "lastReason": "fetched",
+      "lastTs": 1775295815
     },
     "https://in.indeed.com/career-advice/interviewing/telecaller-interview-questions": {
       "pass": 3,
-      "fail": 2,
+      "fail": 4,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295186
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295815
     },
     "https://jobifyindia.com/wp-content/uploads/2025/08/Common-Telecaller-Interview-Questions-With-Sample-Answers.pdf": {
       "pass": 3,
-      "fail": 2,
+      "fail": 4,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295186
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295817
     },
     "https://neodove.com/telecalling-interview-questions/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295186
+      "lastReason": "fetched",
+      "lastTs": 1775295817
     },
     "https://www.jobhai.com/blog/learning/telecaller-job-interview-questions-and-answers": {
       "pass": 3,
-      "fail": 2,
+      "fail": 4,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295186
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295823
     },
     "https://resumedesign.ai/interview-questions/telecaller-job/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295186
+      "lastReason": "fetched",
+      "lastTs": 1775295818
     },
     "https://www.cvowl.com/blog/telecaller-interview-questions-answers": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295186
+      "lastReason": "fetched",
+      "lastTs": 1775295820
     },
     "https://www.hellointern.in/blog/top-interview-questions-and-answers-for-telecaller-74155": {
       "pass": 3,
-      "fail": 1,
+      "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295186
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295824
     },
     "https://www.ambitionbox.com/profiles/voice-process-executive/interview-questions": {
       "pass": 0,
-      "fail": 100,
+      "fail": 108,
       "domain": "voice_process",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775295452
+      "lastTs": 1775295590
     },
     "https://credmark.ai/practice/top-voice-query-processing-interview-questions-and-answers": {
       "pass": 3,
-      "fail": 2,
+      "fail": 4,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295055
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295776
     },
     "https://www.theknowledgeacademy.com/in/interview-questions/voice-process-interview-questions/": {
       "pass": 3,
-      "fail": 2,
+      "fail": 4,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295219
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295825
     },
     "https://www.joinhgs.com/in/en/insights/blogs/screening-interview-tips-voice-non-voice-process-jobs": {
-      "pass": 2,
+      "pass": 5,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288431
+      "lastReason": "fetched",
+      "lastTs": 1775296650
     },
     "https://www.glassdoor.com/Interview/Genpact-Voice-Process-Interview-Questions-EI_IE42613.0,7_KO8,21.htm": {
       "pass": 1,
@@ -5306,19 +5306,19 @@
     },
     "https://www.theknowledgeacademy.com/us/interview-questions/voice-process-interview-questions/": {
       "pass": 3,
-      "fail": 2,
+      "fail": 4,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295319
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295830
     },
     "https://www.founditgulf.com/career-advice/voice-process-interview-questions/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295319
+      "lastReason": "fetched",
+      "lastTs": 1775295830
     },
     "https://no50.com/brief-shots/ace-your-voice-process-interview-top-questions-and-answers-1764799820": {
       "pass": 1,
@@ -5330,27 +5330,27 @@
     },
     "https://www.ambitionbox.com/interviews/cognizant-interview-questions/voice-process-executive": {
       "pass": 0,
-      "fail": 12,
+      "fail": 16,
       "domain": "voice_process",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775295350
+      "lastTs": 1775295622
     },
     "https://cvscreener.co/jobs/Voice-process.html": {
       "pass": 3,
-      "fail": 2,
+      "fail": 4,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295055
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295778
     },
     "https://internshala.com/blog/tech-mahindra-voice-process-interview-questions/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295386
+      "lastReason": "fetched",
+      "lastTs": 1775295834
     },
     "https://nodeflair.com/companies/concentrix/interviews/technical-support-voice-process": {
       "pass": 1,
@@ -5361,76 +5361,76 @@
       "lastTs": 1775201361
     },
     "https://superworks.com/interview-questions/technical-support-voice-process/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295385
+      "lastReason": "fetched",
+      "lastTs": 1775295833
     },
     "https://interviewprep.org/voice-engineer-interview-questions/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295219
+      "lastReason": "fetched",
+      "lastTs": 1775295827
     },
     "https://www.ambitionbox.com/profiles/voice-process/interview-questions/fresher-candidates": {
       "pass": 0,
-      "fail": 12,
+      "fail": 20,
       "domain": "voice_process",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775287905
+      "lastTs": 1775295487
     },
     "https://www.mockinterviewpro.com/interview-questions/voice-engineer": {
-      "pass": 4,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288244
+      "lastTs": 1775295838
     },
     "https://www.cvowl.com/blog/voice-engineer-interview-questions-answers": {
-      "pass": 4,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288243
+      "lastTs": 1775295836
     },
     "https://resumecat.com/blog/voice-engineer-interview-questions": {
-      "pass": 4,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288246
+      "lastTs": 1775295842
     },
     "https://careerhelp.resumegemini.com/interviews/top-10-questions-for-voice-engineer-interview/": {
-      "pass": 4,
+      "pass": 7,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288251
+      "lastTs": 1775295840
     },
     "https://www.glassdoor.com/Interview/voice-engineer-interview-questions-SRCH_KO0,14.htm": {
-      "pass": 2,
-      "fail": 2,
+      "pass": 3,
+      "fail": 4,
       "domain": "voice_process",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775288254
+      "lastTs": 1775295843
     },
     "https://himalayas.app/interview-questions/voice-engineer": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775201533
+      "lastReason": "fetched",
+      "lastTs": 1775295750
     },
     "https://www.scribd.com/document/935956073/30-Must-Know-Java-Scenario-Based-Interview-Questions": {
       "pass": 3,
@@ -5561,12 +5561,12 @@
       "lastTs": 1775208406
     },
     "https://www.projectmanager.com/blog/the-23-best-project-manager-interview-questions": {
-      "pass": 10,
+      "pass": 12,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "chat_process",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775294971
+      "lastTs": 1775296780
     },
     "https://resources.workable.com/sales-interview-questions": {
       "pass": 1,
@@ -6633,76 +6633,76 @@
       "lastTs": 1775284447
     },
     "https://interviewprep.org/category/careers/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 1,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "expanded_link",
-      "lastTs": 1775288157
+      "lastTs": 1775295740
     },
     "https://interviewprep.org/category/companies/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 1,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "expanded_link",
-      "lastTs": 1775288157
+      "lastTs": 1775295740
     },
     "https://interviewprep.org/category/insights/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 1,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "expanded_link",
-      "lastTs": 1775288157
+      "lastTs": 1775295740
     },
     "https://interviewprep.org/category/skills/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 1,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "expanded_link",
-      "lastTs": 1775288157
+      "lastTs": 1775295740
     },
     "https://interviewprep.org/category/technical/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 1,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "expanded_link",
-      "lastTs": 1775288157
+      "lastTs": 1775295740
     },
     "https://interviewprep.org/contact-us/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "expanded_link",
-      "lastTs": 1775288158
+      "lastTs": 1775295740
     },
     "https://interviewprep.org/sign-up/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 1,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "expanded_link",
-      "lastTs": 1775288158
+      "lastTs": 1775295740
     },
     "https://interviewprep.org/sign-in/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 1,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "expanded_link",
-      "lastTs": 1775288158
+      "lastTs": 1775295740
     },
     "https://interviewprep.org/users/8548/profile/interviewprep-career-coach": {
       "pass": 0,
-      "fail": 2,
+      "fail": 3,
       "domain": "voice_process",
       "lastStatus": "fail",
       "lastReason": "blocked_path",
-      "lastTs": 1775288158
+      "lastTs": 1775295740
     },
     "https://interviewprep.org/correctional-counselor-interview-questions/": {
       "pass": 3,
@@ -7745,12 +7745,12 @@
       "lastTs": 1775294954
     },
     "https://www.wecreateproblems.com/interview-questions/behavioral-interview-questions": {
-      "pass": 7,
+      "pass": 9,
       "fail": 0,
-      "domain": "business_development",
+      "domain": "chat_process",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775294989
+      "lastTs": 1775296781
     },
     "https://www.theknowledgeacademy.com/interview-questions/business-development-interview-questions/": {
       "pass": 2,
@@ -7777,20 +7777,20 @@
       "lastTs": 1775287386
     },
     "https://www.cvowl.com/blog/call-center-interview-questions-answers": {
-      "pass": 4,
+      "pass": 6,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295088
+      "lastReason": "fetched",
+      "lastTs": 1775295790
     },
     "https://www.hipeople.io/interview-questions/call-center-interview-questions": {
-      "pass": 4,
+      "pass": 6,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295088
+      "lastReason": "fetched",
+      "lastTs": 1775295796
     },
     "https://resumecat.com/career/call-center/interview-questions": {
       "pass": 3,
@@ -7801,20 +7801,20 @@
       "lastTs": 1775288192
     },
     "https://www.themuse.com/advice/customer-service-interview-questions-answers-examples": {
-      "pass": 4,
+      "pass": 6,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295122
+      "lastReason": "fetched",
+      "lastTs": 1775295803
     },
     "https://www.glassdoor.com/Interview/bpo-voice-interview-questions-SRCH_KO0,9.htm": {
       "pass": 2,
-      "fail": 2,
+      "fail": 4,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295154
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295812
     },
     "https://www.betterteam.com/telecaller-interview-questions": {
       "pass": 3,
@@ -7850,43 +7850,43 @@
     },
     "https://www.glassdoor.com/Interview/voice-process-interview-questions-SRCH_KO0,13.htm": {
       "pass": 2,
-      "fail": 2,
+      "fail": 4,
       "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775295284
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295828
     },
     "https://carreersupport.com/voice-engineer-interview-questions/": {
-      "pass": 3,
+      "pass": 6,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288253
+      "lastTs": 1775295850
     },
     "https://www.glassdoor.com/Interview/HCLTech-Voice-Processing-Interview-Questions-EI_IE553909.0,7_KO8,24.htm": {
-      "pass": 1,
-      "fail": 2,
+      "pass": 2,
+      "fail": 4,
       "domain": "voice_process",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775288254
+      "lastTs": 1775295843
     },
     "https://www.glassdoor.co.in/Interview/Cognizant-Voice-Process-Interview-Questions-EI_IE8014.0,9_KO10,23.htm": {
-      "pass": 1,
-      "fail": 2,
+      "pass": 2,
+      "fail": 4,
       "domain": "voice_process",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775288255
+      "lastTs": 1775295844
     },
     "https://www.ambitionbox.com/interviews/hcl-technologies-interview-questions/voice-process-executive": {
       "pass": 0,
-      "fail": 8,
+      "fail": 12,
       "domain": "voice_process",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775288041
+      "lastTs": 1775295624
     },
     "https://www.glassdoor.com/Interview/TP-Voice-Process-Interview-Questions-EI_IE9779.0,2_KO3,16.htm": {
       "pass": 1,
@@ -7897,324 +7897,324 @@
       "lastTs": 1775288255
     },
     "https://gatecareer.com/top-40-common-engineering-interview-questions-you-must-know/": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288257
-    },
-    "https://timespro.com/blog/how-to-answer-interview-questions-that-test-your-iq": {
-      "pass": 1,
-      "fail": 2,
-      "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288261
-    },
-    "https://timespro.com/blog/what-are-some-commonly-asked-logical-questions-during-interview": {
-      "pass": 1,
-      "fail": 2,
-      "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288264
-    },
-    "https://timespro.com/blog/top-bpo-interview-questions-and-answers": {
-      "pass": 1,
-      "fail": 2,
-      "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288268
-    },
-    "https://timespro.com/executive-education/iim-kashipur-executive-post-graduate-diploma-programme-in-business-management": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288271
-    },
-    "https://timespro.com/executive-education/institute/dtu-delhi-technological-university-courses": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288272
-    },
-    "https://www.app.vervecopilot.com/sign-up": {
-      "pass": 1,
-      "fail": 1,
-      "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288274
-    },
-    "https://linkedin.com/company/verve-ai-interview-copilot": {
-      "pass": 0,
-      "fail": 1,
-      "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "blocked_host",
-      "lastTs": 1775288147
-    },
-    "https://www.tiktok.com/@verveai.interviewcopilot?is_from_webapp=1&sender_device=pc": {
-      "pass": 1,
-      "fail": 2,
-      "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288280
-    },
-    "https://www.foundit.in/rio/login/seeker?return_url=https%3A%2F%2Fwww.foundit.in%2Fcareer-advice%2Fvoice-process-interview-questions%2F&spl=Career_Advice_Login_Header&utm_source=career-advice&utm_medium=banner&utm_campaign=LoginHeader": {
-      "pass": 0,
-      "fail": 1,
-      "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "blocked_path",
-      "lastTs": 1775288148
-    },
-    "https://www.foundit.in/career-advice/interview-questions/": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288282
-    },
-    "https://www.foundit.in/career-advice/interview-tips/": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288283
-    },
-    "https://www.foundit.in/career-advice/voice-process-interview-questions/#respond": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288284
-    },
-    "https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.foundit.in%2Fcareer-advice%2Fvoice-process-interview-questions%2F": {
-      "pass": 0,
-      "fail": 1,
-      "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "blocked_host",
-      "lastTs": 1775288148
-    },
-    "https://twitter.com/intent/tweet?text=50+Voice+Process+Interview+Questions+%28With+Examples%29&url=https%3A%2F%2Fwww.foundit.in%2Fcareer-advice%2Fvoice-process-interview-questions%2F&via=foundit": {
-      "pass": 0,
-      "fail": 1,
-      "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "blocked_host",
-      "lastTs": 1775288148
-    },
-    "https://api.whatsapp.com/send?text=50+Voice+Process+Interview+Questions+%28With+Examples%29 %0A%0A https://www.foundit.in/career-advice/voice-process-interview-questions/": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288285
-    },
-    "https://www.linkedin.com/shareArticle?mini=true&url=https://www.foundit.in/career-advice/voice-process-interview-questions/&title=50+Voice+Process+Interview+Questions+%28With+Examples%29": {
-      "pass": 0,
-      "fail": 1,
-      "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "blocked_host",
-      "lastTs": 1775288148
-    },
-    "https://www.foundit.in/search/hr-jobs": {
-      "pass": 1,
-      "fail": 2,
-      "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288286
-    },
-    "https://www.foundit.in/career-advice/accenture-skills-interview-4-things-you-need-to-know-about/": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288287
-    },
-    "https://www.cvowl.com/interviews/different-type-of-resume-formats": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288288
-    },
-    "https://internshala.com/registration/student/?utm_source=is_blog&utm_medium=genpact-voice-process-interview-questions&utm_campaign=signup_ribbon_guide": {
-      "pass": 1,
-      "fail": 1,
-      "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288288
-    },
-    "https://internshala.com/blog/job-tips/interview-guide/": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288290
-    },
-    "https://internshala.com/blog/employer-resources/hr-resources/": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288291
-    },
-    "https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Finternshala.com%2Fblog%2Fgenpact-voice-process-interview-questions%2F&linkname=Top%2040%20Genpact%20Voice%20Process%20Interview%20Questions%20and%20Answers": {
-      "pass": 1,
-      "fail": 1,
-      "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288293
-    },
-    "https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Finternshala.com%2Fblog%2Fgenpact-voice-process-interview-questions%2F&linkname=Top%2040%20Genpact%20Voice%20Process%20Interview%20Questions%20and%20Answers": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288295
-    },
-    "https://www.addtoany.com/add_to/linkedin?linkurl=https%3A%2F%2Finternshala.com%2Fblog%2Fgenpact-voice-process-interview-questions%2F&linkname=Top%2040%20Genpact%20Voice%20Process%20Interview%20Questions%20and%20Answers": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288297
-    },
-    "https://www.addtoany.com/add_to/whatsapp?linkurl=https%3A%2F%2Finternshala.com%2Fblog%2Fgenpact-voice-process-interview-questions%2F&linkname=Top%2040%20Genpact%20Voice%20Process%20Interview%20Questions%20and%20Answers": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288299
-    },
-    "https://internshala.com/jobs/?utm_source=is_blog&utm_medium=genpact-voice-process-interview-questions&utm_campaign=candidate-web-banner": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288300
-    },
-    "https://internshala.com/jobs/?utm_source=is_blog&utm_medium=genpact-voice-process-interview-questions&utm_campaign=candidate-mobile-banner": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288302
-    },
-    "https://internshala.com/blog/genpact-non-voice-process-interview-questions/": {
       "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775288431
+      "lastTs": 1775296569
     },
-    "https://internshala.com/blog/behavioral-interview-questions/": {
-      "pass": 3,
+    "https://timespro.com/blog/how-to-answer-interview-questions-that-test-your-iq": {
+      "pass": 2,
+      "fail": 4,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295853
+    },
+    "https://timespro.com/blog/what-are-some-commonly-asked-logical-questions-during-interview": {
+      "pass": 2,
+      "fail": 4,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295856
+    },
+    "https://timespro.com/blog/top-bpo-interview-questions-and-answers": {
+      "pass": 2,
+      "fail": 4,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295860
+    },
+    "https://timespro.com/executive-education/iim-kashipur-executive-post-graduate-diploma-programme-in-business-management": {
+      "pass": 6,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288305
+      "lastTs": 1775295862
     },
-    "https://www.facebook.com/sharer.php?u=https%3A%2F%2Finternshala.com%2Fblog%2Fgenpact-voice-process-interview-questions%2F": {
+    "https://timespro.com/executive-education/institute/dtu-delhi-technological-university-courses": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295863
+    },
+    "https://www.app.vervecopilot.com/sign-up": {
+      "pass": 2,
+      "fail": 2,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295866
+    },
+    "https://linkedin.com/company/verve-ai-interview-copilot": {
       "pass": 0,
-      "fail": 1,
+      "fail": 2,
       "domain": "voice_process",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775288155
+      "lastTs": 1775295728
+    },
+    "https://www.tiktok.com/@verveai.interviewcopilot?is_from_webapp=1&sender_device=pc": {
+      "pass": 2,
+      "fail": 4,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295870
+    },
+    "https://www.foundit.in/rio/login/seeker?return_url=https%3A%2F%2Fwww.foundit.in%2Fcareer-advice%2Fvoice-process-interview-questions%2F&spl=Career_Advice_Login_Header&utm_source=career-advice&utm_medium=banner&utm_campaign=LoginHeader": {
+      "pass": 0,
+      "fail": 2,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_path",
+      "lastTs": 1775295729
+    },
+    "https://www.foundit.in/career-advice/interview-questions/": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295871
+    },
+    "https://www.foundit.in/career-advice/interview-tips/": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295872
+    },
+    "https://www.foundit.in/career-advice/voice-process-interview-questions/#respond": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295874
+    },
+    "https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.foundit.in%2Fcareer-advice%2Fvoice-process-interview-questions%2F": {
+      "pass": 0,
+      "fail": 2,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775295729
+    },
+    "https://twitter.com/intent/tweet?text=50+Voice+Process+Interview+Questions+%28With+Examples%29&url=https%3A%2F%2Fwww.foundit.in%2Fcareer-advice%2Fvoice-process-interview-questions%2F&via=foundit": {
+      "pass": 0,
+      "fail": 2,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775295729
+    },
+    "https://api.whatsapp.com/send?text=50+Voice+Process+Interview+Questions+%28With+Examples%29 %0A%0A https://www.foundit.in/career-advice/voice-process-interview-questions/": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295875
+    },
+    "https://www.linkedin.com/shareArticle?mini=true&url=https://www.foundit.in/career-advice/voice-process-interview-questions/&title=50+Voice+Process+Interview+Questions+%28With+Examples%29": {
+      "pass": 0,
+      "fail": 2,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775295730
+    },
+    "https://www.foundit.in/search/hr-jobs": {
+      "pass": 2,
+      "fail": 4,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295876
+    },
+    "https://www.foundit.in/career-advice/accenture-skills-interview-4-things-you-need-to-know-about/": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295877
+    },
+    "https://www.cvowl.com/interviews/different-type-of-resume-formats": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295878
+    },
+    "https://internshala.com/registration/student/?utm_source=is_blog&utm_medium=genpact-voice-process-interview-questions&utm_campaign=signup_ribbon_guide": {
+      "pass": 2,
+      "fail": 2,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295878
+    },
+    "https://internshala.com/blog/job-tips/interview-guide/": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295880
+    },
+    "https://internshala.com/blog/employer-resources/hr-resources/": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295881
+    },
+    "https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Finternshala.com%2Fblog%2Fgenpact-voice-process-interview-questions%2F&linkname=Top%2040%20Genpact%20Voice%20Process%20Interview%20Questions%20and%20Answers": {
+      "pass": 2,
+      "fail": 2,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295883
+    },
+    "https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Finternshala.com%2Fblog%2Fgenpact-voice-process-interview-questions%2F&linkname=Top%2040%20Genpact%20Voice%20Process%20Interview%20Questions%20and%20Answers": {
+      "pass": 4,
+      "fail": 2,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295888
+    },
+    "https://www.addtoany.com/add_to/linkedin?linkurl=https%3A%2F%2Finternshala.com%2Fblog%2Fgenpact-voice-process-interview-questions%2F&linkname=Top%2040%20Genpact%20Voice%20Process%20Interview%20Questions%20and%20Answers": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295889
+    },
+    "https://www.addtoany.com/add_to/whatsapp?linkurl=https%3A%2F%2Finternshala.com%2Fblog%2Fgenpact-voice-process-interview-questions%2F&linkname=Top%2040%20Genpact%20Voice%20Process%20Interview%20Questions%20and%20Answers": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295891
+    },
+    "https://internshala.com/jobs/?utm_source=is_blog&utm_medium=genpact-voice-process-interview-questions&utm_campaign=candidate-web-banner": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295893
+    },
+    "https://internshala.com/jobs/?utm_source=is_blog&utm_medium=genpact-voice-process-interview-questions&utm_campaign=candidate-mobile-banner": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295895
+    },
+    "https://internshala.com/blog/genpact-non-voice-process-interview-questions/": {
+      "pass": 9,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296779
+    },
+    "https://internshala.com/blog/behavioral-interview-questions/": {
+      "pass": 6,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295898
+    },
+    "https://www.facebook.com/sharer.php?u=https%3A%2F%2Finternshala.com%2Fblog%2Fgenpact-voice-process-interview-questions%2F": {
+      "pass": 0,
+      "fail": 2,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775295738
     },
     "https://internshala.com/blog/top-laravel-interview-questions-and-answers/": {
-      "pass": 3,
+      "pass": 6,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288307
+      "lastTs": 1775295901
     },
     "https://internshala.com/blog/myntra-interview-questions-and-answers/": {
-      "pass": 3,
+      "pass": 6,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288308
+      "lastTs": 1775295903
     },
     "https://internshala.com/blog/deloitte-automation-testing-interview-questions/": {
-      "pass": 3,
+      "pass": 6,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288310
+      "lastTs": 1775295905
     },
     "https://internshala.com/jobs/?utm_source=is_blog&utm_medium=genpact-voice-process-interview-questions&utm_campaign=candidate-fixed-button": {
-      "pass": 3,
+      "pass": 6,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288311
+      "lastTs": 1775295907
     },
     "https://internshala.com/jobs/hr-jobs/?utm_source=IS_Blog_footer": {
-      "pass": 3,
+      "pass": 6,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288313
+      "lastTs": 1775295909
     },
     "https://internshala.com/fresher-jobs/hr-jobs/?utm_source=IS_Blog_footer": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288314
+      "lastReason": "expanded_link",
+      "lastTs": 1775295738
     },
     "https://interviewprep.org/cost-controller-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288316
+      "lastReason": "expanded_link",
+      "lastTs": 1775295740
     },
     "https://interviewprep.org/escalation-specialist-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288319
+      "lastReason": "expanded_link",
+      "lastTs": 1775295740
     },
     "https://interviewprep.org/communications-officer-interview-questions/": {
       "pass": 3,
@@ -8225,108 +8225,108 @@
       "lastTs": 1775288321
     },
     "https://www.keka.com/chat-process-interview-questions": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288334
+      "lastReason": "fetched",
+      "lastTs": 1775296619
     },
     "https://factohr.com/chat-process-interview-questions/": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288334
+      "lastReason": "fetched",
+      "lastTs": 1775296621
     },
     "https://www.vervecopilot.com/interview-questions/top-30-most-common-chat-process-interview-questions-you-should-prepare-for": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288334
+      "lastReason": "fetched",
+      "lastTs": 1775296622
     },
     "https://superworks.com/interview-questions/chat-process/": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288334
+      "lastReason": "fetched",
+      "lastTs": 1775296630
     },
     "https://jobifyindia.com/blog/chat-process-interview-questions-and-answers/": {
-      "pass": 1,
-      "fail": 0,
+      "pass": 2,
+      "fail": 2,
       "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288334
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296623
     },
     "https://www.ambitionbox.com/profiles/chat-process/interview-questions": {
       "pass": 0,
-      "fail": 88,
+      "fail": 192,
       "domain": "chat_process",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775288828
+      "lastTs": 1775296601
     },
     "https://www.pmapstest.com/blog/chat-support-interview-questions": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288334
+      "lastReason": "fetched",
+      "lastTs": 1775296624
     },
     "https://resumedesign.ai/interview-questions/online-chat-support/": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288334
+      "lastReason": "fetched",
+      "lastTs": 1775296626
     },
     "https://www.cvowl.com/blog/chat-agent-interview-questions-answers": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288334
+      "lastReason": "fetched",
+      "lastTs": 1775296627
     },
     "https://www.glassdoor.com/Interview/chat-process-interview-questions-SRCH_KO0,12.htm": {
-      "pass": 1,
-      "fail": 0,
+      "pass": 2,
+      "fail": 2,
       "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288334
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296632
     },
     "https://doinsights.in/chat-process-interview-questions/": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288335
+      "lastReason": "fetched",
+      "lastTs": 1775296631
     },
     "https://superworks.com/interview-questions/chat-support-representative/": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288366
+      "lastReason": "fetched",
+      "lastTs": 1775296635
     },
     "https://www.vintti.com/interview-questions/chat-support-agent": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288366
+      "lastReason": "fetched",
+      "lastTs": 1775296636
     },
     "https://careersidekick.com/customer-service-interview-questions/": {
       "pass": 1,
@@ -8337,60 +8337,60 @@
       "lastTs": 1775288399
     },
     "https://www.indeed.com/career-advice/interviewing/customer-service-interview-questions-and-answers": {
-      "pass": 1,
-      "fail": 0,
+      "pass": 2,
+      "fail": 2,
       "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288399
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296637
     },
     "https://www.zendesk.com/in/blog/interview-prep-10-questions-for-hiring-great-support-reps/": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288400
+      "lastReason": "fetched",
+      "lastTs": 1775296639
     },
     "https://chatway.app/blog/customer-service-interview-questions-and-answers": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288400
+      "lastReason": "fetched",
+      "lastTs": 1775296641
     },
     "https://jobifyindia.com/blog/non-voice-process-interview-questions-and-answers/": {
-      "pass": 1,
-      "fail": 0,
+      "pass": 2,
+      "fail": 2,
       "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288431
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296642
     },
     "https://www.ambitionbox.com/profiles/non-voice-process/interview-questions": {
       "pass": 0,
-      "fail": 8,
+      "fail": 16,
       "domain": "chat_process",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775288433
+      "lastTs": 1775296023
     },
     "https://resumekraft.com/genpact-non-voice-process-interview-questions/": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288431
+      "lastReason": "fetched",
+      "lastTs": 1775296644
     },
     "https://screeninghive.com/interview-questions/bpo/non-voice-process-agent": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288431
+      "lastReason": "fetched",
+      "lastTs": 1775296645
     },
     "https://www.ambitionbox.com/interviews/cognizant-interview-questions/non-voice-process-associate": {
       "pass": 0,
@@ -8409,20 +8409,20 @@
       "lastTs": 1775288431
     },
     "https://www.glassdoor.com/Interview/non-voice-and-voice-process-interview-questions-SRCH_KO0,27.htm": {
-      "pass": 1,
-      "fail": 0,
+      "pass": 2,
+      "fail": 2,
       "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288431
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296653
     },
     "https://jobifyindia.com/wp-content/uploads/2025/04/Non-Voice-Interview-Questions-Answer.pdf": {
-      "pass": 1,
-      "fail": 0,
+      "pass": 2,
+      "fail": 2,
       "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288431
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296654
     },
     "https://www.glassdoor.com/Interview/Cognizant-Non-Voice-Process-Interview-Questions-EI_IE8014.0,9_KO10,27.htm": {
       "pass": 1,
@@ -8433,36 +8433,36 @@
       "lastTs": 1775288433
     },
     "https://www.cvowl.com/blog/email-support-interview-questions-answers": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288464
+      "lastReason": "fetched",
+      "lastTs": 1775296656
     },
     "https://www.vintti.com/interview-questions/email-support-specialist": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288464
+      "lastReason": "fetched",
+      "lastTs": 1775296663
     },
     "https://superworks.com/interview-questions/email-support-representative/": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288464
+      "lastReason": "fetched",
+      "lastTs": 1775296658
     },
     "https://www.glassdoor.com/Interview/email-support-representative-interview-questions-SRCH_KO0,28.htm": {
-      "pass": 1,
-      "fail": 0,
+      "pass": 2,
+      "fail": 2,
       "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288464
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296664
     },
     "https://huntr.co/interview-questions/it-support": {
       "pass": 1,
@@ -8473,36 +8473,36 @@
       "lastTs": 1775288464
     },
     "https://digitaldefynd.com/IQ/it-support-interview-questions/": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288464
+      "lastReason": "fetched",
+      "lastTs": 1775296676
     },
     "https://www.indeed.com/career-advice/interviewing/it-support-interview-questions": {
-      "pass": 1,
-      "fail": 0,
+      "pass": 2,
+      "fail": 2,
       "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288464
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296664
     },
     "https://www.hipeople.io/interview-questions/technical-support-interview-questions": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288464
+      "lastReason": "fetched",
+      "lastTs": 1775296666
     },
     "https://interviewprep.org/email-messaging-interview-questions/": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288465
+      "lastReason": "fetched",
+      "lastTs": 1775296661
     },
     "https://www.glassdoor.com/Interview/email-support-interview-questions-SRCH_KO0,13.htm": {
       "pass": 1,
@@ -8513,28 +8513,28 @@
       "lastTs": 1775288465
     },
     "https://www.glassdoor.com/Interview/chat-process-customer-support-interview-questions-SRCH_KO0,29.htm": {
-      "pass": 1,
-      "fail": 0,
+      "pass": 2,
+      "fail": 2,
       "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288498
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296680
     },
     "https://jobifyindia.com/wp-content/uploads/2025/04/Common-Chat-Process-Interview-Questions.pdf": {
-      "pass": 1,
-      "fail": 0,
+      "pass": 2,
+      "fail": 2,
       "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288529
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296714
     },
     "https://sapia.ai/resources/blog/chat-interviews-predict-job-fit/": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288562
+      "lastReason": "fetched",
+      "lastTs": 1775296684
     },
     "https://jobifyindia.com/blog/international-chat-process-interview-questions-and-answers/": {
       "pass": 1,
@@ -8545,12 +8545,12 @@
       "lastTs": 1775288564
     },
     "https://www.glassdoor.com/Interview/chat-process-technical-interview-questions-SRCH_KO0,22.htm": {
-      "pass": 1,
-      "fail": 0,
+      "pass": 2,
+      "fail": 2,
       "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288662
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296686
     },
     "https://credmark.ai/practice/top-chat-consultation-interview-questions-and-answers": {
       "pass": 1,
@@ -8561,36 +8561,36 @@
       "lastTs": 1775288662
     },
     "https://credmark.ai/practice/top-chat-functionality-interview-questions-and-answers": {
-      "pass": 1,
-      "fail": 0,
+      "pass": 2,
+      "fail": 2,
       "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288663
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296720
     },
     "https://igotanoffer.com/blogs/tech/behavioral-interview-questions": {
-      "pass": 1,
-      "fail": 0,
+      "pass": 2,
+      "fail": 2,
       "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288694
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296687
     },
     "https://www.interviewpanel.org/blog/45-behavioral-interview-questions-in-2026-sample-answers/": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288694
+      "lastReason": "fetched",
+      "lastTs": 1775296689
     },
     "https://www.evinex.com/resources/articles/100-behavioral-interview-questions-with-answers/": {
       "pass": 0,
-      "fail": 8,
+      "fail": 16,
       "domain": "chat_process",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775288696
+      "lastTs": 1775296291
     },
     "https://www.iscalepro.com/post/how-crack-chat-process-interview/": {
       "pass": 1,
@@ -8601,36 +8601,36 @@
       "lastTs": 1775288762
     },
     "https://interviewprep.org/process-engineer-interview-questions/": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288826
+      "lastReason": "fetched",
+      "lastTs": 1775296696
     },
     "https://www.indeed.com/career-advice/interviewing/process-engineer-interview-questions": {
-      "pass": 1,
-      "fail": 0,
+      "pass": 2,
+      "fail": 2,
       "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288826
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296697
     },
     "https://resumedesign.ai/interview-questions/process-engineer/": {
-      "pass": 1,
+      "pass": 5,
       "fail": 0,
       "domain": "chat_process",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775288826
+      "lastTs": 1775296429
     },
     "https://www.tealhq.com/career-paths/process-engineer-interview-questions": {
-      "pass": 1,
-      "fail": 0,
+      "pass": 2,
+      "fail": 2,
       "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288826
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296703
     },
     "https://www.springjavalab.com/2025/04/top-25-java-interview-questions-for-freshers.html": {
       "pass": 3,
@@ -8641,12 +8641,12 @@
       "lastTs": 1775293229
     },
     "https://clouddevs.com/java-interview-questions-with-answers/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775293232
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298278
     },
     "https://dev.to/hannah_usmedynska/50-play-framework-interview-questions-and-answers-3p04": {
       "pass": 3,
@@ -8657,12 +8657,12 @@
       "lastTs": 1775293236
     },
     "https://www.mockquestions.com/position/Engineer/": {
-      "pass": 2,
+      "pass": 3,
       "fail": 3,
-      "domain": "business_development",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775295023
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775297287
     },
     "https://utho.com/blog/java-programming-interview-questions/": {
       "pass": 3,
@@ -9050,11 +9050,2043 @@
     },
     "https://www.ambitionbox.com/profiles/voice-process/interview-questions": {
       "pass": 0,
-      "fail": 4,
+      "fail": 8,
       "domain": "voice_process",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775295284
+      "lastTs": 1775295655
+    },
+    "https://interviewprep.org/inventory-auditor-job-description/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295760
+    },
+    "https://nodeflair.com/companies/genpact/interviews/non-voice-process": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "chat_process",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296647
+    },
+    "https://www.naukri.com/campus/career-guidance/bpo-interview-questions-answers": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296652
+    },
+    "https://web.talenttitan.com/candidates/interview-preparation/wipro/associate-non-voice-process": {
+      "pass": 1,
+      "fail": 1,
+      "domain": "chat_process",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296653
+    },
+    "https://www.glassdoor.com/Interview/Accenture-Non-Voice-Process-Interview-Questions-EI_IE4138.0,9_KO10,27.htm": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "chat_process",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296654
+    },
+    "https://www.ambitionbox.com/interviews/genpact-interview-questions/non-voice-process": {
+      "pass": 0,
+      "fail": 4,
+      "domain": "chat_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775296023
+    },
+    "https://www.ambitionbox.com/profiles/chat-and-email-support-executive/interview-questions": {
+      "pass": 0,
+      "fail": 4,
+      "domain": "chat_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775296055
+    },
+    "https://careersidekick.com/what-to-say-in-a-job-interview-questions-and-answers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296670
+    },
+    "https://www.naukri.com/campus/career-guidance/customer-service-interview-questions": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296672
+    },
+    "https://resumedesign.ai/interview-questions/tier-1-support/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296678
+    },
+    "https://interviewquestions.guru/technical-support-interview-questions/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296679
+    },
+    "https://dev.to/hannah_usmedynska/100-spark-scenario-based-interview-questions-and-answers-344m": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296682
+    },
+    "https://www.greetai.co/practice/chat-process": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296686
+    },
+    "https://resources.biginterview.com/behavioral-interviews/behavioral-interview-questions/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296691
+    },
+    "https://www.mockinterviewpro.com/interview-questions/process-engineer": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296699
+    },
+    "https://www.jobcopy.ai/resources/interview-questions/process-engineer-interview-questions": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296702
+    },
+    "https://qnaengine.com/top-50-project-engineer-interview-questions-and-detailed-answers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296706
+    },
+    "https://blog.theinterviewguys.com/project-engineer-interview-questions-and-answers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296709
+    },
+    "https://www.cvowl.com/blog/process-engineer-interview-questions-answers": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296710
+    },
+    "https://digitaldefynd.com/IQ/process-engineer-interview-questions/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296714
+    },
+    "https://mrsimon.ai/interview-questions/process-engineer/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296715
+    },
+    "https://www.glassdoor.co.in/Interview/Stream-Interview-Questions-E2892026.htm": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "chat_process",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296716
+    },
+    "https://www.keka.com/hr-software": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296721
+    },
+    "https://www.keka.com/psa-software": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296723
+    },
+    "https://www.keka.com/marketplace": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296725
+    },
+    "https://www.keka.com/hr-toolkit": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296726
+    },
+    "https://www.keka.com/hr-research-reports": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296728
+    },
+    "https://www.keka.com/hr-story-book": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296729
+    },
+    "https://www.keka.com/hr-perspective": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296731
+    },
+    "https://www.keka.com/hr-toolkit/interview-questions": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296733
+    },
+    "https://twitter.com/intent/tweet?url=https://www.keka.com/chat-process-interview-questions&text=20+Chat+Process+Interview+Questions+%26%23038%3B+Answers+%7C+Keka+HR": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "chat_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775296605
+    },
+    "https://www.facebook.com/sharer/sharer.php?u=https://www.keka.com/chat-process-interview-questions": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "chat_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775296605
+    },
+    "https://www.linkedin.com/sharing/share-offsite/?url=https://www.keka.com/chat-process-interview-questions": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "chat_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775296605
+    },
+    "https://www.keka.com/hr-research-reports/hr-salary-benchmarking": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296735
+    },
+    "https://www.facebook.com/kekahr/": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "chat_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775296606
+    },
+    "https://www.instagram.com/kekahr/": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "chat_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775296606
+    },
+    "https://www.linkedin.com/company/keka-hr/": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "chat_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775296606
+    },
+    "https://www.pinterest.com/kekahrms/": {
+      "pass": 1,
+      "fail": 1,
+      "domain": "chat_process",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775296736
+    },
+    "https://twitter.com/kekahr_official": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "chat_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775296606
+    },
+    "https://www.keka.com/hr-analytics-software": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296738
+    },
+    "https://www.keka.com/project-management-software": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296740
+    },
+    "https://www.keka.com/project-billing-software": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296741
+    },
+    "https://cta-service-cms2.hubspot.com/web-interactives/public/v1/track/redirect?encryptedPayload=AVxigLIXkaXPgPtWGXuptHYJS5imJwGW3yOMPgNYhriGQkm2N7JSsGwXt3MuDGyP9f2jM0x4mJO2aaCppgYEWwNimEaEdeULH%2Bsd7yNiDZQ4eX6%2B5KOXvJ2hQAlujwWkLsuypUJ0mFG1jT%2B4hUXWJG2sXNAHocBLoWr8POY%2BeP0wsffkqUQM7AzON5J4cLih5wLkdegxiku5SLltuNaBsPpabE2DuaVeUxlOiRp8EhlVmPniwjGAruz0vdvxqNP28BZfCM01XZw5otHowfrN76lVSjoeiO%2BwA9FOIeo5W1ZT&webInteractiveContentId=202278369873&portalId=3947363": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296744
+    },
+    "https://factohr.com/labour-law-in-india/?utm_source=website&utm_medium=announcement-bar&utm_campaign=labour_law_2025_guide/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296746
+    },
+    "https://factohr.com": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296747
+    },
+    "https://factohr.com/recruitment/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296748
+    },
+    "https://factohr.com/hr-software/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296749
+    },
+    "https://factohr.com/onboarding-software/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296750
+    },
+    "https://factohr.com/attendance-management-system/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296752
+    },
+    "https://factohr.com/payroll-software/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296753
+    },
+    "https://factohr.com/leave-management-system/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296755
+    },
+    "https://factohr.com/performance-management-software/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296757
+    },
+    "https://factohr.com/learning-management-system/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296758
+    },
+    "https://factohr.com/expense-management-software/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296760
+    },
+    "https://factohr.com/employee-self-service/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296762
+    },
+    "https://factohr.com/mobile-application/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296763
+    },
+    "https://factohr.com/timesheet-software/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296764
+    },
+    "https://factohr.com/integration/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296765
+    },
+    "https://factohr.com/pf-software/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296767
+    },
+    "https://factohr.com/pf-software/benevolent-fund-trust/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296768
+    },
+    "https://factohr.com/pf-software/superannuation-fund-trust/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296770
+    },
+    "https://factohr.com/pf-software/pension-management/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296771
+    },
+    "https://factohr.com/pf-software/gpf-trust/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296773
+    },
+    "https://factohr.com/pf-software/provident-fund-trust/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296774
+    },
+    "https://factohr.com/pf-software/gratuity/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296776
+    },
+    "https://factohr.com/industries/manufacturing-industry/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296777
+    },
+    "https://factohr.com/industries/ngo/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "chat_process",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775296779
+    },
+    "https://www.testmuai.com/learning-hub/flutter-interview-questions/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297369
+    },
+    "https://www.codinginterview.com/guide/flutter-coding-interview-questions/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297371
+    },
+    "https://ittrainingsinstitute.in/top-50-flutter-interview-questions-and-answers-by-it-trainings-institute/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775297375
+    },
+    "https://intellipaat.com/blog/interview-question/flutter-interview-questions-and-answers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297376
+    },
+    "https://interviewquestionshub.com/flutter-interview-questions/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297377
+    },
+    "https://www.wscubetech.com/blog/flutter-interview-questions/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297379
+    },
+    "https://medium.com/@blup-tool/top-20-flutter-interview-questions-advanced-concepts-4f053f06da5f": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775297379
+    },
+    "https://mindmajix.com/flutter-interview-questions": {
+      "pass": 0,
+      "fail": 8,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775297117
+    },
+    "https://www.index.dev/interview-questions/flutter": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297382
+    },
+    "https://www.multisoftsystems.com/interview-questions/flutter-application-development-interview-questions-answers": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297384
+    },
+    "https://medium.com/@anupamsingh696/top-100-flutter-interview-questions-ee5b2e36efd8": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775297385
+    },
+    "https://dev.to/gameon_gameover_8f18dbb85/65-flutter-interview-questions-and-answers-for-all-levels-3n64": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297387
+    },
+    "https://credmark.ai/practice/top-flutter-interview-questions-and-answers": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775297391
+    },
+    "https://www.hirist.tech/blog/top-30-flutter-interview-questions-and-answers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297393
+    },
+    "https://www.igmguru.com/blog/flutter-interview-questions": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775297394
+    },
+    "https://mentorcruise.com/questions/flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297395
+    },
+    "https://www.secondtalent.com/interview-guide/flutter-developer/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297399
+    },
+    "https://www.naukri.com/code360/library/flutter-interview-questions": {
+      "pass": 1,
+      "fail": 1,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775297400
+    },
+    "https://procoders.tech/blog/flutter-technical-interview-questions/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297401
+    },
+    "https://codei5.com/top-50-flutter-interview-questions-and-how-to-answer-them/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297404
+    },
+    "https://internshala.com/blog/flutter-interview-questions/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297406
+    },
+    "https://www.placementpreparation.io/blog/flutter-interview-questions-for-freshers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297408
+    },
+    "https://www.freshersnow.com/flutter-interview-questions-for-freshers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297410
+    },
+    "https://codexrush.com/100-flutter-interview-questions-and-answers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297412
+    },
+    "https://www.linkedin.com/pulse/flutter-interview-questions-answers-freshers-arsnc": {
+      "pass": 0,
+      "fail": 4,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775297082
+    },
+    "https://www.justacademy.co/interview-questions-detail/top-50-flutter-interview-questions-and-answers-for-freshers-2026": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297414
+    },
+    "https://www.glassdoor.co.in/Interview/Flutter-Entertainment-Interview-Questions-E3381369.htm": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775297415
+    },
+    "https://www.linkedin.com/pulse/top-flutter-interview-questions-andanswers-anand-gaur-air5c/": {
+      "pass": 0,
+      "fail": 8,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775297323
+    },
+    "https://github.com/Devinterview-io/flutter-interview-questions": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297417
+    },
+    "https://medium.com/@janaksiag1/100-flutter-interview-questions-and-answers-6e35a870d485": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775297417
+    },
+    "https://medium.com/@ashfaque-khokhar/200-flutter-interview-questions-all-experience-levels-77bda4cfcd20": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775297418
+    },
+    "https://www.seadigitalis.com/en/flutter-developer-job-interview-questions-and-answers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297421
+    },
+    "https://dev.to/huangli_huang_12f4a0530eb/the-most-frequently-asked-flutter-engineer-interview-questions2025-45ee": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297423
+    },
+    "https://medium.com/@ismayilov.niyaz.project/top-20-flutter-interview-questions-in-2026-with-answers-fd2407baa882": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775297423
+    },
+    "https://www.indeed.com/career-advice/interviewing/flutter-interview-question": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775297424
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-tutorial/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297425
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-projects/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297428
+    },
+    "https://www.geeksforgeeks.org/flutter/what-is-widgets-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297429
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-tabs/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297432
+    },
+    "https://www.geeksforgeeks.org/flutter/customizing-fonts-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297433
+    },
+    "https://www.geeksforgeeks.org/flutter/form-validation-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297433
+    },
+    "https://www.geeksforgeeks.org/flutter/urls-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297434
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-an-introduction-to-the-open-source-sdk-by-google/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297435
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-architecture-application/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297436
+    },
+    "https://www.geeksforgeeks.org/android/android-studio-setup-for-flutter-development/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297437
+    },
+    "https://www.geeksforgeeks.org/flutter/getting-started-with-cross-platform-mobile-application-using-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297438
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-development-in-ubuntu-20-04/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297439
+    },
+    "https://www.geeksforgeeks.org/flutter/container-class-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297440
+    },
+    "https://www.geeksforgeeks.org/flutter/scaffold-class-in-flutter-with-examples/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297442
+    },
+    "https://www.geeksforgeeks.org/flutter/materialapp-class-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297443
+    },
+    "https://www.geeksforgeeks.org/flutter/drawer-widget-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297444
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-appbar-widget/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297446
+    },
+    "https://www.geeksforgeeks.org/flutter/richtext-widget-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297447
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-horizontal-list/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297448
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-expansion-tile-card/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297449
+    },
+    "https://www.geeksforgeeks.org/flutter/icon-class-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297451
+    },
+    "https://www.geeksforgeeks.org/flutter/expanded-class-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297453
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-dialogs/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297454
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-circular-linear-progress-indicators/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297456
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-staggered-grid-view/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297458
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-skeleton-text/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297459
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-themes/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297460
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-lazy-loader/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297462
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-ui-orientation/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297464
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-animation-in-route-transition/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297466
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-physics-simulation-in-animation/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297467
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-radial-hero-animation/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297468
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-hinge-animation/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297470
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-lottie-animation/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297471
+    },
+    "https://www.geeksforgeeks.org/flutter/designing-a-form-submission-page-in-flutter/": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "blocked_path",
+      "lastTs": 1775297331
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-gestures/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297473
+    },
+    "https://www.geeksforgeeks.org/flutter/routes-and-navigator-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297475
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-websockets/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297477
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-named-routes/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297477
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-arguments-in-named-routes/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297478
+    },
+    "https://www.geeksforgeeks.org/flutter/multi-page-applications-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297479
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-updating-data-on-the-internet/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297480
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-fetching-data-from-the-internet/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297482
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-deleting-data-on-the-internet/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297483
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-sending-data-to-the-internet/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297485
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-send-data-to-screen/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297486
+    },
+    "https://www.geeksforgeeks.org/flutter/gallery-access-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297489
+    },
+    "https://www.geeksforgeeks.org/flutter/camera-access-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297490
+    },
+    "https://www.geeksforgeeks.org/flutter/background-local-notifications-in-flutter/": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "flutter",
+      "lastStatus": "fail",
+      "lastReason": "blocked_path",
+      "lastTs": 1775297332
+    },
+    "https://www.geeksforgeeks.org/flutter/restrict-landscape-mode-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297492
+    },
+    "https://www.geeksforgeeks.org/flutter/basic-quiz-app-in-flutter-api/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297493
+    },
+    "https://www.geeksforgeeks.org/flutter/a-hello-world-app-using-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297494
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-simple-pdf-generating-app/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297495
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-magic-8-ball-app/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297496
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-read-and-write-data-on-firebase/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297497
+    },
+    "https://www.geeksforgeeks.org/flutter/mail-and-sms-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297499
+    },
+    "https://www.geeksforgeeks.org/flutter/making-calls-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297500
+    },
+    "https://www.geeksforgeeks.org/flutter/fab-speed-dial-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297501
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-wakelock/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297502
+    },
+    "https://www.geeksforgeeks.org/flutter/http-get-response-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297503
+    },
+    "https://www.geeksforgeeks.org/courses/interviewe-101-data-structures-algorithm-system-design": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297504
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-stateless-widget/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297505
+    },
+    "https://www.geeksforgeeks.org/flutter/flutter-stateful-widget/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297506
+    },
+    "https://www.geeksforgeeks.org/dart/difference-between-stateless-and-stateful-widget-in-flutter/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297508
+    },
+    "https://api.flutter.dev/flutter/foundation/UniqueKey/UniqueKey.html": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297508
+    },
+    "https://api.flutter.dev/flutter/foundation/ValueKey/ValueKey.html": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775297510
+    },
+    "https://api.flutter.dev/flutter/widgets/ObjectKey/ObjectKey.html": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "flutter",
+      "lastStatus": "pass",
+      "lastReason": "expanded_link",
+      "lastTs": 1775297333
+    },
+    "https://www.greatfrontend.com/blog/100-react-interview-questions-straight-from-ex-interviewers": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298106
+    },
+    "https://interviewprep.org/react-developer-interview-questions/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298108
+    },
+    "https://www.lupahire.com/blog/react-interview-questions": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298110
+    },
+    "https://www.codinginterview.com/guide/react-coding-interview-questions-and-answers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298112
+    },
+    "https://www.softwaretestinghelp.com/react-interview-questions/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298120
+    },
+    "https://github.com/rumaisanaveed/react-scenario-based-interview-questions": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298122
+    },
+    "https://www.interviewplus.ai/additional-question-types/scenario-based-questions/react-js": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298124
+    },
+    "https://medium.com/@amber_code/navigating-the-depths-20-tricky-reactjs-interview-questions-from-the-experience-vault-unveiled-45a7d3017521": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298125
+    },
+    "https://iocombats.com/interview-questions/react": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298130
+    },
+    "https://javascript.plainenglish.io/100-react-interview-questions-with-answers-da3ce6b714a6": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298130
+    },
+    "https://medium.com/@ksonuraj1/real-world-react-scenario-questions-s1-41c2c569f1d3": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298131
+    },
+    "https://www.wecreateproblems.com/interview-questions/react-interview-questions": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298134
+    },
+    "https://devinterview.io/blog/react-interview-questions/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298136
+    },
+    "https://codeforgeek.com/50-react-interview-questions-you-must-know/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298142
+    },
+    "https://www.codesubmit.io/interview/react": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298144
+    },
+    "https://www.igmguru.com/blog/react-interview-questions": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298145
+    },
+    "https://github.com/sudheerj/reactjs-interview-questions": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298148
+    },
+    "https://prepforhire.com/reactjs-interview-questions": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298149
+    },
+    "https://www.founditgulf.com/career-advice/react-js-interview-questions-answers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298151
+    },
+    "https://www.boundev.com/blog/react-interview-questions-hiring-guide": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298152
+    },
+    "https://github.com/greatfrontend/top-reactjs-interview-questions": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298156
+    },
+    "https://embarkingonvoyage.com/blog/hr/25-react-coding-interview-questions-with-solutions-for-developers-and-hiring-managers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298159
+    },
+    "https://www.altcademy.com/blog/top-20-reactjs-technical-questions-in-coding-interviews/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298165
+    },
+    "https://moldstud.com/articles/p-essential-behavioral-interview-questions-for-effective-react-js-development-recruitment": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298167
+    },
+    "https://resumekraft.com/react-js-developer-interview-questions-and-answers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298170
+    },
+    "https://www.interviewplus.ai/additional-question-types/behavioral-questions/react-js": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298171
+    },
+    "https://scriptedshadows.medium.com/react-js-interview-questions-and-answers-for-experienced-developers-ce78d26a3be8": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298172
+    },
+    "https://arc.dev/talent-blog/reactjs-interview-questions/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298176
+    },
+    "https://www.foundit.my/career-advice/react-js-interview-questions-answers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298181
+    },
+    "https://www.geekshelp.org/2025/06/top-100-reactjs-interview-questions-and-answers-for-freshers.html": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298183
+    },
+    "https://hirecta.com/interviews/react-interview-questions-with-answers-for-freshers": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298187
+    },
+    "https://www.placementpreparation.io/blog/react-interview-questions-for-freshers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298189
+    },
+    "https://www.reddit.com/r/reactjs/comments/18muk6w/what_are_the_interview_questions_in_you_have/": {
+      "pass": 1,
+      "fail": 1,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298189
+    },
+    "https://www.wahresume.com/interview-questions/react-software-engineer-interview": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298191
+    },
+    "https://dev.to/m_midas/44-react-frontend-interview-questions-2o63": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298194
+    },
+    "https://www.terminal.io/blog/15-react-interview-questions-and-answers-for-hiring-react-engineers": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298195
+    },
+    "https://www.seadigitalis.com/en/fullstack-engineer-node-js-react-job-interview-questions-and-answers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298197
+    },
+    "https://dev.to/codeymaze/react-interview-prep-real-questions-clear-answers-5c2e": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298199
+    },
+    "https://coderpad.io/interview-questions/react-interview-questions/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298203
+    },
+    "https://www.geeksforgeeks.org/courses/react-js-beginner-to-advance?utm_campaign=662_reactjs&utm_medium=gfgcontent_shm&utm_source=geeksforgeeks": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298205
+    },
+    "https://www.geeksforgeeks.org/reactjs/react/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298206
+    },
+    "https://www.geeksforgeeks.org/reactjs/practice-react-online/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298208
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-basics-concepts-complete-reference/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298209
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-components-complete-reference/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298211
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-props-complete-reference/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298213
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-hooks-complete-reference/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298214
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-router/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298215
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-advanced-guides-complete-reference/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298217
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-examples/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298218
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-projects/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298219
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-introduction/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298221
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-environment-setup/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298224
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-reactdom/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298225
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-jsx-introduction/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298226
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-rendering-elements/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298228
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-lists/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298229
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-forms/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298230
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-keys/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298231
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-components/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298232
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-functional-components/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298233
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-class-components/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298234
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-pure-components/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298236
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-container-and-presentational-pattern-in-components/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298237
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-proptypes/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298239
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-lifecycle-components/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298240
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-hooks/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298241
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-usestate-hook/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298242
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-useeffect-hook/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298243
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-types-of-routers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298245
+    },
+    "https://www.geeksforgeeks.org/reactjs/lazy-loading-in-react-and-how-to-implement-it/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298247
+    },
+    "https://www.geeksforgeeks.org/reactjs/react-js-higher-order-components/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298248
+    },
+    "https://www.geeksforgeeks.org/reactjs/code-splitting-in-react/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298250
+    },
+    "https://www.geeksforgeeks.org/reactjs/create-todo-app-using-reactjs/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298252
+    },
+    "https://www.geeksforgeeks.org/reactjs/create-a-quiz-app-using-reactjs/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298253
+    },
+    "https://www.geeksforgeeks.org/reactjs/create-a-coin-flipping-app-using-reactjs/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298254
+    },
+    "https://www.geeksforgeeks.org/reactjs/how-to-create-a-color-box-app-using-reactjs/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298255
+    },
+    "https://www.geeksforgeeks.org/reactjs/dice-rolling-app-using-reactjs/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298256
+    },
+    "https://www.geeksforgeeks.org/reactjs/guess-the-number-with-react/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298258
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-props/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298259
+    },
+    "https://www.geeksforgeeks.org/web-tech/introduction-to-react-redux/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298260
+    },
+    "https://www.geeksforgeeks.org/reactjs/explain-new-context-api-in-react/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298262
+    },
+    "https://www.geeksforgeeks.org/reactjs/reactjs-interview-question-and-answers-advance-level/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "react",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775298263
+    },
+    "https://www.geeksforgeeks.org/category/web-technologies/reactjs/": {
+      "pass": 1,
+      "fail": 1,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298265
+    },
+    "https://www.geeksforgeeks.org/tag/react-questions/": {
+      "pass": 1,
+      "fail": 1,
+      "domain": "react",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775298266
+    },
+    "https://medium.com/@gainilaxman5/top-20-java-scenario-based-interview-questions-for-experienced-developers-58f5ac59f36a": {
+      "pass": 1,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775298356
     }
   }
 }
