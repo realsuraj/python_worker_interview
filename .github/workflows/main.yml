@@ -117,13 +117,21 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for i in {1..30}; do
-            if sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "curl -fsS http://127.0.0.1:${HOST_PORT}/health > /dev/null 2>&1"; then
+          for i in {1..60}; do
+            if sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "docker inspect '$CONTAINER_NAME' --format '{{.State.Running}}' 2>/dev/null | grep -q true" \
+              && sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "curl -fsS http://127.0.0.1:${HOST_PORT}/health > /dev/null 2>&1"; then
               echo "AI worker is healthy"
               exit 0
             fi
-            echo "Waiting for ai-worker... ($i/30)"
+            echo "Waiting for ai-worker... ($i/60)"
             sleep 3
           done
           echo "AI worker health check failed"
           exit 1
+
+      - name: Debug container on failure
+        if: failure()
+        shell: bash
+        run: |
+          set +e
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "echo '=== docker ps ==='; docker ps -a --filter name=$CONTAINER_NAME; echo '=== docker inspect state ==='; docker inspect $CONTAINER_NAME --format '{{json .State}}' 2>/dev/null || true; echo '=== last 200 logs ==='; docker logs --tail 200 $CONTAINER_NAME 2>&1 || true; echo '=== host port check ==='; ss -ltnp | grep :$HOST_PORT || true"
