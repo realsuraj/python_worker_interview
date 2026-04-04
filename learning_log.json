@@ -23172,6 +23172,5350 @@
         "mode": "fast",
         "knowledgeScore": 30.82
       }
+    },
+    {
+      "ts": 1775293217,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/realnamehidden1_61/java-scenario-based-interview-questions-542m",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775293217,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/realnamehidden1_61/java-scenario-based-interview-questions-542m",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293221,
+      "event": "url_fail",
+      "details": {
+        "url": "https://huntr.co/interview-questions/java",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293221,
+      "event": "url_fail",
+      "details": {
+        "url": "https://huntr.co/interview-questions/java",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293223,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/p/top-java-interview-questions-and-answers.html",
+        "reason": "fetched",
+        "lines": 80
+      }
+    },
+    {
+      "ts": 1775293223,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/p/top-java-interview-questions-and-answers.html",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293224,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.techinterviewhandbook.org/behavioral-interview-questions/",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775293224,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.techinterviewhandbook.org/behavioral-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293225,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/behavioral-interview-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 62
+      }
+    },
+    {
+      "ts": 1775293225,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/behavioral-interview-questions-and-answers/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293227,
+      "event": "url_pass",
+      "details": {
+        "url": "https://starmethod.org/java-developer/star-interview",
+        "reason": "fetched",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775293228,
+      "event": "url_pass",
+      "details": {
+        "url": "https://starmethod.org/java-developer/star-interview",
+        "domain": "java",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775293229,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.springjavalab.com/2025/04/top-25-java-interview-questions-for-freshers.html",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775293229,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.springjavalab.com/2025/04/top-25-java-interview-questions-for-freshers.html",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293230,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interview-copilot.com/blog/java-interview-questions-and-answers",
+        "reason": "fetched",
+        "lines": 61
+      }
+    },
+    {
+      "ts": 1775293230,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interview-copilot.com/blog/java-interview-questions-and-answers",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293232,
+      "event": "url_pass",
+      "details": {
+        "url": "https://clouddevs.com/java-interview-questions-with-answers/",
+        "reason": "fetched",
+        "lines": 53
+      }
+    },
+    {
+      "ts": 1775293232,
+      "event": "url_pass",
+      "details": {
+        "url": "https://clouddevs.com/java-interview-questions-with-answers/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293234,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewplus.ai/jd/java-developer-role-interview-questions/1255",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775293234,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewplus.ai/jd/java-developer-role-interview-questions/1255",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293236,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/hannah_usmedynska/50-play-framework-interview-questions-and-answers-3p04",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775293236,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/hannah_usmedynska/50-play-framework-interview-questions-and-answers-3p04",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293239,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.acte.in/java-stream-interview-questions-and-answers",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775293239,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.acte.in/java-stream-interview-questions-and-answers",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293240,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.mockquestions.com/position/Engineer/",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775293240,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.mockquestions.com/position/Engineer/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293244,
+      "event": "url_pass",
+      "details": {
+        "url": "https://utho.com/blog/java-programming-interview-questions/",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775293244,
+      "event": "url_pass",
+      "details": {
+        "url": "https://utho.com/blog/java-programming-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293248,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-did-others-say-about-the-java-interview-companion/",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775293248,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-did-others-say-about-the-java-interview-companion/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293250,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/",
+        "reason": "fetched",
+        "lines": 50
+      }
+    },
+    {
+      "ts": 1775293250,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293253,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/java-success-com-blog/",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775293253,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/java-success-com-blog/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293256,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-are-the-benefits-of-java-success-com/",
+        "reason": "fetched",
+        "lines": 42
+      }
+    },
+    {
+      "ts": 1775293256,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-are-the-benefits-of-java-success-com/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293259,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/90-days-members-free-downloads/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775293259,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/90-days-members-free-downloads/",
+        "domain": "java",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775293261,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/privacy-policy/",
+        "reason": "fetched",
+        "lines": 63
+      }
+    },
+    {
+      "ts": 1775293262,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/privacy-policy/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293264,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775293264,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293267,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/resume/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775293267,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/resume/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293270,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/sample-resumes/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775293270,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/sample-resumes/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293273,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/beginner-or-intermediate/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775293273,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/beginner-or-intermediate/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293279,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/zy-feeling-stagnated/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293279,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/zy-feeling-stagnated/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293285,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/earn-more/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293285,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/earn-more/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293288,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/freelancing/",
+        "reason": "fetched",
+        "lines": 16
+      }
+    },
+    {
+      "ts": 1775293288,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/freelancing/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293291,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/z-did-you-get-the-offer/",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775293291,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/z-did-you-get-the-offer/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293295,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/certification/",
+        "reason": "fetched",
+        "lines": 11
+      }
+    },
+    {
+      "ts": 1775293295,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/certification/",
+        "domain": "java",
+        "lines": 11
+      }
+    },
+    {
+      "ts": 1775293299,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting/",
+        "reason": "fetched",
+        "lines": 25
+      }
+    },
+    {
+      "ts": 1775293299,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293302,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/soft-skills/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293303,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/soft-skills/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293307,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/personal-branding/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293307,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/personal-branding/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293312,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-interview-tips/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293312,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-interview-tips/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293318,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/your-motivated/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293319,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/your-motivated/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293325,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/philosophies/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293325,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/philosophies/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293330,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/topics-to-whinge-whine/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293330,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/topics-to-whinge-whine/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293337,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/members/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293337,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/members/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293343,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/membership-levels/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293343,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/membership-levels/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293349,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293349,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293355,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293355,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293361,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/architect-how-to/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293361,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/architect-how-to/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293368,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/key-areas/0003-16-key-areas/03-yl-judgingexperience/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293368,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/key-areas/0003-16-key-areas/03-yl-judgingexperience/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293373,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/00-high-level-low-level-system-design-considerations-for-read-heavy-systems/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293373,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/00-high-level-low-level-system-design-considerations-for-read-heavy-systems/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293383,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/wp-content/uploads/2014/08/Screen-Shot-2023-06-18-at-10.14.41-pm.png",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293383,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/wp-content/uploads/2014/08/Screen-Shot-2023-06-18-at-10.14.41-pm.png",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293391,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/simple-caching-java-application-step-by-step/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293391,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/simple-caching-java-application-step-by-step/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293396,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/implement-an-in-memory-cache-in-java/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293396,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/implement-an-in-memory-cache-in-java/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293401,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/wp-content/uploads/2014/08/Screen-Shot-2023-06-18-at-11.40.44-pm.png",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293401,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/wp-content/uploads/2014/08/Screen-Shot-2023-06-18-at-11.40.44-pm.png",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293407,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/key-areas/0003-16-key-areas/09-low-latency/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293408,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/key-areas/0003-16-key-areas/09-low-latency/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293408,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewbit.com/java-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293408,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java-interview-questions/",
+        "domain": "java",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775293408,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.javatpoint.com/corejava-interview-questions",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293408,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293408,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.turing.com/interview-questions/java",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293409,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.edureka.co/blog/interview-questions/java-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293409,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-interview-questions-and-answers",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293409,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.baeldung.com/java-interview-questions",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293409,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-interview-questions/",
+        "domain": "java",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775293409,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.guru99.com/java-interview-questions-answers.html",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293409,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.tpointtech.com/corejava-interview-questions",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293410,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.datacamp.com/blog/java-interview-questions",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293410,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.w3schools.com/java/java_interview_questions.asp",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293410,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codegnan.com/java-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293410,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codefinity.com/blog/The-80-Top-Java-Interview-Questions-and-Answers",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293411,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewquestions.guru/core-java-interview-questions-answers/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293411,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-programming-interview-questions",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293411,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/java-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293411,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/java-interview-questions-article",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293411,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/2026/02/top-50-java-interview-questions-and-answers.html",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293411,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293412,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/advance-java/advanced-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293412,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-exercises/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293412,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-examples/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293412,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-quiz/",
+        "domain": "java",
+        "lines": 6
+      }
+    },
+    {
+      "ts": 1775293412,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/java-projects/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293412,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-cheat-sheet/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293412,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/dsa/dsa-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293413,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-collection-tutorial/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293413,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/introduction-to-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293413,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-basics/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293413,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/methods-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293413,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/access-modifiers-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293413,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/arrays-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293414,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/strings-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293414,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/regular-expressions-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293414,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/classes-objects-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293414,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/constructors-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293414,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293414,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/packages-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293415,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/interfaces-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293415,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-in-java-2/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293415,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-class-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293415,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collection-interface-in-java-with-examples/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293415,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/iterators-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293416,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-comparator-interface/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293416,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/exceptions-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293416,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-try-catch-block/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293416,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-final-finally-and-finalize/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293416,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/chained-exceptions-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293416,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/null-pointer-exception-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293417,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/exception-handling-with-method-overriding-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293417,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-multithreading-tutorial/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293417,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/synchronization-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293417,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/file-handling-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293417,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-method-references/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293418,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-8-stream-tutorial/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293418,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-networking/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293418,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/jdbc-tutorial/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293418,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-memory-management/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293418,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/garbage-collection-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293419,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/memory-leaks-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293419,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/courses/Java-backend-live",
+        "domain": "java",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775293419,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-fundamentals-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293916,
+      "event": "url_pass",
+      "details": {
+        "url": "https://coverlettersandresume.com/sales/sales-rep-interview-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775293916,
+      "event": "url_pass",
+      "details": {
+        "url": "https://coverlettersandresume.com/sales/sales-rep-interview-questions-and-answers/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293920,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.zenzap.co/blog-posts/12-crucial-inside-sales-interview-questions",
+        "reason": "fetched",
+        "lines": 28
+      }
+    },
+    {
+      "ts": 1775293920,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.zenzap.co/blog-posts/12-crucial-inside-sales-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293923,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.sparkhire.com/interview-questions/sales/inside-sales-representative/",
+        "reason": "fetched",
+        "lines": 41
+      }
+    },
+    {
+      "ts": 1775293923,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.sparkhire.com/interview-questions/sales/inside-sales-representative/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293926,
+      "event": "url_pass",
+      "details": {
+        "url": "https://climbtheladder.com/outside-sales-representative-interview-questions/",
+        "reason": "fetched",
+        "lines": 55
+      }
+    },
+    {
+      "ts": 1775293926,
+      "event": "url_pass",
+      "details": {
+        "url": "https://climbtheladder.com/outside-sales-representative-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293928,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.jobhero.com/career-guides/interviews/questions/situational-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775293928,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.jobhero.com/career-guides/interviews/questions/situational-interview-questions",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293932,
+      "event": "url_fail",
+      "details": {
+        "url": "https://atsresume.ai/blog/sales-interview-questions-answers",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293932,
+      "event": "url_fail",
+      "details": {
+        "url": "https://atsresume.ai/blog/sales-interview-questions-answers",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293940,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.interviewbit.com/hr-interview-questions/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293941,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.interviewbit.com/hr-interview-questions/",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293948,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/sales-manager-interview-questions/",
+        "reason": "fetched",
+        "lines": 36
+      }
+    },
+    {
+      "ts": 1775293948,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/sales-manager-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775293955,
+      "event": "url_fail",
+      "details": {
+        "url": "https://cvblade.com/interview/technical-sales/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293955,
+      "event": "url_fail",
+      "details": {
+        "url": "https://cvblade.com/interview/technical-sales/",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293961,
+      "event": "url_fail",
+      "details": {
+        "url": "https://climbtheladder.com/technical-sales-representative-interview-questions/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293962,
+      "event": "url_fail",
+      "details": {
+        "url": "https://climbtheladder.com/technical-sales-representative-interview-questions/",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293970,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.insidesalesexpert.com/blog/Salesperson-Behavioral-Interview-Questions-and-Best-Answers",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293970,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.insidesalesexpert.com/blog/Salesperson-Behavioral-Interview-Questions-and-Best-Answers",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293976,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/marketing/sales-interview-questions-and-answers/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293976,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/marketing/sales-interview-questions-and-answers/",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293989,
+      "event": "url_fail",
+      "details": {
+        "url": "https://smartwinnr.com/blog/8-sales-role-play-scenarios-that-will-help-prepare-your-sales-team-to-handle-any-sales-situation",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775293989,
+      "event": "url_fail",
+      "details": {
+        "url": "https://smartwinnr.com/blog/8-sales-role-play-scenarios-that-will-help-prepare-your-sales-team-to-handle-any-sales-situation",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775293996,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.mockquestions.com/position/Sales+Engineers/",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775293996,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.mockquestions.com/position/Sales+Engineers/",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294004,
+      "event": "url_fail",
+      "details": {
+        "url": "https://blog.hubspot.com/sales/interview-questions-for-sales-position",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775294005,
+      "event": "url_fail",
+      "details": {
+        "url": "https://blog.hubspot.com/sales/interview-questions-for-sales-position",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294005,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/sales-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294006,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/sales-interview-questions",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294009,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.salesforce.com/blog/sales-interview-questions/",
+        "reason": "fetched",
+        "lines": 58
+      }
+    },
+    {
+      "ts": 1775294009,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.salesforce.com/blog/sales-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294013,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.zendesk.com/blog/sales-interview-questions/",
+        "reason": "fetched",
+        "lines": 64
+      }
+    },
+    {
+      "ts": 1775294013,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.zendesk.com/blog/sales-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294015,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.glassdoor.com/blog/guide/sales-interview-questions/",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294015,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.glassdoor.com/blog/guide/sales-interview-questions/",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294017,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.coursera.org/articles/sales-interview-questions",
+        "reason": "fetched",
+        "lines": 49
+      }
+    },
+    {
+      "ts": 1775294017,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.coursera.org/articles/sales-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294018,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.betterteam.com/sales-interview-questions",
+        "reason": "fetched",
+        "lines": 5
+      }
+    },
+    {
+      "ts": 1775294018,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.betterteam.com/sales-interview-questions",
+        "domain": "sales",
+        "lines": 5
+      }
+    },
+    {
+      "ts": 1775294021,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.gong.io/blog/sales-interview-questions/",
+        "reason": "fetched",
+        "lines": 56
+      }
+    },
+    {
+      "ts": 1775294021,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.gong.io/blog/sales-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294022,
+      "event": "url_pass",
+      "details": {
+        "url": "https://salestalentinc.com/blog/26-sales-interview-questions-beginner-experienced/",
+        "reason": "fetched",
+        "lines": 56
+      }
+    },
+    {
+      "ts": 1775294022,
+      "event": "url_pass",
+      "details": {
+        "url": "https://salestalentinc.com/blog/26-sales-interview-questions-beginner-experienced/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294024,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/top-15-sales-interview-questions/",
+        "reason": "fetched",
+        "lines": 64
+      }
+    },
+    {
+      "ts": 1775294024,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/top-15-sales-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294027,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/sales-representative-interview-questions/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775294027,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/sales-representative-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294028,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/sales-interview-questions-to-ask-candidates",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294028,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/sales-interview-questions-to-ask-candidates",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294031,
+      "event": "url_fail",
+      "details": {
+        "url": "https://timespro.com/blog/sales-interview-questions-and-answers",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775294032,
+      "event": "url_fail",
+      "details": {
+        "url": "https://timespro.com/blog/sales-interview-questions-and-answers",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294035,
+      "event": "url_pass",
+      "details": {
+        "url": "https://x0pa.com/hiring/salesman-interview-questions/",
+        "reason": "fetched",
+        "lines": 40
+      }
+    },
+    {
+      "ts": 1775294036,
+      "event": "url_pass",
+      "details": {
+        "url": "https://x0pa.com/hiring/salesman-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294037,
+      "event": "url_pass",
+      "details": {
+        "url": "https://mailshake.com/blog/sales-interview-questions/",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775294037,
+      "event": "url_pass",
+      "details": {
+        "url": "https://mailshake.com/blog/sales-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294039,
+      "event": "url_pass",
+      "details": {
+        "url": "https://topresume.com/career-advice/job-interview-questions-for-sales",
+        "reason": "fetched",
+        "lines": 49
+      }
+    },
+    {
+      "ts": 1775294039,
+      "event": "url_pass",
+      "details": {
+        "url": "https://topresume.com/career-advice/job-interview-questions-for-sales",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294041,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.zippia.com/advice/sales-interview-questions/",
+        "reason": "fetched",
+        "lines": 54
+      }
+    },
+    {
+      "ts": 1775294041,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.zippia.com/advice/sales-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294042,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/top-sales-representative-interview-questions-and-answers",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294042,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/top-sales-representative-interview-questions-and-answers",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294043,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.coursera.org/articles/sales-representative-interview-questions",
+        "reason": "fetched",
+        "lines": 54
+      }
+    },
+    {
+      "ts": 1775294043,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.coursera.org/articles/sales-representative-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294046,
+      "event": "url_pass",
+      "details": {
+        "url": "https://careersidekick.com/15-most-common-sales-representative-interview-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 74
+      }
+    },
+    {
+      "ts": 1775294047,
+      "event": "url_pass",
+      "details": {
+        "url": "https://careersidekick.com/15-most-common-sales-representative-interview-questions-and-answers/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294048,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.pearltalent.com/resources/sales-representative-interview-questions",
+        "reason": "fetched",
+        "lines": 67
+      }
+    },
+    {
+      "ts": 1775294048,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.pearltalent.com/resources/sales-representative-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294051,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewpro.net/resources/job-interview-guides/sales-representative/interview-questions",
+        "reason": "fetched",
+        "lines": 42
+      }
+    },
+    {
+      "ts": 1775294051,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewpro.net/resources/job-interview-guides/sales-representative/interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294053,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewgrid.com/interview_questions/sales_representative",
+        "reason": "fetched",
+        "lines": 71
+      }
+    },
+    {
+      "ts": 1775294053,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewgrid.com/interview_questions/sales_representative",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294055,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resources.workable.com/sales-representative-interview-questions",
+        "reason": "fetched",
+        "lines": 41
+      }
+    },
+    {
+      "ts": 1775294055,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resources.workable.com/sales-representative-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294055,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/questions-for-inside-sales-interview",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294055,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/questions-for-inside-sales-interview",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294057,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/inside-sales-representative-interview-questions/",
+        "reason": "fetched",
+        "lines": 25
+      }
+    },
+    {
+      "ts": 1775294057,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/inside-sales-representative-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294059,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resumedesign.ai/interview-questions/inside-sales-representative/",
+        "reason": "fetched",
+        "lines": 68
+      }
+    },
+    {
+      "ts": 1775294059,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resumedesign.ai/interview-questions/inside-sales-representative/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294060,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/inside-sales-rep-interview-questions-answers",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775294060,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/inside-sales-rep-interview-questions-answers",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294061,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resources.workable.com/inside-sales-representative-interview-questions",
+        "reason": "fetched",
+        "lines": 53
+      }
+    },
+    {
+      "ts": 1775294061,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resources.workable.com/inside-sales-representative-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294063,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.crosschq.com/blog/inside-sales-interview-questions",
+        "reason": "fetched",
+        "lines": 52
+      }
+    },
+    {
+      "ts": 1775294063,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.crosschq.com/blog/inside-sales-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294065,
+      "event": "url_pass",
+      "details": {
+        "url": "https://guide.resumegemini.com/interviews/top-10-questions-for-inside-sales-person-interview/",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775294065,
+      "event": "url_pass",
+      "details": {
+        "url": "https://guide.resumegemini.com/interviews/top-10-questions-for-inside-sales-person-interview/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294067,
+      "event": "url_fail",
+      "details": {
+        "url": "https://ca.indeed.com/career-advice/interviewing/inside-sales-representative-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294067,
+      "event": "url_fail",
+      "details": {
+        "url": "https://ca.indeed.com/career-advice/interviewing/inside-sales-representative-interview-questions",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294068,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resumecat.com/career/inside-sales-representative/interview-questions",
+        "reason": "fetched",
+        "lines": 34
+      }
+    },
+    {
+      "ts": 1775294068,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resumecat.com/career/inside-sales-representative/interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294070,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/outside-sales-representative-interview-questions/",
+        "reason": "fetched",
+        "lines": 23
+      }
+    },
+    {
+      "ts": 1775294070,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/outside-sales-representative-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294071,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.indeed.com/hire/interview-questions/outside-sales-representative",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775294072,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.indeed.com/hire/interview-questions/outside-sales-representative",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294073,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.finalroundai.com/blog/outside-sales-representative-interview-questions",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775294073,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.finalroundai.com/blog/outside-sales-representative-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294075,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/outside-sales-representative-interview-questions-answers",
+        "reason": "fetched",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775294075,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/outside-sales-representative-interview-questions-answers",
+        "domain": "sales",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775294077,
+      "event": "url_pass",
+      "details": {
+        "url": "https://guide.resumegemini.com/interviews/top-10-questions-for-outside-sales-interview/",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775294077,
+      "event": "url_pass",
+      "details": {
+        "url": "https://guide.resumegemini.com/interviews/top-10-questions-for-outside-sales-interview/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294078,
+      "event": "url_pass",
+      "details": {
+        "url": "https://coverlettersandresume.com/sales/outside-sales-rep-interview-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775294078,
+      "event": "url_pass",
+      "details": {
+        "url": "https://coverlettersandresume.com/sales/outside-sales-rep-interview-questions-and-answers/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294080,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.zenzap.co/blog-posts/12-crucial-outside-sales-interview-questions",
+        "reason": "fetched",
+        "lines": 29
+      }
+    },
+    {
+      "ts": 1775294081,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.zenzap.co/blog-posts/12-crucial-outside-sales-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294082,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resumecat.com/career/outside-sales-rep/interview-questions",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775294082,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resumecat.com/career/outside-sales-rep/interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294084,
+      "event": "url_pass",
+      "details": {
+        "url": "https://avahr.com/outside-sales-representative-interview-questions/",
+        "reason": "fetched",
+        "lines": 37
+      }
+    },
+    {
+      "ts": 1775294084,
+      "event": "url_pass",
+      "details": {
+        "url": "https://avahr.com/outside-sales-representative-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294085,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.tealhq.com/career-paths/outside-sales-representative-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294085,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.tealhq.com/career-paths/outside-sales-representative-interview-questions",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294087,
+      "event": "url_pass",
+      "details": {
+        "url": "https://futureofworking.com/sales-interview-questions/",
+        "reason": "fetched",
+        "lines": 59
+      }
+    },
+    {
+      "ts": 1775294087,
+      "event": "url_pass",
+      "details": {
+        "url": "https://futureofworking.com/sales-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294088,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.indeed.com/hire/interview-questions/sales",
+        "reason": "fetched",
+        "lines": 59
+      }
+    },
+    {
+      "ts": 1775294089,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.indeed.com/hire/interview-questions/sales",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294089,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/sales-interview-questions-answers",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775294090,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/sales-interview-questions-answers",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294090,
+      "event": "url_pass",
+      "details": {
+        "url": "https://status.net/articles/smart-answers-to-common-sales-job-interview-questions/",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775294091,
+      "event": "url_pass",
+      "details": {
+        "url": "https://status.net/articles/smart-answers-to-common-sales-job-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294092,
+      "event": "url_pass",
+      "details": {
+        "url": "https://internshala.com/blog/sales-interview-question/",
+        "reason": "fetched",
+        "lines": 68
+      }
+    },
+    {
+      "ts": 1775294092,
+      "event": "url_pass",
+      "details": {
+        "url": "https://internshala.com/blog/sales-interview-question/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294092,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/situational-interview-questions-for-sales",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294092,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/situational-interview-questions-for-sales",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294095,
+      "event": "url_pass",
+      "details": {
+        "url": "https://revpilots.com/guide/situational-questions-in-sales-interviews/",
+        "reason": "fetched",
+        "lines": 59
+      }
+    },
+    {
+      "ts": 1775294095,
+      "event": "url_pass",
+      "details": {
+        "url": "https://revpilots.com/guide/situational-questions-in-sales-interviews/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294097,
+      "event": "url_pass",
+      "details": {
+        "url": "https://salestalentinc.com/blog/portfolio-items/sales-situational-interview-questions/",
+        "reason": "fetched",
+        "lines": 40
+      }
+    },
+    {
+      "ts": 1775294097,
+      "event": "url_pass",
+      "details": {
+        "url": "https://salestalentinc.com/blog/portfolio-items/sales-situational-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294099,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewbaba.com/sales-situational-interview-questions/",
+        "reason": "fetched",
+        "lines": 64
+      }
+    },
+    {
+      "ts": 1775294099,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewbaba.com/sales-situational-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294100,
+      "event": "url_pass",
+      "details": {
+        "url": "https://globalcareerconsultants.us/sales-situational-interview-questions/",
+        "reason": "fetched",
+        "lines": 50
+      }
+    },
+    {
+      "ts": 1775294100,
+      "event": "url_pass",
+      "details": {
+        "url": "https://globalcareerconsultants.us/sales-situational-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294101,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.hipeople.io/interview-questions/scenario-based-interview-questions",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775294101,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.hipeople.io/interview-questions/scenario-based-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294104,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.insidesalesexpert.com/blog/Situational-Questions-for-Salesperson-Interviews-and-Best-Answers",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775294104,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.insidesalesexpert.com/blog/Situational-Questions-for-Salesperson-Interviews-and-Best-Answers",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294105,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cgaa.org/article/situational-interview-questions-for-sales",
+        "reason": "fetched",
+        "lines": 72
+      }
+    },
+    {
+      "ts": 1775294106,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cgaa.org/article/situational-interview-questions-for-sales",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294106,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.mockquestions.com/interview/Scenario+Based/",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294106,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.mockquestions.com/interview/Scenario+Based/",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294108,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.adaface.com/blog/sales-interview-questions/",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775294108,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.adaface.com/blog/sales-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294109,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resources.workable.com/sales-project-consultant-interview-questions",
+        "reason": "fetched",
+        "lines": 53
+      }
+    },
+    {
+      "ts": 1775294109,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resources.workable.com/sales-project-consultant-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294111,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewplus.ai/blog/2024-11/essential-project-sales-executive-interview-questions",
+        "reason": "fetched",
+        "lines": 25
+      }
+    },
+    {
+      "ts": 1775294111,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewplus.ai/blog/2024-11/essential-project-sales-executive-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294113,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.projectmanager.com/blog/the-23-best-project-manager-interview-questions",
+        "reason": "fetched",
+        "lines": 53
+      }
+    },
+    {
+      "ts": 1775294113,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.projectmanager.com/blog/the-23-best-project-manager-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294115,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resources.biginterview.com/industry-specific/sales-interview-questions-answers/",
+        "reason": "fetched",
+        "lines": 67
+      }
+    },
+    {
+      "ts": 1775294115,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resources.biginterview.com/industry-specific/sales-interview-questions-answers/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294116,
+      "event": "url_fail",
+      "details": {
+        "url": "https://goodmeetings.ai/blog/40-sales-interview-questions-and-answers-to-expect-in-your-next-job-interview/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775294116,
+      "event": "url_fail",
+      "details": {
+        "url": "https://goodmeetings.ai/blog/40-sales-interview-questions-and-answers-to-expect-in-your-next-job-interview/",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294117,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.leadsquared.com/learn/sales/sales-interview-questions/",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775294118,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.leadsquared.com/learn/sales/sales-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294119,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.fhyzics.net/sales-jobs-interview-questions/sales-interview-questions-for-sales-project-manager-salesiq-093",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775294119,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.fhyzics.net/sales-jobs-interview-questions/sales-interview-questions-for-sales-project-manager-salesiq-093",
+        "domain": "sales",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775294121,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.upgrad.com/blog/sales-interview-questions-answers/",
+        "reason": "fetched",
+        "lines": 74
+      }
+    },
+    {
+      "ts": 1775294121,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.upgrad.com/blog/sales-interview-questions-answers/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294123,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/salesperson-interview-questions/",
+        "reason": "fetched",
+        "lines": 36
+      }
+    },
+    {
+      "ts": 1775294123,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/salesperson-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294124,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewgrid.com/interview_questions/sales_personal",
+        "reason": "fetched",
+        "lines": 68
+      }
+    },
+    {
+      "ts": 1775294125,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewgrid.com/interview_questions/sales_personal",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294127,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/sales-person-interview-questions-answers",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775294127,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/sales-person-interview-questions-answers",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294128,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/hr-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294128,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/hr-interview-questions",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294129,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.naukri.com/blog/sales-interview-questions/",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775294130,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.naukri.com/blog/sales-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294130,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.hellointern.in/blog/top-interview-questions-and-answers-for-hr-sales-and-marketing-19894",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294131,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.multiplymii.com/interview-repository/sales-representative",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775294131,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.multiplymii.com/interview-repository/sales-representative",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294132,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.pmapstest.com/blog/sales-representative-interview-questions",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775294133,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.pmapstest.com/blog/sales-representative-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294135,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/human-resources-representative-interview-questions/",
+        "reason": "fetched",
+        "lines": 63
+      }
+    },
+    {
+      "ts": 1775294135,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/human-resources-representative-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294137,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.hubspot.com/sales/25-sales-interview-questions-to-recruit-the-best-reps",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775294138,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.hubspot.com/sales/25-sales-interview-questions-to-recruit-the-best-reps",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294138,
+      "event": "url_pass",
+      "details": {
+        "url": "https://factohr.com/sales-executive-interview-questions-answers/",
+        "reason": "fetched",
+        "lines": 73
+      }
+    },
+    {
+      "ts": 1775294139,
+      "event": "url_pass",
+      "details": {
+        "url": "https://factohr.com/sales-executive-interview-questions-answers/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294141,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/technical-sales-representative-interview-questions/",
+        "reason": "fetched",
+        "lines": 60
+      }
+    },
+    {
+      "ts": 1775294141,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/technical-sales-representative-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294142,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.springboard.com/blog/sales/technical-sales-interview-questions/",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294142,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.springboard.com/blog/sales/technical-sales-interview-questions/",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294142,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.tealhq.com/career-paths/technical-sales-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294142,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.tealhq.com/career-paths/technical-sales-interview-questions",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294144,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resumecat.com/career/technical-sales/interview-questions",
+        "reason": "fetched",
+        "lines": 22
+      }
+    },
+    {
+      "ts": 1775294144,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resumecat.com/career/technical-sales/interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294145,
+      "event": "url_pass",
+      "details": {
+        "url": "https://digitaldefynd.com/IQ/top-technical-sales-interview-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 48
+      }
+    },
+    {
+      "ts": 1775294146,
+      "event": "url_pass",
+      "details": {
+        "url": "https://digitaldefynd.com/IQ/top-technical-sales-interview-questions-and-answers/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294147,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/technical-sales-representative-interview-questions-answers",
+        "reason": "fetched",
+        "lines": 10
+      }
+    },
+    {
+      "ts": 1775294147,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/technical-sales-representative-interview-questions-answers",
+        "domain": "sales",
+        "lines": 10
+      }
+    },
+    {
+      "ts": 1775294148,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.crosschq.com/blog/technical-sales-interview-questions",
+        "reason": "fetched",
+        "lines": 53
+      }
+    },
+    {
+      "ts": 1775294149,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.crosschq.com/blog/technical-sales-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294150,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.finalroundai.com/blog/technical-sales-interview-questions",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775294150,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.finalroundai.com/blog/technical-sales-interview-questions",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294152,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.usecanyon.com/interview-questions/technical-sales",
+        "reason": "fetched",
+        "lines": 26
+      }
+    },
+    {
+      "ts": 1775294152,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.usecanyon.com/interview-questions/technical-sales",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294153,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resumedesign.ai/interview-questions/technical-sales-specialist/",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775294153,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resumedesign.ai/interview-questions/technical-sales-specialist/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294154,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/sales-behavioral-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294154,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/sales-behavioral-interview-questions",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294155,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.themuse.com/advice/behavioral-interview-questions-answers-examples",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775294155,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.themuse.com/advice/behavioral-interview-questions-answers-examples",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294158,
+      "event": "url_pass",
+      "details": {
+        "url": "https://learn.salesfolks.com/essential-sales-behavioral-interview-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 23
+      }
+    },
+    {
+      "ts": 1775294159,
+      "event": "url_pass",
+      "details": {
+        "url": "https://learn.salesfolks.com/essential-sales-behavioral-interview-questions-and-answers/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294160,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.poised.com/blog/list-of-behavioral-interview-questions-for-sales-managers",
+        "reason": "fetched",
+        "lines": 71
+      }
+    },
+    {
+      "ts": 1775294160,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.poised.com/blog/list-of-behavioral-interview-questions-for-sales-managers",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294161,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.testgorilla.com/blog/sales-aptitude-interview-questions/",
+        "reason": "fetched",
+        "lines": 73
+      }
+    },
+    {
+      "ts": 1775294161,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.testgorilla.com/blog/sales-aptitude-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294163,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.best-job-interview.com/sales-interview-questions.html",
+        "reason": "fetched",
+        "lines": 70
+      }
+    },
+    {
+      "ts": 1775294163,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.best-job-interview.com/sales-interview-questions.html",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294167,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/sales-interview-questions/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775294167,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/sales-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294168,
+      "event": "url_pass",
+      "details": {
+        "url": "https://intellipaat.com/blog/interview-question/sales-interview-questions/",
+        "reason": "fetched",
+        "lines": 62
+      }
+    },
+    {
+      "ts": 1775294168,
+      "event": "url_pass",
+      "details": {
+        "url": "https://intellipaat.com/blog/interview-question/sales-interview-questions/",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294172,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.jobhai.com/blog/learning/top-40-sales-interview-questions-and-answers",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775294172,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.jobhai.com/blog/learning/top-40-sales-interview-questions-and-answers",
+        "domain": "sales",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294172,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.vervecopilot.com/interview-questions/top-30-most-common-sales-interview-questions-and-answers-for-freshers-you-should-prepare-for",
+        "reason": "fetched",
+        "lines": 52
+      }
+    },
+    {
+      "ts": 1775294173,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.vervecopilot.com/interview-questions/top-30-most-common-sales-interview-questions-and-answers-for-freshers-you-should-prepare-for",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294175,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.careers360.com/courses-certifications/articles/sales-interview-questions-answers",
+        "reason": "fetched",
+        "lines": 52
+      }
+    },
+    {
+      "ts": 1775294175,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.careers360.com/courses-certifications/articles/sales-interview-questions-answers",
+        "domain": "sales",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294876,
+      "event": "url_pass",
+      "details": {
+        "url": "https://x0pa.com/hiring/business-development-manager-interview-questions/",
+        "reason": "fetched",
+        "lines": 40
+      }
+    },
+    {
+      "ts": 1775294876,
+      "event": "url_pass",
+      "details": {
+        "url": "https://x0pa.com/hiring/business-development-manager-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294878,
+      "event": "url_fail",
+      "details": {
+        "url": "https://breezy.hr/resources/interview-questions/business-development-manager",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294878,
+      "event": "url_fail",
+      "details": {
+        "url": "https://breezy.hr/resources/interview-questions/business-development-manager",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294879,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/business-developer-interview-questions-answers",
+        "reason": "fetched",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775294879,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/business-developer-interview-questions-answers",
+        "domain": "business_development",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775294883,
+      "event": "url_pass",
+      "details": {
+        "url": "https://timespro.com/blog/business-development-associate-interview-questions-and-answers",
+        "reason": "fetched",
+        "lines": 55
+      }
+    },
+    {
+      "ts": 1775294884,
+      "event": "url_pass",
+      "details": {
+        "url": "https://timespro.com/blog/business-development-associate-interview-questions-and-answers",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294885,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.indeed.com/hire/interview-questions/project-engineer",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775294885,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.indeed.com/hire/interview-questions/project-engineer",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294885,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/business-development-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294885,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/business-development-interview-questions",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294886,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.glassdoor.com/blog/guide/business-development-interview-questions/",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294886,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.glassdoor.com/blog/guide/business-development-interview-questions/",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294888,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.turing.com/interview-questions/business-development",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294889,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.coursera.org/articles/business-development-manager-interview-questions",
+        "reason": "http_404"
+      }
+    },
+    {
+      "ts": 1775294889,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.coursera.org/articles/business-development-manager-interview-questions",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294893,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.betterteam.com/business-development-manager-interview-questions",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775294893,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.betterteam.com/business-development-manager-interview-questions",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294894,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resources.workable.com/business-development-manager-interview-questions",
+        "reason": "fetched",
+        "lines": 52
+      }
+    },
+    {
+      "ts": 1775294894,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resources.workable.com/business-development-manager-interview-questions",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294895,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/business-development-interview-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775294895,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/business-development-interview-questions-and-answers/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294895,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/business-development-manager-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294895,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/business-development-manager-interview-questions",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294896,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/business-development-interview-questions-answers",
+        "reason": "fetched",
+        "lines": 11
+      }
+    },
+    {
+      "ts": 1775294897,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/business-development-interview-questions-answers",
+        "domain": "business_development",
+        "lines": 11
+      }
+    },
+    {
+      "ts": 1775294899,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/business-development-officer-interview-questions/",
+        "reason": "fetched",
+        "lines": 18
+      }
+    },
+    {
+      "ts": 1775294899,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/business-development-officer-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294900,
+      "event": "url_pass",
+      "details": {
+        "url": "https://internshala.com/blog/business-development-manager-interview-questions/",
+        "reason": "fetched",
+        "lines": 60
+      }
+    },
+    {
+      "ts": 1775294900,
+      "event": "url_pass",
+      "details": {
+        "url": "https://internshala.com/blog/business-development-manager-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294901,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.theknowledgeacademy.com/blog/business-development-interview-questions/",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294902,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.theknowledgeacademy.com/blog/business-development-interview-questions/",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294908,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.resumeprofessionalwriters.com/business-development-manager-interview-questions/",
+        "reason": "fetched",
+        "lines": 57
+      }
+    },
+    {
+      "ts": 1775294908,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.resumeprofessionalwriters.com/business-development-manager-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294909,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dailyremote.com/advice/business-development-interview-questions",
+        "reason": "fetched",
+        "lines": 56
+      }
+    },
+    {
+      "ts": 1775294910,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dailyremote.com/advice/business-development-interview-questions",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294911,
+      "event": "url_pass",
+      "details": {
+        "url": "https://maxresumes.com/interview-questions/business-development/",
+        "reason": "fetched",
+        "lines": 45
+      }
+    },
+    {
+      "ts": 1775294911,
+      "event": "url_pass",
+      "details": {
+        "url": "https://maxresumes.com/interview-questions/business-development/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294913,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/business-development-manager-interview-questions/",
+        "reason": "fetched",
+        "lines": 34
+      }
+    },
+    {
+      "ts": 1775294913,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/business-development-manager-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294918,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.metaintro.com/blog/business-development-manager-interview-questions",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775294918,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.metaintro.com/blog/business-development-manager-interview-questions",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294919,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.skilr.com/blog/top-50-business-development-manager-interview-questions/",
+        "reason": "fetched",
+        "lines": 74
+      }
+    },
+    {
+      "ts": 1775294920,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.skilr.com/blog/top-50-business-development-manager-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294922,
+      "event": "url_pass",
+      "details": {
+        "url": "https://skillora.ai/blog/top-business-development-manager-interview-questions-with-sample-answers",
+        "reason": "fetched",
+        "lines": 71
+      }
+    },
+    {
+      "ts": 1775294922,
+      "event": "url_pass",
+      "details": {
+        "url": "https://skillora.ai/blog/top-business-development-manager-interview-questions-with-sample-answers",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294924,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/business-development-executive-interview-questions/",
+        "reason": "fetched",
+        "lines": 42
+      }
+    },
+    {
+      "ts": 1775294925,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/business-development-executive-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294925,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/business-development-executive-interview-questions-answers",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775294926,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/business-development-executive-interview-questions-answers",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294927,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.naukri.com/blog/7-business-development-executive-interview-questions/",
+        "reason": "fetched",
+        "lines": 58
+      }
+    },
+    {
+      "ts": 1775294927,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.naukri.com/blog/7-business-development-executive-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294928,
+      "event": "url_fail",
+      "details": {
+        "url": "https://in.indeed.com/career-advice/interviewing/business-development-executive-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294928,
+      "event": "url_fail",
+      "details": {
+        "url": "https://in.indeed.com/career-advice/interviewing/business-development-executive-interview-questions",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294930,
+      "event": "url_pass",
+      "details": {
+        "url": "https://x0pa.com/hiring/business-development-executive-interview-questions/",
+        "reason": "fetched",
+        "lines": 40
+      }
+    },
+    {
+      "ts": 1775294931,
+      "event": "url_pass",
+      "details": {
+        "url": "https://x0pa.com/hiring/business-development-executive-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294932,
+      "event": "url_pass",
+      "details": {
+        "url": "https://internshala.com/blog/business-development-executive-interview-questions/",
+        "reason": "fetched",
+        "lines": 59
+      }
+    },
+    {
+      "ts": 1775294932,
+      "event": "url_pass",
+      "details": {
+        "url": "https://internshala.com/blog/business-development-executive-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294934,
+      "event": "url_pass",
+      "details": {
+        "url": "https://climbtheladder.com/business-development-executive-interview-questions/",
+        "reason": "fetched",
+        "lines": 29
+      }
+    },
+    {
+      "ts": 1775294934,
+      "event": "url_pass",
+      "details": {
+        "url": "https://climbtheladder.com/business-development-executive-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294935,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.mockinterviewpro.com/interview-questions/business-development-executive/",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775294935,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.mockinterviewpro.com/interview-questions/business-development-executive/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294937,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.vervecopilot.com/blog/business-development-executive-interview-questions",
+        "reason": "fetched",
+        "lines": 44
+      }
+    },
+    {
+      "ts": 1775294938,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.vervecopilot.com/blog/business-development-executive-interview-questions",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294938,
+      "event": "url_fail",
+      "details": {
+        "url": "https://uk.indeed.com/career-advice/interviewing/business-development-executive-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294938,
+      "event": "url_fail",
+      "details": {
+        "url": "https://uk.indeed.com/career-advice/interviewing/business-development-executive-interview-questions",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294939,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.tealhq.com/career-paths/business-development-manager-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294939,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.tealhq.com/career-paths/business-development-manager-interview-questions",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294940,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.vervecopilot.com/interview-questions/top-30-most-common-bde-interview-questions-you-should-prepare-for",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775294940,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.vervecopilot.com/interview-questions/top-30-most-common-bde-interview-questions-you-should-prepare-for",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294942,
+      "event": "url_pass",
+      "details": {
+        "url": "https://boulosolutions.com/business-development-executive-interview-questions/",
+        "reason": "fetched",
+        "lines": 67
+      }
+    },
+    {
+      "ts": 1775294942,
+      "event": "url_pass",
+      "details": {
+        "url": "https://boulosolutions.com/business-development-executive-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294943,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.hirequotient.com/blog/business-development-executive-interview-questions-and-answers",
+        "reason": "http_402"
+      }
+    },
+    {
+      "ts": 1775294943,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.hirequotient.com/blog/business-development-executive-interview-questions-and-answers",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294944,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.foundit.in/career-advice/business-development-executive-interview-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 57
+      }
+    },
+    {
+      "ts": 1775294944,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.foundit.in/career-advice/business-development-executive-interview-questions-and-answers/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294946,
+      "event": "url_pass",
+      "details": {
+        "url": "https://screeninghive.com/interview-questions/sales/business-development-executive",
+        "reason": "fetched",
+        "lines": 56
+      }
+    },
+    {
+      "ts": 1775294946,
+      "event": "url_pass",
+      "details": {
+        "url": "https://screeninghive.com/interview-questions/sales/business-development-executive",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294947,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.tealhq.com/career-paths/business-development-executive-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294947,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.tealhq.com/career-paths/business-development-executive-interview-questions",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294949,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/business-developer-interview-questions/",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775294949,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/business-developer-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294952,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.jobhai.com/blog/learning/business-development-interview-questions-answers",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775294952,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.jobhai.com/blog/learning/business-development-interview-questions-answers",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294953,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.mockinterviewpro.com/interview-questions/business-development-officer",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775294954,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.mockinterviewpro.com/interview-questions/business-development-officer",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294956,
+      "event": "url_pass",
+      "details": {
+        "url": "https://climbtheladder.com/business-development-manager-interview-questions/",
+        "reason": "fetched",
+        "lines": 54
+      }
+    },
+    {
+      "ts": 1775294956,
+      "event": "url_pass",
+      "details": {
+        "url": "https://climbtheladder.com/business-development-manager-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294957,
+      "event": "url_pass",
+      "details": {
+        "url": "https://thebusinessanalystjobdescription.com/scenario-based-business-analyst-interview-questions/",
+        "reason": "fetched",
+        "lines": 55
+      }
+    },
+    {
+      "ts": 1775294958,
+      "event": "url_pass",
+      "details": {
+        "url": "https://thebusinessanalystjobdescription.com/scenario-based-business-analyst-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294958,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/situational-interview-questions-and-answers",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294958,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/situational-interview-questions-and-answers",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294960,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.navero.me/blog/scenario-based-interview-questions",
+        "reason": "fetched",
+        "lines": 48
+      }
+    },
+    {
+      "ts": 1775294960,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.navero.me/blog/scenario-based-interview-questions",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294964,
+      "event": "url_pass",
+      "details": {
+        "url": "https://techcanvass.com/blogs/what-are-some-scenario-based-and-logical-questions-that-are-asked-in-a-business-analyst-interview",
+        "reason": "fetched",
+        "lines": 72
+      }
+    },
+    {
+      "ts": 1775294964,
+      "event": "url_pass",
+      "details": {
+        "url": "https://techcanvass.com/blogs/what-are-some-scenario-based-and-logical-questions-that-are-asked-in-a-business-analyst-interview",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294964,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.hipeople.io/interview-questions/scenario-based-interview-questions",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294964,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.mockquestions.com/interview/Scenario+Based/",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294965,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.vervecopilot.com/interview-questions/top-30-most-common-business-development-interview-questions-you-should-prepare-for",
+        "reason": "fetched",
+        "lines": 41
+      }
+    },
+    {
+      "ts": 1775294965,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.vervecopilot.com/interview-questions/top-30-most-common-business-development-interview-questions-you-should-prepare-for",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294966,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.adaface.com/blog/business-development-interview-questions/",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775294967,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.adaface.com/blog/business-development-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294968,
+      "event": "url_pass",
+      "details": {
+        "url": "https://mentorcruise.com/questions/businessdevelopment/",
+        "reason": "fetched",
+        "lines": 53
+      }
+    },
+    {
+      "ts": 1775294968,
+      "event": "url_pass",
+      "details": {
+        "url": "https://mentorcruise.com/questions/businessdevelopment/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294970,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/business-development-specialist-interview-questions/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775294970,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/business-development-specialist-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294971,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.projectmanager.com/blog/the-23-best-project-manager-interview-questions",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294973,
+      "event": "url_pass",
+      "details": {
+        "url": "https://upesonline.ac.in/blog/business-development-interview-questions-entry-level-to-advanced",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775294973,
+      "event": "url_pass",
+      "details": {
+        "url": "https://upesonline.ac.in/blog/business-development-interview-questions-entry-level-to-advanced",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294975,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewbaba.com/business-development-interview-questions/",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775294975,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewbaba.com/business-development-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294977,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.poised.com/blog/list-of-behavioral-interview-questions-for-business-development-managers",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775294977,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.poised.com/blog/list-of-behavioral-interview-questions-for-business-development-managers",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294978,
+      "event": "url_pass",
+      "details": {
+        "url": "https://apna.co/career-central/business-development-job-interview-questions/",
+        "reason": "fetched",
+        "lines": 66
+      }
+    },
+    {
+      "ts": 1775294978,
+      "event": "url_pass",
+      "details": {
+        "url": "https://apna.co/career-central/business-development-job-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294980,
+      "event": "url_pass",
+      "details": {
+        "url": "https://covrltr.com/interview-questions/hr/hr-business-development-manager/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775294981,
+      "event": "url_pass",
+      "details": {
+        "url": "https://covrltr.com/interview-questions/hr/hr-business-development-manager/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294981,
+      "event": "url_pass",
+      "details": {
+        "url": "https://mrsimon.ai/interview-questions/business-development/",
+        "reason": "fetched",
+        "lines": 69
+      }
+    },
+    {
+      "ts": 1775294982,
+      "event": "url_pass",
+      "details": {
+        "url": "https://mrsimon.ai/interview-questions/business-development/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294984,
+      "event": "url_pass",
+      "details": {
+        "url": "https://boulosolutions.com/interview-questions-for-business-development-manager/",
+        "reason": "fetched",
+        "lines": 72
+      }
+    },
+    {
+      "ts": 1775294984,
+      "event": "url_pass",
+      "details": {
+        "url": "https://boulosolutions.com/interview-questions-for-business-development-manager/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294985,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.mockinterviewpro.com/interview-questions/business-developer/",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775294986,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.mockinterviewpro.com/interview-questions/business-developer/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294987,
+      "event": "url_pass",
+      "details": {
+        "url": "https://starmethod.org/business-development-manager/star-interview",
+        "reason": "fetched",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775294987,
+      "event": "url_pass",
+      "details": {
+        "url": "https://starmethod.org/business-development-manager/star-interview",
+        "domain": "business_development",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775294988,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.wecreateproblems.com/interview-questions/behavioral-interview-questions",
+        "reason": "fetched",
+        "lines": 80
+      }
+    },
+    {
+      "ts": 1775294989,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.wecreateproblems.com/interview-questions/behavioral-interview-questions",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294989,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.theknowledgeacademy.com/interview-questions/business-development-interview-questions/",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775294989,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.theknowledgeacademy.com/interview-questions/business-development-interview-questions/",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775294991,
+      "event": "url_pass",
+      "details": {
+        "url": "https://abouthire.com/business-development-interview-questions/",
+        "reason": "fetched",
+        "lines": 59
+      }
+    },
+    {
+      "ts": 1775294992,
+      "event": "url_pass",
+      "details": {
+        "url": "https://abouthire.com/business-development-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294993,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewpenguin.com/business-development-manager-interview-questions-answers/",
+        "reason": "fetched",
+        "lines": 65
+      }
+    },
+    {
+      "ts": 1775294994,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewpenguin.com/business-development-manager-interview-questions-answers/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294996,
+      "event": "url_pass",
+      "details": {
+        "url": "https://jobs.ispe.org/interview-questions/business-development-engineer",
+        "reason": "fetched",
+        "lines": 19
+      }
+    },
+    {
+      "ts": 1775294997,
+      "event": "url_pass",
+      "details": {
+        "url": "https://jobs.ispe.org/interview-questions/business-development-engineer",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294999,
+      "event": "url_pass",
+      "details": {
+        "url": "https://ngt-internship.com/business-development-engineer-interview-questions-and-answers-29018",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775294999,
+      "event": "url_pass",
+      "details": {
+        "url": "https://ngt-internship.com/business-development-engineer-interview-questions-and-answers-29018",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775294999,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.glassdoor.com/Interview/business-development-engineer-interview-questions-SRCH_KO0,29.htm",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775295000,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.glassdoor.com/Interview/business-development-engineer-interview-questions-SRCH_KO0,29.htm",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775295002,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/project-engineer-interview-questions/",
+        "reason": "fetched",
+        "lines": 18
+      }
+    },
+    {
+      "ts": 1775295002,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/project-engineer-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295004,
+      "event": "url_pass",
+      "details": {
+        "url": "https://guide.resumegemini.com/interviews/top-10-questions-for-project-development-engineer-interview/",
+        "reason": "fetched",
+        "lines": 68
+      }
+    },
+    {
+      "ts": 1775295004,
+      "event": "url_pass",
+      "details": {
+        "url": "https://guide.resumegemini.com/interviews/top-10-questions-for-project-development-engineer-interview/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295005,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/hr/hr-interview-questions/",
+        "reason": "fetched",
+        "lines": 54
+      }
+    },
+    {
+      "ts": 1775295005,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/hr/hr-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295005,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.interviewbit.com/hr-interview-questions/",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775295008,
+      "event": "url_pass",
+      "details": {
+        "url": "https://climbtheladder.com/personal-development-interview-questions/",
+        "reason": "fetched",
+        "lines": 28
+      }
+    },
+    {
+      "ts": 1775295008,
+      "event": "url_pass",
+      "details": {
+        "url": "https://climbtheladder.com/personal-development-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295008,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/sample-engineering-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775295008,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.indeed.com/career-advice/interviewing/sample-engineering-interview-questions",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775295010,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/engineering-interview-questions/",
+        "reason": "fetched",
+        "lines": 37
+      }
+    },
+    {
+      "ts": 1775295011,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/engineering-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295012,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.intuit.com/blog/innovative-thinking/60-engineering-interview-questions-to-expect-and-12-to-ask-during-your-job-search/",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775295012,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.intuit.com/blog/innovative-thinking/60-engineering-interview-questions-to-expect-and-12-to-ask-during-your-job-search/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295013,
+      "event": "url_pass",
+      "details": {
+        "url": "https://status.net/articles/common-engineering-interview-questions-sample-answers/",
+        "reason": "fetched",
+        "lines": 74
+      }
+    },
+    {
+      "ts": 1775295013,
+      "event": "url_pass",
+      "details": {
+        "url": "https://status.net/articles/common-engineering-interview-questions-sample-answers/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295014,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.vervecopilot.com/interview-questions/top-30-most-common-engineering-interview-questions-you-should-prepare-for",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775295014,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.vervecopilot.com/interview-questions/top-30-most-common-engineering-interview-questions-you-should-prepare-for",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295015,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/engineering-interview-questions-answers",
+        "reason": "fetched",
+        "lines": 10
+      }
+    },
+    {
+      "ts": 1775295016,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.cvowl.com/blog/engineering-interview-questions-answers",
+        "domain": "business_development",
+        "lines": 10
+      }
+    },
+    {
+      "ts": 1775295017,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.apollotechnical.com/engineering-interview-questions/",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775295017,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.apollotechnical.com/engineering-interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295020,
+      "event": "url_pass",
+      "details": {
+        "url": "https://engineersnotebook.com/interview-questions/",
+        "reason": "fetched",
+        "lines": 6
+      }
+    },
+    {
+      "ts": 1775295020,
+      "event": "url_pass",
+      "details": {
+        "url": "https://engineersnotebook.com/interview-questions/",
+        "domain": "business_development",
+        "lines": 6
+      }
+    },
+    {
+      "ts": 1775295021,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resume.co/blog/engineering-interview-questions",
+        "reason": "fetched",
+        "lines": 71
+      }
+    },
+    {
+      "ts": 1775295021,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resume.co/blog/engineering-interview-questions",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295023,
+      "event": "url_pass",
+      "details": {
+        "url": "https://huntr.co/interview-questions/engineer",
+        "reason": "fetched",
+        "lines": 43
+      }
+    },
+    {
+      "ts": 1775295023,
+      "event": "url_pass",
+      "details": {
+        "url": "https://huntr.co/interview-questions/engineer",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295023,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.mockquestions.com/position/Engineer/",
+        "domain": "business_development",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775295024,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/",
+        "reason": "fetched",
+        "lines": 66
+      }
+    },
+    {
+      "ts": 1775295025,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295025,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/about/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775295026,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/about/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295026,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/editorial-guidelines-the-interview-guys/",
+        "reason": "fetched",
+        "lines": 80
+      }
+    },
+    {
+      "ts": 1775295027,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/editorial-guidelines-the-interview-guys/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295027,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/universities-and-colleges-that-reference-the-interview-guys/",
+        "reason": "fetched",
+        "lines": 15
+      }
+    },
+    {
+      "ts": 1775295028,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/universities-and-colleges-that-reference-the-interview-guys/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295030,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/blog-posts/",
+        "reason": "fetched",
+        "lines": 55
+      }
+    },
+    {
+      "ts": 1775295030,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/blog-posts/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295030,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/job-search/",
+        "reason": "fetched",
+        "lines": 36
+      }
+    },
+    {
+      "ts": 1775295031,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/job-search/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295032,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/job-search/linkedin/",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775295032,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/job-search/linkedin/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295033,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/resumes-cover-letters/",
+        "reason": "fetched",
+        "lines": 40
+      }
+    },
+    {
+      "ts": 1775295033,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/resumes-cover-letters/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295034,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/free-resume-templates/",
+        "reason": "fetched",
+        "lines": 58
+      }
+    },
+    {
+      "ts": 1775295034,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/free-resume-templates/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295035,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/job-interviews/",
+        "reason": "fetched",
+        "lines": 36
+      }
+    },
+    {
+      "ts": 1775295035,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/job-interviews/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295036,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/job-interviews/interview-questions/",
+        "reason": "fetched",
+        "lines": 36
+      }
+    },
+    {
+      "ts": 1775295037,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/job-interviews/interview-questions/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295037,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/careers/",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775295038,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/careers/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295038,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/careers/side-hustles/",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775295039,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/careers/side-hustles/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295039,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/career-certifications/",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775295040,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/career-certifications/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295040,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/remote-jobs/",
+        "reason": "fetched",
+        "lines": 36
+      }
+    },
+    {
+      "ts": 1775295041,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/remote-jobs/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295042,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/industry-insights/",
+        "reason": "fetched",
+        "lines": 37
+      }
+    },
+    {
+      "ts": 1775295042,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/industry-insights/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295043,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/reviews/",
+        "reason": "fetched",
+        "lines": 40
+      }
+    },
+    {
+      "ts": 1775295043,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/reviews/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295044,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/research-reports/",
+        "reason": "fetched",
+        "lines": 35
+      }
+    },
+    {
+      "ts": 1775295044,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/category/research-reports/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295045,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/our-tools/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775295046,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/our-tools/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295047,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/power-bullets-resume-analyzer/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775295047,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/power-bullets-resume-analyzer/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295048,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/interview-oracle-question-predictor/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775295048,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/interview-oracle-question-predictor/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295049,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/the-salary-decoder/",
+        "reason": "fetched",
+        "lines": 17
+      }
+    },
+    {
+      "ts": 1775295049,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/the-salary-decoder/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295049,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/the-interview-follow-up-calculator/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775295050,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/the-interview-follow-up-calculator/",
+        "domain": "business_development",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775295051,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/time-to-offer-estimator-tool/",
+        "reason": "fetched",
+        "lines": 15
+      }
+    },
+    {
+      "ts": 1775295051,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.theinterviewguys.com/time-to-offer-estimator-tool/",
+        "domain": "business_development",
+        "lines": 12
+      }
     }
   ]
 }

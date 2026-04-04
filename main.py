@@ -68,7 +68,7 @@ def _env_float(key: str, default: float) -> float:
     except Exception:
         return float(default)
 
-def _env_port(default: int = 8099) -> int:
+def _env_port(default: int = 9000) -> int:
     """
     Resolve runtime port with platform compatibility.
     Priority: WORKER_PORT -> PORT -> default
@@ -94,7 +94,7 @@ LLM_POOL_LIMIT          = _env_int("LLM_POOL_LIMIT", 60, 10)
 LLM_LINE_WORD_LIMIT     = _env_int("LLM_LINE_WORD_LIMIT", 20, 8)
 LLM_USE_FOR_EVALUATION  = _env_bool("LLM_USE_FOR_EVALUATION", "false")
 WORKER_HOST             = os.getenv("WORKER_HOST", "127.0.0.1")
-WORKER_PORT             = _env_port(8099)
+WORKER_PORT             = _env_port(9000)
 
 RAG_FETCH_ONLINE        = _env_bool("RAG_FETCH_ONLINE", "true")
 RAG_SOURCES_FILE        = Path(os.getenv("RAG_SOURCES_FILE", Path(__file__).with_name("rag_sources.json")))
@@ -5018,3 +5018,4 @@ def speech_synthesize(payload: SpeechSynthesizeRequest) -> Dict[str, Any]:
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host=WORKER_HOST, port=WORKER_PORT)
+

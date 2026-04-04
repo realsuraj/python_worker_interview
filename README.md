@@ -13,7 +13,7 @@ docker compose up --build
 
 First build installs Python dependencies only (no STT/TTS model download).
 
-Worker available at: `http://localhost:8099`
+Worker available at: `http://localhost:9000`
 
 ---
 
@@ -23,8 +23,8 @@ Override any of these in a `.env` file next to `docker-compose.yml`:
 
 | Variable | Default | Description |
 |---|---|---|
-| `WORKER_PUBLIC_PORT` | `8099` | Host port published by Docker (`host:container`) |
-| `WORKER_PORT` | `8099` | Container listen port |
+| `WORKER_PUBLIC_PORT` | `9000` | Host port published by Docker (`host:container`) |
+| `WORKER_PORT` | `9000` | Container listen port |
 | `ENABLE_LLM` | `false` | Enable external LLM API calls |
 | `LLM_MODEL_NAME` | `external-api` | Label shown in API responses |
 | `LLM_API_URL` | empty | External LLM endpoint URL |
@@ -66,8 +66,8 @@ Override any of these in a `.env` file next to `docker-compose.yml`:
 
 Example `.env`:
 ```env
-WORKER_PORT=8099
-WORKER_PUBLIC_PORT=8099
+WORKER_PORT=9000
+WORKER_PUBLIC_PORT=9000
 ENABLE_STT=false
 ENABLE_TTS=false
 ```
@@ -117,7 +117,7 @@ python main.py
 Train/store 5 questions each for Java, Sales, Business Development, Voice Process, Chat Process, Flutter, React:
 
 ```bash
-curl -X POST http://localhost:8099/rag/train-once \
+curl -X POST http://localhost:9000/rag/train-once \
   -H "Content-Type: application/json" \
   -d '{
     "domains": ["java", "sales", "business_development", "voice_process", "chat_process", "flutter", "react"],
@@ -154,7 +154,7 @@ LLM_MODEL_NAME=gpt-or-any
 Generate best answer(s):
 
 ```bash
-curl -X POST http://localhost:8099/interview/best-answer \
+curl -X POST http://localhost:9000/interview/best-answer \
   -H "Content-Type: application/json" \
   -d '{
     "domain": "react",
@@ -172,3 +172,4 @@ curl -X POST http://localhost:8099/interview/best-answer \
 | Path | Size | Source |
 |---|---|---|
 | `_pydeps/` | small | pip local deps |
+

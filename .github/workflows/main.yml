@@ -28,8 +28,8 @@ jobs:
       DEPLOY_PATH: ${{ secrets.PY_WORKER_DEPLOY_PATH || secrets.DEPLOY_PATH }}
       IMAGE_NAME: ${{ secrets.PY_WORKER_IMAGE_NAME || 'interview-ai-worker' }}
       CONTAINER_NAME: ${{ secrets.PY_WORKER_CONTAINER_NAME || 'interview-ai-worker' }}
-      HOST_PORT: ${{ secrets.PY_WORKER_HOST_PORT || '8099' }}
-      CONTAINER_PORT: ${{ secrets.PY_WORKER_CONTAINER_PORT || '8099' }}
+      HOST_PORT: ${{ secrets.PY_WORKER_HOST_PORT || '9000' }}
+      CONTAINER_PORT: ${{ secrets.PY_WORKER_CONTAINER_PORT || '9000' }}
       IMAGE_TAR_NAME: ${{ secrets.PY_WORKER_IMAGE_TAR_NAME || 'ai-worker-image.tar' }}
       REMOTE_DOCKER: ${{ secrets.REMOTE_DOCKER || 'docker' }}
       ENABLE_STT: ${{ secrets.ENABLE_STT || 'false' }}
@@ -156,3 +156,4 @@ jobs:
         run: |
           set +e
           sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "echo '=== docker ps ==='; docker ps -a --filter name=$CONTAINER_NAME; echo '=== docker inspect state ==='; docker inspect $CONTAINER_NAME --format '{{json .State}}' 2>/dev/null || true; echo '=== last 200 logs ==='; docker logs --tail 200 $CONTAINER_NAME 2>&1 || true; echo '=== host port check ==='; ss -ltnp | grep :$HOST_PORT || true"
+

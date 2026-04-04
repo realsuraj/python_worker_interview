@@ -25,124 +25,124 @@
       "lastTs": 1775283713
     },
     "https://www.interviewbit.com/java-interview-questions/": {
-      "pass": 68,
+      "pass": 69,
       "fail": 4,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292550
+      "lastReason": "fetched",
+      "lastTs": 1775293408
     },
     "https://www.geeksforgeeks.org/java-interview-questions/": {
-      "pass": 58,
+      "pass": 59,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291884
+      "lastTs": 1775293408
     },
     "https://www.javatpoint.com/corejava-interview-questions": {
       "pass": 0,
-      "fail": 59,
-      "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "fetch_exception",
-      "lastTs": 1775291886
-    },
-    "https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions": {
-      "pass": 57,
-      "fail": 4,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775291889
-    },
-    "https://www.edureka.co/blog/interview-questions/java-interview-questions/": {
-      "pass": 65,
-      "fail": 1,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292558
-    },
-    "https://www.digitalocean.com/community/tutorials/java-interview-questions-and-answers": {
-      "pass": 0,
-      "fail": 63,
-      "domain": "java",
-      "lastStatus": "fail",
-      "lastReason": "http_404",
-      "lastTs": 1775291897
-    },
-    "https://www.baeldung.com/java-interview-questions": {
-      "pass": 4,
       "fail": 60,
       "domain": "java",
       "lastStatus": "fail",
-      "lastReason": "http_403",
-      "lastTs": 1775291898
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293408
     },
-    "https://www.geeksforgeeks.org/java/java-interview-questions/": {
-      "pass": 66,
+    "https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions": {
+      "pass": 58,
       "fail": 4,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292550
+      "lastReason": "fetched",
+      "lastTs": 1775293408
     },
-    "https://www.guru99.com/java-interview-questions-answers.html": {
+    "https://www.edureka.co/blog/interview-questions/java-interview-questions/": {
       "pass": 66,
-      "fail": 0,
+      "fail": 1,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292622
+      "lastReason": "fetched",
+      "lastTs": 1775293409
     },
-    "https://www.tpointtech.com/corejava-interview-questions": {
-      "pass": 62,
+    "https://www.digitalocean.com/community/tutorials/java-interview-questions-and-answers": {
+      "pass": 0,
+      "fail": 64,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293409
+    },
+    "https://www.baeldung.com/java-interview-questions": {
+      "pass": 4,
+      "fail": 61,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293409
+    },
+    "https://www.geeksforgeeks.org/java/java-interview-questions/": {
+      "pass": 67,
+      "fail": 4,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293409
+    },
+    "https://www.guru99.com/java-interview-questions-answers.html": {
+      "pass": 67,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291906
+      "lastTs": 1775293409
+    },
+    "https://www.tpointtech.com/corejava-interview-questions": {
+      "pass": 63,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293409
     },
     "https://www.datacamp.com/blog/java-interview-questions": {
       "pass": 7,
-      "fail": 62,
+      "fail": 63,
       "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292472
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293410
     },
     "https://www.w3schools.com/java/java_interview_questions.asp": {
-      "pass": 66,
+      "pass": 67,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292624
+      "lastReason": "fetched",
+      "lastTs": 1775293410
     },
     "https://codegnan.com/java-interview-questions/": {
-      "pass": 67,
+      "pass": 68,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292550
+      "lastReason": "fetched",
+      "lastTs": 1775293410
     },
     "https://codefinity.com/blog/The-80-Top-Java-Interview-Questions-and-Answers": {
-      "pass": 67,
+      "pass": 68,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292550
+      "lastReason": "fetched",
+      "lastTs": 1775293410
     },
     "https://interviewquestions.guru/core-java-interview-questions-answers/": {
-      "pass": 67,
+      "pass": 68,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292624
+      "lastReason": "fetched",
+      "lastTs": 1775293411
     },
     "https://duckduckgo.com/feedback.html": {
       "pass": 0,
@@ -153,388 +153,388 @@
       "lastTs": 1775190018
     },
     "https://www.digitalocean.com/community/tutorials/java-programming-interview-questions": {
-      "pass": 66,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292622
-    },
-    "https://interviewprep.org/java-interview-questions/": {
       "pass": 67,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292954
+      "lastReason": "fetched",
+      "lastTs": 1775293411
+    },
+    "https://interviewprep.org/java-interview-questions/": {
+      "pass": 68,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293411
     },
     "https://www.simplilearn.com/java-interview-questions-article": {
+      "pass": 66,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293411
+    },
+    "https://www.javaguides.net/2026/02/top-50-java-interview-questions-and-answers.html": {
+      "pass": 60,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293411
+    },
+    "https://www.geeksforgeeks.org/java/java/": {
       "pass": 65,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292551
-    },
-    "https://www.javaguides.net/2026/02/top-50-java-interview-questions-and-answers.html": {
-      "pass": 59,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291936
-    },
-    "https://www.geeksforgeeks.org/java/java/": {
-      "pass": 64,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775291938
+      "lastTs": 1775293411
     },
     "https://www.geeksforgeeks.org/advance-java/advanced-java/": {
+      "pass": 65,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293411
+    },
+    "https://www.geeksforgeeks.org/java/java-exercises/": {
       "pass": 64,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291940
-    },
-    "https://www.geeksforgeeks.org/java/java-exercises/": {
-      "pass": 63,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775291942
+      "lastTs": 1775293412
     },
     "https://www.geeksforgeeks.org/java/java-programming-examples/": {
+      "pass": 64,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293412
+    },
+    "https://www.geeksforgeeks.org/java/java-quiz/": {
       "pass": 63,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291944
-    },
-    "https://www.geeksforgeeks.org/java/java-quiz/": {
-      "pass": 62,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775291945
+      "lastTs": 1775293412
     },
     "https://www.geeksforgeeks.org/blogs/java-projects/": {
-      "pass": 62,
+      "pass": 63,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291947
+      "lastTs": 1775293412
     },
     "https://www.geeksforgeeks.org/java/java-cheat-sheet/": {
-      "pass": 62,
+      "pass": 63,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291949
+      "lastTs": 1775293412
     },
     "https://www.geeksforgeeks.org/dsa/dsa-in-java/": {
-      "pass": 62,
+      "pass": 63,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291953
+      "lastTs": 1775293412
     },
     "https://www.geeksforgeeks.org/java/java-collection-tutorial/": {
-      "pass": 59,
+      "pass": 60,
       "fail": 3,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291955
+      "lastTs": 1775293413
     },
     "https://www.geeksforgeeks.org/java/introduction-to-java/": {
-      "pass": 62,
+      "pass": 63,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291956
+      "lastTs": 1775293413
     },
     "https://www.geeksforgeeks.org/java/java-programming-basics/": {
-      "pass": 62,
+      "pass": 63,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291959
+      "lastTs": 1775293413
     },
     "https://www.geeksforgeeks.org/java/methods-in-java/": {
+      "pass": 63,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293413
+    },
+    "https://www.geeksforgeeks.org/java/access-modifiers-java/": {
       "pass": 62,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291961
+      "lastTs": 1775293413
     },
-    "https://www.geeksforgeeks.org/java/access-modifiers-java/": {
+    "https://www.geeksforgeeks.org/java/arrays-in-java/": {
       "pass": 61,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291963
-    },
-    "https://www.geeksforgeeks.org/java/arrays-in-java/": {
-      "pass": 60,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775291965
+      "lastTs": 1775293413
     },
     "https://www.geeksforgeeks.org/java/strings-in-java/": {
-      "pass": 60,
+      "pass": 61,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291966
+      "lastTs": 1775293414
     },
     "https://www.geeksforgeeks.org/java/regular-expressions-in-java/": {
+      "pass": 61,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293414
+    },
+    "https://www.geeksforgeeks.org/java/classes-objects-java/": {
       "pass": 60,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291969
+      "lastTs": 1775293414
     },
-    "https://www.geeksforgeeks.org/java/classes-objects-java/": {
+    "https://www.geeksforgeeks.org/java/constructors-in-java/": {
       "pass": 59,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291971
-    },
-    "https://www.geeksforgeeks.org/java/constructors-in-java/": {
-      "pass": 58,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775291973
+      "lastTs": 1775293414
     },
     "https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/": {
-      "pass": 58,
+      "pass": 59,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291975
+      "lastTs": 1775293414
     },
     "https://www.geeksforgeeks.org/java/packages-in-java/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291977
+      "lastTs": 1775293414
     },
     "https://www.geeksforgeeks.org/java/interfaces-in-java/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291979
+      "lastTs": 1775293415
     },
     "https://www.geeksforgeeks.org/java/collections-in-java-2/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291981
+      "lastTs": 1775293415
     },
     "https://www.geeksforgeeks.org/java/collections-class-in-java/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291984
+      "lastTs": 1775293415
     },
     "https://www.geeksforgeeks.org/java/collection-interface-in-java-with-examples/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291987
+      "lastTs": 1775293415
     },
     "https://www.geeksforgeeks.org/java/iterators-in-java/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291989
+      "lastTs": 1775293415
     },
     "https://www.geeksforgeeks.org/java/java-comparator-interface/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291991
+      "lastTs": 1775293416
     },
     "https://www.geeksforgeeks.org/java/exceptions-in-java/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291994
+      "lastTs": 1775293416
     },
     "https://www.geeksforgeeks.org/java/java-try-catch-block/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291995
+      "lastTs": 1775293416
     },
     "https://www.geeksforgeeks.org/java/java-final-finally-and-finalize/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291997
+      "lastTs": 1775293416
     },
     "https://www.geeksforgeeks.org/java/chained-exceptions-in-java/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775291999
+      "lastTs": 1775293416
     },
     "https://www.geeksforgeeks.org/java/null-pointer-exception-in-java/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775292001
+      "lastTs": 1775293416
     },
     "https://www.geeksforgeeks.org/java/exception-handling-with-method-overriding-in-java/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775292005
+      "lastTs": 1775293417
     },
     "https://www.geeksforgeeks.org/java/java-multithreading-tutorial/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775292012
+      "lastTs": 1775293417
     },
     "https://www.geeksforgeeks.org/java/synchronization-in-java/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775292016
+      "lastTs": 1775293417
     },
     "https://www.geeksforgeeks.org/java/file-handling-in-java/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775292019
+      "lastTs": 1775293417
     },
     "https://www.geeksforgeeks.org/java/java-method-references/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775292020
+      "lastTs": 1775293417
     },
     "https://www.geeksforgeeks.org/java/java-8-stream-tutorial/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775292022
+      "lastTs": 1775293418
     },
     "https://www.geeksforgeeks.org/java/java-networking/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775292025
+      "lastTs": 1775293418
     },
     "https://www.geeksforgeeks.org/java/jdbc-tutorial/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775292027
+      "lastTs": 1775293418
     },
     "https://www.geeksforgeeks.org/java/java-memory-management/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775292029
+      "lastTs": 1775293418
     },
     "https://www.geeksforgeeks.org/java/garbage-collection-in-java/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775292031
+      "lastTs": 1775293418
     },
     "https://www.geeksforgeeks.org/java/memory-leaks-in-java/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775292033
+      "lastTs": 1775293418
     },
     "https://www.geeksforgeeks.org/courses/Java-backend-live": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775292034
+      "lastTs": 1775293419
     },
     "https://www.geeksforgeeks.org/java/java-fundamentals-interview-questions/": {
-      "pass": 56,
+      "pass": 57,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775292035
+      "lastTs": 1775293419
     },
     "https://www.geeksforgeeks.org/java/java-core-concepts-interview-questions/": {
       "pass": 57,
@@ -754,11 +754,11 @@
     },
     "https://www.turing.com/interview-questions/java": {
       "pass": 0,
-      "fail": 24,
+      "fail": 25,
       "domain": "java",
       "lastStatus": "fail",
-      "lastReason": "fetch_exception",
-      "lastTs": 1775290821
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293408
     },
     "https://www.geeksforgeeks.org/category/programming-language/java/": {
       "pass": 1,
@@ -1586,203 +1586,203 @@
     },
     "https://blog.hubspot.com/sales/interview-questions-for-sales-position": {
       "pass": 0,
-      "fail": 10,
+      "fail": 12,
       "domain": "sales",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775286607
+      "lastTs": 1775294005
     },
     "https://www.indeed.com/career-advice/interviewing/sales-interview-questions": {
       "pass": 0,
+      "fail": 12,
+      "domain": "sales",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294006
+    },
+    "https://www.salesforce.com/blog/sales-interview-questions/": {
+      "pass": 14,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294009
+    },
+    "https://www.zendesk.com/blog/sales-interview-questions/": {
+      "pass": 12,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294013
+    },
+    "https://www.glassdoor.com/blog/guide/sales-interview-questions/": {
+      "pass": 0,
       "fail": 10,
       "domain": "sales",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775286607
-    },
-    "https://www.salesforce.com/blog/sales-interview-questions/": {
-      "pass": 11,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286609
-    },
-    "https://www.zendesk.com/blog/sales-interview-questions/": {
-      "pass": 9,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286613
-    },
-    "https://www.glassdoor.com/blog/guide/sales-interview-questions/": {
-      "pass": 0,
-      "fail": 8,
-      "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775286613
+      "lastTs": 1775294015
     },
     "https://www.coursera.org/articles/sales-interview-questions": {
-      "pass": 9,
+      "pass": 12,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286615
+      "lastTs": 1775294017
     },
     "https://www.betterteam.com/sales-interview-questions": {
+      "pass": 8,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294018
+    },
+    "https://www.gong.io/blog/sales-interview-questions/": {
       "pass": 6,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286616
+      "lastTs": 1775294021
     },
-    "https://www.gong.io/blog/sales-interview-questions/": {
-      "pass": 4,
+    "https://salestalentinc.com/blog/26-sales-interview-questions-beginner-experienced/": {
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775281448
-    },
-    "https://salestalentinc.com/blog/26-sales-interview-questions-beginner-experienced/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775285990
+      "lastTs": 1775294022
     },
     "https://blog.theinterviewguys.com/top-15-sales-interview-questions/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775286120
+      "lastReason": "fetched",
+      "lastTs": 1775294024
     },
     "https://interviewprep.org/sales-representative-interview-questions/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775286022
+      "lastReason": "fetched",
+      "lastTs": 1775294027
     },
     "https://www.indeed.com/career-advice/interviewing/sales-interview-questions-to-ask-candidates": {
       "pass": 2,
-      "fail": 6,
+      "fail": 8,
       "domain": "sales",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775281455
+      "lastTs": 1775294028
     },
     "https://timespro.com/blog/sales-interview-questions-and-answers": {
-      "pass": 5,
-      "fail": 2,
+      "pass": 6,
+      "fail": 4,
       "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775286381
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294032
     },
     "https://x0pa.com/hiring/salesman-interview-questions/": {
-      "pass": 5,
+      "pass": 8,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775281462
+      "lastTs": 1775294036
     },
     "https://mailshake.com/blog/sales-interview-questions/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775286023
+      "lastReason": "fetched",
+      "lastTs": 1775294037
     },
     "https://topresume.com/career-advice/job-interview-questions-for-sales": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775286217
+      "lastReason": "fetched",
+      "lastTs": 1775294039
     },
     "https://www.zippia.com/advice/sales-interview-questions/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775286120
+      "lastReason": "fetched",
+      "lastTs": 1775294041
     },
     "https://www.indeed.com/career-advice/interviewing/top-sales-representative-interview-questions-and-answers": {
-      "pass": 3,
-      "fail": 6,
+      "pass": 4,
+      "fail": 8,
       "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775286022
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294042
     },
     "https://www.indeed.com/career-advice/interviewing/business-development-interview-questions": {
       "pass": 0,
-      "fail": 8,
+      "fail": 10,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775287471
+      "lastTs": 1775294885
     },
     "https://www.glassdoor.com/blog/guide/business-development-interview-questions/": {
       "pass": 0,
-      "fail": 8,
+      "fail": 10,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775287471
+      "lastTs": 1775294886
     },
     "https://www.turing.com/interview-questions/business-development": {
       "pass": 0,
+      "fail": 7,
+      "domain": "business_development",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294887
+    },
+    "https://www.coursera.org/articles/business-development-manager-interview-questions": {
+      "pass": 0,
+      "fail": 10,
+      "domain": "business_development",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294889
+    },
+    "https://www.betterteam.com/business-development-manager-interview-questions": {
+      "pass": 4,
       "fail": 6,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775287472
+      "lastTs": 1775294893
     },
-    "https://www.coursera.org/articles/business-development-manager-interview-questions": {
-      "pass": 0,
-      "fail": 8,
-      "domain": "business_development",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775287472
-    },
-    "https://www.betterteam.com/business-development-manager-interview-questions": {
-      "pass": 4,
+    "https://resources.workable.com/business-development-manager-interview-questions": {
+      "pass": 8,
       "fail": 4,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287473
-    },
-    "https://resources.workable.com/business-development-manager-interview-questions": {
-      "pass": 5,
-      "fail": 4,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775286619
+      "lastTs": 1775294894
     },
     "https://www.indeed.com/career-advice/interviewing/call-center-interview-questions": {
-      "pass": 2,
+      "pass": 3,
       "fail": 6,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288158
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295088
     },
     "https://www.naukri.com/blog/bpo-interview-questions-and-answers/": {
       "pass": 2,
@@ -2225,12 +2225,12 @@
       "lastTs": 1775285385
     },
     "https://dev.to/realnamehidden1_61/java-scenario-based-interview-questions-542m": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292472
+      "lastReason": "fetched",
+      "lastTs": 1775293217
     },
     "https://climbtheladder.com/java-project-interview-questions/": {
       "pass": 9,
@@ -2242,11 +2242,11 @@
     },
     "https://huntr.co/interview-questions/java": {
       "pass": 6,
-      "fail": 0,
+      "fail": 2,
       "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292558
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293221
     },
     "https://www.toptal.com/developers/java/interview-questions": {
       "pass": 5,
@@ -2369,12 +2369,12 @@
       "lastTs": 1775293101
     },
     "https://www.javaguides.net/p/top-java-interview-questions-and-answers.html": {
-      "pass": 6,
+      "pass": 8,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292731
+      "lastReason": "fetched",
+      "lastTs": 1775293223
     },
     "https://prepinsta.com/interview-preparation/technical-interview-questions/java/": {
       "pass": 1,
@@ -2569,20 +2569,20 @@
       "lastTs": 1775194212
     },
     "https://www.interviewplus.ai/jd/java-developer-role-interview-questions/1255": {
-      "pass": 2,
-      "fail": 0,
-      "domain": "java",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292955
-    },
-    "https://himalayas.app/interview-questions/java-engineer": {
-      "pass": 8,
+      "pass": 4,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775285950
+      "lastTs": 1775293234
+    },
+    "https://himalayas.app/interview-questions/java-engineer": {
+      "pass": 9,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775293208
     },
     "https://www.coursera.org/articles/java-interview-questions": {
       "pass": 9,
@@ -2593,12 +2593,12 @@
       "lastTs": 1775292623
     },
     "https://www.cvowl.com/blog/java-engineer-interview-questions-answers": {
-      "pass": 8,
+      "pass": 9,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775285951
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775293208
     },
     "https://www.mockinterviewpro.com/interview-questions/java-software-engineer": {
       "pass": 9,
@@ -2633,12 +2633,12 @@
       "lastTs": 1775293101
     },
     "https://www.geeksforgeeks.org/hr/hr-interview-questions/": {
-      "pass": 12,
+      "pass": 15,
       "fail": 0,
-      "domain": "java",
+      "domain": "business_development",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775293101
+      "lastReason": "fetched",
+      "lastTs": 1775295005
     },
     "https://aspect-hq.com/interview-questions-10/the-hiring-manager-s-secret-weapon-15-essential-java-developer-interview-questions": {
       "pass": 9,
@@ -2753,52 +2753,52 @@
       "lastTs": 1775208184
     },
     "https://www.indeed.com/career-advice/interviewing/sample-engineering-interview-questions": {
-      "pass": 8,
-      "fail": 6,
-      "domain": "voice_process",
+      "pass": 10,
+      "fail": 8,
+      "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775288322
+      "lastTs": 1775295008
     },
     "https://www.intuit.com/blog/innovative-thinking/60-engineering-interview-questions-to-expect-and-12-to-ask-during-your-job-search/": {
-      "pass": 13,
+      "pass": 17,
       "fail": 0,
-      "domain": "voice_process",
+      "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288324
+      "lastTs": 1775295012
     },
     "https://interviewprep.org/engineering-interview-questions/": {
-      "pass": 13,
+      "pass": 17,
       "fail": 0,
-      "domain": "voice_process",
+      "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288327
+      "lastTs": 1775295011
     },
     "https://status.net/articles/common-engineering-interview-questions-sample-answers/": {
-      "pass": 14,
+      "pass": 18,
       "fail": 0,
-      "domain": "voice_process",
+      "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288328
+      "lastTs": 1775295013
     },
     "https://www.apollotechnical.com/engineering-interview-questions/": {
-      "pass": 11,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288108
-    },
-    "https://huntr.co/interview-questions/engineer": {
       "pass": 14,
       "fail": 0,
-      "domain": "voice_process",
+      "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288330
+      "lastTs": 1775295017
+    },
+    "https://huntr.co/interview-questions/engineer": {
+      "pass": 18,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295023
     },
     "https://interviewbaba.com/common-engineering-interview-questions/": {
       "pass": 7,
@@ -2809,12 +2809,12 @@
       "lastTs": 1775284469
     },
     "https://www.cvowl.com/blog/engineering-interview-questions-answers": {
-      "pass": 11,
+      "pass": 15,
       "fail": 0,
-      "domain": "voice_process",
+      "domain": "business_development",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288106
+      "lastReason": "fetched",
+      "lastTs": 1775295016
     },
     "https://www.contractengineeringstaffing.com/common-engineering-interview-questions/": {
       "pass": 1,
@@ -2825,20 +2825,20 @@
       "lastTs": 1775194381
     },
     "https://www.vervecopilot.com/interview-questions/top-30-most-common-engineering-interview-questions-you-should-prepare-for": {
-      "pass": 13,
+      "pass": 17,
       "fail": 0,
-      "domain": "voice_process",
+      "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775288331
+      "lastTs": 1775295014
     },
     "https://www.evinex.com/resources/articles/100-interview-questions-for-engineers/": {
       "pass": 0,
-      "fail": 48,
-      "domain": "voice_process",
+      "fail": 64,
+      "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775288108
+      "lastTs": 1775294836
     },
     "https://globalcareerconsultants.us/common-engineering-interview-questions/": {
       "pass": 7,
@@ -2849,12 +2849,12 @@
       "lastTs": 1775285981
     },
     "https://resume.co/blog/engineering-interview-questions": {
-      "pass": 8,
+      "pass": 12,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287400
+      "lastTs": 1775295021
     },
     "https://builtin.com/software-engineering-perspectives/java-interview-questions": {
       "pass": 9,
@@ -2929,28 +2929,28 @@
       "lastTs": 1775292803
     },
     "https://www.techinterviewhandbook.org/behavioral-interview-questions/": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292816
+      "lastReason": "fetched",
+      "lastTs": 1775293224
     },
     "https://starmethod.org/java-developer/star-interview": {
-      "pass": 5,
+      "pass": 7,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292816
+      "lastReason": "fetched",
+      "lastTs": 1775293228
     },
     "https://www.geeksforgeeks.org/blogs/behavioral-interview-questions-and-answers/": {
-      "pass": 4,
+      "pass": 6,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292816
+      "lastReason": "fetched",
+      "lastTs": 1775293225
     },
     "https://javainfotech.com/advanced-java-interview-questions-answers-2025/": {
       "pass": 7,
@@ -3065,12 +3065,12 @@
       "lastTs": 1775286450
     },
     "https://factohr.com/sales-executive-interview-questions-answers/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286450
+      "lastTs": 1775294139
     },
     "https://resumedesign.ai/interview-questions/sales-executive/": {
       "pass": 7,
@@ -3137,52 +3137,52 @@
       "lastTs": 1775200032
     },
     "https://www.coursera.org/articles/sales-representative-interview-questions": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286474
+      "lastTs": 1775294043
     },
     "https://www.pearltalent.com/resources/sales-representative-interview-questions": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286473
+      "lastTs": 1775294048
     },
     "https://careersidekick.com/15-most-common-sales-representative-interview-questions-and-answers/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286466
+      "lastTs": 1775294046
     },
     "https://interviewpro.net/resources/job-interview-guides/sales-representative/interview-questions": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286469
+      "lastTs": 1775294051
     },
     "https://www.interviewgrid.com/interview_questions/sales_representative": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286476
+      "lastTs": 1775294053
     },
     "https://resources.workable.com/sales-representative-interview-questions": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286477
+      "lastTs": 1775294055
     },
     "https://resumecat.com/career/sales-representative/interview-questions": {
       "pass": 7,
@@ -3193,172 +3193,172 @@
       "lastTs": 1775286470
     },
     "https://www.indeed.com/career-advice/interviewing/questions-for-inside-sales-interview": {
-      "pass": 3,
-      "fail": 4,
+      "pass": 4,
+      "fail": 6,
       "domain": "sales",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775286477
+      "lastTs": 1775294055
     },
     "https://interviewprep.org/inside-sales-representative-interview-questions/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286479
+      "lastTs": 1775294057
     },
     "https://www.cvowl.com/blog/inside-sales-rep-interview-questions-answers": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286482
+      "lastTs": 1775294060
     },
     "https://resumedesign.ai/interview-questions/inside-sales-representative/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286481
+      "lastTs": 1775294059
     },
     "https://resources.workable.com/inside-sales-representative-interview-questions": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286483
+      "lastTs": 1775294061
     },
     "https://guide.resumegemini.com/interviews/top-10-questions-for-inside-sales-person-interview/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286487
+      "lastTs": 1775294065
     },
     "https://www.zenzap.co/blog-posts/12-crucial-inside-sales-interview-questions": {
-      "pass": 4,
+      "pass": 7,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775208274
+      "lastReason": "fetched",
+      "lastTs": 1775293920
     },
     "https://resumecat.com/career/inside-sales-representative/interview-questions": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286489
+      "lastTs": 1775294068
     },
     "https://www.crosschq.com/blog/inside-sales-interview-questions": {
+      "pass": 9,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294063
+    },
+    "https://ca.indeed.com/career-advice/interviewing/inside-sales-representative-interview-questions": {
+      "pass": 4,
+      "fail": 6,
+      "domain": "sales",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294067
+    },
+    "https://interviewprep.org/outside-sales-representative-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294070
+    },
+    "https://www.indeed.com/hire/interview-questions/outside-sales-representative": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294071
+    },
+    "https://www.finalroundai.com/blog/outside-sales-representative-interview-questions": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294073
+    },
+    "https://www.cvowl.com/blog/outside-sales-representative-interview-questions-answers": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294075
+    },
+    "https://guide.resumegemini.com/interviews/top-10-questions-for-outside-sales-interview/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294077
+    },
+    "https://coverlettersandresume.com/sales/outside-sales-rep-interview-questions-and-answers/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294078
+    },
+    "https://www.zenzap.co/blog-posts/12-crucial-outside-sales-interview-questions": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294081
+    },
+    "https://resumecat.com/career/outside-sales-rep/interview-questions": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294082
+    },
+    "https://avahr.com/outside-sales-representative-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294084
+    },
+    "https://climbtheladder.com/outside-sales-representative-interview-questions/": {
       "pass": 6,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286488
-    },
-    "https://ca.indeed.com/career-advice/interviewing/inside-sales-representative-interview-questions": {
-      "pass": 3,
-      "fail": 4,
-      "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775286490
-    },
-    "https://interviewprep.org/outside-sales-representative-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286491
-    },
-    "https://www.indeed.com/hire/interview-questions/outside-sales-representative": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286492
-    },
-    "https://www.finalroundai.com/blog/outside-sales-representative-interview-questions": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286494
-    },
-    "https://www.cvowl.com/blog/outside-sales-representative-interview-questions-answers": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286494
-    },
-    "https://guide.resumegemini.com/interviews/top-10-questions-for-outside-sales-interview/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286497
-    },
-    "https://coverlettersandresume.com/sales/outside-sales-rep-interview-questions-and-answers/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286498
-    },
-    "https://www.zenzap.co/blog-posts/12-crucial-outside-sales-interview-questions": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286500
-    },
-    "https://resumecat.com/career/outside-sales-rep/interview-questions": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286499
-    },
-    "https://avahr.com/outside-sales-representative-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286503
-    },
-    "https://climbtheladder.com/outside-sales-representative-interview-questions/": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200081
+      "lastTs": 1775293926
     },
     "https://www.tealhq.com/career-paths/outside-sales-representative-interview-questions": {
-      "pass": 2,
-      "fail": 4,
+      "pass": 3,
+      "fail": 6,
       "domain": "sales",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775286501
+      "lastTs": 1775294085
     },
     "https://himalayas.app/interview-questions/outside-sales": {
       "pass": 3,
@@ -3369,84 +3369,84 @@
       "lastTs": 1775200082
     },
     "https://www.indeed.com/career-advice/interviewing/situational-interview-questions-for-sales": {
-      "pass": 3,
+      "pass": 4,
+      "fail": 6,
+      "domain": "sales",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294092
+    },
+    "https://revpilots.com/guide/situational-questions-in-sales-interviews/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294095
+    },
+    "https://salestalentinc.com/blog/portfolio-items/sales-situational-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294097
+    },
+    "https://interviewbaba.com/sales-situational-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294099
+    },
+    "https://globalcareerconsultants.us/sales-situational-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294100
+    },
+    "https://www.linkedin.com/advice/3/how-do-you-answer-scenario-based-questions-sales-p9lfc": {
+      "pass": 0,
+      "fail": 28,
+      "domain": "sales",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775293612
+    },
+    "https://www.cgaa.org/article/situational-interview-questions-for-sales": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294106
+    },
+    "https://www.insidesalesexpert.com/blog/Situational-Questions-for-Salesperson-Interviews-and-Best-Answers": {
+      "pass": 9,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294104
+    },
+    "https://www.jobhero.com/career-guides/interviews/questions/situational-interview-questions": {
+      "pass": 2,
       "fail": 4,
       "domain": "sales",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775286508
-    },
-    "https://revpilots.com/guide/situational-questions-in-sales-interviews/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286511
-    },
-    "https://salestalentinc.com/blog/portfolio-items/sales-situational-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286512
-    },
-    "https://interviewbaba.com/sales-situational-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286514
-    },
-    "https://globalcareerconsultants.us/sales-situational-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286515
-    },
-    "https://www.linkedin.com/advice/3/how-do-you-answer-scenario-based-questions-sales-p9lfc": {
-      "pass": 0,
-      "fail": 20,
-      "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "blocked_host",
-      "lastTs": 1775286154
-    },
-    "https://www.cgaa.org/article/situational-interview-questions-for-sales": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286522
-    },
-    "https://www.insidesalesexpert.com/blog/Situational-Questions-for-Salesperson-Interviews-and-Best-Answers": {
-      "pass": 6,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286519
-    },
-    "https://www.jobhero.com/career-guides/interviews/questions/situational-interview-questions": {
-      "pass": 1,
-      "fail": 2,
-      "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775200094
+      "lastTs": 1775293928
     },
     "https://www.adaface.com/blog/sales-interview-questions/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286529
+      "lastTs": 1775294108
     },
     "https://www.vervecopilot.com/interview-questions/top-30-most-common-salesforce-scenario-based-interview-questions-you-should-prepare-for": {
       "pass": 3,
@@ -3457,28 +3457,28 @@
       "lastTs": 1775200097
     },
     "https://resources.workable.com/sales-project-consultant-interview-questions": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286530
+      "lastTs": 1775294109
     },
     "https://blog.fhyzics.net/sales-jobs-interview-questions/sales-interview-questions-for-sales-project-manager-salesiq-093": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286537
+      "lastTs": 1775294119
     },
     "https://www.interviewplus.ai/blog/2024-11/essential-project-sales-executive-interview-questions": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286531
+      "lastTs": 1775294111
     },
     "https://www.glassdoor.com/Interview/sales-project-manager-interview-questions-SRCH_KO0,21.htm": {
       "pass": 1,
@@ -3489,340 +3489,340 @@
       "lastTs": 1775200103
     },
     "https://goodmeetings.ai/blog/40-sales-interview-questions-and-answers-to-expect-in-your-next-job-interview/": {
-      "pass": 3,
-      "fail": 4,
+      "pass": 4,
+      "fail": 6,
       "domain": "sales",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775286535
+      "lastTs": 1775294116
     },
     "https://www.leadsquared.com/learn/sales/sales-interview-questions/": {
+      "pass": 8,
+      "fail": 2,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294118
+    },
+    "https://interviewprep.org/salesperson-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294123
+    },
+    "https://www.naukri.com/blog/sales-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294130
+    },
+    "https://www.cvowl.com/blog/sales-person-interview-questions-answers": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294127
+    },
+    "https://www.interviewgrid.com/interview_questions/sales_personal": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294125
+    },
+    "https://futureofworking.com/sales-interview-questions/": {
+      "pass": 9,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294087
+    },
+    "https://status.net/articles/smart-answers-to-common-sales-job-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294090
+    },
+    "https://www.indeed.com/career-advice/interviewing/hr-interview-questions": {
+      "pass": 5,
+      "fail": 6,
+      "domain": "sales",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294128
+    },
+    "https://www.multiplymii.com/interview-repository/sales-representative": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294131
+    },
+    "https://blog.hubspot.com/sales/25-sales-interview-questions-to-recruit-the-best-reps": {
+      "pass": 9,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294137
+    },
+    "https://resources.biginterview.com/industry-specific/sales-interview-questions-answers/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294115
+    },
+    "https://internshala.com/blog/sales-interview-question/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294092
+    },
+    "https://interviewprep.org/technical-sales-representative-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294141
+    },
+    "https://www.springboard.com/blog/sales/technical-sales-interview-questions/": {
+      "pass": 4,
+      "fail": 6,
+      "domain": "sales",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294142
+    },
+    "https://www.tealhq.com/career-paths/technical-sales-interview-questions": {
+      "pass": 4,
+      "fail": 6,
+      "domain": "sales",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294142
+    },
+    "https://resumecat.com/career/technical-sales/interview-questions": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294144
+    },
+    "https://digitaldefynd.com/IQ/top-technical-sales-interview-questions-and-answers/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294146
+    },
+    "https://www.crosschq.com/blog/technical-sales-interview-questions": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294149
+    },
+    "https://www.cvowl.com/blog/technical-sales-representative-interview-questions-answers": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294147
+    },
+    "https://www.finalroundai.com/blog/technical-sales-interview-questions": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294150
+    },
+    "https://cvblade.com/interview/technical-sales/": {
       "pass": 5,
       "fail": 2,
       "domain": "sales",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775286536
-    },
-    "https://interviewprep.org/salesperson-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286539
-    },
-    "https://www.naukri.com/blog/sales-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286541
-    },
-    "https://www.cvowl.com/blog/sales-person-interview-questions-answers": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286543
-    },
-    "https://www.interviewgrid.com/interview_questions/sales_personal": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286542
-    },
-    "https://futureofworking.com/sales-interview-questions/": {
-      "pass": 6,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286508
-    },
-    "https://status.net/articles/smart-answers-to-common-sales-job-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286504
-    },
-    "https://www.indeed.com/career-advice/interviewing/hr-interview-questions": {
-      "pass": 4,
-      "fail": 4,
-      "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288629
-    },
-    "https://www.multiplymii.com/interview-repository/sales-representative": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286548
-    },
-    "https://blog.hubspot.com/sales/25-sales-interview-questions-to-recruit-the-best-reps": {
-      "pass": 6,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286552
-    },
-    "https://resources.biginterview.com/industry-specific/sales-interview-questions-answers/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286534
-    },
-    "https://internshala.com/blog/sales-interview-question/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286587
-    },
-    "https://interviewprep.org/technical-sales-representative-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286555
-    },
-    "https://www.springboard.com/blog/sales/technical-sales-interview-questions/": {
-      "pass": 3,
-      "fail": 4,
-      "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775286556
-    },
-    "https://www.tealhq.com/career-paths/technical-sales-interview-questions": {
-      "pass": 3,
-      "fail": 4,
-      "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775286556
-    },
-    "https://resumecat.com/career/technical-sales/interview-questions": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286558
-    },
-    "https://digitaldefynd.com/IQ/top-technical-sales-interview-questions-and-answers/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286560
-    },
-    "https://www.crosschq.com/blog/technical-sales-interview-questions": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286563
-    },
-    "https://www.cvowl.com/blog/technical-sales-representative-interview-questions-answers": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286561
-    },
-    "https://www.finalroundai.com/blog/technical-sales-interview-questions": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286563
-    },
-    "https://cvblade.com/interview/technical-sales/": {
-      "pass": 4,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775208503
+      "lastTs": 1775293955
     },
     "https://www.usecanyon.com/interview-questions/technical-sales": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286567
+      "lastTs": 1775294152
     },
     "https://www.indeed.com/career-advice/interviewing/sales-behavioral-interview-questions": {
-      "pass": 3,
-      "fail": 4,
+      "pass": 4,
+      "fail": 6,
       "domain": "sales",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775286569
+      "lastTs": 1775294154
     },
     "https://www.themuse.com/advice/behavioral-interview-questions-answers-examples": {
-      "pass": 13,
+      "pass": 17,
       "fail": 0,
-      "domain": "chat_process",
+      "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775288694
+      "lastTs": 1775295418
     },
     "https://learn.salesfolks.com/essential-sales-behavioral-interview-questions-and-answers/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286572
+      "lastTs": 1775294158
     },
     "https://www.testgorilla.com/blog/sales-aptitude-interview-questions/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286575
+      "lastTs": 1775294161
     },
     "https://www.poised.com/blog/list-of-behavioral-interview-questions-for-sales-managers": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286574
+      "lastTs": 1775294160
     },
     "https://www.best-job-interview.com/sales-interview-questions.html": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286577
+      "lastTs": 1775294163
     },
     "https://www.insidesalesexpert.com/blog/Salesperson-Behavioral-Interview-Questions-and-Best-Answers": {
-      "pass": 3,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775200143
-    },
-    "https://intellipaat.com/blog/interview-question/sales-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286578
-    },
-    "https://www.cvowl.com/blog/sales-interview-questions-answers": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286506
-    },
-    "https://www.upgrad.com/blog/sales-interview-questions-answers/": {
-      "pass": 6,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286593
-    },
-    "https://www.vervecopilot.com/interview-questions/top-30-most-common-sales-interview-questions-and-answers-for-freshers-you-should-prepare-for": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286588
-    },
-    "https://www.jobhai.com/blog/learning/top-40-sales-interview-questions-and-answers": {
-      "pass": 3,
-      "fail": 4,
+      "pass": 4,
+      "fail": 2,
       "domain": "sales",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775286585
+      "lastTs": 1775293970
     },
-    "https://www.geeksforgeeks.org/marketing/sales-interview-questions-and-answers/": {
-      "pass": 4,
+    "https://intellipaat.com/blog/interview-question/sales-interview-questions/": {
+      "pass": 10,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775208207
+      "lastReason": "fetched",
+      "lastTs": 1775294168
+    },
+    "https://www.cvowl.com/blog/sales-interview-questions-answers": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294090
+    },
+    "https://www.upgrad.com/blog/sales-interview-questions-answers/": {
+      "pass": 9,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294121
+    },
+    "https://www.vervecopilot.com/interview-questions/top-30-most-common-sales-interview-questions-and-answers-for-freshers-you-should-prepare-for": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294173
+    },
+    "https://www.jobhai.com/blog/learning/top-40-sales-interview-questions-and-answers": {
+      "pass": 4,
+      "fail": 6,
+      "domain": "sales",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294172
+    },
+    "https://www.geeksforgeeks.org/marketing/sales-interview-questions-and-answers/": {
+      "pass": 5,
+      "fail": 2,
+      "domain": "sales",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293976
     },
     "https://www.linkedin.com/pulse/job-interview-question-answer-sales-position-fresher": {
       "pass": 0,
-      "fail": 20,
+      "fail": 28,
       "domain": "sales",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775286381
+      "lastTs": 1775293844
     },
     "https://www.careers360.com/courses-certifications/articles/sales-interview-questions-answers": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294175
+    },
+    "https://www.indeed.com/career-advice/interviewing/sales-role-play-interview": {
+      "pass": 3,
+      "fail": 4,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775293875
+    },
+    "https://www.bluselection.com/blog/2025/09/how-to-succeed-in-a-sales-role-play": {
       "pass": 7,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286582
-    },
-    "https://www.indeed.com/career-advice/interviewing/sales-role-play-interview": {
-      "pass": 2,
-      "fail": 4,
-      "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775286593
-    },
-    "https://www.bluselection.com/blog/2025/09/how-to-succeed-in-a-sales-role-play": {
-      "pass": 6,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286596
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775293875
     },
     "https://goodmeetings.ai/blog/a-guide-to-sales-role-play-interview-training-goodmeetings/": {
-      "pass": 2,
+      "pass": 3,
       "fail": 4,
       "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775286597
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775293875
     },
     "https://www.paperflite.com/blogs/interview-sales-role-play": {
-      "pass": 6,
+      "pass": 7,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286599
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775293875
     },
     "https://phponline.in/blog/role-play-interview-questions-and-answers/": {
       "pass": 4,
@@ -3833,60 +3833,60 @@
       "lastTs": 1775288794
     },
     "https://www.hyperbound.ai/blog/sales-roleplay-playbook": {
-      "pass": 6,
+      "pass": 7,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286603
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775293875
     },
     "https://yourcareersupport.com/sales-role-play-interview-questions-and-answers/": {
-      "pass": 6,
+      "pass": 7,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286605
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775293875
     },
     "https://salesrecruitersdallas.com/how-to-ace-a-role-play-sales-interview-questions/": {
-      "pass": 6,
+      "pass": 7,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286601
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775293875
     },
     "https://www.indeed.com/career-advice/interviewing/sales-engineer-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 4,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775286444
+      "lastTs": 1775293909
     },
     "https://interviewprep.org/sales-engineer-interview-questions/": {
-      "pass": 7,
+      "pass": 8,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775286444
+      "lastTs": 1775293909
     },
     "https://www.finalroundai.com/blog/sales-engineer-interview-questions": {
-      "pass": 7,
+      "pass": 8,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775286444
+      "lastTs": 1775293909
     },
     "https://www.bettercareer.org/post/sales-engineer-interview-questions": {
-      "pass": 7,
+      "pass": 8,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775286444
+      "lastTs": 1775293909
     },
     "https://www.tealhq.com/career-paths/sales-engineer-interview-questions": {
       "pass": 2,
@@ -3913,260 +3913,260 @@
       "lastTs": 1775284489
     },
     "https://www.mockquestions.com/position/Sales+Engineers/": {
-      "pass": 1,
-      "fail": 2,
-      "domain": "sales",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775200178
-    },
-    "https://www.cvowl.com/blog/sales-engineer-interview-questions-answers": {
-      "pass": 6,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775284486
-    },
-    "https://interviewprep.org/": {
-      "pass": 5,
-      "fail": 1,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "expanded_link",
-      "lastTs": 1775288157
-    },
-    "https://www.indeed.com/career-advice/interviewing/business-development-manager-interview-questions": {
-      "pass": 3,
-      "fail": 4,
-      "domain": "business_development",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775287277
-    },
-    "https://blog.theinterviewguys.com/business-development-interview-questions-and-answers/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287277
-    },
-    "https://interviewprep.org/business-development-manager-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287322
-    },
-    "https://www.cvowl.com/blog/business-development-interview-questions-answers": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287278
-    },
-    "https://www.resumeprofessionalwriters.com/business-development-manager-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287287
-    },
-    "https://internshala.com/blog/business-development-manager-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287281
-    },
-    "https://maxresumes.com/interview-questions/business-development/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287289
-    },
-    "https://www.skilr.com/blog/top-50-business-development-manager-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287299
-    },
-    "https://interviewprep.org/business-development-officer-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287280
-    },
-    "https://interviewprep.org/business-development-executive-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287305
-    },
-    "https://in.indeed.com/career-advice/interviewing/business-development-executive-interview-questions": {
-      "pass": 3,
-      "fail": 4,
-      "domain": "business_development",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775287307
-    },
-    "https://www.cvowl.com/blog/business-development-executive-interview-questions-answers": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287306
-    },
-    "https://x0pa.com/hiring/business-development-executive-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287310
-    },
-    "https://www.vervecopilot.com/blog/business-development-executive-interview-questions": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287315
-    },
-    "https://www.mockinterviewpro.com/interview-questions/business-development-executive/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287314
-    },
-    "https://climbtheladder.com/business-development-executive-interview-questions/": {
-      "pass": 7,
-      "fail": 0,
-      "domain": "business_development",
-      "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287313
-    },
-    "https://uk.indeed.com/career-advice/interviewing/business-development-executive-interview-questions": {
       "pass": 2,
       "fail": 4,
+      "domain": "sales",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293996
+    },
+    "https://www.cvowl.com/blog/sales-engineer-interview-questions-answers": {
+      "pass": 7,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775293909
+    },
+    "https://interviewprep.org/": {
+      "pass": 6,
+      "fail": 1,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "expanded_link",
+      "lastTs": 1775293913
+    },
+    "https://www.indeed.com/career-advice/interviewing/business-development-manager-interview-questions": {
+      "pass": 4,
+      "fail": 6,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775287316
+      "lastTs": 1775294895
     },
-    "https://internshala.com/blog/business-development-executive-interview-questions/": {
-      "pass": 7,
+    "https://blog.theinterviewguys.com/business-development-interview-questions-and-answers/": {
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287311
+      "lastTs": 1775294895
+    },
+    "https://interviewprep.org/business-development-manager-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294913
+    },
+    "https://www.cvowl.com/blog/business-development-interview-questions-answers": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294897
+    },
+    "https://www.resumeprofessionalwriters.com/business-development-manager-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294908
+    },
+    "https://internshala.com/blog/business-development-manager-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294900
+    },
+    "https://maxresumes.com/interview-questions/business-development/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294911
+    },
+    "https://www.skilr.com/blog/top-50-business-development-manager-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294920
+    },
+    "https://interviewprep.org/business-development-officer-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294899
+    },
+    "https://interviewprep.org/business-development-executive-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294925
+    },
+    "https://in.indeed.com/career-advice/interviewing/business-development-executive-interview-questions": {
+      "pass": 4,
+      "fail": 6,
+      "domain": "business_development",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294928
+    },
+    "https://www.cvowl.com/blog/business-development-executive-interview-questions-answers": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294926
+    },
+    "https://x0pa.com/hiring/business-development-executive-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294931
+    },
+    "https://www.vervecopilot.com/blog/business-development-executive-interview-questions": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294937
+    },
+    "https://www.mockinterviewpro.com/interview-questions/business-development-executive/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294935
+    },
+    "https://climbtheladder.com/business-development-executive-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294934
+    },
+    "https://uk.indeed.com/career-advice/interviewing/business-development-executive-interview-questions": {
+      "pass": 3,
+      "fail": 6,
+      "domain": "business_development",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294938
+    },
+    "https://internshala.com/blog/business-development-executive-interview-questions/": {
+      "pass": 10,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294932
     },
     "https://www.hirequotient.com/blog/business-development-executive-interview-questions-and-answers": {
-      "pass": 5,
-      "fail": 2,
-      "domain": "business_development",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775287327
-    },
-    "https://www.metaintro.com/blog/business-development-manager-interview-questions": {
-      "pass": 5,
-      "fail": 2,
-      "domain": "business_development",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775287297
-    },
-    "https://www.tealhq.com/career-paths/business-development-manager-interview-questions": {
-      "pass": 3,
+      "pass": 6,
       "fail": 4,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775287322
+      "lastTs": 1775294943
+    },
+    "https://www.metaintro.com/blog/business-development-manager-interview-questions": {
+      "pass": 6,
+      "fail": 4,
+      "domain": "business_development",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294918
+    },
+    "https://www.tealhq.com/career-paths/business-development-manager-interview-questions": {
+      "pass": 4,
+      "fail": 6,
+      "domain": "business_development",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294939
     },
     "https://x0pa.com/hiring/business-development-manager-interview-questions/": {
-      "pass": 4,
+      "pass": 7,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775284672
+      "lastReason": "fetched",
+      "lastTs": 1775294876
     },
     "https://boulosolutions.com/interview-questions-for-business-development-manager/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287325
+      "lastTs": 1775294984
     },
     "https://www.naukri.com/blog/7-business-development-executive-interview-questions/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287307
+      "lastTs": 1775294927
     },
     "https://www.vervecopilot.com/interview-questions/top-30-most-common-bde-interview-questions-you-should-prepare-for": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287326
+      "lastTs": 1775294940
     },
     "https://www.foundit.in/career-advice/business-development-executive-interview-questions-and-answers/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287329
+      "lastTs": 1775294944
     },
     "https://boulosolutions.com/business-development-executive-interview-questions/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287320
+      "lastTs": 1775294942
     },
     "https://screeninghive.com/interview-questions/sales/business-development-executive": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287330
+      "lastTs": 1775294946
     },
     "https://skillora.ai/blog/top-business-development-manager-interview-questions-with-sample-answers": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287332
+      "lastTs": 1775294922
     },
     "https://www.ambitionbox.com/profiles/bdm/interview-questions": {
       "pass": 0,
@@ -4177,116 +4177,116 @@
       "lastTs": 1775200320
     },
     "https://interviewpenguin.com/business-development-manager-interview-questions-answers/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287338
+      "lastTs": 1775294994
     },
     "https://www.jobhai.com/blog/learning/business-development-interview-questions-answers": {
-      "pass": 3,
-      "fail": 4,
+      "pass": 4,
+      "fail": 6,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775287303
+      "lastTs": 1775294952
     },
     "https://www.theknowledgeacademy.com/blog/business-development-interview-questions/": {
-      "pass": 3,
-      "fail": 4,
+      "pass": 4,
+      "fail": 6,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775287282
+      "lastTs": 1775294901
     },
     "https://dailyremote.com/advice/business-development-interview-questions": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287290
+      "lastTs": 1775294909
     },
     "https://thebusinessanalystjobdescription.com/scenario-based-business-analyst-interview-questions/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287340
+      "lastTs": 1775294958
     },
     "https://www.indeed.com/career-advice/interviewing/situational-interview-questions-and-answers": {
-      "pass": 3,
-      "fail": 4,
-      "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288529
+      "pass": 4,
+      "fail": 6,
+      "domain": "business_development",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294958
     },
     "https://www.navero.me/blog/scenario-based-interview-questions": {
-      "pass": 12,
+      "pass": 16,
       "fail": 0,
-      "domain": "chat_process",
+      "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775288529
+      "lastTs": 1775295252
     },
     "https://techcanvass.com/blogs/what-are-some-scenario-based-and-logical-questions-that-are-asked-in-a-business-analyst-interview": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287347
+      "lastTs": 1775294964
     },
     "https://mentorcruise.com/questions/businessdevelopment/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287343
+      "lastTs": 1775294968
     },
     "https://www.hipeople.io/interview-questions/scenario-based-interview-questions": {
-      "pass": 12,
+      "pass": 18,
       "fail": 0,
-      "domain": "chat_process",
+      "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775288531
+      "lastTs": 1775295252
     },
     "https://interviewprep.org/business-developer-interview-questions/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287292
+      "lastTs": 1775294949
     },
     "https://www.mockinterviewpro.com/interview-questions/business-developer/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287352
+      "lastTs": 1775294986
     },
     "https://www.vervecopilot.com/interview-questions/top-30-most-common-business-development-interview-questions-you-should-prepare-for": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287353
+      "lastTs": 1775294965
     },
     "https://upesonline.ac.in/blog/business-development-interview-questions-entry-level-to-advanced": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287355
+      "lastTs": 1775294973
     },
     "https://careersherpa.net/business-development-interview-questions/": {
       "pass": 3,
@@ -4297,20 +4297,20 @@
       "lastTs": 1775200930
     },
     "https://abouthire.com/business-development-interview-questions/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287377
+      "lastTs": 1775294992
     },
     "https://www.ambitionbox.com/profiles/hr-and-business-development-executive/interview-questions": {
       "pass": 0,
-      "fail": 36,
+      "fail": 44,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775287174
+      "lastTs": 1775294769
     },
     "https://covrltr.com/interview-questions/hr/hr-business-development-specialist/": {
       "pass": 3,
@@ -4321,44 +4321,44 @@
       "lastTs": 1775200937
     },
     "https://mrsimon.ai/interview-questions/business-development/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287363
+      "lastTs": 1775294982
     },
     "https://breezy.hr/resources/interview-questions/business-development-manager": {
-      "pass": 1,
-      "fail": 2,
+      "pass": 2,
+      "fail": 4,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775200942
+      "lastTs": 1775294878
     },
     "https://covrltr.com/interview-questions/hr/hr-business-development-manager/": {
-      "pass": 5,
+      "pass": 8,
       "fail": 2,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287366
+      "lastTs": 1775294981
     },
     "https://www.poised.com/blog/list-of-behavioral-interview-questions-for-business-development-managers": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287359
+      "lastTs": 1775294977
     },
     "https://business.linkedin.com/content/dam/me/business/en-us/talent-solutions/resources/pdfs/guide-to-screening-candidates-30-essential-behavioral-interview-questions-to-ask-ebook-v2.pdf": {
       "pass": 0,
-      "fail": 20,
+      "fail": 28,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775286977
+      "lastTs": 1775294573
     },
     "https://www.yardstick.team/interview-questions/business-development": {
       "pass": 6,
@@ -4369,76 +4369,76 @@
       "lastTs": 1775287373
     },
     "https://starmethod.org/business-development-manager/star-interview": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287371
+      "lastTs": 1775294987
     },
     "https://interviewbaba.com/business-development-interview-questions/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287357
+      "lastTs": 1775294975
     },
     "https://www.adaface.com/blog/business-development-interview-questions/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287368
+      "lastTs": 1775294967
     },
     "https://timespro.com/blog/business-development-associate-interview-questions-and-answers": {
-      "pass": 1,
+      "pass": 4,
       "fail": 2,
       "domain": "business_development",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775200962
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294883
     },
     "https://www.ambitionbox.com/profiles/business-development-associate/interview-questions/fresher-candidates": {
       "pass": 0,
-      "fail": 12,
+      "fail": 16,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775285041
+      "lastTs": 1775294637
     },
     "https://apna.co/career-central/business-development-job-interview-questions/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287361
+      "lastTs": 1775294978
     },
     "https://jobs.ispe.org/interview-questions/business-development-engineer": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287382
+      "lastTs": 1775294997
     },
     "https://ngt-internship.com/business-development-engineer-interview-questions-and-answers-29018": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287384
+      "lastTs": 1775294999
     },
     "https://www.glassdoor.com/Interview/business-development-engineer-interview-questions-SRCH_KO0,29.htm": {
-      "pass": 3,
-      "fail": 4,
+      "pass": 4,
+      "fail": 6,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775287385
+      "lastTs": 1775295000
     },
     "https://www.tryexponent.com/questions?role=business-development": {
       "pass": 3,
@@ -4449,28 +4449,28 @@
       "lastTs": 1775200969
     },
     "https://www.indeed.com/hire/interview-questions/project-engineer": {
-      "pass": 3,
+      "pass": 6,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775200970
+      "lastTs": 1775294885
     },
     "https://guide.resumegemini.com/interviews/top-10-questions-for-project-development-engineer-interview/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287388
+      "lastTs": 1775295004
     },
     "https://interviewprep.org/project-engineer-interview-questions/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287392
+      "lastTs": 1775295002
     },
     "https://igotanoffer.com/blogs/mckinsey-case-interview-blog/case-interview-examples": {
       "pass": 1,
@@ -4497,12 +4497,12 @@
       "lastTs": 1775200980
     },
     "https://engineersnotebook.com/interview-questions/": {
-      "pass": 7,
+      "pass": 10,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287398
+      "lastTs": 1775295020
     },
     "https://www.mockinterviewpro.com/interview-questions/engineer": {
       "pass": 9,
@@ -4529,332 +4529,332 @@
       "lastTs": 1775287390
     },
     "https://blog.theinterviewguys.com/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287401
+      "lastTs": 1775295025
     },
     "https://blog.theinterviewguys.com/about/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287404
+      "lastTs": 1775295026
     },
     "https://blog.theinterviewguys.com/editorial-guidelines-the-interview-guys/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287406
+      "lastTs": 1775295026
     },
     "https://blog.theinterviewguys.com/universities-and-colleges-that-reference-the-interview-guys/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287407
+      "lastTs": 1775295028
     },
     "https://blog.theinterviewguys.com/blog-posts/": {
-      "pass": 4,
+      "pass": 7,
       "fail": 2,
       "domain": "business_development",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775287411
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295030
     },
     "https://blog.theinterviewguys.com/category/job-search/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287413
+      "lastTs": 1775295031
     },
     "https://blog.theinterviewguys.com/category/job-search/linkedin/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287414
+      "lastTs": 1775295032
     },
     "https://blog.theinterviewguys.com/category/resumes-cover-letters/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287416
+      "lastTs": 1775295033
     },
     "https://blog.theinterviewguys.com/free-resume-templates/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287419
+      "lastTs": 1775295034
     },
     "https://blog.theinterviewguys.com/category/job-interviews/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287421
+      "lastTs": 1775295035
     },
     "https://blog.theinterviewguys.com/category/job-interviews/interview-questions/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287423
+      "lastTs": 1775295037
     },
     "https://blog.theinterviewguys.com/category/careers/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287425
+      "lastTs": 1775295037
     },
     "https://blog.theinterviewguys.com/category/careers/side-hustles/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287426
+      "lastTs": 1775295039
     },
     "https://blog.theinterviewguys.com/category/career-certifications/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287428
+      "lastTs": 1775295039
     },
     "https://blog.theinterviewguys.com/category/remote-jobs/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287430
+      "lastTs": 1775295041
     },
     "https://blog.theinterviewguys.com/category/industry-insights/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287432
+      "lastTs": 1775295042
     },
     "https://blog.theinterviewguys.com/category/reviews/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287433
+      "lastTs": 1775295043
     },
     "https://blog.theinterviewguys.com/category/research-reports/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287435
+      "lastTs": 1775295044
     },
     "https://blog.theinterviewguys.com/our-tools/": {
-      "pass": 4,
+      "pass": 7,
       "fail": 2,
       "domain": "business_development",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775287439
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775295046
     },
     "https://blog.theinterviewguys.com/power-bullets-resume-analyzer/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287441
+      "lastTs": 1775295047
     },
     "https://blog.theinterviewguys.com/interview-oracle-question-predictor/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287442
+      "lastTs": 1775295048
     },
     "https://blog.theinterviewguys.com/the-salary-decoder/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287444
+      "lastTs": 1775295049
     },
     "https://blog.theinterviewguys.com/the-interview-follow-up-calculator/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287446
+      "lastTs": 1775295050
     },
     "https://blog.theinterviewguys.com/time-to-offer-estimator-tool/": {
-      "pass": 6,
+      "pass": 9,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287448
+      "lastTs": 1775295051
     },
     "https://blog.theinterviewguys.com/the-career-code-assessment/": {
-      "pass": 6,
+      "pass": 7,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287450
+      "lastReason": "expanded_link",
+      "lastTs": 1775294872
     },
     "https://blog.theinterviewguys.com/resources/": {
-      "pass": 6,
+      "pass": 7,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287451
+      "lastReason": "expanded_link",
+      "lastTs": 1775294872
     },
     "https://blog.theinterviewguys.com/the-ats-resume-checker-we-recommend/": {
-      "pass": 6,
+      "pass": 7,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287453
+      "lastReason": "expanded_link",
+      "lastTs": 1775294872
     },
     "https://blog.theinterviewguys.com": {
-      "pass": 6,
+      "pass": 7,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287454
+      "lastReason": "expanded_link",
+      "lastTs": 1775294872
     },
     "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.theinterviewguys.com%2Fbusiness-development-interview-questions-and-answers%2F": {
       "pass": 0,
-      "fail": 2,
+      "fail": 3,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775287275
+      "lastTs": 1775294873
     },
     "https://twitter.com/intent/tweet?text=Top%2010%20Business%20Development%20Interview%20Questions%20and%20Answers%20%28Your%20Complete%202025%20Guide%29&url=https%3A%2F%2Fblog.theinterviewguys.com%2Fbusiness-development-interview-questions-and-answers%2F": {
       "pass": 0,
-      "fail": 2,
+      "fail": 3,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775287275
+      "lastTs": 1775294873
     },
     "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.theinterviewguys.com%2Fbusiness-development-interview-questions-and-answers%2F": {
       "pass": 0,
-      "fail": 2,
+      "fail": 3,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775287275
+      "lastTs": 1775294873
     },
     "https://www.threads.net/intent/post?text=Top%2010%20Business%20Development%20Interview%20Questions%20and%20Answers%20%28Your%20Complete%202025%20Guide%29%20https%3A%2F%2Fblog.theinterviewguys.com%2Fbusiness-development-interview-questions-and-answers%2F": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "business_development",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775287456
+      "lastStatus": "pass",
+      "lastReason": "expanded_link",
+      "lastTs": 1775294873
     },
     "https://app.monstercampaigns.com/c/rstcykhrysmnshqapvo7/": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "business_development",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775287457
+      "lastStatus": "pass",
+      "lastReason": "expanded_link",
+      "lastTs": 1775294873
     },
     "https://blog.theinterviewguys.com/tell-me-about-a-time-you-solved-a-problem/": {
-      "pass": 6,
+      "pass": 7,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287459
+      "lastReason": "expanded_link",
+      "lastTs": 1775294873
     },
     "https://blog.theinterviewguys.com/the-soar-method/": {
-      "pass": 6,
+      "pass": 7,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287460
+      "lastReason": "expanded_link",
+      "lastTs": 1775294873
     },
     "https://blog.theinterviewguys.com/leadership-interview-questions-with-soar-example-answers/": {
-      "pass": 6,
+      "pass": 7,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287462
+      "lastReason": "expanded_link",
+      "lastTs": 1775294873
     },
     "https://blog.theinterviewguys.com/top-10-situational-interview-questions/": {
-      "pass": 6,
+      "pass": 7,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287464
+      "lastReason": "expanded_link",
+      "lastTs": 1775294873
     },
     "https://blog.theinterviewguys.com/what-are-your-strengths-interview-question/": {
-      "pass": 6,
+      "pass": 7,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287465
+      "lastReason": "expanded_link",
+      "lastTs": 1775294873
     },
     "https://blog.theinterviewguys.com/questions-to-ask-in-your-interview/": {
-      "pass": 6,
+      "pass": 7,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287467
+      "lastReason": "expanded_link",
+      "lastTs": 1775294873
     },
     "https://business.linkedin.com/talent-solutions/resources/how-to-hire-guides/business-development-manager/interview-questions": {
       "pass": 0,
-      "fail": 2,
+      "fail": 3,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775287276
+      "lastTs": 1775294873
     },
     "https://blog.theinterviewguys.com/restaurant-manager-resume-template/": {
-      "pass": 6,
+      "pass": 7,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775287468
+      "lastReason": "expanded_link",
+      "lastTs": 1775294873
     },
     "https://blog.theinterviewguys.com/business-development-resume-template/": {
       "pass": 4,
@@ -4889,68 +4889,68 @@
       "lastTs": 1775200851
     },
     "https://www.indeed.com/career-advice/interviewing/voice-process-interview-questions": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288162
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295055
     },
     "https://timespro.com/blog/voice-process-interview-questions-and-answers-for-freshers-and-experts": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288166
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295055
     },
     "https://www.vervecopilot.com/interview-questions/top-30-most-common-voice-process-interview-questions-you-should-prepare-for": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288167
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295055
     },
     "https://concentrixcareers.blogspot.com/2025/07/how-to-prepare-for-voice-process-job.html": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288170
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295057
     },
     "https://www.foundit.in/career-advice/voice-process-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288168
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295055
     },
     "https://jobifyindia.com/blog/voice-process-interview-questions-and-answer/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288196
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295122
     },
     "https://www.cvowl.com/blog/customer-support-for-voice-process-interview-questions-answers": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288171
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295055
     },
     "https://www.theknowledgeacademy.com/interview-questions/voice-process-interview-questions/": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288173
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295055
     },
     "https://yourcareersupport.com/voice-process-interview-questions/": {
       "pass": 1,
@@ -4961,68 +4961,68 @@
       "lastTs": 1775201029
     },
     "https://internshala.com/blog/genpact-voice-process-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288174
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295057
     },
     "https://jobifyindia.com/wp-content/uploads/2025/04/Common-Voice-Process-Interview-Questions-and-Best-Ways-to-Answer.pdf": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288168
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295055
     },
     "https://in.indeed.com/career-advice/interviewing/voice-process-interview-questions": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288196
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295121
     },
     "https://interviewprep.org/customer-service-call-center-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288176
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295088
     },
     "https://career.guru99.com/top-25-call-center-job-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288178
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295088
     },
     "https://dailyremote.com/advice/call-center-interview-questions": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288179
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295088
     },
     "https://careersidekick.com/15-most-common-call-center-interview-questions-and-answers/": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288183
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295088
     },
     "https://www.softwaretestinghelp.com/call-center-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288188
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295088
     },
     "https://www.cvowl.com/blog/call-center-customer-service-representative-interview-questions-answers": {
       "pass": 1,
@@ -5033,20 +5033,20 @@
       "lastTs": 1775201063
     },
     "https://www.mockquestions.com/position/Call+Center/": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288185
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295088
     },
     "https://www.verint.com/blog/21-interview-questions-to-ask-when-hiring-all-star-call-center-agents/": {
-      "pass": 1,
+      "pass": 2,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775201063
+      "lastTs": 1775295090
     },
     "https://atsresume.ai/blog/call-center-interview-questions": {
       "pass": 1,
@@ -5057,84 +5057,84 @@
       "lastTs": 1775201063
     },
     "https://topinterview.com/interview-advice/12-common-call-center-interview-questions-and-the-right-way-to-answer-them": {
-      "pass": 1,
+      "pass": 2,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775201064
+      "lastTs": 1775295088
     },
     "https://interviewprep.org/customer-support-interview-questions/": {
-      "pass": 5,
+      "pass": 6,
       "fail": 0,
-      "domain": "chat_process",
+      "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775288366
+      "lastTs": 1775295121
     },
     "https://www.glassdoor.com/Interview/customer-support-executive-voice-interview-questions-SRCH_KO0,32.htm": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288195
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295121
     },
     "https://resumedesign.ai/interview-questions/voice-of-the/": {
-      "pass": 1,
-      "fail": 0,
-      "domain": "voice_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775201096
-    },
-    "https://dailyremote.com/advice/customer-support-interview-questions": {
       "pass": 2,
       "fail": 0,
-      "domain": "chat_process",
+      "domain": "voice_process",
       "lastStatus": "pass",
       "lastReason": "search_duckduckgo",
-      "lastTs": 1775288399
+      "lastTs": 1775295121
+    },
+    "https://dailyremote.com/advice/customer-support-interview-questions": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "voice_process",
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295121
     },
     "https://www.pmapstest.com/blog/bpo-interview-questions": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288198
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295153
     },
     "https://interviewquestionshub.com/bpo-interview-questions-and-answers/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288207
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295154
     },
     "https://screeninghive.com/interview-questions/bpo/voice-process-agent": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288199
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295153
     },
     "https://www.dailyrecruitment.in/bpo-interview-questions-and-answer-pdf/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288206
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295154
     },
     "https://internshala.com/blog/bpo-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288200
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295154
     },
     "https://www.wecreateproblems.com/interview-questions/bpo-interview-questions": {
       "pass": 4,
@@ -5153,12 +5153,12 @@
       "lastTs": 1775288209
     },
     "https://www.vervecopilot.com/interview-questions/top-30-most-common-international-voice-process-interview-questions-you-should-prepare-for": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288202
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295154
     },
     "https://career.guru99.com/top-25-bpo-interview-questions/": {
       "pass": 1,
@@ -5169,100 +5169,100 @@
       "lastTs": 1775201130
     },
     "https://internshala.com/blog/telecaller-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288210
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295186
     },
     "https://callyzer.co/blog/top-telecaller-interview-questions-and-answers-for-freshers-to-experts/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288212
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295186
     },
     "https://in.indeed.com/career-advice/interviewing/telecaller-interview-questions": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288213
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295186
     },
     "https://jobifyindia.com/wp-content/uploads/2025/08/Common-Telecaller-Interview-Questions-With-Sample-Answers.pdf": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288214
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295186
     },
     "https://neodove.com/telecalling-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288213
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295186
     },
     "https://www.jobhai.com/blog/learning/telecaller-job-interview-questions-and-answers": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288218
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295186
     },
     "https://resumedesign.ai/interview-questions/telecaller-job/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288220
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295186
     },
     "https://www.cvowl.com/blog/telecaller-interview-questions-answers": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288215
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295186
     },
     "https://www.hellointern.in/blog/top-interview-questions-and-answers-for-telecaller-74155": {
-      "pass": 2,
+      "pass": 3,
       "fail": 1,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288221
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295186
     },
     "https://www.ambitionbox.com/profiles/voice-process-executive/interview-questions": {
       "pass": 0,
-      "fail": 68,
+      "fail": 100,
       "domain": "voice_process",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775288140
+      "lastTs": 1775295452
     },
     "https://credmark.ai/practice/top-voice-query-processing-interview-questions-and-answers": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288231
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295055
     },
     "https://www.theknowledgeacademy.com/in/interview-questions/voice-process-interview-questions/": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288232
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295219
     },
     "https://www.joinhgs.com/in/en/insights/blogs/screening-interview-tips-voice-non-voice-process-jobs": {
       "pass": 2,
@@ -5305,20 +5305,20 @@
       "lastTs": 1775201263
     },
     "https://www.theknowledgeacademy.com/us/interview-questions/voice-process-interview-questions/": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288238
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295319
     },
     "https://www.founditgulf.com/career-advice/voice-process-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288238
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295319
     },
     "https://no50.com/brief-shots/ace-your-voice-process-interview-top-questions-and-answers-1764799820": {
       "pass": 1,
@@ -5330,27 +5330,27 @@
     },
     "https://www.ambitionbox.com/interviews/cognizant-interview-questions/voice-process-executive": {
       "pass": 0,
-      "fail": 8,
+      "fail": 12,
       "domain": "voice_process",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775287774
+      "lastTs": 1775295350
     },
     "https://cvscreener.co/jobs/Voice-process.html": {
-      "pass": 2,
+      "pass": 3,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288232
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295055
     },
     "https://internshala.com/blog/tech-mahindra-voice-process-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288242
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295386
     },
     "https://nodeflair.com/companies/concentrix/interviews/technical-support-voice-process": {
       "pass": 1,
@@ -5361,20 +5361,20 @@
       "lastTs": 1775201361
     },
     "https://superworks.com/interview-questions/technical-support-voice-process/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288241
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295385
     },
     "https://interviewprep.org/voice-engineer-interview-questions/": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288227
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295219
     },
     "https://www.ambitionbox.com/profiles/voice-process/interview-questions/fresher-candidates": {
       "pass": 0,
@@ -5441,12 +5441,12 @@
       "lastTs": 1775208166
     },
     "https://www.interview-copilot.com/blog/java-interview-questions-and-answers": {
-      "pass": 4,
+      "pass": 6,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292954
+      "lastReason": "fetched",
+      "lastTs": 1775293230
     },
     "https://www.cvowl.com/blog/java-interview-questions-answers": {
       "pass": 3,
@@ -5473,12 +5473,12 @@
       "lastTs": 1775208176
     },
     "https://www.acte.in/java-stream-interview-questions-and-answers": {
-      "pass": 4,
+      "pass": 6,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775293138
+      "lastReason": "fetched",
+      "lastTs": 1775293239
     },
     "https://www.geeksforgeeks.org/java/java-stream-lambda-expression-coding-practice-problems/": {
       "pass": 3,
@@ -5537,12 +5537,12 @@
       "lastTs": 1775208309
     },
     "https://www.mockquestions.com/interview/Scenario+Based/": {
-      "pass": 4,
-      "fail": 2,
-      "domain": "chat_process",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288529
+      "pass": 6,
+      "fail": 5,
+      "domain": "business_development",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775294964
     },
     "https://huntr.co/interview-questions/sales": {
       "pass": 1,
@@ -5561,12 +5561,12 @@
       "lastTs": 1775208406
     },
     "https://www.projectmanager.com/blog/the-23-best-project-manager-interview-questions": {
-      "pass": 5,
+      "pass": 10,
       "fail": 0,
-      "domain": "sales",
+      "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286533
+      "lastTs": 1775294971
     },
     "https://resources.workable.com/sales-interview-questions": {
       "pass": 1,
@@ -5585,28 +5585,28 @@
       "lastTs": 1775286552
     },
     "https://www.interviewbit.com/hr-interview-questions/": {
-      "pass": 1,
-      "fail": 0,
-      "domain": "sales",
-      "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775208472
+      "pass": 3,
+      "fail": 3,
+      "domain": "business_development",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295005
     },
     "https://interviewprep.org/sales-manager-interview-questions/": {
-      "pass": 1,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775208472
+      "lastReason": "fetched",
+      "lastTs": 1775293948
     },
     "https://www.linkedin.com/business/talent/blog/talent-acquisition/interview-questions-to-ask-every-sales-candidate": {
       "pass": 0,
-      "fail": 4,
+      "fail": 8,
       "domain": "sales",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775208472
+      "lastTs": 1775293711
     },
     "https://www.careercontessa.com/advice/tech-sales-interview-questions/": {
       "pass": 1,
@@ -5633,20 +5633,20 @@
       "lastTs": 1775208570
     },
     "https://interviewprep.org/sales-interview-questions/": {
-      "pass": 4,
+      "pass": 7,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286580
+      "lastTs": 1775294167
     },
     "https://www.mindgroom.in/blogs/15-essential-sales-interview-questions-and-answers-for-freshers": {
-      "pass": 4,
+      "pass": 5,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775286592
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775293843
     },
     "https://www.simplilearn.com/sales-interview-questions-answers-article": {
       "pass": 1,
@@ -6577,12 +6577,12 @@
       "lastTs": 1775284490
     },
     "https://x0pa.com/hiring/sales-engineer-interview-questions/": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775284492
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775293909
     },
     "https://www.glassdoor.com/Interview/sales-engineer-interview-questions-SRCH_KO0,14.htm": {
       "pass": 1,
@@ -7465,12 +7465,12 @@
       "lastTs": 1775284462
     },
     "https://climbtheladder.com/business-development-manager-interview-questions/": {
-      "pass": 4,
+      "pass": 7,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287336
+      "lastTs": 1775294956
     },
     "https://resumeworded.com/interview-questions/business-development-manager": {
       "pass": 1,
@@ -7481,20 +7481,20 @@
       "lastTs": 1775284673
     },
     "https://www.tealhq.com/career-paths/business-development-executive-interview-questions": {
-      "pass": 2,
-      "fail": 2,
+      "pass": 3,
+      "fail": 4,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775287328
+      "lastTs": 1775294947
     },
     "https://www.ambitionbox.com/profiles/business-development-executive/interview-questions": {
       "pass": 0,
-      "fail": 12,
+      "fail": 20,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775286717
+      "lastTs": 1775294284
     },
     "https://www.vervecopilot.com/interview-questions/top-30-most-common-bdm-interview-questions-you-should-prepare-for": {
       "pass": 4,
@@ -7521,20 +7521,20 @@
       "lastTs": 1775284806
     },
     "https://interviewprep.org/business-development-specialist-interview-questions/": {
-      "pass": 4,
+      "pass": 7,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287395
+      "lastTs": 1775294970
     },
     "https://www.ambitionbox.com/profiles/business-development-executive/interview-questions/fresher-candidates": {
       "pass": 0,
-      "fail": 12,
+      "fail": 16,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "blocked_host",
-      "lastTs": 1775287043
+      "lastTs": 1775294638
     },
     "https://thetalent4u.com/insights/business-development-executive-interview-questions": {
       "pass": 1,
@@ -7553,12 +7553,12 @@
       "lastTs": 1775285041
     },
     "https://climbtheladder.com/personal-development-interview-questions/": {
-      "pass": 4,
+      "pass": 7,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287393
+      "lastTs": 1775295008
     },
     "https://www.guvi.in/blog/java-interview-questions-and-answers/": {
       "pass": 3,
@@ -7649,12 +7649,12 @@
       "lastTs": 1775286458
     },
     "https://www.indeed.com/hire/interview-questions/sales": {
-      "pass": 3,
+      "pass": 6,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286505
+      "lastTs": 1775294089
     },
     "https://srijaninstitute.com/blog/salesforce-interview-questions": {
       "pass": 3,
@@ -7681,36 +7681,36 @@
       "lastTs": 1775286538
     },
     "https://www.hellointern.in/blog/top-interview-questions-and-answers-for-hr-sales-and-marketing-19894": {
-      "pass": 1,
-      "fail": 1,
+      "pass": 2,
+      "fail": 2,
       "domain": "sales",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775286546
+      "lastTs": 1775294130
     },
     "https://www.pmapstest.com/blog/sales-representative-interview-questions": {
-      "pass": 3,
+      "pass": 6,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286549
+      "lastTs": 1775294133
     },
     "https://interviewprep.org/human-resources-representative-interview-questions/": {
-      "pass": 3,
+      "pass": 6,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286551
+      "lastTs": 1775294135
     },
     "https://resumedesign.ai/interview-questions/technical-sales-specialist/": {
-      "pass": 3,
+      "pass": 6,
       "fail": 0,
       "domain": "sales",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775286565
+      "lastTs": 1775294153
     },
     "https://www.showpad.com/sales-behavioral-interview-questions": {
       "pass": 1,
@@ -7737,28 +7737,28 @@
       "lastTs": 1775287351
     },
     "https://www.mockinterviewpro.com/interview-questions/business-development-officer": {
-      "pass": 3,
+      "pass": 6,
       "fail": 0,
       "domain": "business_development",
       "lastStatus": "pass",
       "lastReason": "fetched",
-      "lastTs": 1775287360
+      "lastTs": 1775294954
     },
     "https://www.wecreateproblems.com/interview-questions/behavioral-interview-questions": {
-      "pass": 4,
+      "pass": 7,
       "fail": 0,
-      "domain": "chat_process",
+      "domain": "business_development",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775288694
+      "lastReason": "fetched",
+      "lastTs": 1775294989
     },
     "https://www.theknowledgeacademy.com/interview-questions/business-development-interview-questions/": {
-      "pass": 1,
-      "fail": 2,
+      "pass": 2,
+      "fail": 4,
       "domain": "business_development",
       "lastStatus": "fail",
       "lastReason": "fetch_empty",
-      "lastTs": 1775287374
+      "lastTs": 1775294989
     },
     "https://www.graduatesfirst.com/assessment-day-2/role-play-exercises": {
       "pass": 3,
@@ -7777,20 +7777,20 @@
       "lastTs": 1775287386
     },
     "https://www.cvowl.com/blog/call-center-interview-questions-answers": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288184
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295088
     },
     "https://www.hipeople.io/interview-questions/call-center-interview-questions": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288191
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295088
     },
     "https://resumecat.com/career/call-center/interview-questions": {
       "pass": 3,
@@ -7801,20 +7801,20 @@
       "lastTs": 1775288192
     },
     "https://www.themuse.com/advice/customer-service-interview-questions-answers-examples": {
-      "pass": 3,
+      "pass": 4,
       "fail": 0,
       "domain": "voice_process",
       "lastStatus": "pass",
-      "lastReason": "fetched",
-      "lastTs": 1775288197
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295122
     },
     "https://www.glassdoor.com/Interview/bpo-voice-interview-questions-SRCH_KO0,9.htm": {
-      "pass": 1,
+      "pass": 2,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288207
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295154
     },
     "https://www.betterteam.com/telecaller-interview-questions": {
       "pass": 3,
@@ -7849,12 +7849,12 @@
       "lastTs": 1775288236
     },
     "https://www.glassdoor.com/Interview/voice-process-interview-questions-SRCH_KO0,13.htm": {
-      "pass": 1,
+      "pass": 2,
       "fail": 2,
       "domain": "voice_process",
-      "lastStatus": "fail",
-      "lastReason": "fetch_empty",
-      "lastTs": 1775288238
+      "lastStatus": "pass",
+      "lastReason": "search_duckduckgo",
+      "lastTs": 1775295284
     },
     "https://carreersupport.com/voice-engineer-interview-questions/": {
       "pass": 3,
@@ -8633,28 +8633,428 @@
       "lastTs": 1775288826
     },
     "https://www.springjavalab.com/2025/04/top-25-java-interview-questions-for-freshers.html": {
-      "pass": 1,
+      "pass": 3,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292919
+      "lastReason": "fetched",
+      "lastTs": 1775293229
     },
     "https://clouddevs.com/java-interview-questions-with-answers/": {
-      "pass": 1,
+      "pass": 3,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292955
+      "lastReason": "fetched",
+      "lastTs": 1775293232
     },
     "https://dev.to/hannah_usmedynska/50-play-framework-interview-questions-and-answers-3p04": {
-      "pass": 1,
+      "pass": 3,
       "fail": 0,
       "domain": "java",
       "lastStatus": "pass",
-      "lastReason": "search_duckduckgo",
-      "lastTs": 1775292955
+      "lastReason": "fetched",
+      "lastTs": 1775293236
+    },
+    "https://www.mockquestions.com/position/Engineer/": {
+      "pass": 2,
+      "fail": 3,
+      "domain": "business_development",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775295023
+    },
+    "https://utho.com/blog/java-programming-interview-questions/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293244
+    },
+    "https://www.java-success.com/what-did-others-say-about-the-java-interview-companion/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293248
+    },
+    "https://www.java-success.com/wp-login.php?action=register": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "blocked_path",
+      "lastTs": 1775293213
+    },
+    "https://www.java-success.com/wp-login.php": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "blocked_path",
+      "lastTs": 1775293213
+    },
+    "https://www.java-success.com/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293250
+    },
+    "https://www.java-success.com/java-success-com-blog/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293253
+    },
+    "https://www.java-success.com/what-are-the-benefits-of-java-success-com/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293256
+    },
+    "https://www.java-success.com/90-days-members-free-downloads/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293259
+    },
+    "https://www.java-success.com/privacy-policy/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293262
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293264
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/resume/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293267
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/sample-resumes/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293270
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/beginner-or-intermediate/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293273
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/zy-feeling-stagnated/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293279
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/earn-more/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293285
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/freelancing/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293288
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/z-did-you-get-the-offer/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293291
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/certification/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293295
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293299
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/soft-skills/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293303
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/personal-branding/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293307
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-interview-tips/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293312
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/your-motivated/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "java",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293319
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/philosophies/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293325
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/topics-to-whinge-whine/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293330
+    },
+    "https://www.java-success.com/members/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293337
+    },
+    "https://www.java-success.com/membership-levels/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293343
+    },
+    "https://www.java-success.com/membership-account/membership-billing/": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "blocked_path",
+      "lastTs": 1775293214
+    },
+    "https://www.java-success.com/membership-account/membership-checkout/": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "blocked_path",
+      "lastTs": 1775293214
+    },
+    "https://www.java-success.com/membership-account/membership-invoice/": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "blocked_path",
+      "lastTs": 1775293214
+    },
+    "https://www.java-success.com/membership-account/": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "blocked_path",
+      "lastTs": 1775293214
+    },
+    "https://www.java-success.com/membership-account/membership-cancel/": {
+      "pass": 0,
+      "fail": 1,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "blocked_path",
+      "lastTs": 1775293214
+    },
+    "https://www.java-success.com/category/menu-java-data/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293349
+    },
+    "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293355
+    },
+    "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/architect-how-to/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293361
+    },
+    "https://www.java-success.com/category/key-areas/0003-16-key-areas/03-yl-judgingexperience/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293368
+    },
+    "https://www.java-success.com/00-high-level-low-level-system-design-considerations-for-read-heavy-systems/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293373
+    },
+    "https://www.java-success.com/wp-content/uploads/2014/08/Screen-Shot-2023-06-18-at-10.14.41-pm.png": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293383
+    },
+    "https://www.java-success.com/simple-caching-java-application-step-by-step/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293391
+    },
+    "https://www.java-success.com/implement-an-in-memory-cache-in-java/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293396
+    },
+    "https://www.java-success.com/wp-content/uploads/2014/08/Screen-Shot-2023-06-18-at-11.40.44-pm.png": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293401
+    },
+    "https://www.java-success.com/category/java-big-data-interview-qas/key-areas/0003-16-key-areas/09-low-latency/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "java",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293407
+    },
+    "https://coverlettersandresume.com/sales/sales-rep-interview-questions-and-answers/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293916
+    },
+    "https://www.sparkhire.com/interview-questions/sales/inside-sales-representative/": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "sales",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775293923
+    },
+    "https://atsresume.ai/blog/sales-interview-questions-answers": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "sales",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293932
+    },
+    "https://climbtheladder.com/technical-sales-representative-interview-questions/": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "sales",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293962
+    },
+    "https://smartwinnr.com/blog/8-sales-role-play-scenarios-that-will-help-prepare-your-sales-team-to-handle-any-sales-situation": {
+      "pass": 1,
+      "fail": 2,
+      "domain": "sales",
+      "lastStatus": "fail",
+      "lastReason": "fetch_empty",
+      "lastTs": 1775293989
+    },
+    "https://www.cvowl.com/blog/business-developer-interview-questions-answers": {
+      "pass": 3,
+      "fail": 0,
+      "domain": "business_development",
+      "lastStatus": "pass",
+      "lastReason": "fetched",
+      "lastTs": 1775294879
+    },
+    "https://www.ambitionbox.com/profiles/voice-process/interview-questions": {
+      "pass": 0,
+      "fail": 4,
+      "domain": "voice_process",
+      "lastStatus": "fail",
+      "lastReason": "blocked_host",
+      "lastTs": 1775295284
     }
   }
 }

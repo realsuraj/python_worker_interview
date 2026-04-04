@@ -5,10 +5,10 @@ services:
       dockerfile: Dockerfile
     image: interview-ai-worker:latest
     ports:
-      - "${WORKER_PUBLIC_PORT:-8099}:${WORKER_PORT:-8099}"
+      - "${WORKER_PUBLIC_PORT:-9000}:${WORKER_PORT:-9000}"
     environment:
       WORKER_HOST: "0.0.0.0"
-      WORKER_PORT: "${WORKER_PORT:-8099}"
+      WORKER_PORT: "${WORKER_PORT:-9000}"
       ENABLE_LLM: "${ENABLE_LLM:-false}"
       LLM_MODEL_NAME: "${LLM_MODEL_NAME:-external-api}"
       LLM_API_URL: "${LLM_API_URL:-}"
@@ -20,8 +20,9 @@ services:
       COUNTER_Q_ENABLED: "${COUNTER_Q_ENABLED:-true}"
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-fsS", "http://localhost:${WORKER_PORT:-8099}/health"]
+      test: ["CMD", "curl", "-fsS", "http://localhost:${WORKER_PORT:-9000}/health"]
       interval: 15s
       timeout: 5s
       retries: 5
       start_period: 30s
+
