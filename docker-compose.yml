@@ -18,8 +18,6 @@ services:
       ENABLE_TTS: "${ENABLE_TTS:-false}"
       RAG_FETCH_ONLINE: "${RAG_FETCH_ONLINE:-true}"
       COUNTER_Q_ENABLED: "${COUNTER_Q_ENABLED:-true}"
-      PIPER_BIN: "/usr/local/bin/piper"
-      PIPER_VOICE_MODEL: "/app/models/piper/voice.onnx"
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-fsS", "http://localhost:${WORKER_PORT:-8099}/health"]

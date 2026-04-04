@@ -155,7 +155,7 @@ COUNTER_Q_DEPTH_THRESHOLD = _env_int("COUNTER_Q_DEPTH_THRESHOLD", 40, 0)   # sco
 
 ENABLE_STT              = False
 ENABLE_TTS              = False
-STT_MODEL_ID            = "browser-web-speech"
+STT_MODEL_ID            = "disabled-browser-only"
 STT_PRIORITY_MODE       = "browser_only"
 CORE_JAVA_REFERENCE_URL  = "https://www.interviewbit.com/java-interview-questions/"
 TRAINING_STORE_FILE      = Path(os.getenv("TRAINING_STORE_FILE", Path(__file__).with_name("training_store.json")))

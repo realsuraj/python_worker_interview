@@ -101,6 +101,27 @@ jobs:
           IMAGE_REF="${IMAGE_NAME}:${GITHUB_SHA}"
           sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "IMAGE_REF='$IMAGE_REF' CONTAINER_NAME='$CONTAINER_NAME' HOST_PORT='$HOST_PORT' CONTAINER_PORT='$CONTAINER_PORT' REMOTE_DOCKER='$REMOTE_DOCKER' ENABLE_STT='$ENABLE_STT' ENABLE_TTS='$ENABLE_TTS' bash -s" <<'EOF'
           set -euo pipefail
+          # Free conflicting Docker containers that already publish HOST_PORT.
+          CONFLICT_IDS="$($REMOTE_DOCKER ps -q --filter "publish=${HOST_PORT}" || true)"
+          if [ -n "${CONFLICT_IDS}" ]; then
+            echo "Found container(s) already publishing port ${HOST_PORT}; stopping/removing conflicts..."
+            for cid in ${CONFLICT_IDS}; do
+              cname="$($REMOTE_DOCKER inspect -f '{{.Name}}' "$cid" 2>/dev/null | sed 's#^/##' || true)"
+              if [ -n "${cname}" ] && [ "${cname}" != "${CONTAINER_NAME}" ]; then
+                echo "Stopping conflicting container: ${cname}"
+                $REMOTE_DOCKER stop "${cname}" >/dev/null 2>&1 || true
+                $REMOTE_DOCKER rm "${cname}" >/dev/null 2>&1 || true
+              fi
+            done
+          fi
+
+          # If a non-Docker process still owns the host port, fail with diagnostics.
+          if ss -ltnp 2>/dev/null | grep -q ":${HOST_PORT} "; then
+            echo "Port ${HOST_PORT} is still in use by non-container process:"
+            ss -ltnp 2>/dev/null | grep ":${HOST_PORT} " || true
+            exit 1
+          fi
+
           $REMOTE_DOCKER run -d \
             --name "$CONTAINER_NAME" \
             --restart unless-stopped \

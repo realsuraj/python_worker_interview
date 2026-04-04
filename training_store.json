@@ -296,9 +296,29 @@
       "qaMemory": {
         "why is java a platform independent language?": {
           "question": "Why is Java a platform independent language?",
-          "idealAnswer": "Java is the most widely used programming language \u00c2 in the current IT industry. One major reason for the vast Exception Handling with Method Overriding in Java Java Project Ideas For Beginners and Advanced For individuals aiming to excel in the field of software development, understanding Core Java is fundamental. Whether you're preparing for",
-          "updatedAt": "2026-04-04T04:58:38Z",
+          "idealAnswer": "Java is platform independent because Java source code is compiled into bytecode, not native machine code. That bytecode runs on the JVM, and each operating system has its own JVM implementation. So the same compiled program can run across Windows, Linux, and macOS without recompiling, with minor platform-specific behavior handled by the JVM and libraries.",
+          "updatedAt": "2026-04-04T08:38:26Z",
           "samples": [
+            {
+              "ts": 1775291906,
+              "answer": "because Java don't have any right to say anything for me and it does not do anything for me right now",
+              "score": 35,
+              "metrics": {
+                "overall": 35,
+                "work": 23,
+                "fluency": 42,
+                "relevance": 25,
+                "confidence": 76
+              },
+              "sentenceChecks": [
+                {
+                  "index": 1,
+                  "sentence": "because Java don't have any right to say anything for me and it does not do anything for me right now",
+                  "score": 25,
+                  "source": "local"
+                }
+              ]
+            },
             {
               "ts": 1775278718,
               "answer": "working this way",
@@ -371,6 +391,350 @@
                 "confidence": 75
               },
               "sentenceChecks": []
+            }
+          ]
+        },
+        "share a simple project example where you used oriented?": {
+          "question": "Share a simple project example where you used oriented?",
+          "idealAnswer": "A strong answer should define example, oriented, project, share, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T08:38:59Z",
+          "samples": [
+            {
+              "ts": 1775291939,
+              "answer": "I don't have any project I just use my own thing you don't help me anything for that I always use my own thing you fucker you idiot",
+              "score": 27,
+              "metrics": {
+                "overall": 27,
+                "work": 6,
+                "fluency": 44,
+                "relevance": 20,
+                "confidence": 76
+              },
+              "sentenceChecks": [
+                {
+                  "index": 1,
+                  "sentence": "I don't have any project I just use my own thing you don't help me anything for that I always use my own thing you fucker you idiot",
+                  "score": 0,
+                  "source": "local"
+                }
+              ]
+            }
+          ]
+        },
+        "how would you implement interfaces step-by-step using java?": {
+          "question": "How would you implement interfaces step-by-step using java?",
+          "idealAnswer": "A strong answer should define implement, interfaces, java, step-by-step, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T08:39:20Z",
+          "samples": [
+            {
+              "ts": 1775291960,
+              "answer": "I don't have interfaces I use my people faces and then I where they eat and I clear it like your mother did",
+              "score": 30,
+              "metrics": {
+                "overall": 30,
+                "work": 9,
+                "fluency": 44,
+                "relevance": 25,
+                "confidence": 76
+              },
+              "sentenceChecks": [
+                {
+                  "index": 1,
+                  "sentence": "I don't have interfaces I use my people faces and then I where they eat and I clear it like your mother did",
+                  "score": 10,
+                  "source": "local"
+                }
+              ]
+            }
+          ]
+        },
+        "what are the differences between heap and stack memory in java?": {
+          "question": "What are the differences between Heap and Stack Memory in Java?",
+          "idealAnswer": "A strong answer should define between, differences, heap, java, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T08:39:41Z",
+          "samples": [
+            {
+              "ts": 1775291981,
+              "answer": "because he is a heap and stack is a stack and you are just bloody idiot for that",
+              "score": 33,
+              "metrics": {
+                "overall": 33,
+                "work": 15,
+                "fluency": 38,
+                "relevance": 33,
+                "confidence": 75
+              },
+              "sentenceChecks": [
+                {
+                  "index": 1,
+                  "sentence": "because he is a heap and stack is a stack and you are just bloody idiot for that",
+                  "score": 17,
+                  "source": "local"
+                }
+              ]
+            }
+          ]
+        },
+        "what do you understand by an instance variable and a local variable?": {
+          "question": "What do you understand by an instance variable and a local variable?",
+          "idealAnswer": "A strong answer should define variable, instance, local, understand, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T08:40:10Z",
+          "samples": [
+            {
+              "ts": 1775292010,
+              "answer": "instance variable and local variable are variable which are variable and variable",
+              "score": 74,
+              "metrics": {
+                "overall": 74,
+                "work": 92,
+                "fluency": 25,
+                "relevance": 85,
+                "confidence": 75
+              },
+              "sentenceChecks": [
+                {
+                  "index": 1,
+                  "sentence": "instance variable and local variable are variable which are variable and variable",
+                  "score": 100,
+                  "source": "local"
+                }
+              ]
+            }
+          ]
+        },
+        "what common beginner mistakes happen in object, and how would you avoid them?": {
+          "question": "What common beginner mistakes happen in object, and how would you avoid them?",
+          "idealAnswer": "A strong answer should define avoid, beginner, common, happen, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T08:40:38Z",
+          "samples": [
+            {
+              "ts": 1775292038,
+              "answer": "I don't do common mistake I do big mistake like a bug mistake are you deleting the server I am expert in this",
+              "score": 28,
+              "metrics": {
+                "overall": 28,
+                "work": 10,
+                "fluency": 43,
+                "relevance": 16,
+                "confidence": 76
+              },
+              "sentenceChecks": [
+                {
+                  "index": 1,
+                  "sentence": "I don't do common mistake I do big mistake like a bug mistake are you deleting the server I am expert in this",
+                  "score": 11,
+                  "source": "local"
+                }
+              ]
+            }
+          ]
+        },
+        "how would you debug a basic issue related to between?": {
+          "question": "How would you debug a basic issue related to between?",
+          "idealAnswer": "A strong answer should define basic, between, debug, issue, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T08:41:08Z",
+          "samples": [
+            {
+              "ts": 1775292068,
+              "answer": "I don't have any issue your issue you do it I my shoe my do it not related to you you idiot you idiot your buffalo you must so rahi ho",
+              "score": 35,
+              "metrics": {
+                "overall": 35,
+                "work": 12,
+                "fluency": 45,
+                "relevance": 40,
+                "confidence": 76
+              },
+              "sentenceChecks": [
+                {
+                  "index": 1,
+                  "sentence": "I don't have any issue your issue you do it I my shoe my do it not related to you you idiot you idiot your buffalo you must so rahi ho",
+                  "score": 14,
+                  "source": "local"
+                }
+              ]
+            }
+          ]
+        },
+        "how would you implement pointers step-by-step using java?": {
+          "question": "How would you implement pointers step-by-step using java?",
+          "idealAnswer": "A strong answer should define implement, java, pointers, step-by-step, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T08:41:38Z",
+          "samples": [
+            {
+              "ts": 1775292098,
+              "answer": "you ask me this question why you asking me again and again same question I just ask me the new position in new version",
+              "score": 19,
+              "metrics": {
+                "overall": 19,
+                "work": 0,
+                "fluency": 42,
+                "relevance": 0,
+                "confidence": 76
+              },
+              "sentenceChecks": [
+                {
+                  "index": 1,
+                  "sentence": "you ask me this question why you asking me again and again same question I just ask me the new position in new version",
+                  "score": 0,
+                  "source": "local"
+                }
+              ]
+            }
+          ]
+        },
+        "how would you debug a basic issue related to overloading?": {
+          "question": "How would you debug a basic issue related to overloading?",
+          "idealAnswer": "A strong answer should define basic, debug, issue, overloading, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T08:42:11Z",
+          "samples": [
+            {
+              "ts": 1775292131,
+              "answer": "I don't have any related issue net khatam ho gaya",
+              "score": 34,
+              "metrics": {
+                "overall": 34,
+                "work": 15,
+                "fluency": 38,
+                "relevance": 40,
+                "confidence": 75
+              },
+              "sentenceChecks": [
+                {
+                  "index": 1,
+                  "sentence": "I don't have any related issue net khatam ho gaya",
+                  "score": 17,
+                  "source": "local"
+                }
+              ]
+            }
+          ]
+        },
+        "netbeans tutorial: what is netbeans ide and how to get started?": {
+          "question": "Netbeans Tutorial: What is NetBeans IDE and how to get started?",
+          "idealAnswer": "A strong answer should define netbeans, get, ide, started, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T08:42:44Z",
+          "samples": [
+            {
+              "ts": 1775292164,
+              "answer": "dusre Browser",
+              "score": 19,
+              "metrics": {
+                "overall": 19,
+                "work": 5,
+                "fluency": 31,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "what are the default values assigned to variables and instances in java?": {
+          "question": "What are the default values assigned to variables and instances in java?",
+          "idealAnswer": "A strong answer should define assigned, default, instances, java, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T08:43:09Z",
+          "samples": [
+            {
+              "ts": 1775292189,
+              "answer": "I don't know abe teri Mummy ko jakar puchna bhai kya hai teri Mummy Hai Na Ja poochh kya yah \u092c\u093e\u0930-\u092c\u093e\u0930 dikhana mat ki tu pura type kar raha hai main jo bol raha hun",
+              "score": 24,
+              "metrics": {
+                "overall": 24,
+                "work": 4,
+                "fluency": 54,
+                "relevance": 4,
+                "confidence": 76
+              },
+              "sentenceChecks": [
+                {
+                  "index": 1,
+                  "sentence": "I don't know abe teri Mummy ko jakar puchna bhai kya hai teri Mummy Hai Na Ja poochh kya yah \u092c\u093e\u0930-\u092c\u093e\u0930 dikhana mat ki tu pura type kar raha hai main jo bol raha hun",
+                  "score": 5,
+                  "source": "local"
+                }
+              ]
+            }
+          ]
+        },
+        "can you tell the difference between equals() method and equality operator (==) in java?": {
+          "question": "Can you tell the difference between equals() method and equality operator (==) in Java?",
+          "idealAnswer": "equals() method and equality operator (==) in Java differ in core capability and scope. equals() method usually provides stronger abstraction and extensibility, while equality operator (==) in Java is often simpler and narrower in feature set. A good interview answer should compare definition, core concepts, practical use cases, limitations, and one real example.",
+          "updatedAt": "2026-04-04T08:43:50Z",
+          "samples": [
+            {
+              "ts": 1775292230,
+              "answer": "no I can't tell you about this just do your stuff don't ask me again and again same questions same thing same repeating",
+              "score": 28,
+              "metrics": {
+                "overall": 28,
+                "work": 13,
+                "fluency": 45,
+                "relevance": 12,
+                "confidence": 76
+              },
+              "sentenceChecks": [
+                {
+                  "index": 1,
+                  "sentence": "no I can't tell you about this just do your stuff don't ask me again and again same questions same thing same repeating",
+                  "score": 15,
+                  "source": "local"
+                }
+              ]
+            }
+          ]
+        },
+        "explain the basics of jvm for a java role?": {
+          "question": "Explain the basics of jvm for a java role?",
+          "idealAnswer": "A strong answer should define basics, explain, java, jvm, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T08:47:06Z",
+          "samples": [
+            {
+              "ts": 1775292426,
+              "answer": "okay do you want me to say the basic do you want to say me basic thing but you are more basic than basic thing then why you asking me such a basic thing as me some basic music",
+              "score": 37,
+              "metrics": {
+                "overall": 37,
+                "work": 27,
+                "fluency": 50,
+                "relevance": 22,
+                "confidence": 76
+              },
+              "sentenceChecks": [
+                {
+                  "index": 1,
+                  "sentence": "okay do you want me to say the basic do you want to say me basic thing but you are more basic than basic thing then why you asking me such a basic thing as me some basic music",
+                  "score": 27,
+                  "source": "local"
+                }
+              ]
+            }
+          ]
+        },
+        "what is a do while loop in java and how to use it?": {
+          "question": "What is a Do while loop in Java and how to use it?",
+          "idealAnswer": "A strong answer should define java, loop, use, while, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T08:47:24Z",
+          "samples": [
+            {
+              "ts": 1775292444,
+              "answer": "look lot lot kyon karte mujhe samajh Nahin Aata sabse best To Yahi Hai",
+              "score": 24,
+              "metrics": {
+                "overall": 24,
+                "work": 8,
+                "fluency": 39,
+                "relevance": 7,
+                "confidence": 75
+              },
+              "sentenceChecks": [
+                {
+                  "index": 1,
+                  "sentence": "look lot lot kyon karte mujhe samajh Nahin Aata sabse best To Yahi Hai",
+                  "score": 9,
+                  "source": "local"
+                }
+              ]
             }
           ]
         }

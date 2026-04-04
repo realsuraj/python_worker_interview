@@ -1,6 +1,6 @@
 # Interview AI Worker
 
-FastAPI-based interview worker with RAG question generation, answer evaluation, STT, and TTS.
+FastAPI-based interview worker with RAG question generation and answer evaluation.
 
 ## Quick Start (Docker)
 
@@ -11,7 +11,7 @@ cd ai_worker
 docker compose up --build
 ```
 
-First build can take a few minutes (installs deps + downloads piper voice model).
+First build installs Python dependencies only (no STT/TTS model download).
 
 Worker available at: `http://localhost:8099`
 
@@ -30,14 +30,8 @@ Override any of these in a `.env` file next to `docker-compose.yml`:
 | `LLM_API_URL` | empty | External LLM endpoint URL |
 | `LLM_API_KEY` | empty | Bearer token for external LLM endpoint |
 | `LLM_API_TIMEOUT_SECONDS` | `45` | Timeout for external LLM calls |
-| `ENABLE_STT` | `true` | Enable speech-to-text (faster-whisper) |
-| `STT_MODEL_ID` | `faster-whisper-small` | Fixed STT model used by worker (small only) |
-| `STT_LANGUAGE` | `en` | Locked to English only |
-| `STT_PRIORITY_MODE` | `python_only` | Python worker STT is the only active STT path |
-| `AUTO_INSTALL_STT` | `true` | Auto-install `faster-whisper` at startup if missing |
-| `ENABLE_TTS` | `false` | Enable text-to-speech (Piper) |
-| `AUTO_INSTALL_PIPER` | `true` | Auto-install `piper-tts` at startup if missing |
-| `AUTO_INSTALL_PIPER_DEPS` | `true` | Auto-install Piper runtime deps (`onnxruntime`, etc.) |
+| `ENABLE_STT` | `false` | Browser-side STT mode (backend STT model disabled) |
+| `ENABLE_TTS` | `false` | Browser-side TTS mode (backend TTS model disabled) |
 | `RAG_FETCH_ONLINE` | `true` | Fetch RAG sources from the web |
 | `COUNTER_Q_ENABLED` | `true` | Enable counter/follow-up questions |
 | `AUTO_TRAIN_ENABLED` | `true` | Auto-train in idle time |
@@ -74,13 +68,8 @@ Example `.env`:
 ```env
 WORKER_PORT=8099
 WORKER_PUBLIC_PORT=8099
-ENABLE_STT=true
-STT_MODEL_ID=faster-whisper-small
-STT_LANGUAGE=en
-AUTO_INSTALL_STT=true
-ENABLE_TTS=true
-AUTO_INSTALL_PIPER=true
-AUTO_INSTALL_PIPER_DEPS=true
+ENABLE_STT=false
+ENABLE_TTS=false
 ```
 
 ---
@@ -104,9 +93,9 @@ AUTO_INSTALL_PIPER_DEPS=true
 | GET | `/ml/learning-stats` | 1-week / 1-month / 1-year learning stats |
 | POST | `/ml/train-small-model` | Train compact reusable ML model from RL events |
 | POST | `/interview/best-answer` | Generate best interview answers from trained store + URLs |
-| POST | `/speech/transcribe` | Transcribe audio (STT) |
-| POST | `/speech/synthesize` | Synthesize speech (TTS) |
-| WS | `/speech/ws/stt` | Real-time STT via WebSocket |
+| POST | `/speech/transcribe` | Stub response (backend STT disabled) |
+| POST | `/speech/synthesize` | Stub response (backend TTS disabled) |
+| WS | `/speech/ws/stt` | Available, returns disabled-mode responses |
 
 ---
 
@@ -178,9 +167,8 @@ curl -X POST http://localhost:8099/interview/best-answer \
 
 ---
 
-## What's NOT in Git (downloaded at build time)
+## What's NOT in Git
 
 | Path | Size | Source |
 |---|---|---|
-| `models/piper/` | ~60 MB | HuggingFace (piper voices) |
 | `_pydeps/` | small | pip local deps |

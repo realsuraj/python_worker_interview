@@ -428,12 +428,12 @@
     "java": {
       "questions": {
         "why is java a platform independent language?": {
-          "shown": 1,
+          "shown": 2,
           "good": 0,
-          "bad": 1,
-          "reward": -0.06,
-          "lastScore": 20,
-          "lastUpdated": "2026-04-04T04:58:38Z"
+          "bad": 2,
+          "reward": -0.084,
+          "lastScore": 35,
+          "lastUpdated": "2026-04-04T08:38:26Z"
         },
         "how would you implement between step-by-step using java?": {
           "shown": 1,
@@ -458,6 +458,110 @@
           "reward": -0.066,
           "lastScore": 17,
           "lastUpdated": "2026-04-04T07:23:46Z"
+        },
+        "share a simple project example where you used oriented?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.046,
+          "lastScore": 27,
+          "lastUpdated": "2026-04-04T08:38:59Z"
+        },
+        "how would you implement interfaces step-by-step using java?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.04,
+          "lastScore": 30,
+          "lastUpdated": "2026-04-04T08:39:20Z"
+        },
+        "what are the differences between heap and stack memory in java?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.034,
+          "lastScore": 33,
+          "lastUpdated": "2026-04-04T08:39:41Z"
+        },
+        "what do you understand by an instance variable and a local variable?": {
+          "shown": 1,
+          "good": 1,
+          "bad": 0,
+          "reward": 0.048,
+          "lastScore": 74,
+          "lastUpdated": "2026-04-04T08:40:10Z"
+        },
+        "what common beginner mistakes happen in object, and how would you avoid them?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.044,
+          "lastScore": 28,
+          "lastUpdated": "2026-04-04T08:40:38Z"
+        },
+        "how would you debug a basic issue related to between?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.03,
+          "lastScore": 35,
+          "lastUpdated": "2026-04-04T08:41:08Z"
+        },
+        "how would you implement pointers step-by-step using java?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.062,
+          "lastScore": 19,
+          "lastUpdated": "2026-04-04T08:41:38Z"
+        },
+        "how would you debug a basic issue related to overloading?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.032,
+          "lastScore": 34,
+          "lastUpdated": "2026-04-04T08:42:11Z"
+        },
+        "netbeans tutorial: what is netbeans ide and how to get started?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.062,
+          "lastScore": 19,
+          "lastUpdated": "2026-04-04T08:42:44Z"
+        },
+        "what are the default values assigned to variables and instances in java?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.052,
+          "lastScore": 24,
+          "lastUpdated": "2026-04-04T08:43:09Z"
+        },
+        "can you tell the difference between equals() method and equality operator (==) in java?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.044,
+          "lastScore": 28,
+          "lastUpdated": "2026-04-04T08:43:50Z"
+        },
+        "explain the basics of jvm for a java role?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.026,
+          "lastScore": 37,
+          "lastUpdated": "2026-04-04T08:47:06Z"
+        },
+        "what is a do while loop in java and how to use it?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.052,
+          "lastScore": 24,
+          "lastUpdated": "2026-04-04T08:47:25Z"
         }
       },
       "sources": {},
@@ -465,13 +569,26 @@
         "why is java a platform independent language?": "Why is Java a platform independent language?",
         "how would you implement between step-by-step using java?": "How would you implement between step-by-step using java?",
         "what common beginner mistakes happen in java, and how would you avoid them?": "What common beginner mistakes happen in java, and how would you avoid them?",
-        "how would you implement unit step-by-step using javascript?": "How would you implement unit step-by-step using javascript?"
+        "how would you implement unit step-by-step using javascript?": "How would you implement unit step-by-step using javascript?",
+        "share a simple project example where you used oriented?": "Share a simple project example where you used oriented?",
+        "how would you implement interfaces step-by-step using java?": "How would you implement interfaces step-by-step using java?",
+        "what are the differences between heap and stack memory in java?": "What are the differences between Heap and Stack Memory in Java?",
+        "what do you understand by an instance variable and a local variable?": "What do you understand by an instance variable and a local variable?",
+        "what common beginner mistakes happen in object, and how would you avoid them?": "What common beginner mistakes happen in object, and how would you avoid them?",
+        "how would you debug a basic issue related to between?": "How would you debug a basic issue related to between?",
+        "how would you implement pointers step-by-step using java?": "How would you implement pointers step-by-step using java?",
+        "how would you debug a basic issue related to overloading?": "How would you debug a basic issue related to overloading?",
+        "netbeans tutorial: what is netbeans ide and how to get started?": "Netbeans Tutorial: What is NetBeans IDE and how to get started?",
+        "what are the default values assigned to variables and instances in java?": "What are the default values assigned to variables and instances in java?",
+        "can you tell the difference between equals() method and equality operator (==) in java?": "Can you tell the difference between equals() method and equality operator (==) in Java?",
+        "explain the basics of jvm for a java role?": "Explain the basics of jvm for a java role?",
+        "what is a do while loop in java and how to use it?": "What is a Do while loop in Java and how to use it?"
       },
       "questionDaily": {
         "why is java a platform independent language?": {
           "2026-04-04": {
-            "count": 1,
-            "scoreSum": 20.0,
+            "count": 2,
+            "scoreSum": 55.0,
             "correctSum": 0
           }
         },
@@ -493,6 +610,97 @@
           "2026-04-04": {
             "count": 1,
             "scoreSum": 17.0,
+            "correctSum": 0
+          }
+        },
+        "share a simple project example where you used oriented?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 27.0,
+            "correctSum": 0
+          }
+        },
+        "how would you implement interfaces step-by-step using java?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 30.0,
+            "correctSum": 0
+          }
+        },
+        "what are the differences between heap and stack memory in java?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 33.0,
+            "correctSum": 0
+          }
+        },
+        "what do you understand by an instance variable and a local variable?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 74.0,
+            "correctSum": 1
+          }
+        },
+        "what common beginner mistakes happen in object, and how would you avoid them?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 28.0,
+            "correctSum": 0
+          }
+        },
+        "how would you debug a basic issue related to between?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 35.0,
+            "correctSum": 0
+          }
+        },
+        "how would you implement pointers step-by-step using java?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 19.0,
+            "correctSum": 0
+          }
+        },
+        "how would you debug a basic issue related to overloading?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 34.0,
+            "correctSum": 0
+          }
+        },
+        "netbeans tutorial: what is netbeans ide and how to get started?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 19.0,
+            "correctSum": 0
+          }
+        },
+        "what are the default values assigned to variables and instances in java?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 24.0,
+            "correctSum": 0
+          }
+        },
+        "can you tell the difference between equals() method and equality operator (==) in java?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 28.0,
+            "correctSum": 0
+          }
+        },
+        "explain the basics of jvm for a java role?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 37.0,
+            "correctSum": 0
+          }
+        },
+        "what is a do while loop in java and how to use it?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 24.0,
             "correctSum": 0
           }
         }
@@ -524,6 +732,104 @@
           "role": "java",
           "question": "How would you implement unit step-by-step using javascript?",
           "score": 17,
+          "correct": false
+        },
+        {
+          "ts": 1775291906,
+          "role": "java",
+          "question": "Why is Java a platform independent language?",
+          "score": 35,
+          "correct": false
+        },
+        {
+          "ts": 1775291939,
+          "role": "java",
+          "question": "Share a simple project example where you used oriented?",
+          "score": 27,
+          "correct": false
+        },
+        {
+          "ts": 1775291960,
+          "role": "java",
+          "question": "How would you implement interfaces step-by-step using java?",
+          "score": 30,
+          "correct": false
+        },
+        {
+          "ts": 1775291981,
+          "role": "java",
+          "question": "What are the differences between Heap and Stack Memory in Java?",
+          "score": 33,
+          "correct": false
+        },
+        {
+          "ts": 1775292010,
+          "role": "java",
+          "question": "What do you understand by an instance variable and a local variable?",
+          "score": 74,
+          "correct": true
+        },
+        {
+          "ts": 1775292038,
+          "role": "java",
+          "question": "What common beginner mistakes happen in object, and how would you avoid them?",
+          "score": 28,
+          "correct": false
+        },
+        {
+          "ts": 1775292068,
+          "role": "java",
+          "question": "How would you debug a basic issue related to between?",
+          "score": 35,
+          "correct": false
+        },
+        {
+          "ts": 1775292098,
+          "role": "java",
+          "question": "How would you implement pointers step-by-step using java?",
+          "score": 19,
+          "correct": false
+        },
+        {
+          "ts": 1775292131,
+          "role": "java",
+          "question": "How would you debug a basic issue related to overloading?",
+          "score": 34,
+          "correct": false
+        },
+        {
+          "ts": 1775292164,
+          "role": "java",
+          "question": "Netbeans Tutorial: What is NetBeans IDE and how to get started?",
+          "score": 19,
+          "correct": false
+        },
+        {
+          "ts": 1775292189,
+          "role": "java",
+          "question": "What are the default values assigned to variables and instances in java?",
+          "score": 24,
+          "correct": false
+        },
+        {
+          "ts": 1775292230,
+          "role": "java",
+          "question": "Can you tell the difference between equals() method and equality operator (==) in Java?",
+          "score": 28,
+          "correct": false
+        },
+        {
+          "ts": 1775292426,
+          "role": "java",
+          "question": "Explain the basics of jvm for a java role?",
+          "score": 37,
+          "correct": false
+        },
+        {
+          "ts": 1775292445,
+          "role": "java",
+          "question": "What is a Do while loop in Java and how to use it?",
+          "score": 24,
           "correct": false
         }
       ]

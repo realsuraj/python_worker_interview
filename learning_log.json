@@ -22124,6 +22124,1054 @@
         "domain": "voice_process",
         "lines": 12
       }
+    },
+    {
+      "ts": 1775290780,
+      "event": "startup",
+      "details": {
+        "resourceProfile": "medium",
+        "strictIdentity": true,
+        "learnMode": "fast",
+        "knowledgeScore": 30.71
+      }
+    },
+    {
+      "ts": 1775290789,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.interviewbit.com/java-interview-questions/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775290798,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775290801,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.javatpoint.com/corejava-interview-questions",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775290812,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775290821,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.turing.com/interview-questions/java",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775290830,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.edureka.co/blog/interview-questions/java-interview-questions/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775290837,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-interview-questions-and-answers",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775290840,
+      "event": "train_start",
+      "details": {
+        "runLabel": "auto-idle-fast",
+        "domains": [
+          "java",
+          "sales",
+          "business_development",
+          "voice_process",
+          "chat_process",
+          "flutter",
+          "react"
+        ],
+        "qTarget": 23,
+        "discoverLimit": 120,
+        "profile": "medium",
+        "mode": "fast",
+        "knowledgeScore": 30.7
+      }
+    },
+    {
+      "ts": 1775290841,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.baeldung.com/java-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775290846,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-interview-questions/",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775290853,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.guru99.com/java-interview-questions-answers.html",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775290865,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.tpointtech.com/corejava-interview-questions",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775290869,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.datacamp.com/blog/java-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775290874,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.w3schools.com/java/java_interview_questions.asp",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775290884,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codegnan.com/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 57
+      }
+    },
+    {
+      "ts": 1775290893,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codefinity.com/blog/The-80-Top-Java-Interview-Questions-and-Answers",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775290900,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewquestions.guru/core-java-interview-questions-answers/",
+        "reason": "fetched",
+        "lines": 71
+      }
+    },
+    {
+      "ts": 1775290911,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-programming-interview-questions",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775290916,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 70
+      }
+    },
+    {
+      "ts": 1775290923,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/java-interview-questions-article",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775290931,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/2026/02/top-50-java-interview-questions-and-answers.html",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775290934,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java/",
+        "reason": "fetched",
+        "lines": 29
+      }
+    },
+    {
+      "ts": 1775291877,
+      "event": "startup",
+      "details": {
+        "resourceProfile": "medium",
+        "strictIdentity": true,
+        "learnMode": "fast",
+        "knowledgeScore": 30.7
+      }
+    },
+    {
+      "ts": 1775291882,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewbit.com/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775291884,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775291886,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.javatpoint.com/corejava-interview-questions",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775291889,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775291894,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.edureka.co/blog/interview-questions/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 80
+      }
+    },
+    {
+      "ts": 1775291897,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-interview-questions-and-answers",
+        "reason": "http_404"
+      }
+    },
+    {
+      "ts": 1775291898,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.baeldung.com/java-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775291900,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775291902,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.guru99.com/java-interview-questions-answers.html",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775291906,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.tpointtech.com/corejava-interview-questions",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775291908,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.datacamp.com/blog/java-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775291911,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.w3schools.com/java/java_interview_questions.asp",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775291914,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codegnan.com/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 57
+      }
+    },
+    {
+      "ts": 1775291918,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codefinity.com/blog/The-80-Top-Java-Interview-Questions-and-Answers",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775291922,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewquestions.guru/core-java-interview-questions-answers/",
+        "reason": "fetched",
+        "lines": 71
+      }
+    },
+    {
+      "ts": 1775291927,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-programming-interview-questions",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775291930,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 70
+      }
+    },
+    {
+      "ts": 1775291933,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/java-interview-questions-article",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775291936,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/2026/02/top-50-java-interview-questions-and-answers.html",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775291938,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java/",
+        "reason": "fetched",
+        "lines": 29
+      }
+    },
+    {
+      "ts": 1775291940,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/advance-java/advanced-java/",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775291942,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-exercises/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775291944,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-examples/",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775291945,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-quiz/",
+        "reason": "fetched",
+        "lines": 6
+      }
+    },
+    {
+      "ts": 1775291947,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/java-projects/",
+        "reason": "fetched",
+        "lines": 54
+      }
+    },
+    {
+      "ts": 1775291950,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-cheat-sheet/",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775291953,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/dsa/dsa-in-java/",
+        "reason": "fetched",
+        "lines": 26
+      }
+    },
+    {
+      "ts": 1775291955,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-collection-tutorial/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775291956,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/introduction-to-java/",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775291959,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-basics/",
+        "reason": "fetched",
+        "lines": 50
+      }
+    },
+    {
+      "ts": 1775291961,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/methods-in-java/",
+        "reason": "fetched",
+        "lines": 44
+      }
+    },
+    {
+      "ts": 1775291963,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/access-modifiers-java/",
+        "reason": "fetched",
+        "lines": 23
+      }
+    },
+    {
+      "ts": 1775291965,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/arrays-in-java/",
+        "reason": "fetched",
+        "lines": 41
+      }
+    },
+    {
+      "ts": 1775291966,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/strings-in-java/",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775291969,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/regular-expressions-in-java/",
+        "reason": "fetched",
+        "lines": 24
+      }
+    },
+    {
+      "ts": 1775291972,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/classes-objects-java/",
+        "reason": "fetched",
+        "lines": 34
+      }
+    },
+    {
+      "ts": 1775291974,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/constructors-in-java/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775291975,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/",
+        "reason": "fetched",
+        "lines": 59
+      }
+    },
+    {
+      "ts": 1775291977,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/packages-in-java/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775291979,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/interfaces-in-java/",
+        "reason": "fetched",
+        "lines": 37
+      }
+    },
+    {
+      "ts": 1775291981,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-in-java-2/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775291984,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-class-in-java/",
+        "reason": "fetched",
+        "lines": 48
+      }
+    },
+    {
+      "ts": 1775291987,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collection-interface-in-java-with-examples/",
+        "reason": "fetched",
+        "lines": 44
+      }
+    },
+    {
+      "ts": 1775291989,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/iterators-in-java/",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775291992,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-comparator-interface/",
+        "reason": "fetched",
+        "lines": 28
+      }
+    },
+    {
+      "ts": 1775291994,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/exceptions-in-java/",
+        "reason": "fetched",
+        "lines": 35
+      }
+    },
+    {
+      "ts": 1775291995,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-try-catch-block/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775291997,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-final-finally-and-finalize/",
+        "reason": "fetched",
+        "lines": 24
+      }
+    },
+    {
+      "ts": 1775291999,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/chained-exceptions-in-java/",
+        "reason": "fetched",
+        "lines": 28
+      }
+    },
+    {
+      "ts": 1775292002,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/null-pointer-exception-in-java/",
+        "reason": "fetched",
+        "lines": 24
+      }
+    },
+    {
+      "ts": 1775292005,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/exception-handling-with-method-overriding-in-java/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775292012,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-multithreading-tutorial/",
+        "reason": "fetched",
+        "lines": 23
+      }
+    },
+    {
+      "ts": 1775292017,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/synchronization-in-java/",
+        "reason": "fetched",
+        "lines": 28
+      }
+    },
+    {
+      "ts": 1775292019,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/file-handling-in-java/",
+        "reason": "fetched",
+        "lines": 42
+      }
+    },
+    {
+      "ts": 1775292020,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-method-references/",
+        "reason": "fetched",
+        "lines": 32
+      }
+    },
+    {
+      "ts": 1775292022,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-8-stream-tutorial/",
+        "reason": "fetched",
+        "lines": 48
+      }
+    },
+    {
+      "ts": 1775292025,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-networking/",
+        "reason": "fetched",
+        "lines": 65
+      }
+    },
+    {
+      "ts": 1775292027,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/jdbc-tutorial/",
+        "reason": "fetched",
+        "lines": 58
+      }
+    },
+    {
+      "ts": 1775292029,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-memory-management/",
+        "reason": "fetched",
+        "lines": 34
+      }
+    },
+    {
+      "ts": 1775292031,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/garbage-collection-in-java/",
+        "reason": "fetched",
+        "lines": 50
+      }
+    },
+    {
+      "ts": 1775292033,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/memory-leaks-in-java/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775292034,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/courses/Java-backend-live",
+        "reason": "fetched",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775292036,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-fundamentals-interview-questions/",
+        "reason": "fetched",
+        "lines": 54
+      }
+    },
+    {
+      "ts": 1775292038,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-core-concepts-interview-questions/",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775292040,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/oops-interview-questions-java-programming/",
+        "reason": "fetched",
+        "lines": 80
+      }
+    },
+    {
+      "ts": 1775292042,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-generics-interview-questions-java-programming/",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775292044,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/advanced-topics-interview-questions-java-programming/",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775292046,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/variables-in-java/",
+        "reason": "fetched",
+        "lines": 19
+      }
+    },
+    {
+      "ts": 1775292048,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-data-types/",
+        "reason": "fetched",
+        "lines": 24
+      }
+    },
+    {
+      "ts": 1775292050,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/string-class-in-java/",
+        "reason": "fetched",
+        "lines": 25
+      }
+    },
+    {
+      "ts": 1775292052,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/deep-shallow-lazy-copy-java-examples/",
+        "reason": "fetched",
+        "lines": 32
+      }
+    },
+    {
+      "ts": 1775292054,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/mutable-and-immutable-objects-in-java-1/",
+        "reason": "fetched",
+        "lines": 26
+      }
+    },
+    {
+      "ts": 1775292056,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/inheritance-in-java/",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775292058,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/polymorphism-in-java/",
+        "reason": "fetched",
+        "lines": 25
+      }
+    },
+    {
+      "ts": 1775292060,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/abstraction-in-java-2/",
+        "reason": "fetched",
+        "lines": 29
+      }
+    },
+    {
+      "ts": 1775292062,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/encapsulation-in-java/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775292064,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/generics-in-java/",
+        "reason": "fetched",
+        "lines": 29
+      }
+    },
+    {
+      "ts": 1775292065,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/multithreading-in-java/",
+        "reason": "fetched",
+        "lines": 25
+      }
+    },
+    {
+      "ts": 1775292067,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/lambda-expressions-java-8/",
+        "reason": "fetched",
+        "lines": 26
+      }
+    },
+    {
+      "ts": 1775292069,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-functional-interfaces/",
+        "reason": "fetched",
+        "lines": 42
+      }
+    },
+    {
+      "ts": 1775292071,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/stream-in-java/",
+        "reason": "fetched",
+        "lines": 64
+      }
+    },
+    {
+      "ts": 1775292075,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/annotations-in-java/",
+        "reason": "fetched",
+        "lines": 44
+      }
+    },
+    {
+      "ts": 1775292077,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/reflection-in-java/",
+        "reason": "fetched",
+        "lines": 23
+      }
+    },
+    {
+      "ts": 1775292079,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/system-design/java-design-patterns/",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775292081,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/singleton-class-java/",
+        "reason": "fetched",
+        "lines": 25
+      }
+    },
+    {
+      "ts": 1775292083,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/system-design/observer-method-design-pattern-in-java/",
+        "reason": "fetched",
+        "lines": 63
+      }
+    },
+    {
+      "ts": 1775292084,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-8-features-tutorial/",
+        "reason": "fetched",
+        "lines": 24
+      }
+    },
+    {
+      "ts": 1775292091,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/interview-prep/interview-corner/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775292093,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/aptitude/aptitude-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775292096,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewbit.com/",
+        "reason": "fetched",
+        "lines": 2
+      }
+    },
+    {
+      "ts": 1775292329,
+      "event": "train_start",
+      "details": {
+        "runLabel": "auto-idle-fast",
+        "domains": [
+          "java",
+          "sales",
+          "business_development",
+          "voice_process",
+          "chat_process",
+          "flutter",
+          "react"
+        ],
+        "qTarget": 23,
+        "discoverLimit": 120,
+        "profile": "medium",
+        "mode": "fast",
+        "knowledgeScore": 30.82
+      }
     }
   ]
 }
