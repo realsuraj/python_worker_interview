@@ -292,7 +292,89 @@
           "answer": "6. Pointers are used in C/ C++. Why does Java not make use of pointers? 12. How is an infinite loop declared in Java? 1. Why is Java a platform independent language? 2. Why is Java not a pure object oriented language?"
         }
       ],
-      "qaBankUpdatedAt": "2026-04-03T06:32:52Z"
+      "qaBankUpdatedAt": "2026-04-03T06:32:52Z",
+      "qaMemory": {
+        "why is java a platform independent language?": {
+          "question": "Why is Java a platform independent language?",
+          "idealAnswer": "Java is the most widely used programming language \u00c2 in the current IT industry. One major reason for the vast Exception Handling with Method Overriding in Java Java Project Ideas For Beginners and Advanced For individuals aiming to excel in the field of software development, understanding Core Java is fundamental. Whether you're preparing for",
+          "updatedAt": "2026-04-04T04:58:38Z",
+          "samples": [
+            {
+              "ts": 1775278718,
+              "answer": "working this way",
+              "score": 20,
+              "metrics": {
+                "overall": 20,
+                "work": 8,
+                "fluency": 32,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "how would you implement between step-by-step using java?": {
+          "question": "How would you implement between step-by-step using java?",
+          "idealAnswer": "A strong answer should define between, implement, java, step-by-step, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T05:12:18Z",
+          "samples": [
+            {
+              "ts": 1775279538,
+              "answer": "so wh",
+              "score": 17,
+              "metrics": {
+                "overall": 17,
+                "work": 0,
+                "fluency": 31,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "what common beginner mistakes happen in java, and how would you avoid them?": {
+          "question": "What common beginner mistakes happen in java, and how would you avoid them?",
+          "idealAnswer": "A strong answer should define avoid, beginner, common, happen, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:10:15Z",
+          "samples": [
+            {
+              "ts": 1775286615,
+              "answer": "hi",
+              "score": 18,
+              "metrics": {
+                "overall": 18,
+                "work": 4,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "how would you implement unit step-by-step using javascript?": {
+          "question": "How would you implement unit step-by-step using javascript?",
+          "idealAnswer": "A strong answer should define implement, javascript, step-by-step, unit, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:23:46Z",
+          "samples": [
+            {
+              "ts": 1775287426,
+              "answer": "hi",
+              "score": 17,
+              "metrics": {
+                "overall": 17,
+                "work": 0,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        }
+      }
     },
     "sales": {
       "trainedAt": "2026-04-03T04:18:53Z",
@@ -439,7 +521,29 @@
           "question": "How do you give back to your community outside of work?",
           "answer": "10 Common Sales Interview Questions \u2014 and How to Answer Them So You Get the Job Prep for these common questions and nail your next job interview. Few things are more thrilling \u2014 or nerve-racking \u2014 than seeing an email in your inbox that says, \u201cWe\u2019d like to schedule an interview.\u201d Standing out in a sea of Knowing common sales interview questions, understanding why they\u2019re asked, and having good answers prepared can make all the difference. We\u2019ll dig into what to expect and how to prepare so"
         }
-      ]
+      ],
+      "qaMemory": {
+        "explain the basics of sales for a candidate role?": {
+          "question": "Explain the basics of sales for a candidate role?",
+          "idealAnswer": "A strong answer should define basics, candidate, explain, sales, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:10:18Z",
+          "samples": [
+            {
+              "ts": 1775286618,
+              "answer": "hi",
+              "score": 18,
+              "metrics": {
+                "overall": 18,
+                "work": 4,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        }
+      }
     },
     "flutter": {
       "trainedAt": "2026-04-03T04:18:53Z",
@@ -550,6 +654,377 @@
       "discoveredSourceCount": 5,
       "questions": [],
       "qaBank": []
+    },
+    "default": {
+      "qaMemory": {
+        "explain the basics of concepts for a java developer role?": {
+          "question": "Explain the basics of concepts for a Java Developer role?",
+          "idealAnswer": "A strong answer should define basics, concepts, developer, explain, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T05:08:44Z",
+          "samples": [
+            {
+              "ts": 1775279324,
+              "answer": "Java is platform independent because bytecode runs on JVM across operating systems.",
+              "score": 24,
+              "metrics": {
+                "overall": 24,
+                "work": 0,
+                "fluency": 40,
+                "relevance": 20,
+                "confidence": 75
+              },
+              "sentenceChecks": [
+                {
+                  "index": 1,
+                  "sentence": "Java is platform independent because bytecode runs on JVM across operating systems.",
+                  "score": 0,
+                  "source": "local"
+                }
+              ]
+            },
+            {
+              "ts": 1775278572,
+              "answer": "Exception handling uses try catch finally and checked vs unchecked exceptions.",
+              "score": 19,
+              "metrics": {
+                "overall": 19,
+                "work": 0,
+                "fluency": 39,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": [
+                {
+                  "index": 1,
+                  "sentence": "Exception handling uses try catch finally and checked vs unchecked exceptions.",
+                  "score": 0,
+                  "source": "local"
+                }
+              ]
+            }
+          ]
+        },
+        "how do you test and validate core in a small project?": {
+          "question": "How do you test and validate core in a small project?",
+          "idealAnswer": "A strong answer should define core, project, small, test, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T06:43:17Z",
+          "samples": [
+            {
+              "ts": 1775284997,
+              "answer": "hi",
+              "score": 17,
+              "metrics": {
+                "overall": 17,
+                "work": 0,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "how would you debug a basic issue related to process?": {
+          "question": "How would you debug a basic issue related to process?",
+          "idealAnswer": "A strong answer should define basic, debug, issue, process, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T06:43:40Z",
+          "samples": [
+            {
+              "ts": 1775285020,
+              "answer": "hi",
+              "score": 18,
+              "metrics": {
+                "overall": 18,
+                "work": 2,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "share a simple project example where you used asked?": {
+          "question": "Share a simple project example where you used asked?",
+          "idealAnswer": "A strong answer should define asked, example, project, share, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T06:44:14Z",
+          "samples": [
+            {
+              "ts": 1775285054,
+              "answer": "hi",
+              "score": 18,
+              "metrics": {
+                "overall": 18,
+                "work": 4,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "how do you test and validate hiring in a small project?": {
+          "question": "How do you test and validate hiring in a small project?",
+          "idealAnswer": "A strong answer should define hiring, project, small, test, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:10:10Z",
+          "samples": [
+            {
+              "ts": 1775286610,
+              "answer": "hi",
+              "score": 17,
+              "metrics": {
+                "overall": 17,
+                "work": 0,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "explain the basics of key for a candidate role?": {
+          "question": "Explain the basics of key for a candidate role?",
+          "idealAnswer": "A strong answer should define basics, candidate, explain, key, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:10:22Z",
+          "samples": [
+            {
+              "ts": 1775286622,
+              "answer": "hi",
+              "score": 18,
+              "metrics": {
+                "overall": 18,
+                "work": 3,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "explain the basics of access for a candidate role?": {
+          "question": "Explain the basics of access for a candidate role?",
+          "idealAnswer": "A strong answer should define access, basics, candidate, explain, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:10:28Z",
+          "samples": [
+            {
+              "ts": 1775286628,
+              "answer": "hi",
+              "score": 18,
+              "metrics": {
+                "overall": 18,
+                "work": 3,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "how would you debug a basic issue related to values?": {
+          "question": "How would you debug a basic issue related to values?",
+          "idealAnswer": "A strong answer should define basic, debug, issue, related, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:10:59Z",
+          "samples": [
+            {
+              "ts": 1775286659,
+              "answer": "hi",
+              "score": 18,
+              "metrics": {
+                "overall": 18,
+                "work": 3,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "how would you debug a basic issue related to letter?": {
+          "question": "How would you debug a basic issue related to letter?",
+          "idealAnswer": "A strong answer should define basic, debug, issue, letter, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:15:25Z",
+          "samples": [
+            {
+              "ts": 1775286925,
+              "answer": "hi",
+              "score": 18,
+              "metrics": {
+                "overall": 18,
+                "work": 4,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "how do you test and validate technical in a small project?": {
+          "question": "How do you test and validate technical in a small project?",
+          "idealAnswer": "A strong answer should define project, small, technical, test, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:23:31Z",
+          "samples": [
+            {
+              "ts": 1775287411,
+              "answer": "hi",
+              "score": 17,
+              "metrics": {
+                "overall": 17,
+                "work": 0,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "explain the basics of default for a software_engineering role?": {
+          "question": "Explain the basics of default for a software_engineering role?",
+          "idealAnswer": "A strong answer should define basics, default, engineering, explain, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:23:38Z",
+          "samples": [
+            {
+              "ts": 1775287418,
+              "answer": "hi",
+              "score": 18,
+              "metrics": {
+                "overall": 18,
+                "work": 2,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "how do you test and validate recruiters in a small project?": {
+          "question": "How do you test and validate recruiters in a small project?",
+          "idealAnswer": "A strong answer should define project, recruiters, small, test, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:23:42Z",
+          "samples": [
+            {
+              "ts": 1775287422,
+              "answer": "hi",
+              "score": 17,
+              "metrics": {
+                "overall": 17,
+                "work": 0,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "share a simple project example where you used top?": {
+          "question": "Share a simple project example where you used top?",
+          "idealAnswer": "A strong answer should define example, project, share, simple, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:23:52Z",
+          "samples": [
+            {
+              "ts": 1775287432,
+              "answer": "hi",
+              "score": 17,
+              "metrics": {
+                "overall": 17,
+                "work": 1,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "how do you test and validate management in a small project?": {
+          "question": "How do you test and validate management in a small project?",
+          "idealAnswer": "A strong answer should define management, project, small, test, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:23:56Z",
+          "samples": [
+            {
+              "ts": 1775287436,
+              "answer": "hi",
+              "score": 17,
+              "metrics": {
+                "overall": 17,
+                "work": 0,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "share a simple project example where you used answers?": {
+          "question": "Share a simple project example where you used answers?",
+          "idealAnswer": "A strong answer should define answers, example, project, share, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:23:59Z",
+          "samples": [
+            {
+              "ts": 1775287439,
+              "answer": "ih",
+              "score": 17,
+              "metrics": {
+                "overall": 17,
+                "work": 0,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "how would you debug a basic issue related to business?": {
+          "question": "How would you debug a basic issue related to business?",
+          "idealAnswer": "A strong answer should define basic, business, debug, issue, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:24:04Z",
+          "samples": [
+            {
+              "ts": 1775287444,
+              "answer": "hi",
+              "score": 18,
+              "metrics": {
+                "overall": 18,
+                "work": 2,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        },
+        "explain the basics of class for a software_engineering role?": {
+          "question": "Explain the basics of class for a software_engineering role?",
+          "idealAnswer": "A strong answer should define basics, class, engineering, explain, explain how it works in practice, compare trade-offs, and finish with a real project example and measurable outcome.",
+          "updatedAt": "2026-04-04T07:24:09Z",
+          "samples": [
+            {
+              "ts": 1775287449,
+              "answer": "hi",
+              "score": 18,
+              "metrics": {
+                "overall": 18,
+                "work": 2,
+                "fluency": 30,
+                "relevance": 0,
+                "confidence": 75
+              },
+              "sentenceChecks": []
+            }
+          ]
+        }
+      }
     }
   }
 }

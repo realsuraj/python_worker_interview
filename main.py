@@ -68,6 +68,21 @@ def _env_float(key: str, default: float) -> float:
     except Exception:
         return float(default)
 
+def _env_port(default: int = 8099) -> int:
+    """
+    Resolve runtime port with platform compatibility.
+    Priority: WORKER_PORT -> PORT -> default
+    """
+    raw = (
+        str(os.getenv("WORKER_PORT", "")).strip()
+        or str(os.getenv("PORT", "")).strip()
+        or str(default)
+    )
+    try:
+        return int(raw)
+    except Exception:
+        return default
+
 MODEL_NAME              = os.getenv("LLM_MODEL_NAME", "external-api")
 ENABLE_LLM              = _env_bool("ENABLE_LLM", "false")
 LLM_API_URL             = os.getenv("LLM_API_URL", "").strip()
@@ -79,7 +94,7 @@ LLM_POOL_LIMIT          = _env_int("LLM_POOL_LIMIT", 60, 10)
 LLM_LINE_WORD_LIMIT     = _env_int("LLM_LINE_WORD_LIMIT", 20, 8)
 LLM_USE_FOR_EVALUATION  = _env_bool("LLM_USE_FOR_EVALUATION", "false")
 WORKER_HOST             = os.getenv("WORKER_HOST", "127.0.0.1")
-WORKER_PORT             = int(os.getenv("WORKER_PORT", "8099"))
+WORKER_PORT             = _env_port(8099)
 
 RAG_FETCH_ONLINE        = _env_bool("RAG_FETCH_ONLINE", "true")
 RAG_SOURCES_FILE        = Path(os.getenv("RAG_SOURCES_FILE", Path(__file__).with_name("rag_sources.json")))
@@ -124,6 +139,9 @@ NOVEL_URL_REPEAT_DAYS     = _env_int("NOVEL_URL_REPEAT_DAYS", 21, 1)
 DAILY_NEW_URL_TARGET      = _env_int("DAILY_NEW_URL_TARGET", 20, 1)
 SEMANTIC_MATCH_ENABLED  = _env_bool("SEMANTIC_MATCH_ENABLED", "true")
 SEMANTIC_MODEL_NAME     = os.getenv("SEMANTIC_MODEL_NAME", "sentence-transformers/all-MiniLM-L6-v2")
+MATCHANSWER_ONLINE_ENABLED = _env_bool("MATCHANSWER_ONLINE_ENABLED", "false")
+MATCHANSWER_ONLINE_MAX_SENTENCES = _env_int("MATCHANSWER_ONLINE_MAX_SENTENCES", 1, 0)
+MATCHANSWER_ONLINE_MAX_URLS = _env_int("MATCHANSWER_ONLINE_MAX_URLS", 1, 0)
 
 INTERVIEW_QUESTION_COUNT  = _env_int("INTERVIEW_QUESTION_COUNT", 14, 4)
 TARGET_WORDS_PER_ANSWER   = _env_int("TARGET_WORDS_PER_ANSWER", 70, 20)
@@ -197,6 +215,7 @@ LAST_AUTO_TRAIN_TS    = 0.0
 LAST_SMALL_MODEL_TRAIN_TS = 0.0
 ACTIVE_STT_WS_COUNT   = 0
 ACTIVE_INTERVIEW_SESSIONS: Dict[str, int] = {}
+SIMPLE_INTERVIEW_SESSIONS: Dict[str, Dict[str, Any]] = {}
 LAST_DISCOVERY_TS: Dict[str, float] = {}
 SEARCH_PROVIDER_STATS: Dict[str, Dict[str, int]] = {}
 QA_REFRESH_STATE: Dict[str, Dict[str, Any]] = {}
@@ -216,7 +235,13 @@ WORKER_STARTUP_STATUS: Dict[str, Any] = {
     "smallModelReason": "not initialized",
 }
 
-app = FastAPI(title="Interview AI Worker", version="5.0.0")
+app = FastAPI(
+    title="Interview AI Worker",
+    version="5.0.0",
+    docs_url="/swagger",
+    redoc_url="/redoc",
+    openapi_url="/openapi.json",
+)
 
 # ══════════════════════════════════════════════════════════════════════════════
 # SECTION 1 — Pydantic models
@@ -304,6 +329,24 @@ class BestAnswerRequest(BaseModel):
 class SmallModelTrainRequest(BaseModel):
     windowDays: int = 365
     minSamples: int = 80
+
+
+class StartInterveiwRequest(BaseModel):
+    candidateId: str = ""
+    candidateName: str = ""
+    role: str = ""
+    jobTitle: str = ""
+    difficulty: str = "medium"
+
+
+class AskQuestionRequest(BaseModel):
+    sessionId: str = ""
+
+
+class MatchAnswerRequest(BaseModel):
+    sessionId: str = ""
+    questionId: str = ""
+    answer: str = ""
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -2339,6 +2382,104 @@ def _stored_qa_bank_for_role(role_key: str) -> List[Dict[str, str]]:
             out.append({"question": q, "answer": ans})
     return out
 
+def _offline_qa_memory_refs(role_key: str, question_text: str, limit: int = 16) -> List[str]:
+    global TRAINING_STORE_MAP
+    out: List[str] = []
+    if not isinstance(TRAINING_STORE_MAP, dict):
+        return out
+    domains = TRAINING_STORE_MAP.get("domains", {}) if isinstance(TRAINING_STORE_MAP.get("domains", {}), dict) else {}
+    node = domains.get(role_key, {}) if isinstance(domains, dict) else {}
+    qa_memory = node.get("qaMemory", {}) if isinstance(node, dict) else {}
+    if not isinstance(qa_memory, dict):
+        return out
+    q_key = _normalize(_normalize_question(question_text) or question_text)
+    rec = qa_memory.get(q_key, {})
+    if not isinstance(rec, dict):
+        return out
+    ideal = str(rec.get("idealAnswer", "")).strip()
+    if ideal:
+        out.append(ideal)
+    samples = rec.get("samples", [])
+    if isinstance(samples, list):
+        ranked_samples = sorted(
+            [s for s in samples if isinstance(s, dict)],
+            key=lambda x: _safe_int(x.get("score"), 0),
+            reverse=True,
+        )
+        for s in ranked_samples:
+            a = str(s.get("answer", "")).strip()
+            if a:
+                out.append(_limit_words(a, 140))
+            if len(out) >= max(4, limit):
+                break
+    return out[: max(4, limit)]
+
+def _learn_offline_qa_memory(
+    role_key: str,
+    question_text: str,
+    ideal_answer: str,
+    candidate_answer: str,
+    score: int,
+    metrics: Dict[str, int],
+    sentence_checks: List[Dict[str, Any]],
+) -> None:
+    global TRAINING_STORE_MAP
+    try:
+        store = _load_training_store()
+        domains = store.setdefault("domains", {})
+        if not isinstance(domains, dict):
+            domains = {}
+            store["domains"] = domains
+        node = domains.setdefault(role_key, {})
+        if not isinstance(node, dict):
+            node = {}
+            domains[role_key] = node
+        qa_memory = node.setdefault("qaMemory", {})
+        if not isinstance(qa_memory, dict):
+            qa_memory = {}
+            node["qaMemory"] = qa_memory
+        q_norm = _normalize_question(question_text) or str(question_text or "").strip()
+        q_key = _normalize(q_norm)
+        if not q_key:
+            return
+        rec = qa_memory.setdefault(q_key, {})
+        if not isinstance(rec, dict):
+            rec = {}
+            qa_memory[q_key] = rec
+        rec["question"] = q_norm
+        rec["idealAnswer"] = str(ideal_answer or "").strip()
+        rec["updatedAt"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+        samples = rec.get("samples", [])
+        if not isinstance(samples, list):
+            samples = []
+        samples.append({
+            "ts": int(time.time()),
+            "answer": _limit_words(candidate_answer, 180),
+            "score": _clamp(_safe_int(score, 0)),
+            "metrics": {
+                "overall": _clamp(_safe_int(metrics.get("overall"), 0)),
+                "work": _clamp(_safe_int(metrics.get("work"), 0)),
+                "fluency": _clamp(_safe_int(metrics.get("fluency"), 0)),
+                "relevance": _clamp(_safe_int(metrics.get("relevance"), 0)),
+                "confidence": _clamp(_safe_int(metrics.get("confidence"), 0)),
+            },
+            "sentenceChecks": sentence_checks[:8] if isinstance(sentence_checks, list) else [],
+        })
+        samples = sorted(
+            [s for s in samples if isinstance(s, dict)],
+            key=lambda x: (_safe_int(x.get("score"), 0), _safe_int(x.get("ts"), 0)),
+            reverse=True,
+        )[:60]
+        rec["samples"] = samples
+        qa_memory[q_key] = rec
+        node["qaMemory"] = qa_memory
+        domains[role_key] = node
+        store["domains"] = domains
+        _save_training_store(store)
+        TRAINING_STORE_MAP = store
+    except Exception:
+        logger.exception("[ML][offline] qa_memory_update_failed role=%s", role_key)
+
 def _refresh_role_qa_bank(role_key: str, target_count: int = 50) -> int:
     global TRAINING_STORE_MAP
     target = max(10, min(target_count, 80))
@@ -3769,12 +3910,571 @@ def health() -> Dict[str, Any]:
     }
 
 
-@app.get("/rag/sources")
+@app.get("/", tags=["system"])
+def root_index() -> Dict[str, Any]:
+    return {
+        "name": "Interview AI Worker API",
+        "version": "5.0.0",
+        "health": "/health",
+        "swagger": "/swagger",
+        "openapi": "/openapi.json",
+        "redoc": "/redoc",
+        "notes": "WebSocket endpoint available at /speech/ws/stt",
+    }
+
+
+def _generate_simple_ideal_answer(question: str, job_title: str, difficulty: str) -> str:
+    q = str(question or "").strip()
+    if not q:
+        return ""
+    q_norm = _normalize(q)
+
+    def _looks_like_question_dump(text: str) -> bool:
+        t = re.sub(r"\s+", " ", str(text or "")).strip()
+        if not t:
+            return True
+        lo = t.lower()
+        if lo.count("?") >= 1:
+            return True
+        if re.search(r"(?:^|\s)\d+\.\s+[A-Za-z]", t):
+            return True
+        if any(tok in lo for tok in [
+            "interview questions",
+            "question bank",
+            "java oop(object oriented programming) concepts",
+            "practice programs",
+            "with solutions",
+            "top companies",
+            "most used language",
+        ]):
+            return True
+        return False
+
+    if "difference between an object-oriented programming language and an object-based programming language" in q_norm:
+        return (
+            "An object-oriented language supports the full OOP model: classes, objects, inheritance, "
+            "polymorphism, abstraction, and encapsulation. An object-based language supports objects and "
+            "encapsulation but usually does not provide full inheritance and polymorphism like class-based OOP."
+        )
+    if "new keyword" in q_norm and ("object is created" in q_norm or "happens internally" in q_norm):
+        return (
+            "When you use new in Java, the JVM allocates memory for the object on the heap, sets default field values, "
+            "runs instance initializers, and then calls the selected constructor. The constructor initializes state and may "
+            "invoke super() first for parent initialization. Finally, the object reference is returned and stored in the variable, "
+            "while lifecycle cleanup is handled later by garbage collection."
+        )
+    if "platform independent" in q_norm and "java" in q_norm:
+        return (
+            "Java is platform independent because Java source code is compiled into bytecode, not native machine code. "
+            "That bytecode runs on the JVM, and each operating system has its own JVM implementation. "
+            "So the same compiled program can run across Windows, Linux, and macOS without recompiling, with minor "
+            "platform-specific behavior handled by the JVM and libraries."
+        )
+    if "not a pure object oriented" in q_norm and "java" in q_norm:
+        return (
+            "Java is not considered purely object oriented because it supports primitive data types like int, char, and boolean, "
+            "which are not objects. It also includes static members and methods that belong to classes rather than object instances. "
+            "So Java is strongly object-oriented in practice, but not purely object-oriented by strict definition."
+        )
+
+    answer = (
+        f"For {job_title or 'this role'}, explain {q} with a clear definition, core mechanism, "
+        "practical example, and trade-offs. Include one short real-world scenario and keep the explanation structured."
+    )
+    answer = _limit_words(answer, 120)
+
+    question_keywords = _keywords(q, top_n=8)
+    overlap = _overlap_ratio(answer, question_keywords) if answer else 0.0
+    lower_answer = answer.lower()
+    low_signal = (
+        len(re.findall(r"\S+", answer)) < 14
+        or overlap < 0.16
+        or _looks_like_question_dump(answer)
+        or lower_answer in {"java. medium interview", "medium interview", "interview"}
+        or re.fullmatch(r"[a-z0-9 ._-]{1,40}", lower_answer or "") is not None
+    )
+    if low_signal:
+        if "difference between" in q_norm:
+            m = re.search(r"difference between (.+?) and (.+?)(\?|$)", q, flags=re.IGNORECASE)
+            if m:
+                lhs = str(m.group(1)).strip().rstrip("?.")
+                rhs = str(m.group(2)).strip().rstrip("?.")
+                answer = (
+                    f"{lhs} and {rhs} differ in core capability and scope. "
+                    f"{lhs} usually provides stronger abstraction and extensibility, while {rhs} is often simpler and narrower in feature set. "
+                    "A good interview answer should compare definition, core concepts, practical use cases, limitations, and one real example."
+                )
+                return _limit_words(answer, 120)
+        keywords = _keywords(q, top_n=6)
+        kw_text = ", ".join(keywords[:4]) if keywords else "core concepts"
+        answer = (
+            f"A strong answer should define {kw_text}, explain how it works in practice, "
+            "compare trade-offs, and finish with a real project example and measurable outcome."
+        )
+    return answer
+
+
+@app.post("/startinterveiw", tags=["simple-interview"])
+def startinterveiw(payload: StartInterveiwRequest) -> Dict[str, Any]:
+    session_id = f"si_{int(time.time() * 1000)}"
+    started = time.perf_counter()
+    role_text = _first_non_blank(payload.role, payload.jobTitle, "general").strip()
+    role_key = _infer_role_key(role_text, "", role_text, "engineering")
+    eff_lang = _effective_language(role_text, "", "javascript")
+    snippet_seed = [role_text, payload.difficulty, role_key]
+    snippets = _sample_rag_lines(role_key, snippet_seed, count=60)
+    if not snippets:
+        snippets = _split_sentences(
+            f"{role_text}. {payload.difficulty}. core concepts, system design, debugging, testing, performance."
+        )
+
+    stored_pool = _stored_questions_for_role(role_key, max(INTERVIEW_QUESTION_COUNT * 3, 40))
+    dynamic_pool = _question_engine._build_dynamic(
+        role_text,
+        eff_lang,
+        snippets,
+        department="engineering",
+        custom_prompts=[],
+        experience_years=0.0,
+        count=INTERVIEW_QUESTION_COUNT + 6,
+    )
+    raw_pool = [str(q or "").strip() for q in [*stored_pool, *dynamic_pool] if str(q or "").strip()]
+    clean_pool: List[str] = []
+    seen: Set[str] = set()
+    for raw_q in raw_pool:
+        q = _normalize_question(raw_q) or raw_q
+        q = q.replace("Â", " ").replace("\u00a0", " ")
+        q = re.sub(r"\s+", " ", q).strip()
+        if not q.endswith("?"):
+            q = q.rstrip(".") + "?"
+        k = _normalize(q)
+        if k in seen:
+            continue
+        seen.add(k)
+        clean_pool.append(q)
+    candidate_key = _first_non_blank(payload.candidateId, payload.candidateName, f"anon-{session_id}")
+    unique_questions = _select_unique_questions_for_candidate(
+        role_key=role_key,
+        candidate_key=candidate_key,
+        pool=clean_pool,
+        target=INTERVIEW_QUESTION_COUNT,
+    )
+    if not unique_questions:
+        unique_questions = clean_pool[:INTERVIEW_QUESTION_COUNT]
+    questions: List[Dict[str, Any]] = []
+    for idx, q in enumerate(unique_questions, start=1):
+        ideal = _generate_simple_ideal_answer(q, role_text, payload.difficulty)
+        questions.append({"questionId": f"q{idx}", "question": q, "idealAnswer": str(ideal).strip()})
+    if not questions:
+        raise HTTPException(status_code=503, detail="No questions generated")
+    SIMPLE_INTERVIEW_SESSIONS[session_id] = {
+        "createdAt": int(time.time()),
+        "context": {
+            "candidateId": payload.candidateId,
+            "candidateName": payload.candidateName,
+            "role": role_text,
+            "jobTitle": _first_non_blank(payload.jobTitle, role_text),
+            "difficulty": payload.difficulty,
+        },
+        "questions": questions,
+        "answers": {},
+        "nextIndex": 0,
+    }
+    took_ms = round((time.perf_counter() - started) * 1000)
+    logger.info("[simple-start] session=%s role=%s q=%s tookMs=%s", session_id, role_key, len(questions), took_ms)
+    return {"ok": True, "sessionId": session_id}
+
+
+@app.post("/askquestion", tags=["simple-interview"])
+def askquestion(payload: AskQuestionRequest) -> Dict[str, Any]:
+    session_id = str(payload.sessionId or "").strip()
+    if not session_id:
+        raise HTTPException(status_code=400, detail="sessionId is required")
+    session = SIMPLE_INTERVIEW_SESSIONS.get(session_id)
+    if not session:
+        raise HTTPException(status_code=404, detail="Interview session not found")
+    questions = session.get("questions", [])
+    if not isinstance(questions, list) or not questions:
+        raise HTTPException(status_code=404, detail="No questions available")
+    next_index = _safe_int(session.get("nextIndex"), 0)
+    if next_index < 0:
+        next_index = 0
+    if next_index >= len(questions):
+        return {
+            "ok": True,
+            "sessionId": session_id,
+            "completed": True,
+            "message": "All questions completed",
+        }
+    selected = questions[next_index]
+    session["nextIndex"] = next_index + 1
+    SIMPLE_INTERVIEW_SESSIONS[session_id] = session
+    return {
+        "ok": True,
+        "sessionId": session_id,
+        "questionNumber": next_index + 1,
+        "totalQuestions": len(questions),
+        "questionId": str(selected.get("questionId", "")).strip(),
+        "question": str(selected.get("question", "")).strip(),
+        "answer": str(selected.get("idealAnswer", "")).strip(),
+    }
+
+
+@app.post("/matchanswer", tags=["simple-interview"])
+def matchanswer(payload: MatchAnswerRequest) -> Dict[str, Any]:
+    session_id = str(payload.sessionId or "").strip()
+    question_id = str(payload.questionId or "").strip()
+    answer_text = str(payload.answer or "").strip()
+    if not session_id:
+        raise HTTPException(status_code=400, detail="sessionId is required")
+    if not question_id:
+        raise HTTPException(status_code=400, detail="questionId is required")
+    if not answer_text:
+        raise HTTPException(status_code=400, detail="answer is required")
+
+    session = SIMPLE_INTERVIEW_SESSIONS.get(session_id)
+    if not session:
+        raise HTTPException(status_code=404, detail="Interview session not found")
+    questions = session.get("questions", [])
+    if not isinstance(questions, list):
+        questions = []
+    selected = None
+    for q in questions:
+        if str(q.get("questionId", "")).strip() == question_id:
+            selected = q
+            break
+    if selected is None:
+        raise HTTPException(status_code=404, detail="questionId not found")
+
+    question_text = str(selected.get("question", "")).strip()
+    ideal_answer = str(selected.get("idealAnswer", "")).strip()
+    session_context = session.get("context", {}) if isinstance(session.get("context", {}), dict) else {}
+    role_text = _first_non_blank(session_context.get("role"), session_context.get("jobTitle")).strip()
+    role_key = _infer_role_key(role_text, "", question_text, "engineering")
+
+    def _looks_like_question_dump(text: str) -> bool:
+        t = re.sub(r"\s+", " ", str(text or "")).strip()
+        if not t:
+            return True
+        lo = t.lower()
+        if lo.count("?") >= 1:
+            return True
+        if re.search(r"(?:^|\s)\d+\.\s+[A-Za-z]", t):
+            return True
+        if any(tok in lo for tok in [
+            "interview questions", "question bank", "practice programs",
+            "with solutions", "top companies", "most used language",
+        ]):
+            return True
+        return False
+
+    def _fast_semantic_similarity(text: str, candidates: List[str], cap: int = 8) -> float:
+        # Avoid cold-start model download/load during request path.
+        if SEMANTIC_MODEL_HANDLE is None:
+            return 0.0
+        return _best_semantic_similarity(text, candidates, cap=cap)
+
+    def _collect_local_reference_lines() -> List[str]:
+        refs = _sample_rag_lines(role_key, [question_text, ideal_answer], count=24)
+        refs = [ln for ln in refs if not _looks_like_question_dump(ln)]
+        refs.extend(_offline_qa_memory_refs(role_key, question_text, limit=16))
+        if ideal_answer:
+            refs.insert(0, ideal_answer)
+        return _sanitize_cache_lines(refs, max_items=40)[:40]
+
+    def _split_candidate_sentences(text: str) -> List[str]:
+        parts = _split_sentences(text)
+        if not parts:
+            parts = [text]
+        out: List[str] = []
+        for p in parts:
+            t = re.sub(r"\s+", " ", str(p or "")).strip()
+            if len(re.findall(r"\w+", t)) < 4:
+                continue
+            out.append(t)
+        return out[:8]
+
+    def _fetch_sentence_refs_online(sentence: str) -> List[str]:
+        # User-required policy: keep answer matching offline by default.
+        if not MATCHANSWER_ONLINE_ENABLED or not RAG_FETCH_ONLINE:
+            return []
+        query = _limit_words(sentence, 18)
+        if not query:
+            return []
+        providers = _provider_priority(SEARCH_ENGINES or ["duckduckgo", "bing", "brave"])
+        urls: List[str] = []
+        seen_urls: Set[str] = set()
+        for provider in providers[:2]:
+            try:
+                status, links = _search_provider_query(provider, query, 0)
+            except Exception:
+                continue
+            if status >= 400:
+                continue
+            for u in links:
+                ok, _reason = _is_url_allowed(u)
+                if not ok:
+                    continue
+                key = _normalize(u)
+                if key in seen_urls:
+                    continue
+                seen_urls.add(key)
+                urls.append(u)
+                if len(urls) >= max(1, MATCHANSWER_ONLINE_MAX_URLS):
+                    break
+            if urls:
+                break
+        refs: List[str] = []
+        for u in urls[: max(1, MATCHANSWER_ONLINE_MAX_URLS)]:
+            cached = _fetch_url_cached_only(u, query=query)
+            lines = cached if cached else _fetch_url(u)
+            for line in lines[:20]:
+                t = str(line or "").strip()
+                if t and not _looks_like_question_dump(t):
+                    refs.append(t)
+        return _sanitize_cache_lines(refs, max_items=20)[:20]
+
+    def _sentence_match_score(answer: str, local_refs: List[str]) -> tuple[int, List[Dict[str, Any]], str]:
+        if not answer.strip():
+            return 0, [], "local"
+        sentences = _split_candidate_sentences(answer)
+        if not sentences:
+            return 0, [], "local"
+        details: List[Dict[str, Any]] = []
+        unit_scores: List[float] = []
+        online_used = False
+        online_budget = max(0, MATCHANSWER_ONLINE_MAX_SENTENCES)
+        for idx, sent in enumerate(sentences):
+            kws = _keywords(sent, top_n=10)
+            local_lex = max([_overlap_ratio(ref, kws) for ref in local_refs[:30]] or [0.0])
+            local_sem = _fast_semantic_similarity(sent, local_refs[:30], cap=10)
+            best = max(local_lex, local_sem)
+            source = "local"
+            if best < 0.42 and online_budget > 0:
+                online_budget -= 1
+                online_refs = _fetch_sentence_refs_online(sent)
+                if online_refs:
+                    online_used = True
+                    online_lex = max([_overlap_ratio(ref, kws) for ref in online_refs[:20]] or [0.0])
+                    online_sem = _fast_semantic_similarity(sent, online_refs[:20], cap=8)
+                    online_best = max(online_lex, online_sem)
+                    if online_best > best:
+                        best = online_best
+                        source = "online"
+            unit_scores.append(best)
+            details.append({
+                "index": idx + 1,
+                "sentence": sent,
+                "score": _clamp(int(round(best * 100))),
+                "source": source,
+            })
+        final_score = _clamp(int(round((sum(unit_scores) / max(1, len(unit_scores))) * 100)))
+        return final_score, details, ("online+local" if online_used else "local")
+
+    answer_words = re.findall(r"\S+", answer_text)
+    word_count = len(answer_words)
+    unique_count = len(set(w.lower() for w in answer_words))
+    question_tokens = set(_tokenize(question_text))
+    answer_tokens = set(_tokenize(answer_text))
+    ideal_tokens = set(_tokenize(ideal_answer))
+    q_overlap = len(question_tokens.intersection(answer_tokens))
+    i_overlap = len(ideal_tokens.intersection(answer_tokens))
+    q_base = len(question_tokens) or 1
+    i_base = len(ideal_tokens) or 1
+    lexical_relevance = _clamp(int((q_overlap / q_base) * 100))
+    lexical_work = _clamp(int((i_overlap / i_base) * 100))
+    semantic_ideal = _clamp(int(round(_fast_semantic_similarity(answer_text, [ideal_answer], cap=1) * 100))) if ideal_answer else 0
+    reference_lines = _collect_local_reference_lines()
+    reference_score, sentence_checks, evaluation_source = _sentence_match_score(answer_text, reference_lines)
+    relevance_score = _clamp(max(lexical_relevance, int(reference_score * 0.85)))
+    work_score = _clamp(max(lexical_work, semantic_ideal, int(reference_score * 0.92)))
+
+    fluency_score = _clamp(int(min(100, (word_count / 80.0) * 100)))
+    if unique_count > 0 and word_count > 0:
+        fluency_score = _clamp(int((fluency_score * 0.7) + ((unique_count / word_count) * 100 * 0.3)))
+    hedges = {"maybe", "probably", "guess", "not sure", "i think"}
+    lower_answer = answer_text.lower()
+    hedge_hits = sum(1 for h in hedges if h in lower_answer)
+    confidence_score = _clamp(75 - (hedge_hits * 12) + min(20, int(word_count / 20)))
+
+    overall_score = _clamp(int(
+        (work_score * 0.40) +
+        (relevance_score * 0.25) +
+        (fluency_score * 0.20) +
+        (confidence_score * 0.15)
+    ))
+
+    missing_keywords = [k for k in sorted(question_tokens) if k not in answer_tokens][:8]
+    matched_keywords = [k for k in sorted(question_tokens) if k in answer_tokens][:8]
+    analysis_parts = [
+        f"Matched {len(matched_keywords)} key terms from the question.",
+        f"Answer length: {word_count} words.",
+    ]
+    if missing_keywords:
+        analysis_parts.append("Missing focus terms: " + ", ".join(missing_keywords))
+    if ideal_answer:
+        analysis_parts.append(f"Ideal-answer alignment: {work_score}%")
+    analysis_parts.append(f"Semantic alignment: {semantic_ideal}%")
+    analysis_parts.append(f"Reference match: {reference_score}% ({evaluation_source})")
+    analysis_text = " ".join(analysis_parts).strip()
+
+    feedback = {
+        "score": overall_score,
+        "isCorrect": overall_score >= 65,
+        "matchPercent": work_score,
+        "analysis": analysis_text,
+    }
+
+    answers_map = session.get("answers", {})
+    if not isinstance(answers_map, dict):
+        answers_map = {}
+        session["answers"] = answers_map
+    answers_map[question_id] = {
+        "answer": answer_text,
+        "metrics": {
+            "overall": overall_score,
+            "work": work_score,
+            "fluency": fluency_score,
+            "relevance": relevance_score,
+            "confidence": confidence_score,
+        },
+        "feedback": feedback,
+        "answeredAt": int(time.time()),
+    }
+    SIMPLE_INTERVIEW_SESSIONS[session_id] = session
+
+    first_q = questions[0] if questions else {}
+    metrics = {
+        "overall": overall_score,
+        "work": work_score,
+        "fluency": fluency_score,
+        "relevance": relevance_score,
+        "confidence": confidence_score,
+    }
+
+    score_by_qid: Dict[str, Dict[str, Any]] = {}
+    totals = {"overall": 0.0, "work": 0.0, "fluency": 0.0, "relevance": 0.0, "confidence": 0.0}
+    answered_count = 0
+    for q_item in questions:
+        qid = str(q_item.get("questionId", "")).strip()
+        if not qid:
+            continue
+        a_item = answers_map.get(qid, {})
+        if isinstance(a_item, dict) and a_item:
+            m = a_item.get("metrics", {})
+            if not isinstance(m, dict):
+                m = {}
+            m_overall = _safe_int(m.get("overall"), _safe_int(((a_item.get("feedback", {}) or {}).get("score")), 0))
+            m_work = _safe_int(m.get("work"), 0)
+            m_fluency = _safe_int(m.get("fluency"), 0)
+            m_relevance = _safe_int(m.get("relevance"), 0)
+            m_confidence = _safe_int(m.get("confidence"), 0)
+            score_by_qid[qid] = {
+                "overall": m_overall,
+                "work": m_work,
+                "fluency": m_fluency,
+                "relevance": m_relevance,
+                "confidence": m_confidence,
+                "candidateAnswer": str(a_item.get("answer", "")).strip(),
+                "idealAnswer": str(q_item.get("idealAnswer", "")).strip(),
+            }
+            totals["overall"] += m_overall
+            totals["work"] += m_work
+            totals["fluency"] += m_fluency
+            totals["relevance"] += m_relevance
+            totals["confidence"] += m_confidence
+            answered_count += 1
+
+    session_metrics = {
+        "overall": _clamp(int(round(totals["overall"] / answered_count))) if answered_count else 0,
+        "work": _clamp(int(round(totals["work"] / answered_count))) if answered_count else 0,
+        "fluency": _clamp(int(round(totals["fluency"] / answered_count))) if answered_count else 0,
+        "relevance": _clamp(int(round(totals["relevance"] / answered_count))) if answered_count else 0,
+        "confidence": _clamp(int(round(totals["confidence"] / answered_count))) if answered_count else 0,
+    }
+
+    question_scores: List[Dict[str, Any]] = []
+    question_matrix: List[Dict[str, Any]] = []
+    all_answers: List[Dict[str, Any]] = []
+    for idx, q_item in enumerate(questions, start=1):
+        qid = str(q_item.get("questionId", "")).strip()
+        qtxt = str(q_item.get("question", "")).strip()
+        qs = score_by_qid.get(qid)
+        if not qs:
+            continue
+        row = {
+            "questionId": qid,
+            "questionNumber": idx,
+            "question": qtxt,
+            "answered": True,
+            "score": qs.get("overall"),
+        }
+        question_scores.append(row)
+        question_matrix.append({
+            "questionId": qid,
+            "questionNumber": idx,
+            "question": qtxt,
+            "overall": qs.get("overall", 0),
+            "work": qs.get("work", 0),
+            "fluency": qs.get("fluency", 0),
+            "relevance": qs.get("relevance", 0),
+            "confidence": qs.get("confidence", 0),
+            "answered": True,
+        })
+        all_answers.append({
+            "questionId": qid,
+            "questionNumber": idx,
+            "question": qtxt,
+            "candidateAnswer": qs.get("candidateAnswer", ""),
+            "idealAnswer": qs.get("idealAnswer", ""),
+            "score": qs.get("overall", 0),
+        })
+
+    _learn_offline_qa_memory(
+        role_key=role_key,
+        question_text=question_text,
+        ideal_answer=ideal_answer,
+        candidate_answer=answer_text,
+        score=overall_score,
+        metrics=metrics,
+        sentence_checks=sentence_checks,
+    )
+    _rl_update_question(role_key, question_text, overall_score, overall_score >= 65)
+
+    return {
+        "ok": True,
+        "sessionId": session_id,
+        "questionId": question_id,
+        "question": question_text,
+        "firstQuestion": {
+            "questionId": str(first_q.get("questionId", "")).strip(),
+            "question": str(first_q.get("question", "")).strip(),
+        },
+        "metrics": metrics,
+        "overallScore": metrics["overall"],
+        "workScore": metrics["work"],
+        "fluencyScore": metrics["fluency"],
+        "relevanceScore": metrics["relevance"],
+        "confidenceScore": metrics["confidence"],
+        "answeredCount": answered_count,
+        "questionScores": question_scores,
+        "questionMatrix": question_matrix,
+        "sessionMetrics": session_metrics,
+        "globalMatrix": session_metrics,
+        "sessionOverall": session_metrics["overall"],
+        "allAnswers": all_answers,
+        "evaluationSource": evaluation_source,
+        "sentenceChecks": sentence_checks,
+        "feedback": feedback,
+    }
+
+
+@app.get("/rag/sources", include_in_schema=False)
 def rag_sources() -> Dict[str, Any]:
     return {"sources": RAG_SOURCE_MAP}
 
 
-@app.post("/rag/sources")
+@app.post("/rag/sources", include_in_schema=False)
 def update_rag_sources(payload: Dict[str, Any]) -> Dict[str, Any]:
     global RAG_SOURCE_MAP, URL_CONTENT_CACHE, URL_CONTENT_INDEX
     if not isinstance(payload, dict): return {"status": "ignored", "reason": "payload must be object"}
@@ -3790,7 +4490,7 @@ def update_rag_sources(payload: Dict[str, Any]) -> Dict[str, Any]:
     return {"status": "updated", "roles": sorted(RAG_SOURCE_MAP.keys())}
 
 
-@app.post("/rag/train-once")
+@app.post("/rag/train-once", include_in_schema=False)
 def rag_train_once(payload: OneTimeTrainingRequest) -> Dict[str, Any]:
     global RAG_SOURCE_MAP, URL_CONTENT_CACHE, URL_CONTENT_INDEX, TRAINING_STORE_MAP
     started = time.perf_counter()
@@ -4035,12 +4735,12 @@ def rag_train_once(payload: OneTimeTrainingRequest) -> Dict[str, Any]:
     }
 
 
-@app.get("/rag/training-store")
+@app.get("/rag/training-store", include_in_schema=False)
 def rag_training_store() -> Dict[str, Any]:
     return _load_training_store()
 
 
-@app.get("/rag/learning-log")
+@app.get("/rag/learning-log", include_in_schema=False)
 def rag_learning_log(limit: int = 200, event: str = "", domain: str = "") -> Dict[str, Any]:
     data = _load_learning_log()
     items = data.get("items", []) if isinstance(data, dict) else []
@@ -4074,7 +4774,7 @@ def rag_learning_log(limit: int = 200, event: str = "", domain: str = "") -> Dic
     }
 
 
-@app.get("/rag/source-quality")
+@app.get("/rag/source-quality", include_in_schema=False)
 def rag_source_quality(limit: int = 200, domain: str = "", status: str = "all") -> Dict[str, Any]:
     data = _load_source_quality()
     urls = data.get("urls", {}) if isinstance(data, dict) else {}
@@ -4134,7 +4834,7 @@ def rag_source_quality(limit: int = 200, domain: str = "", status: str = "all") 
     }
 
 
-@app.get("/rag/learning-policy")
+@app.get("/rag/learning-policy", include_in_schema=False)
 def rag_learning_policy() -> Dict[str, Any]:
     store = _load_learning_policy()
     policy = _adaptive_learning_policy()
@@ -4154,17 +4854,17 @@ def rag_learning_policy() -> Dict[str, Any]:
     }
 
 
-@app.get("/reinforcement/state")
+@app.get("/reinforcement/state", include_in_schema=False)
 def reinforcement_state() -> Dict[str, Any]:
     return _load_reinforcement_state()
 
 
-@app.get("/ml/learning-stats")
+@app.get("/ml/learning-stats", include_in_schema=False)
 def ml_learning_stats() -> Dict[str, Any]:
     return _learning_stats()
 
 
-@app.post("/ml/train-small-model")
+@app.post("/ml/train-small-model", include_in_schema=False)
 def ml_train_small_model(payload: SmallModelTrainRequest) -> Dict[str, Any]:
     result = _train_small_model(window_days=max(1, payload.windowDays), min_samples=max(20, payload.minSamples))
     if result.get("ok"):
@@ -4173,7 +4873,7 @@ def ml_train_small_model(payload: SmallModelTrainRequest) -> Dict[str, Any]:
     return result
 
 
-@app.post("/interview/best-answer")
+@app.post("/interview/best-answer", include_in_schema=False)
 def interview_best_answer(payload: BestAnswerRequest) -> Dict[str, Any]:
     global TRAINING_STORE_MAP
     if not isinstance(TRAINING_STORE_MAP, dict) or not TRAINING_STORE_MAP:
@@ -4214,7 +4914,7 @@ def interview_best_answer(payload: BestAnswerRequest) -> Dict[str, Any]:
 
 
 # ── Engine 1: question generation ─────────────────────────────────────────────
-@app.post("/interview/questions")
+@app.post("/interview/questions", include_in_schema=False)
 def interview_questions(payload: InterviewQuestionsRequest) -> Dict[str, Any]:
     _touch_activity()
     role_key = _infer_role_key(payload.jobTitle, payload.domainLabel or payload.domain, payload.jobDescription, payload.department)
@@ -4228,13 +4928,13 @@ def interview_questions(payload: InterviewQuestionsRequest) -> Dict[str, Any]:
 
 
 # ── Engine 2: counter / follow-up questions ───────────────────────────────────
-@app.post("/interview/counter-questions")
+@app.post("/interview/counter-questions", include_in_schema=False)
 def interview_counter_questions(payload: CounterQuestionRequest) -> Dict[str, Any]:
     return _counter_engine.generate(payload)
 
 
 # ── Evaluation ────────────────────────────────────────────────────────────────
-@app.post("/interview/evaluate")
+@app.post("/interview/evaluate", include_in_schema=False)
 def interview_evaluate(payload: InterviewRequest) -> Dict[str, Any]:
     _touch_activity()
     role_key = _infer_role_key(payload.jobTitle, payload.domainLabel or payload.domain, payload.jobDescription, payload.department)
@@ -4245,7 +4945,7 @@ def interview_evaluate(payload: InterviewRequest) -> Dict[str, Any]:
 
 
 # ── Combined: evaluate + auto-generate counter questions ──────────────────────
-@app.post("/interview/evaluate-with-followup")
+@app.post("/interview/evaluate-with-followup", include_in_schema=False)
 def interview_evaluate_with_followup(payload: InterviewRequest) -> Dict[str, Any]:
     """Evaluate all answers AND generate counter-questions for each answer in one call."""
     _touch_activity()
@@ -4287,7 +4987,7 @@ def interview_evaluate_with_followup(payload: InterviewRequest) -> Dict[str, Any
 
 
 # ── STT ───────────────────────────────────────────────────────────────────────
-@app.post("/speech/transcribe")
+@app.post("/speech/transcribe", include_in_schema=False)
 def speech_transcribe(payload: SpeechTranscribeRequest) -> Dict[str, Any]:
     return {
         "ok": False,
@@ -4306,7 +5006,7 @@ async def speech_ws_stt(websocket: WebSocket):
 
 
 # ── TTS ───────────────────────────────────────────────────────────────────────
-@app.post("/speech/synthesize")
+@app.post("/speech/synthesize", include_in_schema=False)
 def speech_synthesize(payload: SpeechSynthesizeRequest) -> Dict[str, Any]:
     return {
         "ok": False,

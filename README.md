@@ -23,7 +23,8 @@ Override any of these in a `.env` file next to `docker-compose.yml`:
 
 | Variable | Default | Description |
 |---|---|---|
-| `WORKER_PORT` | `8099` | Port to expose |
+| `WORKER_PUBLIC_PORT` | `8099` | Host port published by Docker (`host:container`) |
+| `WORKER_PORT` | `8099` | Container listen port |
 | `ENABLE_LLM` | `false` | Enable external LLM API calls |
 | `LLM_MODEL_NAME` | `external-api` | Label shown in API responses |
 | `LLM_API_URL` | empty | External LLM endpoint URL |
@@ -72,6 +73,7 @@ Override any of these in a `.env` file next to `docker-compose.yml`:
 Example `.env`:
 ```env
 WORKER_PORT=8099
+WORKER_PUBLIC_PORT=8099
 ENABLE_STT=true
 STT_MODEL_ID=faster-whisper-small
 STT_LANGUAGE=en

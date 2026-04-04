@@ -6,7 +6,12 @@ services:
     envVars:
       - key: WORKER_HOST
         value: 0.0.0.0
+      # Keep Python worker on a dedicated published port to avoid overlap
+      # with Java service conventions.
       - key: WORKER_PORT
-        value: 10000
+        value: 10001
+      # Render also provides PORT; keep it aligned with WORKER_PORT.
+      - key: PORT
+        value: 10001
       - key: DEEPSEEK_MODEL_NAME
         value: python-interview-worker

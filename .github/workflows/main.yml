@@ -1,10 +1,16 @@
-name: Deploy AI Worker to Linux Server
+name: Deploy AI Worker Docker Image to Linux Server
 
 on:
   push:
     branches:
       - main
       - master
+    paths:
+      - "main.py"
+      - "requirements.txt"
+      - "Dockerfile"
+      - ".dockerignore"
+      - ".github/workflows/main.yml"
   workflow_dispatch:
 
 concurrency:
@@ -20,14 +26,17 @@ jobs:
       SSH_USER: ${{ secrets.SSH_USER }}
       SSHPASS: ${{ secrets.SSH_PASSWORD }}
       DEPLOY_PATH: ${{ secrets.PY_WORKER_DEPLOY_PATH || secrets.DEPLOY_PATH }}
-      WORKER_PORT: ${{ secrets.WORKER_PORT || '8099' }}
-      WORKER_HOST: ${{ secrets.WORKER_HOST || '127.0.0.1' }}
-      PYTHON_BIN: ${{ secrets.PYTHON_BIN || 'python3' }}
-      ENABLE_STT: ${{ secrets.ENABLE_STT || 'true' }}
-      ENABLE_TTS: ${{ secrets.ENABLE_TTS || 'true' }}
+      IMAGE_NAME: ${{ secrets.PY_WORKER_IMAGE_NAME || 'interview-ai-worker' }}
+      CONTAINER_NAME: ${{ secrets.PY_WORKER_CONTAINER_NAME || 'interview-ai-worker' }}
+      HOST_PORT: ${{ secrets.PY_WORKER_HOST_PORT || '8099' }}
+      CONTAINER_PORT: ${{ secrets.PY_WORKER_CONTAINER_PORT || '8099' }}
+      IMAGE_TAR_NAME: ${{ secrets.PY_WORKER_IMAGE_TAR_NAME || 'ai-worker-image.tar' }}
+      REMOTE_DOCKER: ${{ secrets.REMOTE_DOCKER || 'docker' }}
+      ENABLE_STT: ${{ secrets.ENABLE_STT || 'false' }}
+      ENABLE_TTS: ${{ secrets.ENABLE_TTS || 'false' }}
 
     steps:
-      - name: Checkout
+      - name: Check out source
         uses: actions/checkout@v4
 
       - name: Install sshpass
@@ -35,7 +44,22 @@ jobs:
         run: |
           set -euo pipefail
           sudo apt-get update
-          sudo apt-get install -y sshpass rsync
+          sudo apt-get install -y sshpass
+
+      - name: Build ai-worker docker image
+        shell: bash
+        run: |
+          set -euo pipefail
+          IMAGE_REF="${IMAGE_NAME}:${GITHUB_SHA}"
+          docker build -t "$IMAGE_REF" .
+
+      - name: Save ai-worker image archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release
+          IMAGE_REF="${IMAGE_NAME}:${GITHUB_SHA}"
+          docker save "$IMAGE_REF" -o "release/${IMAGE_TAR_NAME}"
 
       - name: Trust remote host
         shell: bash
@@ -45,108 +69,61 @@ jobs:
           ssh-keyscan -p "$SSH_PORT" -H "$SSH_HOST" >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
 
-      - name: Ensure deploy directory exists
+      - name: Ensure remote directory exists
         shell: bash
         run: |
           set -euo pipefail
           sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "mkdir -p '$DEPLOY_PATH'"
 
-      - name: Install Python venv package
+      - name: Stop existing ai-worker container
         shell: bash
         run: |
           set -euo pipefail
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "PYTHON_BIN='$PYTHON_BIN' bash -s" <<'EOF'
-          set -euo pipefail
-          PYTHON_VERSION=$($PYTHON_BIN --version 2>&1 | grep -oP '\d+\.\d+' | head -1)
-          if ! dpkg -l | grep -q "python${PYTHON_VERSION}-venv"; then
-            echo "Installing python${PYTHON_VERSION}-venv..."
-            sudo apt-get update -qq
-            sudo apt-get install -y -qq "python${PYTHON_VERSION}-venv"
-          else
-            echo "python${PYTHON_VERSION}-venv already installed"
-          fi
-          EOF
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "set -e; if $REMOTE_DOCKER ps -a --format '{{.Names}}' | grep -qx '$CONTAINER_NAME'; then $REMOTE_DOCKER stop '$CONTAINER_NAME' >/dev/null 2>&1 || true; $REMOTE_DOCKER rm '$CONTAINER_NAME' >/dev/null 2>&1 || true; fi"
 
-      - name: Upload worker source + models from git
+      - name: Upload ai-worker image
         shell: bash
         run: |
           set -euo pipefail
-          sshpass -e rsync -az --delete \
-            --exclude '.git/' \
-            --exclude '.github/' \
-            --exclude '__pycache__/' \
-            --exclude '.hf_cache/' \
-            --exclude '_pydeps/' \
-            --exclude 'venv/' \
-            --exclude '.venv/' \
-            --exclude 'worker.out.log' \
-            --exclude 'worker.err.log' \
-            --exclude 'worker.pid' \
-            --exclude '*.pyc' \
-            -e "ssh -p $SSH_PORT" \
-            "./" "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
-          echo "Source uploaded from git"
+          sshpass -e rsync -az -e "ssh -p $SSH_PORT" "release/${IMAGE_TAR_NAME}" "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/${IMAGE_TAR_NAME}"
 
-      - name: Install Python dependencies
+      - name: Load new ai-worker image and prune old tags
         shell: bash
         run: |
           set -euo pipefail
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "PYTHON_BIN='$PYTHON_BIN' DEPLOY_PATH='$DEPLOY_PATH' bash -s" <<'EOF'
-          set -euo pipefail
-          cd "$DEPLOY_PATH"
-          "$PYTHON_BIN" -m venv .venv
-          . .venv/bin/activate
-          pip install --upgrade pip -q
-          pip install -r requirements.txt -q
-          EOF
+          IMAGE_REF="${IMAGE_NAME}:${GITHUB_SHA}"
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "set -e; cd '$DEPLOY_PATH'; $REMOTE_DOCKER load -i '$IMAGE_TAR_NAME'; rm -f '$IMAGE_TAR_NAME'; for img in \$($REMOTE_DOCKER images '$IMAGE_NAME' --format '{{.Repository}}:{{.Tag}}' | grep -vFx '$IMAGE_REF' || true); do $REMOTE_DOCKER rmi -f \"\$img\" >/dev/null 2>&1 || true; done"
 
-      - name: Stop existing worker
+      - name: Run ai-worker container
         shell: bash
         run: |
           set -euo pipefail
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "DEPLOY_PATH='$DEPLOY_PATH' bash -s" <<'EOF'
-          if [ -f "$DEPLOY_PATH/worker.pid" ]; then
-            kill "$(cat $DEPLOY_PATH/worker.pid)" 2>/dev/null || true
-            rm -f "$DEPLOY_PATH/worker.pid"
-          fi
-          pkill -f "$DEPLOY_PATH/main.py" 2>/dev/null || true
-          sleep 1
-          EOF
-
-      - name: Start worker
-        shell: bash
-        run: |
+          IMAGE_REF="${IMAGE_NAME}:${GITHUB_SHA}"
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "IMAGE_REF='$IMAGE_REF' CONTAINER_NAME='$CONTAINER_NAME' HOST_PORT='$HOST_PORT' CONTAINER_PORT='$CONTAINER_PORT' REMOTE_DOCKER='$REMOTE_DOCKER' ENABLE_STT='$ENABLE_STT' ENABLE_TTS='$ENABLE_TTS' bash -s" <<'EOF'
           set -euo pipefail
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "DEPLOY_PATH='$DEPLOY_PATH' WORKER_HOST='$WORKER_HOST' WORKER_PORT='$WORKER_PORT' ENABLE_STT='$ENABLE_STT' ENABLE_TTS='$ENABLE_TTS' bash -s" <<'EOF'
-          set -euo pipefail
-          cd "$DEPLOY_PATH"
-          . .venv/bin/activate
-          nohup env \
-            WORKER_HOST="$WORKER_HOST" \
-            WORKER_PORT="$WORKER_PORT" \
-            ENABLE_STT="$ENABLE_STT" \
-            ENABLE_TTS="$ENABLE_TTS" \
-            python main.py > worker.out.log 2> worker.err.log < /dev/null &
-          echo $! > worker.pid
-          sleep 3
-          ps -p "$(cat worker.pid)" > /dev/null || { echo "✗ Worker failed to start"; tail -30 worker.err.log; exit 1; }
-          echo "✓ Worker started (pid=$(cat worker.pid))"
+          $REMOTE_DOCKER run -d \
+            --name "$CONTAINER_NAME" \
+            --restart unless-stopped \
+            --add-host=host.docker.internal:host-gateway \
+            -e WORKER_HOST=0.0.0.0 \
+            -e WORKER_PORT="$CONTAINER_PORT" \
+            -e ENABLE_STT="$ENABLE_STT" \
+            -e ENABLE_TTS="$ENABLE_TTS" \
+            -p "$HOST_PORT:$CONTAINER_PORT" \
+            "$IMAGE_REF"
           EOF
 
       - name: Health check
         shell: bash
         run: |
           set -euo pipefail
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "WORKER_PORT='$WORKER_PORT' DEPLOY_PATH='$DEPLOY_PATH' bash -s" <<'EOF'
           for i in {1..30}; do
-            if curl -fsS "http://127.0.0.1:${WORKER_PORT}/health" > /dev/null 2>&1; then
-              echo "✓ Worker is healthy"
+            if sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "curl -fsS http://127.0.0.1:${HOST_PORT}/health > /dev/null 2>&1"; then
+              echo "AI worker is healthy"
               exit 0
             fi
-            echo "Waiting... ($i/30)"
+            echo "Waiting for ai-worker... ($i/30)"
             sleep 3
           done
-          echo "✗ Health check failed"
-          tail -30 "$DEPLOY_PATH/worker.err.log" 2>/dev/null
+          echo "AI worker health check failed"
           exit 1
-          EOF
