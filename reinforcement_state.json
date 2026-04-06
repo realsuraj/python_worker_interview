@@ -1,0 +1,872 @@
+{
+  "roles": {
+    "default": {
+      "questions": {
+        "explain the basics of concepts for a java developer role.": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.062,
+          "lastScore": 19,
+          "lastUpdated": "2026-04-04T04:56:12Z"
+        },
+        "explain the basics of concepts for a java developer role?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.052,
+          "lastScore": 24,
+          "lastUpdated": "2026-04-04T05:08:44Z"
+        },
+        "how do you test and validate core in a small project?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.066,
+          "lastScore": 17,
+          "lastUpdated": "2026-04-04T06:43:17Z"
+        },
+        "how would you debug a basic issue related to process?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.064,
+          "lastScore": 18,
+          "lastUpdated": "2026-04-04T06:43:40Z"
+        },
+        "share a simple project example where you used asked?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.064,
+          "lastScore": 18,
+          "lastUpdated": "2026-04-04T06:44:14Z"
+        },
+        "how do you test and validate hiring in a small project?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.066,
+          "lastScore": 17,
+          "lastUpdated": "2026-04-04T07:10:10Z"
+        },
+        "explain the basics of key for a candidate role?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.064,
+          "lastScore": 18,
+          "lastUpdated": "2026-04-04T07:10:22Z"
+        },
+        "explain the basics of access for a candidate role?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.064,
+          "lastScore": 18,
+          "lastUpdated": "2026-04-04T07:10:28Z"
+        },
+        "how would you debug a basic issue related to values?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.064,
+          "lastScore": 18,
+          "lastUpdated": "2026-04-04T07:10:59Z"
+        },
+        "how would you debug a basic issue related to letter?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.064,
+          "lastScore": 18,
+          "lastUpdated": "2026-04-04T07:15:25Z"
+        },
+        "how do you test and validate technical in a small project?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.066,
+          "lastScore": 17,
+          "lastUpdated": "2026-04-04T07:23:31Z"
+        },
+        "explain the basics of default for a software_engineering role?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.064,
+          "lastScore": 18,
+          "lastUpdated": "2026-04-04T07:23:38Z"
+        },
+        "how do you test and validate recruiters in a small project?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.066,
+          "lastScore": 17,
+          "lastUpdated": "2026-04-04T07:23:42Z"
+        },
+        "share a simple project example where you used top?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.066,
+          "lastScore": 17,
+          "lastUpdated": "2026-04-04T07:23:52Z"
+        },
+        "how do you test and validate management in a small project?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.066,
+          "lastScore": 17,
+          "lastUpdated": "2026-04-04T07:23:56Z"
+        },
+        "share a simple project example where you used answers?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.066,
+          "lastScore": 17,
+          "lastUpdated": "2026-04-04T07:23:59Z"
+        },
+        "how would you debug a basic issue related to business?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.064,
+          "lastScore": 18,
+          "lastUpdated": "2026-04-04T07:24:04Z"
+        },
+        "explain the basics of class for a software_engineering role?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.064,
+          "lastScore": 18,
+          "lastUpdated": "2026-04-04T07:24:09Z"
+        }
+      },
+      "sources": {},
+      "questionText": {
+        "explain the basics of concepts for a java developer role.": "Explain the basics of concepts for a Java Developer role.",
+        "explain the basics of concepts for a java developer role?": "Explain the basics of concepts for a Java Developer role?",
+        "how do you test and validate core in a small project?": "How do you test and validate core in a small project?",
+        "how would you debug a basic issue related to process?": "How would you debug a basic issue related to process?",
+        "share a simple project example where you used asked?": "Share a simple project example where you used asked?",
+        "how do you test and validate hiring in a small project?": "How do you test and validate hiring in a small project?",
+        "explain the basics of key for a candidate role?": "Explain the basics of key for a candidate role?",
+        "explain the basics of access for a candidate role?": "Explain the basics of access for a candidate role?",
+        "how would you debug a basic issue related to values?": "How would you debug a basic issue related to values?",
+        "how would you debug a basic issue related to letter?": "How would you debug a basic issue related to letter?",
+        "how do you test and validate technical in a small project?": "How do you test and validate technical in a small project?",
+        "explain the basics of default for a software_engineering role?": "Explain the basics of default for a software_engineering role?",
+        "how do you test and validate recruiters in a small project?": "How do you test and validate recruiters in a small project?",
+        "share a simple project example where you used top?": "Share a simple project example where you used top?",
+        "how do you test and validate management in a small project?": "How do you test and validate management in a small project?",
+        "share a simple project example where you used answers?": "Share a simple project example where you used answers?",
+        "how would you debug a basic issue related to business?": "How would you debug a basic issue related to business?",
+        "explain the basics of class for a software_engineering role?": "Explain the basics of class for a software_engineering role?"
+      },
+      "questionDaily": {
+        "explain the basics of concepts for a java developer role.": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 19.0,
+            "correctSum": 0
+          }
+        },
+        "explain the basics of concepts for a java developer role?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 24.0,
+            "correctSum": 0
+          }
+        },
+        "how do you test and validate core in a small project?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 17.0,
+            "correctSum": 0
+          }
+        },
+        "how would you debug a basic issue related to process?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 18.0,
+            "correctSum": 0
+          }
+        },
+        "share a simple project example where you used asked?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 18.0,
+            "correctSum": 0
+          }
+        },
+        "how do you test and validate hiring in a small project?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 17.0,
+            "correctSum": 0
+          }
+        },
+        "explain the basics of key for a candidate role?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 18.0,
+            "correctSum": 0
+          }
+        },
+        "explain the basics of access for a candidate role?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 18.0,
+            "correctSum": 0
+          }
+        },
+        "how would you debug a basic issue related to values?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 18.0,
+            "correctSum": 0
+          }
+        },
+        "how would you debug a basic issue related to letter?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 18.0,
+            "correctSum": 0
+          }
+        },
+        "how do you test and validate technical in a small project?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 17.0,
+            "correctSum": 0
+          }
+        },
+        "explain the basics of default for a software_engineering role?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 18.0,
+            "correctSum": 0
+          }
+        },
+        "how do you test and validate recruiters in a small project?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 17.0,
+            "correctSum": 0
+          }
+        },
+        "share a simple project example where you used top?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 17.0,
+            "correctSum": 0
+          }
+        },
+        "how do you test and validate management in a small project?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 17.0,
+            "correctSum": 0
+          }
+        },
+        "share a simple project example where you used answers?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 17.0,
+            "correctSum": 0
+          }
+        },
+        "how would you debug a basic issue related to business?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 18.0,
+            "correctSum": 0
+          }
+        },
+        "explain the basics of class for a software_engineering role?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 18.0,
+            "correctSum": 0
+          }
+        }
+      },
+      "events": [
+        {
+          "ts": 1775278572,
+          "role": "default",
+          "question": "Explain the basics of concepts for a Java Developer role.",
+          "score": 19,
+          "correct": false
+        },
+        {
+          "ts": 1775279324,
+          "role": "default",
+          "question": "Explain the basics of concepts for a Java Developer role?",
+          "score": 24,
+          "correct": false
+        },
+        {
+          "ts": 1775284997,
+          "role": "default",
+          "question": "How do you test and validate core in a small project?",
+          "score": 17,
+          "correct": false
+        },
+        {
+          "ts": 1775285020,
+          "role": "default",
+          "question": "How would you debug a basic issue related to process?",
+          "score": 18,
+          "correct": false
+        },
+        {
+          "ts": 1775285054,
+          "role": "default",
+          "question": "Share a simple project example where you used asked?",
+          "score": 18,
+          "correct": false
+        },
+        {
+          "ts": 1775286610,
+          "role": "default",
+          "question": "How do you test and validate hiring in a small project?",
+          "score": 17,
+          "correct": false
+        },
+        {
+          "ts": 1775286622,
+          "role": "default",
+          "question": "Explain the basics of key for a candidate role?",
+          "score": 18,
+          "correct": false
+        },
+        {
+          "ts": 1775286628,
+          "role": "default",
+          "question": "Explain the basics of access for a candidate role?",
+          "score": 18,
+          "correct": false
+        },
+        {
+          "ts": 1775286659,
+          "role": "default",
+          "question": "How would you debug a basic issue related to values?",
+          "score": 18,
+          "correct": false
+        },
+        {
+          "ts": 1775286925,
+          "role": "default",
+          "question": "How would you debug a basic issue related to letter?",
+          "score": 18,
+          "correct": false
+        },
+        {
+          "ts": 1775287411,
+          "role": "default",
+          "question": "How do you test and validate technical in a small project?",
+          "score": 17,
+          "correct": false
+        },
+        {
+          "ts": 1775287418,
+          "role": "default",
+          "question": "Explain the basics of default for a software_engineering role?",
+          "score": 18,
+          "correct": false
+        },
+        {
+          "ts": 1775287422,
+          "role": "default",
+          "question": "How do you test and validate recruiters in a small project?",
+          "score": 17,
+          "correct": false
+        },
+        {
+          "ts": 1775287432,
+          "role": "default",
+          "question": "Share a simple project example where you used top?",
+          "score": 17,
+          "correct": false
+        },
+        {
+          "ts": 1775287436,
+          "role": "default",
+          "question": "How do you test and validate management in a small project?",
+          "score": 17,
+          "correct": false
+        },
+        {
+          "ts": 1775287439,
+          "role": "default",
+          "question": "Share a simple project example where you used answers?",
+          "score": 17,
+          "correct": false
+        },
+        {
+          "ts": 1775287444,
+          "role": "default",
+          "question": "How would you debug a basic issue related to business?",
+          "score": 18,
+          "correct": false
+        },
+        {
+          "ts": 1775287449,
+          "role": "default",
+          "question": "Explain the basics of class for a software_engineering role?",
+          "score": 18,
+          "correct": false
+        }
+      ]
+    },
+    "java": {
+      "questions": {
+        "why is java a platform independent language?": {
+          "shown": 2,
+          "good": 0,
+          "bad": 2,
+          "reward": -0.084,
+          "lastScore": 35,
+          "lastUpdated": "2026-04-04T08:38:26Z"
+        },
+        "how would you implement between step-by-step using java?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.066,
+          "lastScore": 17,
+          "lastUpdated": "2026-04-04T05:12:18Z"
+        },
+        "what common beginner mistakes happen in java, and how would you avoid them?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.064,
+          "lastScore": 18,
+          "lastUpdated": "2026-04-04T07:10:15Z"
+        },
+        "how would you implement unit step-by-step using javascript?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.066,
+          "lastScore": 17,
+          "lastUpdated": "2026-04-04T07:23:46Z"
+        },
+        "share a simple project example where you used oriented?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.046,
+          "lastScore": 27,
+          "lastUpdated": "2026-04-04T08:38:59Z"
+        },
+        "how would you implement interfaces step-by-step using java?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.04,
+          "lastScore": 30,
+          "lastUpdated": "2026-04-04T08:39:20Z"
+        },
+        "what are the differences between heap and stack memory in java?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.034,
+          "lastScore": 33,
+          "lastUpdated": "2026-04-04T08:39:41Z"
+        },
+        "what do you understand by an instance variable and a local variable?": {
+          "shown": 1,
+          "good": 1,
+          "bad": 0,
+          "reward": 0.048,
+          "lastScore": 74,
+          "lastUpdated": "2026-04-04T08:40:10Z"
+        },
+        "what common beginner mistakes happen in object, and how would you avoid them?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.044,
+          "lastScore": 28,
+          "lastUpdated": "2026-04-04T08:40:38Z"
+        },
+        "how would you debug a basic issue related to between?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.03,
+          "lastScore": 35,
+          "lastUpdated": "2026-04-04T08:41:08Z"
+        },
+        "how would you implement pointers step-by-step using java?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.062,
+          "lastScore": 19,
+          "lastUpdated": "2026-04-04T08:41:38Z"
+        },
+        "how would you debug a basic issue related to overloading?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.032,
+          "lastScore": 34,
+          "lastUpdated": "2026-04-04T08:42:11Z"
+        },
+        "netbeans tutorial: what is netbeans ide and how to get started?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.062,
+          "lastScore": 19,
+          "lastUpdated": "2026-04-04T08:42:44Z"
+        },
+        "what are the default values assigned to variables and instances in java?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.052,
+          "lastScore": 24,
+          "lastUpdated": "2026-04-04T08:43:09Z"
+        },
+        "can you tell the difference between equals() method and equality operator (==) in java?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.044,
+          "lastScore": 28,
+          "lastUpdated": "2026-04-04T08:43:50Z"
+        },
+        "explain the basics of jvm for a java role?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.026,
+          "lastScore": 37,
+          "lastUpdated": "2026-04-04T08:47:06Z"
+        },
+        "what is a do while loop in java and how to use it?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.052,
+          "lastScore": 24,
+          "lastUpdated": "2026-04-04T08:47:25Z"
+        }
+      },
+      "sources": {},
+      "questionText": {
+        "why is java a platform independent language?": "Why is Java a platform independent language?",
+        "how would you implement between step-by-step using java?": "How would you implement between step-by-step using java?",
+        "what common beginner mistakes happen in java, and how would you avoid them?": "What common beginner mistakes happen in java, and how would you avoid them?",
+        "how would you implement unit step-by-step using javascript?": "How would you implement unit step-by-step using javascript?",
+        "share a simple project example where you used oriented?": "Share a simple project example where you used oriented?",
+        "how would you implement interfaces step-by-step using java?": "How would you implement interfaces step-by-step using java?",
+        "what are the differences between heap and stack memory in java?": "What are the differences between Heap and Stack Memory in Java?",
+        "what do you understand by an instance variable and a local variable?": "What do you understand by an instance variable and a local variable?",
+        "what common beginner mistakes happen in object, and how would you avoid them?": "What common beginner mistakes happen in object, and how would you avoid them?",
+        "how would you debug a basic issue related to between?": "How would you debug a basic issue related to between?",
+        "how would you implement pointers step-by-step using java?": "How would you implement pointers step-by-step using java?",
+        "how would you debug a basic issue related to overloading?": "How would you debug a basic issue related to overloading?",
+        "netbeans tutorial: what is netbeans ide and how to get started?": "Netbeans Tutorial: What is NetBeans IDE and how to get started?",
+        "what are the default values assigned to variables and instances in java?": "What are the default values assigned to variables and instances in java?",
+        "can you tell the difference between equals() method and equality operator (==) in java?": "Can you tell the difference between equals() method and equality operator (==) in Java?",
+        "explain the basics of jvm for a java role?": "Explain the basics of jvm for a java role?",
+        "what is a do while loop in java and how to use it?": "What is a Do while loop in Java and how to use it?"
+      },
+      "questionDaily": {
+        "why is java a platform independent language?": {
+          "2026-04-04": {
+            "count": 2,
+            "scoreSum": 55.0,
+            "correctSum": 0
+          }
+        },
+        "how would you implement between step-by-step using java?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 17.0,
+            "correctSum": 0
+          }
+        },
+        "what common beginner mistakes happen in java, and how would you avoid them?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 18.0,
+            "correctSum": 0
+          }
+        },
+        "how would you implement unit step-by-step using javascript?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 17.0,
+            "correctSum": 0
+          }
+        },
+        "share a simple project example where you used oriented?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 27.0,
+            "correctSum": 0
+          }
+        },
+        "how would you implement interfaces step-by-step using java?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 30.0,
+            "correctSum": 0
+          }
+        },
+        "what are the differences between heap and stack memory in java?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 33.0,
+            "correctSum": 0
+          }
+        },
+        "what do you understand by an instance variable and a local variable?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 74.0,
+            "correctSum": 1
+          }
+        },
+        "what common beginner mistakes happen in object, and how would you avoid them?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 28.0,
+            "correctSum": 0
+          }
+        },
+        "how would you debug a basic issue related to between?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 35.0,
+            "correctSum": 0
+          }
+        },
+        "how would you implement pointers step-by-step using java?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 19.0,
+            "correctSum": 0
+          }
+        },
+        "how would you debug a basic issue related to overloading?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 34.0,
+            "correctSum": 0
+          }
+        },
+        "netbeans tutorial: what is netbeans ide and how to get started?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 19.0,
+            "correctSum": 0
+          }
+        },
+        "what are the default values assigned to variables and instances in java?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 24.0,
+            "correctSum": 0
+          }
+        },
+        "can you tell the difference between equals() method and equality operator (==) in java?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 28.0,
+            "correctSum": 0
+          }
+        },
+        "explain the basics of jvm for a java role?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 37.0,
+            "correctSum": 0
+          }
+        },
+        "what is a do while loop in java and how to use it?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 24.0,
+            "correctSum": 0
+          }
+        }
+      },
+      "events": [
+        {
+          "ts": 1775278718,
+          "role": "java",
+          "question": "Why is Java a platform independent language?",
+          "score": 20,
+          "correct": false
+        },
+        {
+          "ts": 1775279538,
+          "role": "java",
+          "question": "How would you implement between step-by-step using java?",
+          "score": 17,
+          "correct": false
+        },
+        {
+          "ts": 1775286615,
+          "role": "java",
+          "question": "What common beginner mistakes happen in java, and how would you avoid them?",
+          "score": 18,
+          "correct": false
+        },
+        {
+          "ts": 1775287426,
+          "role": "java",
+          "question": "How would you implement unit step-by-step using javascript?",
+          "score": 17,
+          "correct": false
+        },
+        {
+          "ts": 1775291906,
+          "role": "java",
+          "question": "Why is Java a platform independent language?",
+          "score": 35,
+          "correct": false
+        },
+        {
+          "ts": 1775291939,
+          "role": "java",
+          "question": "Share a simple project example where you used oriented?",
+          "score": 27,
+          "correct": false
+        },
+        {
+          "ts": 1775291960,
+          "role": "java",
+          "question": "How would you implement interfaces step-by-step using java?",
+          "score": 30,
+          "correct": false
+        },
+        {
+          "ts": 1775291981,
+          "role": "java",
+          "question": "What are the differences between Heap and Stack Memory in Java?",
+          "score": 33,
+          "correct": false
+        },
+        {
+          "ts": 1775292010,
+          "role": "java",
+          "question": "What do you understand by an instance variable and a local variable?",
+          "score": 74,
+          "correct": true
+        },
+        {
+          "ts": 1775292038,
+          "role": "java",
+          "question": "What common beginner mistakes happen in object, and how would you avoid them?",
+          "score": 28,
+          "correct": false
+        },
+        {
+          "ts": 1775292068,
+          "role": "java",
+          "question": "How would you debug a basic issue related to between?",
+          "score": 35,
+          "correct": false
+        },
+        {
+          "ts": 1775292098,
+          "role": "java",
+          "question": "How would you implement pointers step-by-step using java?",
+          "score": 19,
+          "correct": false
+        },
+        {
+          "ts": 1775292131,
+          "role": "java",
+          "question": "How would you debug a basic issue related to overloading?",
+          "score": 34,
+          "correct": false
+        },
+        {
+          "ts": 1775292164,
+          "role": "java",
+          "question": "Netbeans Tutorial: What is NetBeans IDE and how to get started?",
+          "score": 19,
+          "correct": false
+        },
+        {
+          "ts": 1775292189,
+          "role": "java",
+          "question": "What are the default values assigned to variables and instances in java?",
+          "score": 24,
+          "correct": false
+        },
+        {
+          "ts": 1775292230,
+          "role": "java",
+          "question": "Can you tell the difference between equals() method and equality operator (==) in Java?",
+          "score": 28,
+          "correct": false
+        },
+        {
+          "ts": 1775292426,
+          "role": "java",
+          "question": "Explain the basics of jvm for a java role?",
+          "score": 37,
+          "correct": false
+        },
+        {
+          "ts": 1775292445,
+          "role": "java",
+          "question": "What is a Do while loop in Java and how to use it?",
+          "score": 24,
+          "correct": false
+        }
+      ]
+    },
+    "sales": {
+      "questions": {
+        "explain the basics of sales for a candidate role?": {
+          "shown": 1,
+          "good": 0,
+          "bad": 1,
+          "reward": -0.064,
+          "lastScore": 18,
+          "lastUpdated": "2026-04-04T07:10:18Z"
+        }
+      },
+      "sources": {},
+      "questionText": {
+        "explain the basics of sales for a candidate role?": "Explain the basics of sales for a candidate role?"
+      },
+      "questionDaily": {
+        "explain the basics of sales for a candidate role?": {
+          "2026-04-04": {
+            "count": 1,
+            "scoreSum": 18.0,
+            "correctSum": 0
+          }
+        }
+      },
+      "events": [
+        {
+          "ts": 1775286618,
+          "role": "sales",
+          "question": "Explain the basics of sales for a candidate role?",
+          "score": 18,
+          "correct": false
+        }
+      ]
+    }
+  }
+}

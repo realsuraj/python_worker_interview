@@ -32,8 +32,8 @@ jobs:
       CONTAINER_PORT: ${{ secrets.PY_WORKER_CONTAINER_PORT || '9000' }}
       IMAGE_TAR_NAME: ${{ secrets.PY_WORKER_IMAGE_TAR_NAME || 'ai-worker-image.tar' }}
       REMOTE_DOCKER: ${{ secrets.REMOTE_DOCKER || 'docker' }}
-      DEEPSEEK_MODEL_NAME: ${{ secrets.DEEPSEEK_MODEL_NAME || 'deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B' }}
-      SEMANTIC_MODEL_NAME: ${{ secrets.SEMANTIC_MODEL_NAME || 'sentence-transformers/all-MiniLM-L6-v2' }}
+      ENABLE_STT: ${{ secrets.ENABLE_STT || 'false' }}
+      ENABLE_TTS: ${{ secrets.ENABLE_TTS || 'false' }}
 
     steps:
       - name: Check out source
@@ -99,7 +99,7 @@ jobs:
         run: |
           set -euo pipefail
           IMAGE_REF="${IMAGE_NAME}:${GITHUB_SHA}"
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "IMAGE_REF='$IMAGE_REF' CONTAINER_NAME='$CONTAINER_NAME' HOST_PORT='$HOST_PORT' CONTAINER_PORT='$CONTAINER_PORT' REMOTE_DOCKER='$REMOTE_DOCKER' DEEPSEEK_MODEL_NAME='$DEEPSEEK_MODEL_NAME' SEMANTIC_MODEL_NAME='$SEMANTIC_MODEL_NAME' bash -s" <<'EOF'
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "IMAGE_REF='$IMAGE_REF' CONTAINER_NAME='$CONTAINER_NAME' HOST_PORT='$HOST_PORT' CONTAINER_PORT='$CONTAINER_PORT' REMOTE_DOCKER='$REMOTE_DOCKER' ENABLE_STT='$ENABLE_STT' ENABLE_TTS='$ENABLE_TTS' bash -s" <<'EOF'
           set -euo pipefail
           # Free conflicting Docker containers that already publish HOST_PORT.
           CONFLICT_IDS="$($REMOTE_DOCKER ps -q --filter "publish=${HOST_PORT}" || true)"
@@ -128,8 +128,8 @@ jobs:
             --add-host=host.docker.internal:host-gateway \
             -e WORKER_HOST=0.0.0.0 \
             -e WORKER_PORT="$CONTAINER_PORT" \
-            -e DEEPSEEK_MODEL_NAME="$DEEPSEEK_MODEL_NAME" \
-            -e SEMANTIC_MODEL_NAME="$SEMANTIC_MODEL_NAME" \
+            -e ENABLE_STT="$ENABLE_STT" \
+            -e ENABLE_TTS="$ENABLE_TTS" \
             -p "$HOST_PORT:$CONTAINER_PORT" \
             "$IMAGE_REF"
           EOF
