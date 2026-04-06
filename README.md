@@ -51,6 +51,7 @@ Override any of these in a `.env` file next to `docker-compose.yml`:
 | `RL_RAW_EVENT_RETENTION_DAYS` | `90` | Keep raw RL events only for this many days (daily buckets are retained) |
 | `SMALL_MODEL_ENABLED` | `true` | Enable compact ML model for question ranking |
 | `SMALL_MODEL_FILE` | `small_question_model.pkl` | Path for trained small model artifact |
+| `DATASET_ONLY_MODE` | `true` | For Java interviews, rebuild and serve questions/answers only from the StackOverflow QA dataset, without legacy training-store fallback |
 | `STRICT_CANDIDATE_IDENTITY` | `true` | Require candidate identity/session token for uniqueness tracking |
 | `RESOURCE_PROFILE` | `medium` | Cost profile: `low`, `medium`, `high` (caps discover/fetch/train usage) |
 | `SOURCE_ALLOWLIST_DOMAINS` | empty | Optional comma-separated allowlist domains for source saving |
@@ -63,6 +64,13 @@ Override any of these in a `.env` file next to `docker-compose.yml`:
 | `DAILY_NEW_URL_TARGET` | `20` | Minimum target of new URLs per day before repeats |
 | `SEMANTIC_MATCH_ENABLED` | `true` | Concept/meaning-based answer matching |
 | `SEMANTIC_MODEL_NAME` | `tfidf-cosine-pkl` | TF-IDF semantic scorer label |
+
+Startup behavior:
+- By default, the worker does not run broad web auto-learning or search-engine discovery.
+- On worker startup, the small model checks whether it has already learned the default dataset source:
+  - `https://huggingface.co/datasets/mteb/stackoverflow-qa`
+- If that dataset source is missing, or if the current model still contains older non-dataset sources, the worker rebuilds `small_question_model.pkl` from the StackOverflow QA dataset before Java interview usage continues.
+- In dataset-only mode, Java simple-interview questions and ideal answers come only from the dataset-backed question bank and QA bank stored in `small_question_model.pkl`.
 
 Example `.env`:
 ```env
@@ -92,6 +100,9 @@ ENABLE_TTS=false
 | GET | `/reinforcement/state` | Read reinforcement learning state |
 | GET | `/ml/learning-stats` | 1-week / 1-month / 1-year learning stats |
 | POST | `/ml/train-small-model` | Train compact reusable ML model from RL events |
+| POST | `/ml/online-training-dataset` | Estimate or train `small_question_model.pkl` from dataset/source URLs; for Hugging Face datasets, `domain` can be left blank and labels are inferred automatically |
+| POST | `/ml/model-source-status` | Check whether the current small model already learned given URLs |
+| GET | `/ml/export-model` | Return model export metadata or download `small_question_model.pkl` |
 | POST | `/interview/best-answer` | Generate best interview answers from trained store + URLs |
 | POST | `/speech/transcribe` | Stub response (backend STT disabled) |
 | POST | `/speech/synthesize` | Stub response (backend TTS disabled) |

@@ -36134,6 +36134,5773 @@
         "mode": "fast",
         "knowledgeScore": 35.7
       }
+    },
+    {
+      "ts": 1775457720,
+      "event": "startup",
+      "details": {
+        "resourceProfile": "medium",
+        "strictIdentity": true,
+        "learnMode": "fast",
+        "knowledgeScore": 35.71
+      }
+    },
+    {
+      "ts": 1775457721,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/realnamehidden1_61/java-scenario-based-interview-questions-542m",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775457722,
+      "event": "url_pass",
+      "details": {
+        "url": "https://huntr.co/interview-questions/java",
+        "reason": "fetched",
+        "lines": 64
+      }
+    },
+    {
+      "ts": 1775457723,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/p/top-java-interview-questions-and-answers.html",
+        "reason": "fetched",
+        "lines": 80
+      }
+    },
+    {
+      "ts": 1775457724,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.techinterviewhandbook.org/behavioral-interview-questions/",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775457725,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/behavioral-interview-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 51
+      }
+    },
+    {
+      "ts": 1775457726,
+      "event": "url_pass",
+      "details": {
+        "url": "https://starmethod.org/java-developer/star-interview",
+        "reason": "fetched",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775457726,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.springjavalab.com/2025/04/top-25-java-interview-questions-for-freshers.html",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775457728,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interview-copilot.com/blog/java-interview-questions-and-answers",
+        "reason": "fetched",
+        "lines": 61
+      }
+    },
+    {
+      "ts": 1775457730,
+      "event": "url_pass",
+      "details": {
+        "url": "https://clouddevs.com/java-interview-questions-with-answers/",
+        "reason": "fetched",
+        "lines": 53
+      }
+    },
+    {
+      "ts": 1775457732,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewplus.ai/jd/java-developer-role-interview-questions/1255",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775457733,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/hannah_usmedynska/50-play-framework-interview-questions-and-answers-3p04",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775457733,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.acte.in/java-stream-interview-questions-and-answers",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775457734,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.mockquestions.com/position/Engineer/",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775457736,
+      "event": "url_pass",
+      "details": {
+        "url": "https://utho.com/blog/java-programming-interview-questions/",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775457739,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-did-others-say-about-the-java-interview-companion/",
+        "reason": "fetched",
+        "lines": 48
+      }
+    },
+    {
+      "ts": 1775457741,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/",
+        "reason": "fetched",
+        "lines": 50
+      }
+    },
+    {
+      "ts": 1775457743,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/java-success-com-blog/",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775457745,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-are-the-benefits-of-java-success-com/",
+        "reason": "fetched",
+        "lines": 42
+      }
+    },
+    {
+      "ts": 1775457747,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/90-days-members-free-downloads/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775457749,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/privacy-policy/",
+        "reason": "fetched",
+        "lines": 63
+      }
+    },
+    {
+      "ts": 1775457752,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775457754,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/resume/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775457756,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/sample-resumes/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775457758,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/beginner-or-intermediate/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775457761,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/zy-feeling-stagnated/",
+        "reason": "fetched",
+        "lines": 15
+      }
+    },
+    {
+      "ts": 1775457763,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/earn-more/",
+        "reason": "fetched",
+        "lines": 17
+      }
+    },
+    {
+      "ts": 1775457765,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/freelancing/",
+        "reason": "fetched",
+        "lines": 16
+      }
+    },
+    {
+      "ts": 1775457767,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/z-did-you-get-the-offer/",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775457770,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/certification/",
+        "reason": "fetched",
+        "lines": 11
+      }
+    },
+    {
+      "ts": 1775457772,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting/",
+        "reason": "fetched",
+        "lines": 25
+      }
+    },
+    {
+      "ts": 1775457774,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/soft-skills/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775457777,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/personal-branding/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775457779,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-interview-tips/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775457781,
+      "event": "train_start",
+      "details": {
+        "runLabel": "auto-idle-fast",
+        "domains": [
+          "java",
+          "sales",
+          "business_development",
+          "voice_process",
+          "chat_process",
+          "flutter",
+          "react"
+        ],
+        "qTarget": 23,
+        "discoverLimit": 120,
+        "profile": "medium",
+        "mode": "fast",
+        "knowledgeScore": 35.72
+      }
+    },
+    {
+      "ts": 1775457781,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/your-motivated/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775457783,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/philosophies/",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775457786,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/topics-to-whinge-whine/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775457788,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/members/",
+        "reason": "fetched",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775457790,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/membership-levels/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775457793,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/",
+        "reason": "fetched",
+        "lines": 34
+      }
+    },
+    {
+      "ts": 1775457795,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/",
+        "reason": "fetched",
+        "lines": 32
+      }
+    },
+    {
+      "ts": 1775457797,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/architect-how-to/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775457799,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/key-areas/0003-16-key-areas/03-yl-judgingexperience/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775457801,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/00-high-level-low-level-system-design-considerations-for-read-heavy-systems/",
+        "reason": "fetched",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775457802,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/wp-content/uploads/2014/08/Screen-Shot-2023-06-18-at-10.14.41-pm.png",
+        "reason": "fetched",
+        "lines": 0
+      }
+    },
+    {
+      "ts": 1775457805,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/simple-caching-java-application-step-by-step/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775457807,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/implement-an-in-memory-cache-in-java/",
+        "reason": "fetched",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775457809,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/key-areas/0003-16-key-areas/09-low-latency/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775457810,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewbit.com/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775457810,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775457811,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.javatpoint.com/corejava-interview-questions",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775457811,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775457813,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.edureka.co/blog/interview-questions/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 80
+      }
+    },
+    {
+      "ts": 1775457814,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-interview-questions-and-answers",
+        "reason": "http_404"
+      }
+    },
+    {
+      "ts": 1775457815,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.baeldung.com/java-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775457815,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775457816,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.guru99.com/java-interview-questions-answers.html",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775457817,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.tpointtech.com/corejava-interview-questions",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775457817,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.datacamp.com/blog/java-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775457817,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.w3schools.com/java/java_interview_questions.asp",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775457819,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codegnan.com/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 57
+      }
+    },
+    {
+      "ts": 1775457820,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codefinity.com/blog/The-80-Top-Java-Interview-Questions-and-Answers",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775457822,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewquestions.guru/core-java-interview-questions-answers/",
+        "reason": "fetched",
+        "lines": 71
+      }
+    },
+    {
+      "ts": 1775457824,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-programming-interview-questions",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775457826,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 70
+      }
+    },
+    {
+      "ts": 1775457826,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/java-interview-questions-article",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775457828,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/2026/02/top-50-java-interview-questions-and-answers.html",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775457829,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java/",
+        "reason": "fetched",
+        "lines": 29
+      }
+    },
+    {
+      "ts": 1775457829,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/advance-java/advanced-java/",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775457829,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-exercises/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775457830,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-examples/",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775457830,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-quiz/",
+        "reason": "fetched",
+        "lines": 6
+      }
+    },
+    {
+      "ts": 1775457831,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/java-projects/",
+        "reason": "fetched",
+        "lines": 49
+      }
+    },
+    {
+      "ts": 1775457831,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-cheat-sheet/",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775457832,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/dsa/dsa-in-java/",
+        "reason": "fetched",
+        "lines": 26
+      }
+    },
+    {
+      "ts": 1775457832,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-collection-tutorial/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775457833,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/introduction-to-java/",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775457833,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-basics/",
+        "reason": "fetched",
+        "lines": 50
+      }
+    },
+    {
+      "ts": 1775457834,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/methods-in-java/",
+        "reason": "fetched",
+        "lines": 44
+      }
+    },
+    {
+      "ts": 1775457834,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/access-modifiers-java/",
+        "reason": "fetched",
+        "lines": 23
+      }
+    },
+    {
+      "ts": 1775457835,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/arrays-in-java/",
+        "reason": "fetched",
+        "lines": 41
+      }
+    },
+    {
+      "ts": 1775457835,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/strings-in-java/",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775457835,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/regular-expressions-in-java/",
+        "reason": "fetched",
+        "lines": 24
+      }
+    },
+    {
+      "ts": 1775457836,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/classes-objects-java/",
+        "reason": "fetched",
+        "lines": 34
+      }
+    },
+    {
+      "ts": 1775457836,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/constructors-in-java/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775457837,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/",
+        "reason": "fetched",
+        "lines": 59
+      }
+    },
+    {
+      "ts": 1775457837,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/packages-in-java/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775457838,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/interfaces-in-java/",
+        "reason": "fetched",
+        "lines": 37
+      }
+    },
+    {
+      "ts": 1775457838,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-in-java-2/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775457839,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-class-in-java/",
+        "reason": "fetched",
+        "lines": 48
+      }
+    },
+    {
+      "ts": 1775457839,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collection-interface-in-java-with-examples/",
+        "reason": "fetched",
+        "lines": 44
+      }
+    },
+    {
+      "ts": 1775457840,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/iterators-in-java/",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775457840,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-comparator-interface/",
+        "reason": "fetched",
+        "lines": 28
+      }
+    },
+    {
+      "ts": 1775457840,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/exceptions-in-java/",
+        "reason": "fetched",
+        "lines": 35
+      }
+    },
+    {
+      "ts": 1775457842,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-try-catch-block/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775458042,
+      "event": "startup",
+      "details": {
+        "resourceProfile": "medium",
+        "strictIdentity": true,
+        "learnMode": "fast",
+        "knowledgeScore": 37.67
+      }
+    },
+    {
+      "ts": 1775458043,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/realnamehidden1_61/java-scenario-based-interview-questions-542m",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775458044,
+      "event": "url_pass",
+      "details": {
+        "url": "https://huntr.co/interview-questions/java",
+        "reason": "fetched",
+        "lines": 64
+      }
+    },
+    {
+      "ts": 1775458045,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/p/top-java-interview-questions-and-answers.html",
+        "reason": "fetched",
+        "lines": 80
+      }
+    },
+    {
+      "ts": 1775458046,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.techinterviewhandbook.org/behavioral-interview-questions/",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775458046,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/behavioral-interview-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 51
+      }
+    },
+    {
+      "ts": 1775458047,
+      "event": "url_pass",
+      "details": {
+        "url": "https://starmethod.org/java-developer/star-interview",
+        "reason": "fetched",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775458048,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.springjavalab.com/2025/04/top-25-java-interview-questions-for-freshers.html",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775458049,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interview-copilot.com/blog/java-interview-questions-and-answers",
+        "reason": "fetched",
+        "lines": 61
+      }
+    },
+    {
+      "ts": 1775458051,
+      "event": "url_pass",
+      "details": {
+        "url": "https://clouddevs.com/java-interview-questions-with-answers/",
+        "reason": "fetched",
+        "lines": 53
+      }
+    },
+    {
+      "ts": 1775458052,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewplus.ai/jd/java-developer-role-interview-questions/1255",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775458053,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/hannah_usmedynska/50-play-framework-interview-questions-and-answers-3p04",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775458053,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.acte.in/java-stream-interview-questions-and-answers",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775458054,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.mockquestions.com/position/Engineer/",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775458056,
+      "event": "url_pass",
+      "details": {
+        "url": "https://utho.com/blog/java-programming-interview-questions/",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775458058,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-did-others-say-about-the-java-interview-companion/",
+        "reason": "fetched",
+        "lines": 48
+      }
+    },
+    {
+      "ts": 1775458060,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/",
+        "reason": "fetched",
+        "lines": 50
+      }
+    },
+    {
+      "ts": 1775458063,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/java-success-com-blog/",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775458065,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-are-the-benefits-of-java-success-com/",
+        "reason": "fetched",
+        "lines": 42
+      }
+    },
+    {
+      "ts": 1775458067,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/90-days-members-free-downloads/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775458069,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/privacy-policy/",
+        "reason": "fetched",
+        "lines": 63
+      }
+    },
+    {
+      "ts": 1775458071,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775458073,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/resume/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775458075,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/sample-resumes/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775458077,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/beginner-or-intermediate/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775458079,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/zy-feeling-stagnated/",
+        "reason": "fetched",
+        "lines": 15
+      }
+    },
+    {
+      "ts": 1775458083,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/earn-more/",
+        "reason": "fetched",
+        "lines": 17
+      }
+    },
+    {
+      "ts": 1775458085,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/freelancing/",
+        "reason": "fetched",
+        "lines": 16
+      }
+    },
+    {
+      "ts": 1775458087,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/z-did-you-get-the-offer/",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775458089,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/certification/",
+        "reason": "fetched",
+        "lines": 11
+      }
+    },
+    {
+      "ts": 1775458091,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting/",
+        "reason": "fetched",
+        "lines": 25
+      }
+    },
+    {
+      "ts": 1775458093,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/soft-skills/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775458095,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/personal-branding/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775458097,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-interview-tips/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775458099,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/your-motivated/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775458101,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/philosophies/",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775458102,
+      "event": "train_start",
+      "details": {
+        "runLabel": "auto-idle-fast",
+        "domains": [
+          "java",
+          "sales",
+          "business_development",
+          "voice_process",
+          "chat_process",
+          "flutter",
+          "react"
+        ],
+        "qTarget": 23,
+        "discoverLimit": 120,
+        "profile": "medium",
+        "mode": "fast",
+        "knowledgeScore": 37.91
+      }
+    },
+    {
+      "ts": 1775458103,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/topics-to-whinge-whine/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775458105,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/members/",
+        "reason": "fetched",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775458107,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/membership-levels/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775458109,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/",
+        "reason": "fetched",
+        "lines": 34
+      }
+    },
+    {
+      "ts": 1775458111,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/",
+        "reason": "fetched",
+        "lines": 32
+      }
+    },
+    {
+      "ts": 1775458114,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/architect-how-to/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775458116,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/key-areas/0003-16-key-areas/03-yl-judgingexperience/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775458118,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/00-high-level-low-level-system-design-considerations-for-read-heavy-systems/",
+        "reason": "fetched",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775458119,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/wp-content/uploads/2014/08/Screen-Shot-2023-06-18-at-10.14.41-pm.png",
+        "reason": "fetched",
+        "lines": 0
+      }
+    },
+    {
+      "ts": 1775458121,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/simple-caching-java-application-step-by-step/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775458123,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/implement-an-in-memory-cache-in-java/",
+        "reason": "fetched",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775458125,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/key-areas/0003-16-key-areas/09-low-latency/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775458126,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewbit.com/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775458126,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775458135,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.javatpoint.com/corejava-interview-questions",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775458135,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775458137,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.edureka.co/blog/interview-questions/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 80
+      }
+    },
+    {
+      "ts": 1775458138,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-interview-questions-and-answers",
+        "reason": "http_404"
+      }
+    },
+    {
+      "ts": 1775458139,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.baeldung.com/java-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775458139,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775458140,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.guru99.com/java-interview-questions-answers.html",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775458141,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.tpointtech.com/corejava-interview-questions",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775458141,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.datacamp.com/blog/java-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775458141,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.w3schools.com/java/java_interview_questions.asp",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775458143,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codegnan.com/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 57
+      }
+    },
+    {
+      "ts": 1775458144,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codefinity.com/blog/The-80-Top-Java-Interview-Questions-and-Answers",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775458146,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewquestions.guru/core-java-interview-questions-answers/",
+        "reason": "fetched",
+        "lines": 71
+      }
+    },
+    {
+      "ts": 1775458148,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-programming-interview-questions",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775458150,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 70
+      }
+    },
+    {
+      "ts": 1775458150,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/java-interview-questions-article",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775458151,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/2026/02/top-50-java-interview-questions-and-answers.html",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775458152,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java/",
+        "reason": "fetched",
+        "lines": 29
+      }
+    },
+    {
+      "ts": 1775458152,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/advance-java/advanced-java/",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775458152,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-exercises/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775458153,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-examples/",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775458153,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-quiz/",
+        "reason": "fetched",
+        "lines": 6
+      }
+    },
+    {
+      "ts": 1775458154,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/java-projects/",
+        "reason": "fetched",
+        "lines": 49
+      }
+    },
+    {
+      "ts": 1775458154,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-cheat-sheet/",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775458155,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/dsa/dsa-in-java/",
+        "reason": "fetched",
+        "lines": 26
+      }
+    },
+    {
+      "ts": 1775458155,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-collection-tutorial/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775458155,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/introduction-to-java/",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775458156,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-basics/",
+        "reason": "fetched",
+        "lines": 50
+      }
+    },
+    {
+      "ts": 1775458156,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/methods-in-java/",
+        "reason": "fetched",
+        "lines": 44
+      }
+    },
+    {
+      "ts": 1775458156,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/access-modifiers-java/",
+        "reason": "fetched",
+        "lines": 23
+      }
+    },
+    {
+      "ts": 1775458157,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/arrays-in-java/",
+        "reason": "fetched",
+        "lines": 41
+      }
+    },
+    {
+      "ts": 1775458157,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/strings-in-java/",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775458158,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/regular-expressions-in-java/",
+        "reason": "fetched",
+        "lines": 24
+      }
+    },
+    {
+      "ts": 1775458158,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/classes-objects-java/",
+        "reason": "fetched",
+        "lines": 34
+      }
+    },
+    {
+      "ts": 1775458158,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/constructors-in-java/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775458159,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/",
+        "reason": "fetched",
+        "lines": 59
+      }
+    },
+    {
+      "ts": 1775458159,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/packages-in-java/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775458160,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/interfaces-in-java/",
+        "reason": "fetched",
+        "lines": 37
+      }
+    },
+    {
+      "ts": 1775458160,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-in-java-2/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775458160,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-class-in-java/",
+        "reason": "fetched",
+        "lines": 48
+      }
+    },
+    {
+      "ts": 1775458161,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collection-interface-in-java-with-examples/",
+        "reason": "fetched",
+        "lines": 44
+      }
+    },
+    {
+      "ts": 1775458161,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/iterators-in-java/",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775458162,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-comparator-interface/",
+        "reason": "fetched",
+        "lines": 28
+      }
+    },
+    {
+      "ts": 1775458162,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/exceptions-in-java/",
+        "reason": "fetched",
+        "lines": 35
+      }
+    },
+    {
+      "ts": 1775458162,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-try-catch-block/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775458308,
+      "event": "startup",
+      "details": {
+        "resourceProfile": "medium",
+        "strictIdentity": true,
+        "learnMode": "fast",
+        "knowledgeScore": 38.25
+      }
+    },
+    {
+      "ts": 1775458308,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/realnamehidden1_61/java-scenario-based-interview-questions-542m",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775458310,
+      "event": "url_pass",
+      "details": {
+        "url": "https://huntr.co/interview-questions/java",
+        "reason": "fetched",
+        "lines": 64
+      }
+    },
+    {
+      "ts": 1775458311,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/p/top-java-interview-questions-and-answers.html",
+        "reason": "fetched",
+        "lines": 80
+      }
+    },
+    {
+      "ts": 1775458312,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.techinterviewhandbook.org/behavioral-interview-questions/",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775458312,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/behavioral-interview-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 51
+      }
+    },
+    {
+      "ts": 1775458313,
+      "event": "url_pass",
+      "details": {
+        "url": "https://starmethod.org/java-developer/star-interview",
+        "reason": "fetched",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775458314,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.springjavalab.com/2025/04/top-25-java-interview-questions-for-freshers.html",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775458315,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interview-copilot.com/blog/java-interview-questions-and-answers",
+        "reason": "fetched",
+        "lines": 61
+      }
+    },
+    {
+      "ts": 1775458317,
+      "event": "url_pass",
+      "details": {
+        "url": "https://clouddevs.com/java-interview-questions-with-answers/",
+        "reason": "fetched",
+        "lines": 53
+      }
+    },
+    {
+      "ts": 1775458319,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewplus.ai/jd/java-developer-role-interview-questions/1255",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775458319,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/hannah_usmedynska/50-play-framework-interview-questions-and-answers-3p04",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775458320,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.acte.in/java-stream-interview-questions-and-answers",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775458320,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.mockquestions.com/position/Engineer/",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775458322,
+      "event": "url_pass",
+      "details": {
+        "url": "https://utho.com/blog/java-programming-interview-questions/",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775458325,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-did-others-say-about-the-java-interview-companion/",
+        "reason": "fetched",
+        "lines": 48
+      }
+    },
+    {
+      "ts": 1775458327,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/",
+        "reason": "fetched",
+        "lines": 50
+      }
+    },
+    {
+      "ts": 1775458329,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/java-success-com-blog/",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775458331,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-are-the-benefits-of-java-success-com/",
+        "reason": "fetched",
+        "lines": 42
+      }
+    },
+    {
+      "ts": 1775458334,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/90-days-members-free-downloads/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775458336,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/privacy-policy/",
+        "reason": "fetched",
+        "lines": 63
+      }
+    },
+    {
+      "ts": 1775458339,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775458341,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/resume/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775458343,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/sample-resumes/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775458345,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/beginner-or-intermediate/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775458348,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/zy-feeling-stagnated/",
+        "reason": "fetched",
+        "lines": 15
+      }
+    },
+    {
+      "ts": 1775458350,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/earn-more/",
+        "reason": "fetched",
+        "lines": 17
+      }
+    },
+    {
+      "ts": 1775458352,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/freelancing/",
+        "reason": "fetched",
+        "lines": 16
+      }
+    },
+    {
+      "ts": 1775458354,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/z-did-you-get-the-offer/",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775458357,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/certification/",
+        "reason": "fetched",
+        "lines": 11
+      }
+    },
+    {
+      "ts": 1775458359,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting/",
+        "reason": "fetched",
+        "lines": 25
+      }
+    },
+    {
+      "ts": 1775458362,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/soft-skills/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775458364,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/personal-branding/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775458366,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-interview-tips/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775458369,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/your-motivated/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775458371,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/philosophies/",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775458373,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/topics-to-whinge-whine/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775458375,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/members/",
+        "reason": "fetched",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775458378,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/membership-levels/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775458380,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/",
+        "reason": "fetched",
+        "lines": 34
+      }
+    },
+    {
+      "ts": 1775458382,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/",
+        "reason": "fetched",
+        "lines": 32
+      }
+    },
+    {
+      "ts": 1775458385,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/architect-how-to/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775458387,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/key-areas/0003-16-key-areas/03-yl-judgingexperience/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775458389,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/00-high-level-low-level-system-design-considerations-for-read-heavy-systems/",
+        "reason": "fetched",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775458390,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/wp-content/uploads/2014/08/Screen-Shot-2023-06-18-at-10.14.41-pm.png",
+        "reason": "fetched",
+        "lines": 0
+      }
+    },
+    {
+      "ts": 1775458392,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/simple-caching-java-application-step-by-step/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775458395,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/implement-an-in-memory-cache-in-java/",
+        "reason": "fetched",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775458397,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/key-areas/0003-16-key-areas/09-low-latency/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775458398,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewbit.com/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775458399,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775458400,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.javatpoint.com/corejava-interview-questions",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775458400,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775458402,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.edureka.co/blog/interview-questions/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 80
+      }
+    },
+    {
+      "ts": 1775458403,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-interview-questions-and-answers",
+        "reason": "http_404"
+      }
+    },
+    {
+      "ts": 1775458403,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.baeldung.com/java-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775458403,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775458404,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.guru99.com/java-interview-questions-answers.html",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775458405,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.tpointtech.com/corejava-interview-questions",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775458405,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.datacamp.com/blog/java-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775458406,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.w3schools.com/java/java_interview_questions.asp",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775458407,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codegnan.com/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 57
+      }
+    },
+    {
+      "ts": 1775458409,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codefinity.com/blog/The-80-Top-Java-Interview-Questions-and-Answers",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775458410,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewquestions.guru/core-java-interview-questions-answers/",
+        "reason": "fetched",
+        "lines": 71
+      }
+    },
+    {
+      "ts": 1775458413,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-programming-interview-questions",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775458414,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 70
+      }
+    },
+    {
+      "ts": 1775458415,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/java-interview-questions-article",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775458416,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/2026/02/top-50-java-interview-questions-and-answers.html",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775458417,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java/",
+        "reason": "fetched",
+        "lines": 29
+      }
+    },
+    {
+      "ts": 1775458417,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/advance-java/advanced-java/",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775458417,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-exercises/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775458418,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-examples/",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775458418,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-quiz/",
+        "reason": "fetched",
+        "lines": 6
+      }
+    },
+    {
+      "ts": 1775458419,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/java-projects/",
+        "reason": "fetched",
+        "lines": 49
+      }
+    },
+    {
+      "ts": 1775458420,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-cheat-sheet/",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775458420,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/dsa/dsa-in-java/",
+        "reason": "fetched",
+        "lines": 26
+      }
+    },
+    {
+      "ts": 1775458420,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-collection-tutorial/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775458421,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/introduction-to-java/",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775458421,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-basics/",
+        "reason": "fetched",
+        "lines": 50
+      }
+    },
+    {
+      "ts": 1775458422,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/methods-in-java/",
+        "reason": "fetched",
+        "lines": 44
+      }
+    },
+    {
+      "ts": 1775458422,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/access-modifiers-java/",
+        "reason": "fetched",
+        "lines": 23
+      }
+    },
+    {
+      "ts": 1775458423,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/arrays-in-java/",
+        "reason": "fetched",
+        "lines": 41
+      }
+    },
+    {
+      "ts": 1775458423,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/strings-in-java/",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775458424,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/regular-expressions-in-java/",
+        "reason": "fetched",
+        "lines": 24
+      }
+    },
+    {
+      "ts": 1775458424,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/classes-objects-java/",
+        "reason": "fetched",
+        "lines": 34
+      }
+    },
+    {
+      "ts": 1775458425,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/constructors-in-java/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775458425,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/",
+        "reason": "fetched",
+        "lines": 59
+      }
+    },
+    {
+      "ts": 1775458425,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/packages-in-java/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775458426,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/interfaces-in-java/",
+        "reason": "fetched",
+        "lines": 37
+      }
+    },
+    {
+      "ts": 1775458427,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-in-java-2/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775458427,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-class-in-java/",
+        "reason": "fetched",
+        "lines": 48
+      }
+    },
+    {
+      "ts": 1775458427,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collection-interface-in-java-with-examples/",
+        "reason": "fetched",
+        "lines": 44
+      }
+    },
+    {
+      "ts": 1775458428,
+      "event": "train_start",
+      "details": {
+        "runLabel": "auto-idle-fast",
+        "domains": [
+          "java",
+          "sales",
+          "business_development",
+          "voice_process",
+          "chat_process",
+          "flutter",
+          "react"
+        ],
+        "qTarget": 23,
+        "discoverLimit": 120,
+        "profile": "medium",
+        "mode": "fast",
+        "knowledgeScore": 38.17
+      }
+    },
+    {
+      "ts": 1775458428,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-comparator-interface/",
+        "reason": "fetched",
+        "lines": 28
+      }
+    },
+    {
+      "ts": 1775458429,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/exceptions-in-java/",
+        "reason": "fetched",
+        "lines": 35
+      }
+    },
+    {
+      "ts": 1775458429,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-try-catch-block/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775458932,
+      "event": "startup",
+      "details": {
+        "resourceProfile": "medium",
+        "strictIdentity": true,
+        "learnMode": "fast",
+        "knowledgeScore": 38.38
+      }
+    },
+    {
+      "ts": 1775458933,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/realnamehidden1_61/java-scenario-based-interview-questions-542m",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775458933,
+      "event": "url_pass",
+      "details": {
+        "url": "https://huntr.co/interview-questions/java",
+        "reason": "fetched",
+        "lines": 64
+      }
+    },
+    {
+      "ts": 1775458934,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/p/top-java-interview-questions-and-answers.html",
+        "reason": "fetched",
+        "lines": 80
+      }
+    },
+    {
+      "ts": 1775458935,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.techinterviewhandbook.org/behavioral-interview-questions/",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775458935,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/behavioral-interview-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 51
+      }
+    },
+    {
+      "ts": 1775458936,
+      "event": "url_pass",
+      "details": {
+        "url": "https://starmethod.org/java-developer/star-interview",
+        "reason": "fetched",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775458937,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.springjavalab.com/2025/04/top-25-java-interview-questions-for-freshers.html",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775458938,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interview-copilot.com/blog/java-interview-questions-and-answers",
+        "reason": "fetched",
+        "lines": 61
+      }
+    },
+    {
+      "ts": 1775458940,
+      "event": "url_pass",
+      "details": {
+        "url": "https://clouddevs.com/java-interview-questions-with-answers/",
+        "reason": "fetched",
+        "lines": 53
+      }
+    },
+    {
+      "ts": 1775458942,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewplus.ai/jd/java-developer-role-interview-questions/1255",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775458942,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/hannah_usmedynska/50-play-framework-interview-questions-and-answers-3p04",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775458943,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.acte.in/java-stream-interview-questions-and-answers",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775458943,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.mockquestions.com/position/Engineer/",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775458945,
+      "event": "url_pass",
+      "details": {
+        "url": "https://utho.com/blog/java-programming-interview-questions/",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775458947,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-did-others-say-about-the-java-interview-companion/",
+        "reason": "fetched",
+        "lines": 48
+      }
+    },
+    {
+      "ts": 1775458949,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/",
+        "reason": "fetched",
+        "lines": 50
+      }
+    },
+    {
+      "ts": 1775458952,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/java-success-com-blog/",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775458954,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-are-the-benefits-of-java-success-com/",
+        "reason": "fetched",
+        "lines": 42
+      }
+    },
+    {
+      "ts": 1775458956,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/90-days-members-free-downloads/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775458958,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/privacy-policy/",
+        "reason": "fetched",
+        "lines": 63
+      }
+    },
+    {
+      "ts": 1775458962,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775458964,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/resume/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775458966,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/sample-resumes/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775458969,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/beginner-or-intermediate/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775458971,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/zy-feeling-stagnated/",
+        "reason": "fetched",
+        "lines": 15
+      }
+    },
+    {
+      "ts": 1775458973,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/earn-more/",
+        "reason": "fetched",
+        "lines": 17
+      }
+    },
+    {
+      "ts": 1775458976,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/freelancing/",
+        "reason": "fetched",
+        "lines": 16
+      }
+    },
+    {
+      "ts": 1775458978,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/z-did-you-get-the-offer/",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775458980,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/certification/",
+        "reason": "fetched",
+        "lines": 11
+      }
+    },
+    {
+      "ts": 1775458983,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting/",
+        "reason": "fetched",
+        "lines": 25
+      }
+    },
+    {
+      "ts": 1775458985,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/soft-skills/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775458988,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/personal-branding/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775458990,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-interview-tips/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775458992,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/your-motivated/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775458995,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/philosophies/",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775458997,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/topics-to-whinge-whine/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775458999,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/members/",
+        "reason": "fetched",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775459001,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/membership-levels/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459004,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/",
+        "reason": "fetched",
+        "lines": 34
+      }
+    },
+    {
+      "ts": 1775459006,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/",
+        "reason": "fetched",
+        "lines": 32
+      }
+    },
+    {
+      "ts": 1775459009,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/architect-how-to/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775459012,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/key-areas/0003-16-key-areas/03-yl-judgingexperience/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775459014,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/00-high-level-low-level-system-design-considerations-for-read-heavy-systems/",
+        "reason": "fetched",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775459015,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/wp-content/uploads/2014/08/Screen-Shot-2023-06-18-at-10.14.41-pm.png",
+        "reason": "fetched",
+        "lines": 0
+      }
+    },
+    {
+      "ts": 1775459017,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/simple-caching-java-application-step-by-step/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775459019,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/implement-an-in-memory-cache-in-java/",
+        "reason": "fetched",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775459023,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/key-areas/0003-16-key-areas/09-low-latency/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775459024,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewbit.com/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775459024,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775459025,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.javatpoint.com/corejava-interview-questions",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775459026,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775459029,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.edureka.co/blog/interview-questions/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 80
+      }
+    },
+    {
+      "ts": 1775459030,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-interview-questions-and-answers",
+        "reason": "http_404"
+      }
+    },
+    {
+      "ts": 1775459031,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.baeldung.com/java-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775459031,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775459032,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.guru99.com/java-interview-questions-answers.html",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775459033,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.tpointtech.com/corejava-interview-questions",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775459033,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.datacamp.com/blog/java-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775459033,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.w3schools.com/java/java_interview_questions.asp",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775459035,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codegnan.com/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 57
+      }
+    },
+    {
+      "ts": 1775459036,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codefinity.com/blog/The-80-Top-Java-Interview-Questions-and-Answers",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775459038,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewquestions.guru/core-java-interview-questions-answers/",
+        "reason": "fetched",
+        "lines": 71
+      }
+    },
+    {
+      "ts": 1775459040,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-programming-interview-questions",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775459042,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 70
+      }
+    },
+    {
+      "ts": 1775459042,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/java-interview-questions-article",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775459043,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/2026/02/top-50-java-interview-questions-and-answers.html",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775459044,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java/",
+        "reason": "fetched",
+        "lines": 29
+      }
+    },
+    {
+      "ts": 1775459044,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/advance-java/advanced-java/",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775459044,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-exercises/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775459045,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-examples/",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775459045,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-quiz/",
+        "reason": "fetched",
+        "lines": 6
+      }
+    },
+    {
+      "ts": 1775459046,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/java-projects/",
+        "reason": "fetched",
+        "lines": 49
+      }
+    },
+    {
+      "ts": 1775459046,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-cheat-sheet/",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775459046,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/dsa/dsa-in-java/",
+        "reason": "fetched",
+        "lines": 26
+      }
+    },
+    {
+      "ts": 1775459047,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-collection-tutorial/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775459047,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/introduction-to-java/",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775459048,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-basics/",
+        "reason": "fetched",
+        "lines": 50
+      }
+    },
+    {
+      "ts": 1775459048,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/methods-in-java/",
+        "reason": "fetched",
+        "lines": 44
+      }
+    },
+    {
+      "ts": 1775459048,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/access-modifiers-java/",
+        "reason": "fetched",
+        "lines": 23
+      }
+    },
+    {
+      "ts": 1775459049,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/arrays-in-java/",
+        "reason": "fetched",
+        "lines": 41
+      }
+    },
+    {
+      "ts": 1775459049,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/strings-in-java/",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775459050,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/regular-expressions-in-java/",
+        "reason": "fetched",
+        "lines": 24
+      }
+    },
+    {
+      "ts": 1775459050,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/classes-objects-java/",
+        "reason": "fetched",
+        "lines": 34
+      }
+    },
+    {
+      "ts": 1775459050,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/constructors-in-java/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775459051,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/",
+        "reason": "fetched",
+        "lines": 59
+      }
+    },
+    {
+      "ts": 1775459051,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/packages-in-java/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775459052,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/interfaces-in-java/",
+        "reason": "fetched",
+        "lines": 37
+      }
+    },
+    {
+      "ts": 1775459052,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-in-java-2/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775459052,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-class-in-java/",
+        "reason": "fetched",
+        "lines": 48
+      }
+    },
+    {
+      "ts": 1775459053,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collection-interface-in-java-with-examples/",
+        "reason": "fetched",
+        "lines": 44
+      }
+    },
+    {
+      "ts": 1775459053,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/iterators-in-java/",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775459054,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-comparator-interface/",
+        "reason": "fetched",
+        "lines": 28
+      }
+    },
+    {
+      "ts": 1775459054,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/exceptions-in-java/",
+        "reason": "fetched",
+        "lines": 35
+      }
+    },
+    {
+      "ts": 1775459183,
+      "event": "startup",
+      "details": {
+        "resourceProfile": "medium",
+        "strictIdentity": true,
+        "learnMode": "fast",
+        "knowledgeScore": 38.3
+      }
+    },
+    {
+      "ts": 1775459183,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/realnamehidden1_61/java-scenario-based-interview-questions-542m",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775459184,
+      "event": "url_pass",
+      "details": {
+        "url": "https://huntr.co/interview-questions/java",
+        "reason": "fetched",
+        "lines": 64
+      }
+    },
+    {
+      "ts": 1775459185,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/p/top-java-interview-questions-and-answers.html",
+        "reason": "fetched",
+        "lines": 80
+      }
+    },
+    {
+      "ts": 1775459185,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.techinterviewhandbook.org/behavioral-interview-questions/",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775459186,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/behavioral-interview-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 51
+      }
+    },
+    {
+      "ts": 1775459187,
+      "event": "url_pass",
+      "details": {
+        "url": "https://starmethod.org/java-developer/star-interview",
+        "reason": "fetched",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775459187,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.springjavalab.com/2025/04/top-25-java-interview-questions-for-freshers.html",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775459188,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interview-copilot.com/blog/java-interview-questions-and-answers",
+        "reason": "fetched",
+        "lines": 61
+      }
+    },
+    {
+      "ts": 1775459190,
+      "event": "url_pass",
+      "details": {
+        "url": "https://clouddevs.com/java-interview-questions-with-answers/",
+        "reason": "fetched",
+        "lines": 53
+      }
+    },
+    {
+      "ts": 1775459191,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewplus.ai/jd/java-developer-role-interview-questions/1255",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775459192,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/hannah_usmedynska/50-play-framework-interview-questions-and-answers-3p04",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775459193,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.acte.in/java-stream-interview-questions-and-answers",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775459193,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.mockquestions.com/position/Engineer/",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775459195,
+      "event": "url_pass",
+      "details": {
+        "url": "https://utho.com/blog/java-programming-interview-questions/",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775459197,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-did-others-say-about-the-java-interview-companion/",
+        "reason": "fetched",
+        "lines": 48
+      }
+    },
+    {
+      "ts": 1775459199,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/",
+        "reason": "fetched",
+        "lines": 50
+      }
+    },
+    {
+      "ts": 1775459202,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/java-success-com-blog/",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775459204,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-are-the-benefits-of-java-success-com/",
+        "reason": "fetched",
+        "lines": 42
+      }
+    },
+    {
+      "ts": 1775459206,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/90-days-members-free-downloads/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775459208,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/privacy-policy/",
+        "reason": "fetched",
+        "lines": 63
+      }
+    },
+    {
+      "ts": 1775459210,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775459212,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/resume/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775459215,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/sample-resumes/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775459217,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/beginner-or-intermediate/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775459219,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/zy-feeling-stagnated/",
+        "reason": "fetched",
+        "lines": 15
+      }
+    },
+    {
+      "ts": 1775459221,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/earn-more/",
+        "reason": "fetched",
+        "lines": 17
+      }
+    },
+    {
+      "ts": 1775459223,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/freelancing/",
+        "reason": "fetched",
+        "lines": 16
+      }
+    },
+    {
+      "ts": 1775459225,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/z-did-you-get-the-offer/",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775459227,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/certification/",
+        "reason": "fetched",
+        "lines": 11
+      }
+    },
+    {
+      "ts": 1775459229,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting/",
+        "reason": "fetched",
+        "lines": 25
+      }
+    },
+    {
+      "ts": 1775459231,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/soft-skills/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459234,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/personal-branding/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775459236,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-interview-tips/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775459238,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/your-motivated/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459240,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/philosophies/",
+        "reason": "fetched",
+        "lines": 13
+      }
+    },
+    {
+      "ts": 1775459242,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/topics-to-whinge-whine/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775459244,
+      "event": "train_start",
+      "details": {
+        "runLabel": "auto-idle-fast",
+        "domains": [
+          "java",
+          "sales",
+          "business_development",
+          "voice_process",
+          "chat_process",
+          "flutter",
+          "react"
+        ],
+        "qTarget": 23,
+        "discoverLimit": 120,
+        "profile": "medium",
+        "mode": "fast",
+        "knowledgeScore": 38.33
+      }
+    },
+    {
+      "ts": 1775459244,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/members/",
+        "reason": "fetched",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775459247,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/membership-levels/",
+        "reason": "fetched",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459249,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/",
+        "reason": "fetched",
+        "lines": 34
+      }
+    },
+    {
+      "ts": 1775459251,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/",
+        "reason": "fetched",
+        "lines": 32
+      }
+    },
+    {
+      "ts": 1775459253,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/architect-how-to/",
+        "reason": "fetched",
+        "lines": 27
+      }
+    },
+    {
+      "ts": 1775459255,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/key-areas/0003-16-key-areas/03-yl-judgingexperience/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775459258,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/00-high-level-low-level-system-design-considerations-for-read-heavy-systems/",
+        "reason": "fetched",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775459258,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/wp-content/uploads/2014/08/Screen-Shot-2023-06-18-at-10.14.41-pm.png",
+        "reason": "fetched",
+        "lines": 0
+      }
+    },
+    {
+      "ts": 1775459261,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/simple-caching-java-application-step-by-step/",
+        "reason": "fetched",
+        "lines": 14
+      }
+    },
+    {
+      "ts": 1775459263,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/implement-an-in-memory-cache-in-java/",
+        "reason": "fetched",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775459266,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/key-areas/0003-16-key-areas/09-low-latency/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775459267,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewbit.com/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775459267,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775459268,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.javatpoint.com/corejava-interview-questions",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775459268,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775459270,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.edureka.co/blog/interview-questions/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 80
+      }
+    },
+    {
+      "ts": 1775459271,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-interview-questions-and-answers",
+        "reason": "http_404"
+      }
+    },
+    {
+      "ts": 1775459271,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.baeldung.com/java-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775459272,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775459272,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.guru99.com/java-interview-questions-answers.html",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775459273,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.tpointtech.com/corejava-interview-questions",
+        "reason": "fetched",
+        "lines": 78
+      }
+    },
+    {
+      "ts": 1775459273,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.datacamp.com/blog/java-interview-questions",
+        "reason": "http_403"
+      }
+    },
+    {
+      "ts": 1775459274,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.w3schools.com/java/java_interview_questions.asp",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775459275,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codegnan.com/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 57
+      }
+    },
+    {
+      "ts": 1775459277,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codefinity.com/blog/The-80-Top-Java-Interview-Questions-and-Answers",
+        "reason": "fetched",
+        "lines": 77
+      }
+    },
+    {
+      "ts": 1775459278,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewquestions.guru/core-java-interview-questions-answers/",
+        "reason": "fetched",
+        "lines": 71
+      }
+    },
+    {
+      "ts": 1775459280,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-programming-interview-questions",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775459282,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 70
+      }
+    },
+    {
+      "ts": 1775459282,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/java-interview-questions-article",
+        "reason": "fetched",
+        "lines": 79
+      }
+    },
+    {
+      "ts": 1775459283,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/2026/02/top-50-java-interview-questions-and-answers.html",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775459284,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java/",
+        "reason": "fetched",
+        "lines": 29
+      }
+    },
+    {
+      "ts": 1775459284,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/advance-java/advanced-java/",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775459284,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-exercises/",
+        "reason": "fetched",
+        "lines": 30
+      }
+    },
+    {
+      "ts": 1775459285,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-examples/",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775459285,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-quiz/",
+        "reason": "fetched",
+        "lines": 6
+      }
+    },
+    {
+      "ts": 1775459286,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/java-projects/",
+        "reason": "fetched",
+        "lines": 49
+      }
+    },
+    {
+      "ts": 1775459286,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-cheat-sheet/",
+        "reason": "fetched",
+        "lines": 75
+      }
+    },
+    {
+      "ts": 1775459287,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/dsa/dsa-in-java/",
+        "reason": "fetched",
+        "lines": 26
+      }
+    },
+    {
+      "ts": 1775459287,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-collection-tutorial/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775459287,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/introduction-to-java/",
+        "reason": "fetched",
+        "lines": 39
+      }
+    },
+    {
+      "ts": 1775459288,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-basics/",
+        "reason": "fetched",
+        "lines": 50
+      }
+    },
+    {
+      "ts": 1775459288,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/methods-in-java/",
+        "reason": "fetched",
+        "lines": 44
+      }
+    },
+    {
+      "ts": 1775459289,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/access-modifiers-java/",
+        "reason": "fetched",
+        "lines": 23
+      }
+    },
+    {
+      "ts": 1775459289,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/arrays-in-java/",
+        "reason": "fetched",
+        "lines": 41
+      }
+    },
+    {
+      "ts": 1775459289,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/strings-in-java/",
+        "reason": "fetched",
+        "lines": 46
+      }
+    },
+    {
+      "ts": 1775459290,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/regular-expressions-in-java/",
+        "reason": "fetched",
+        "lines": 24
+      }
+    },
+    {
+      "ts": 1775459290,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/classes-objects-java/",
+        "reason": "fetched",
+        "lines": 34
+      }
+    },
+    {
+      "ts": 1775459291,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/constructors-in-java/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775459291,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/",
+        "reason": "fetched",
+        "lines": 59
+      }
+    },
+    {
+      "ts": 1775459291,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/packages-in-java/",
+        "reason": "fetched",
+        "lines": 20
+      }
+    },
+    {
+      "ts": 1775459292,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/interfaces-in-java/",
+        "reason": "fetched",
+        "lines": 37
+      }
+    },
+    {
+      "ts": 1775459292,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-in-java-2/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775459293,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-class-in-java/",
+        "reason": "fetched",
+        "lines": 48
+      }
+    },
+    {
+      "ts": 1775459293,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collection-interface-in-java-with-examples/",
+        "reason": "fetched",
+        "lines": 44
+      }
+    },
+    {
+      "ts": 1775459293,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/iterators-in-java/",
+        "reason": "fetched",
+        "lines": 38
+      }
+    },
+    {
+      "ts": 1775459294,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-comparator-interface/",
+        "reason": "fetched",
+        "lines": 28
+      }
+    },
+    {
+      "ts": 1775459294,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/exceptions-in-java/",
+        "reason": "fetched",
+        "lines": 35
+      }
+    },
+    {
+      "ts": 1775459295,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-try-catch-block/",
+        "reason": "fetched",
+        "lines": 21
+      }
+    },
+    {
+      "ts": 1775459300,
+      "event": "online_train_source",
+      "details": {
+        "domain": "java",
+        "url": "https://github.com/in28minutes/JavaInterviewQuestionsAndAnswers",
+        "type": "github",
+        "lineCount": 120,
+        "questionCount": 60,
+        "sampleCount": 120
+      }
+    },
+    {
+      "ts": 1775459301,
+      "event": "online_train_source",
+      "details": {
+        "domain": "java",
+        "url": "https://github.com/Devinterview-io/java-interview-questions",
+        "type": "github",
+        "lineCount": 120,
+        "questionCount": 2,
+        "sampleCount": 82
+      }
+    },
+    {
+      "ts": 1775459305,
+      "event": "online_train_source",
+      "details": {
+        "domain": "java",
+        "url": "https://huggingface.co/datasets/mteb/stackoverflow-qa",
+        "type": "huggingface_dataset",
+        "lineCount": 120,
+        "questionCount": 0,
+        "sampleCount": 80
+      }
+    },
+    {
+      "ts": 1775459305,
+      "event": "online_train_done",
+      "details": {
+        "domain": "java",
+        "sourceCount": 3,
+        "sampleCount": 282,
+        "durationSeconds": 10.5
+      }
+    },
+    {
+      "ts": 1775459785,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.softwaretestingmaterial.com/java-interview-questions/",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775459786,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.softwaretestingmaterial.com/java-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459788,
+      "event": "url_pass",
+      "details": {
+        "url": "https://nareshjobs.com/java-real-time-scenario-based-interview-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 49
+      }
+    },
+    {
+      "ts": 1775459788,
+      "event": "url_pass",
+      "details": {
+        "url": "https://nareshjobs.com/java-real-time-scenario-based-interview-questions-and-answers/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459789,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.scribd.com/document/890189772/Top-20-Scenario-Based-Java-Interview-Questions",
+        "reason": "fetched",
+        "lines": 2
+      }
+    },
+    {
+      "ts": 1775459789,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.scribd.com/document/890189772/Top-20-Scenario-Based-Java-Interview-Questions",
+        "domain": "java",
+        "lines": 2
+      }
+    },
+    {
+      "ts": 1775459790,
+      "event": "url_pass",
+      "details": {
+        "url": "https://roadmap.sh/questions/java",
+        "reason": "fetched",
+        "lines": 58
+      }
+    },
+    {
+      "ts": 1775459790,
+      "event": "url_pass",
+      "details": {
+        "url": "https://roadmap.sh/questions/java",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459791,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.codesubmit.io/interview/java",
+        "reason": "fetched",
+        "lines": 32
+      }
+    },
+    {
+      "ts": 1775459791,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.codesubmit.io/interview/java",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459792,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.wscubetech.com/blog/java-interview-questions-answers/",
+        "reason": "fetched",
+        "lines": 76
+      }
+    },
+    {
+      "ts": 1775459793,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.wscubetech.com/blog/java-interview-questions-answers/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459796,
+      "event": "url_fail",
+      "details": {
+        "url": "https://javacompiler.in/interview/java-interview-questions-freshers",
+        "reason": "fetch_exception"
+      }
+    },
+    {
+      "ts": 1775459796,
+      "event": "url_fail",
+      "details": {
+        "url": "https://javacompiler.in/interview/java-interview-questions-freshers",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775459797,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.upgrad.com/blog/java-interview-questions-answers/",
+        "reason": "fetched",
+        "lines": 73
+      }
+    },
+    {
+      "ts": 1775459797,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.upgrad.com/blog/java-interview-questions-answers/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459798,
+      "event": "url_pass",
+      "details": {
+        "url": "https://internshala.com/blog/java-coding-interview-questions/",
+        "reason": "fetched",
+        "lines": 71
+      }
+    },
+    {
+      "ts": 1775459798,
+      "event": "url_pass",
+      "details": {
+        "url": "https://internshala.com/blog/java-coding-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459800,
+      "event": "url_pass",
+      "details": {
+        "url": "https://climbtheladder.com/java-production-support-interview-questions/",
+        "reason": "fetched",
+        "lines": 16
+      }
+    },
+    {
+      "ts": 1775459801,
+      "event": "url_pass",
+      "details": {
+        "url": "https://climbtheladder.com/java-production-support-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459801,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.emb.global/senior-java-developer-interview-questions/",
+        "reason": "fetched",
+        "lines": 72
+      }
+    },
+    {
+      "ts": 1775459802,
+      "event": "url_pass",
+      "details": {
+        "url": "https://blog.emb.global/senior-java-developer-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459803,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resources.workable.com/tutorial/73-real-life-interview-questions-for-development-and-coding-roles",
+        "reason": "fetched",
+        "lines": 53
+      }
+    },
+    {
+      "ts": 1775459803,
+      "event": "url_pass",
+      "details": {
+        "url": "https://resources.workable.com/tutorial/73-real-life-interview-questions-for-development-and-coding-roles",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459803,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-8-interview-questions-and-answers/",
+        "reason": "fetched",
+        "lines": 74
+      }
+    },
+    {
+      "ts": 1775459804,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-8-interview-questions-and-answers/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459806,
+      "event": "url_pass",
+      "details": {
+        "url": "https://javatechonline.com/java-stream-api-interview-questions/",
+        "reason": "fetched",
+        "lines": 71
+      }
+    },
+    {
+      "ts": 1775459806,
+      "event": "url_pass",
+      "details": {
+        "url": "https://javatechonline.com/java-stream-api-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459806,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/realnamehidden1_61/java-scenario-based-interview-questions-542m",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459807,
+      "event": "url_pass",
+      "details": {
+        "url": "https://huntr.co/interview-questions/java",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459807,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/p/top-java-interview-questions-and-answers.html",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459807,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.techinterviewhandbook.org/behavioral-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459807,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/behavioral-interview-questions-and-answers/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459807,
+      "event": "url_pass",
+      "details": {
+        "url": "https://starmethod.org/java-developer/star-interview",
+        "domain": "java",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775459807,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.springjavalab.com/2025/04/top-25-java-interview-questions-for-freshers.html",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459808,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interview-copilot.com/blog/java-interview-questions-and-answers",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459808,
+      "event": "url_pass",
+      "details": {
+        "url": "https://clouddevs.com/java-interview-questions-with-answers/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459808,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewplus.ai/jd/java-developer-role-interview-questions/1255",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459808,
+      "event": "url_pass",
+      "details": {
+        "url": "https://dev.to/hannah_usmedynska/50-play-framework-interview-questions-and-answers-3p04",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459808,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.acte.in/java-stream-interview-questions-and-answers",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459808,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.mockquestions.com/position/Engineer/",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775459809,
+      "event": "url_pass",
+      "details": {
+        "url": "https://utho.com/blog/java-programming-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459809,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-did-others-say-about-the-java-interview-companion/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459809,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459809,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/java-success-com-blog/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459809,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/what-are-the-benefits-of-java-success-com/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459810,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/90-days-members-free-downloads/",
+        "domain": "java",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775459810,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/privacy-policy/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459810,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459810,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/resume/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459810,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting-tips/sample-resumes/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459810,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/beginner-or-intermediate/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459811,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/zy-feeling-stagnated/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459811,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/earn-more/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459811,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/freelancing/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459811,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/z-did-you-get-the-offer/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459811,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/certification/",
+        "domain": "java",
+        "lines": 11
+      }
+    },
+    {
+      "ts": 1775459811,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-hunting/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459812,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/soft-skills/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459812,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/personal-branding/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459812,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/job-interview-tips/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459812,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/your-motivated/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459812,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/philosophies/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459812,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/yourcareer-success-com/zzz-non-technical/topics-to-whinge-whine/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459812,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/members/",
+        "domain": "java",
+        "lines": 7
+      }
+    },
+    {
+      "ts": 1775459813,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/membership-levels/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459813,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459813,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459813,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/menu-java-data/0008-architecture-interview-qa/architect-how-to/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459813,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/key-areas/0003-16-key-areas/03-yl-judgingexperience/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459813,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/00-high-level-low-level-system-design-considerations-for-read-heavy-systems/",
+        "domain": "java",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775459814,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/wp-content/uploads/2014/08/Screen-Shot-2023-06-18-at-10.14.41-pm.png",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775459814,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/simple-caching-java-application-step-by-step/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459814,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/implement-an-in-memory-cache-in-java/",
+        "domain": "java",
+        "lines": 9
+      }
+    },
+    {
+      "ts": 1775459814,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.java-success.com/wp-content/uploads/2014/08/Screen-Shot-2023-06-18-at-11.40.44-pm.png",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775459814,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.java-success.com/category/java-big-data-interview-qas/key-areas/0003-16-key-areas/09-low-latency/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459814,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.interviewbit.com/java-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459815,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java-interview-questions/",
+        "domain": "java",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775459815,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.javatpoint.com/corejava-interview-questions",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775459815,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/tutorials/java-tutorial/java-interview-questions",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459815,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.turing.com/interview-questions/java",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775459815,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.edureka.co/blog/interview-questions/java-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459815,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-interview-questions-and-answers",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775459816,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.baeldung.com/java-interview-questions",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775459816,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-interview-questions/",
+        "domain": "java",
+        "lines": 8
+      }
+    },
+    {
+      "ts": 1775459816,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.guru99.com/java-interview-questions-answers.html",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459816,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.tpointtech.com/corejava-interview-questions",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459816,
+      "event": "url_fail",
+      "details": {
+        "url": "https://www.datacamp.com/blog/java-interview-questions",
+        "domain": "java",
+        "reason": "fetch_empty"
+      }
+    },
+    {
+      "ts": 1775459817,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.w3schools.com/java/java_interview_questions.asp",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459817,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codegnan.com/java-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459817,
+      "event": "url_pass",
+      "details": {
+        "url": "https://codefinity.com/blog/The-80-Top-Java-Interview-Questions-and-Answers",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459817,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewquestions.guru/core-java-interview-questions-answers/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459817,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.digitalocean.com/community/tutorials/java-programming-interview-questions",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459817,
+      "event": "url_pass",
+      "details": {
+        "url": "https://interviewprep.org/java-interview-questions/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459818,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.simplilearn.com/java-interview-questions-article",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459818,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.javaguides.net/2026/02/top-50-java-interview-questions-and-answers.html",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459818,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459818,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/advance-java/advanced-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459818,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-exercises/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459818,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-examples/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459819,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-quiz/",
+        "domain": "java",
+        "lines": 6
+      }
+    },
+    {
+      "ts": 1775459819,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/blogs/java-projects/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459819,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-cheat-sheet/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459819,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/dsa/dsa-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459819,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-collection-tutorial/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459819,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/introduction-to-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459819,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-programming-basics/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459820,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/methods-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459820,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/access-modifiers-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459820,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/arrays-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459820,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/strings-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459820,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/regular-expressions-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459820,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/classes-objects-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459821,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/constructors-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459821,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459821,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/packages-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459821,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/interfaces-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459821,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-in-java-2/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459822,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collections-class-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459822,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/collection-interface-in-java-with-examples/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459822,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/iterators-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459822,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-comparator-interface/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459822,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/exceptions-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459822,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-try-catch-block/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459823,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-final-finally-and-finalize/",
+        "reason": "fetched",
+        "lines": 24
+      }
+    },
+    {
+      "ts": 1775459823,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/java-final-finally-and-finalize/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775459823,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/chained-exceptions-in-java/",
+        "reason": "fetched",
+        "lines": 28
+      }
+    },
+    {
+      "ts": 1775459824,
+      "event": "url_pass",
+      "details": {
+        "url": "https://www.geeksforgeeks.org/java/chained-exceptions-in-java/",
+        "domain": "java",
+        "lines": 12
+      }
+    },
+    {
+      "ts": 1775460289,
+      "event": "startup",
+      "details": {
+        "resourceProfile": "medium",
+        "strictIdentity": true,
+        "learnMode": "fast",
+        "knowledgeScore": 37.89
+      }
+    },
+    {
+      "ts": 1775460290,
+      "event": "online_train_fail",
+      "details": {
+        "domain": "java",
+        "url": "https://huggingface.co/datasets/mteb/stackoverflow-qa",
+        "reason": "no_dataset_rows"
+      }
+    },
+    {
+      "ts": 1775463569,
+      "event": "online_train_source",
+      "details": {
+        "domain": "java",
+        "url": "https://huggingface.co/datasets/mteb/stackoverflow-qa",
+        "type": "huggingface_dataset",
+        "lineCount": 20,
+        "questionCount": 80,
+        "sampleCount": 20
+      }
+    },
+    {
+      "ts": 1775463569,
+      "event": "online_train_done",
+      "details": {
+        "domain": "java",
+        "sourceCount": 1,
+        "sampleCount": 25,
+        "durationSeconds": 19.0
+      }
+    },
+    {
+      "ts": 1775463695,
+      "event": "online_train_source",
+      "details": {
+        "domain": "java",
+        "url": "https://huggingface.co/datasets/mteb/stackoverflow-qa",
+        "type": "huggingface_dataset",
+        "lineCount": 15,
+        "questionCount": 80,
+        "sampleCount": 15
+      }
+    },
+    {
+      "ts": 1775463695,
+      "event": "online_train_done",
+      "details": {
+        "domain": "java",
+        "sourceCount": 1,
+        "sampleCount": 80,
+        "durationSeconds": 17.49
+      }
+    },
+    {
+      "ts": 1775463733,
+      "event": "online_train_source",
+      "details": {
+        "domain": "java",
+        "url": "https://huggingface.co/datasets/mteb/stackoverflow-qa",
+        "type": "huggingface_dataset",
+        "lineCount": 14,
+        "questionCount": 80,
+        "sampleCount": 14
+      }
+    },
+    {
+      "ts": 1775463733,
+      "event": "online_train_done",
+      "details": {
+        "domain": "java",
+        "sourceCount": 1,
+        "sampleCount": 80,
+        "durationSeconds": 17.08
+      }
+    },
+    {
+      "ts": 1775463787,
+      "event": "online_train_source",
+      "details": {
+        "domain": "java",
+        "url": "https://huggingface.co/datasets/mteb/stackoverflow-qa",
+        "type": "huggingface_dataset",
+        "lineCount": 14,
+        "questionCount": 80,
+        "sampleCount": 14
+      }
+    },
+    {
+      "ts": 1775463787,
+      "event": "online_train_done",
+      "details": {
+        "domain": "java",
+        "sourceCount": 1,
+        "sampleCount": 80,
+        "durationSeconds": 17.03
+      }
+    },
+    {
+      "ts": 1775464092,
+      "event": "startup",
+      "details": {
+        "resourceProfile": "medium",
+        "strictIdentity": true,
+        "learnMode": "fast",
+        "knowledgeScore": 30.51
+      }
+    },
+    {
+      "ts": 1775465303,
+      "event": "online_train_source",
+      "details": {
+        "domain": "https",
+        "url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+        "type": "huggingface_dataset",
+        "lineCount": 120,
+        "questionCount": 385,
+        "sampleCount": 289
+      }
+    },
+    {
+      "ts": 1775465303,
+      "event": "online_train_done",
+      "details": {
+        "domain": "https",
+        "sourceCount": 1,
+        "sampleCount": 385,
+        "durationSeconds": 3.3
+      }
+    },
+    {
+      "ts": 1775465389,
+      "event": "online_train_source",
+      "details": {
+        "domain": "software_engineering",
+        "url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+        "type": "huggingface_dataset",
+        "lineCount": 120,
+        "questionCount": 360,
+        "sampleCount": 267
+      }
+    },
+    {
+      "ts": 1775465390,
+      "event": "online_train_done",
+      "details": {
+        "domain": "software_engineering",
+        "sourceCount": 1,
+        "sampleCount": 360,
+        "durationSeconds": 3.37
+      }
+    },
+    {
+      "ts": 1775465466,
+      "event": "online_train_source",
+      "details": {
+        "domain": "java",
+        "url": "https://huggingface.co/datasets/mteb/stackoverflow-qa",
+        "type": "huggingface_dataset",
+        "lineCount": 14,
+        "questionCount": 90,
+        "sampleCount": 14
+      }
+    },
+    {
+      "ts": 1775465466,
+      "event": "online_train_done",
+      "details": {
+        "domain": "java",
+        "sourceCount": 1,
+        "sampleCount": 90,
+        "durationSeconds": 21.19
+      }
+    },
+    {
+      "ts": 1775465468,
+      "event": "online_train_source",
+      "details": {
+        "domain": "software_engineering",
+        "url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+        "type": "huggingface_dataset",
+        "lineCount": 80,
+        "questionCount": 0,
+        "sampleCount": 80
+      }
+    },
+    {
+      "ts": 1775465575,
+      "event": "online_train_source",
+      "details": {
+        "domain": "software_engineering",
+        "url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+        "type": "huggingface_dataset",
+        "lineCount": 120,
+        "questionCount": 360,
+        "sampleCount": 267
+      }
+    },
+    {
+      "ts": 1775465575,
+      "event": "online_train_done",
+      "details": {
+        "domain": "software_engineering",
+        "sourceCount": 1,
+        "sampleCount": 360,
+        "durationSeconds": 15.31
+      }
+    },
+    {
+      "ts": 1775465591,
+      "event": "online_train_source",
+      "details": {
+        "domain": "java",
+        "url": "https://huggingface.co/datasets/mteb/stackoverflow-qa",
+        "type": "huggingface_dataset",
+        "lineCount": 14,
+        "questionCount": 80,
+        "sampleCount": 14
+      }
+    },
+    {
+      "ts": 1775465591,
+      "event": "online_train_done",
+      "details": {
+        "domain": "java",
+        "sourceCount": 1,
+        "sampleCount": 80,
+        "durationSeconds": 16.02
+      }
+    },
+    {
+      "ts": 1775465874,
+      "event": "startup",
+      "details": {
+        "resourceProfile": "medium",
+        "strictIdentity": true,
+        "learnMode": "fast",
+        "knowledgeScore": 30.51
+      }
     }
   ]
 }

@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import asyncio
 import base64
+import copy
 import hashlib
 import importlib
 import json
@@ -24,8 +25,16 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Set
 from urllib.parse import parse_qs, quote_plus, unquote, urlparse
 
+LOCAL_PY_DEPS = Path(__file__).with_name("_pydeps")
+LOCAL_PY_DEPS.mkdir(parents=True, exist_ok=True)
+if str(LOCAL_PY_DEPS) not in sys.path:
+    sys.path.insert(0, str(LOCAL_PY_DEPS))
+
 from fastapi import FastAPI, HTTPException, Request, WebSocket
 from pydantic import BaseModel
+
+from app.api.ml_routes import register_ml_routes
+from app.schemas.ml import ModelSourceStatusRequest, OnlineTrainingSetRequest, SmallModelTrainRequest
 
 # ── optional deps ──────────────────────────────────────────────────────────────
 try:
@@ -44,14 +53,25 @@ except Exception:
     np = None
 
 try:
-    from sklearn.feature_extraction.text import HashingVectorizer, TfidfVectorizer
-    from sklearn.linear_model import SGDRegressor
-    from sklearn.metrics.pairwise import cosine_similarity
+    import polars as pl
 except Exception:
+    pl = None
+
+if os.getenv("DATASET_ONLY_MODE", "true").strip().lower() in {"1", "true", "yes", "on"}:
     HashingVectorizer = None
     SGDRegressor = None
     TfidfVectorizer = None
     cosine_similarity = None
+else:
+    try:
+        from sklearn.feature_extraction.text import HashingVectorizer, TfidfVectorizer
+        from sklearn.linear_model import SGDRegressor
+        from sklearn.metrics.pairwise import cosine_similarity
+    except Exception:
+        HashingVectorizer = None
+        SGDRegressor = None
+        TfidfVectorizer = None
+        cosine_similarity = None
 
 # ── env / config ───────────────────────────────────────────────────────────────
 def _env_bool(key: str, default: str = "true") -> bool:
@@ -81,6 +101,21 @@ def _env_port(default: int = 9000) -> int:
     except Exception:
         return default
 
+def _default_worker_path(filename: str) -> Path:
+    base = Path(__file__).resolve().parent
+    data_dir = base / "data"
+    data_dir.mkdir(parents=True, exist_ok=True)
+    return data_dir / filename
+
+def _state_file_path(env_key: str, filename: str) -> Path:
+    env_path = str(os.getenv(env_key, "")).strip()
+    if env_path:
+        return Path(env_path)
+    legacy = Path(__file__).with_name(filename)
+    if legacy.exists():
+        return legacy
+    return _default_worker_path(filename)
+
 MODEL_NAME              = os.getenv("LLM_MODEL_NAME", "external-api")
 ENABLE_LLM              = _env_bool("ENABLE_LLM", "false")
 LLM_API_URL             = os.getenv("LLM_API_URL", "").strip()
@@ -94,13 +129,13 @@ LLM_USE_FOR_EVALUATION  = _env_bool("LLM_USE_FOR_EVALUATION", "false")
 WORKER_HOST             = os.getenv("WORKER_HOST", "127.0.0.1")
 WORKER_PORT             = _env_port(9000)
 
-RAG_FETCH_ONLINE        = _env_bool("RAG_FETCH_ONLINE", "true")
-RAG_SOURCES_FILE        = Path(os.getenv("RAG_SOURCES_FILE", Path(__file__).with_name("rag_sources.json")))
+RAG_FETCH_ONLINE        = _env_bool("RAG_FETCH_ONLINE", "false")
+RAG_SOURCES_FILE        = _state_file_path("RAG_SOURCES_FILE", "rag_sources.json")
 RAG_FETCH_TIMEOUT       = _env_int("RAG_FETCH_TIMEOUT_SECONDS", 3, 1)
 RAG_MAX_URLS            = _env_int("RAG_MAX_URLS", 12, 1)
-RAG_PREFETCH_ON_STARTUP = _env_bool("RAG_PREFETCH_ON_STARTUP", "true")
-AUTO_TRAIN_ENABLED      = _env_bool("AUTO_TRAIN_ENABLED", "true")
-LEARNING_ALWAYS_ENABLED = _env_bool("LEARNING_ALWAYS_ENABLED", "true")
+RAG_PREFETCH_ON_STARTUP = _env_bool("RAG_PREFETCH_ON_STARTUP", "false")
+AUTO_TRAIN_ENABLED      = _env_bool("AUTO_TRAIN_ENABLED", "false")
+LEARNING_ALWAYS_ENABLED = _env_bool("LEARNING_ALWAYS_ENABLED", "false")
 AUTO_TRAIN_IDLE_SECONDS = _env_int("AUTO_TRAIN_IDLE_SECONDS", 60, 30)
 AUTO_TRAIN_MIN_GAP_SEC  = _env_int("AUTO_TRAIN_MIN_GAP_SECONDS", 900, 60)
 AUTO_DISCOVER_PER_DOMAIN = _env_int("AUTO_DISCOVER_PER_DOMAIN", 120, 2)
@@ -110,7 +145,7 @@ AUTO_TRAIN_DOMAIN_LIST  = [d.strip().lower() for d in os.getenv(
 ).split(",") if d.strip()]
 TRAIN_FETCH_URL_LIMIT   = _env_int("TRAIN_FETCH_URL_LIMIT", 80, 10)
 DISCOVERY_COOLDOWN_SECONDS = _env_int("DISCOVERY_COOLDOWN_SECONDS", 30, 0)
-ON_DEMAND_DISCOVERY_ENABLED = _env_bool("ON_DEMAND_DISCOVERY_ENABLED", "true")
+ON_DEMAND_DISCOVERY_ENABLED = _env_bool("ON_DEMAND_DISCOVERY_ENABLED", "false")
 INTERVIEW_SESSION_TTL_SECONDS = _env_int("INTERVIEW_SESSION_TTL_SECONDS", 28800, 600)
 SEARCH_ENGINES            = [x.strip().lower() for x in os.getenv("SEARCH_ENGINES", "duckduckgo,bing,brave").split(",") if x.strip()]
 SEARCH_BLOCK_STATUS_CODES = {403, 429}
@@ -118,8 +153,8 @@ VECTOR_CACHE_ENABLED      = _env_bool("VECTOR_CACHE_ENABLED", "true")
 VECTOR_CACHE_DIM          = _env_int("VECTOR_CACHE_DIM", 256, 64)
 VECTOR_TOP_K              = _env_int("VECTOR_TOP_K", 24, 4)
 URL_TEXT_MEMORY_CAP       = _env_int("URL_TEXT_MEMORY_CAP", 12, 4)
-VECTOR_CACHE_DIR          = Path(os.getenv("VECTOR_CACHE_DIR", str(Path(__file__).with_name("vector_cache"))))
-VECTOR_CACHE_FILE         = Path(os.getenv("VECTOR_CACHE_FILE", str(Path(__file__).with_name("vector_cache.json"))))
+VECTOR_CACHE_DIR          = Path(os.getenv("VECTOR_CACHE_DIR", str(_default_worker_path("vector_cache").with_suffix(""))))
+VECTOR_CACHE_FILE         = _state_file_path("VECTOR_CACHE_FILE", "vector_cache.json")
 VECTOR_CACHE_MAX_BYTES    = _env_int("VECTOR_CACHE_MAX_BYTES", 25 * 1024 * 1024, 1_048_576)
 RL_ENABLED                = _env_bool("RL_ENABLED", "true")
 SMALL_MODEL_ENABLED       = _env_bool("SMALL_MODEL_ENABLED", "true")
@@ -127,6 +162,7 @@ SMALL_MODEL_AUTO_TRAIN_ENABLED = _env_bool("SMALL_MODEL_AUTO_TRAIN_ENABLED", "tr
 SMALL_MODEL_AUTO_TRAIN_WINDOW_DAYS = _env_int("SMALL_MODEL_AUTO_TRAIN_WINDOW_DAYS", 365, 7)
 SMALL_MODEL_AUTO_TRAIN_MIN_SAMPLES = _env_int("SMALL_MODEL_AUTO_TRAIN_MIN_SAMPLES", 80, 20)
 SMALL_MODEL_AUTO_TRAIN_GAP_SECONDS = _env_int("SMALL_MODEL_AUTO_TRAIN_GAP_SECONDS", 21600, 900)
+DATASET_ONLY_MODE         = _env_bool("DATASET_ONLY_MODE", "true")
 STRICT_CANDIDATE_IDENTITY = _env_bool("STRICT_CANDIDATE_IDENTITY", "true")
 RL_RAW_EVENT_RETENTION_DAYS = _env_int("RL_RAW_EVENT_RETENTION_DAYS", 90, 7)
 LEARNING_LOG_MAX_ITEMS    = _env_int("LEARNING_LOG_MAX_ITEMS", 5000, 100)
@@ -156,21 +192,32 @@ ENABLE_TTS              = False
 STT_MODEL_ID            = "disabled-browser-only"
 STT_PRIORITY_MODE       = "browser_only"
 CORE_JAVA_REFERENCE_URL  = "https://www.interviewbit.com/java-interview-questions/"
-TRAINING_STORE_FILE      = Path(os.getenv("TRAINING_STORE_FILE", Path(__file__).with_name("training_store.json")))
-CANDIDATE_STATE_FILE     = Path(os.getenv("CANDIDATE_STATE_FILE", Path(__file__).with_name("candidate_question_state.json")))
-REINFORCEMENT_STATE_FILE = Path(os.getenv("REINFORCEMENT_STATE_FILE", Path(__file__).with_name("reinforcement_state.json")))
-SMALL_MODEL_FILE         = Path(os.getenv("SMALL_MODEL_FILE", Path(__file__).with_name("small_question_model.pkl")))
-SEMANTIC_SCORER_FILE     = Path(os.getenv("SEMANTIC_SCORER_FILE", Path(__file__).with_name("semantic_scorer.pkl")))
-SOURCE_QUALITY_FILE      = Path(os.getenv("SOURCE_QUALITY_FILE", Path(__file__).with_name("source_quality.json")))
-LEARNING_LOG_FILE        = Path(os.getenv("LEARNING_LOG_FILE", Path(__file__).with_name("learning_log.json")))
-LEARNING_POLICY_FILE     = Path(os.getenv("LEARNING_POLICY_FILE", Path(__file__).with_name("learning_policy.json")))
+TRAINING_STORE_FILE      = _state_file_path("TRAINING_STORE_FILE", "training_store.json")
+CANDIDATE_STATE_FILE     = _state_file_path("CANDIDATE_STATE_FILE", "candidate_question_state.json")
+REINFORCEMENT_STATE_FILE = _state_file_path("REINFORCEMENT_STATE_FILE", "reinforcement_state.json")
+SMALL_MODEL_FILE         = _state_file_path("SMALL_MODEL_FILE", "small_question_model.pkl")
+SEMANTIC_SCORER_FILE     = _state_file_path("SEMANTIC_SCORER_FILE", "semantic_scorer.pkl")
+SOURCE_QUALITY_FILE      = _state_file_path("SOURCE_QUALITY_FILE", "source_quality.json")
+LEARNING_LOG_FILE        = _state_file_path("LEARNING_LOG_FILE", "learning_log.json")
+LEARNING_POLICY_FILE     = _state_file_path("LEARNING_POLICY_FILE", "learning_policy.json")
+DEFAULT_ONLINE_TRAINING_SOURCES: List[str] = [
+    "https://huggingface.co/datasets/mteb/stackoverflow-qa",
+]
+STACKOVERFLOW_QA_CACHE_DIR = Path(
+    os.getenv(
+        "STACKOVERFLOW_QA_CACHE_DIR",
+        str(Path(__file__).resolve().parent / "data" / "dataset_cache" / "mteb_stackoverflow_qa"),
+    )
+)
+STACKOVERFLOW_QA_REMOTE_FILES: Dict[str, str] = {
+    "default": "https://huggingface.co/datasets/mteb/stackoverflow-qa/resolve/main/data/train-00000-of-00001.parquet?download=true",
+    "queries": "https://huggingface.co/datasets/mteb/stackoverflow-qa/resolve/main/queries/queries-00000-of-00001.parquet?download=true",
+    "corpus": "https://huggingface.co/datasets/mteb/stackoverflow-qa/resolve/main/corpus/corpus-00000-of-00001.parquet?download=true",
+}
 
-LOCAL_PY_DEPS = Path(__file__).with_name("_pydeps")
-LOCAL_PY_DEPS.mkdir(parents=True, exist_ok=True)
 VECTOR_CACHE_DIR.mkdir(parents=True, exist_ok=True)
 VECTOR_CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
-if str(LOCAL_PY_DEPS) not in sys.path:
-    sys.path.insert(0, str(LOCAL_PY_DEPS))
+STACKOVERFLOW_QA_CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 # ── logging ────────────────────────────────────────────────────────────────────
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -217,6 +264,7 @@ ACTIVE_INTERVIEW_SESSIONS: Dict[str, int] = {}
 SIMPLE_INTERVIEW_SESSIONS: Dict[str, Dict[str, Any]] = {}
 LAST_DISCOVERY_TS: Dict[str, float] = {}
 SEARCH_PROVIDER_STATS: Dict[str, Dict[str, int]] = {}
+STACKOVERFLOW_QA_TABLE_CACHE: Dict[str, List[Dict[str, Any]]] = {}
 QA_REFRESH_STATE: Dict[str, Dict[str, Any]] = {}
 WORKER_STARTUP_STATUS: Dict[str, Any] = {
     "llmReady": False,
@@ -323,11 +371,6 @@ class BestAnswerRequest(BaseModel):
     contextUrls: List[str] = []
     candidateAnswer: str = ""
     maxWords: int = 140
-
-
-class SmallModelTrainRequest(BaseModel):
-    windowDays: int = 365
-    minSamples: int = 80
 
 
 class StartInterveiwRequest(BaseModel):
@@ -852,6 +895,8 @@ def _normalize_question(line: str) -> str:
         starters = ("what","why","how","when","where","which","who","explain","describe","difference")
         if text.lower().startswith(starters): text += "?"
         else: return ""
+    if text and text[0].islower():
+        text = text[0].upper() + text[1:]
     return text
 
 def _is_valid_answer_text(answer: str) -> bool:
@@ -1881,6 +1926,1134 @@ def _rl_update_question(role_key: str, question: str, score: int, correct: bool)
     REINFORCEMENT_STATE_MAP["roles"] = roles
     _save_reinforcement_state(REINFORCEMENT_STATE_MAP)
 
+def _normalize_source_url(url: str) -> str:
+    try:
+        parsed = urlparse(str(url or "").strip())
+        scheme = (parsed.scheme or "https").lower()
+        host = (parsed.netloc or "").lower()
+        path = re.sub(r"/+", "/", parsed.path or "/").rstrip("/")
+        return f"{scheme}://{host}{path}"
+    except Exception:
+        return str(url or "").strip()
+
+def _guess_online_source_type(url: str) -> str:
+    norm = _normalize_source_url(url)
+    if "github.com" in norm:
+        return "github"
+    if "huggingface.co/datasets/" in norm:
+        return "huggingface_dataset"
+    return "web"
+
+def _domain_training_keywords(domain: str) -> List[str]:
+    key = _normalize(domain)
+    if key == "java":
+        return [
+            "java", "jvm", "jdk", "jre", "spring", "spring boot", "hibernate",
+            "maven", "gradle", "servlet", "jdbc", "collections", "multithreading",
+            "streams", "lambda", "garbage collection", "exception handling",
+        ]
+    parts = [p for p in re.split(r"[_\s\-]+", key) if p]
+    return parts or [key]
+
+def _matches_domain_keywords(text: str, keywords: List[str]) -> bool:
+    hay = str(text or "").lower()
+    for raw_kw in keywords:
+        kw = str(raw_kw or "").strip().lower()
+        if not kw:
+            continue
+        if " " in kw:
+            if kw in hay:
+                return True
+            continue
+        if re.search(rf"(?<![a-z0-9]){re.escape(kw)}(?![a-z0-9])", hay):
+            return True
+    return False
+
+def _domain_match_score(question: str, answer: str, keywords: List[str]) -> int:
+    q_text = str(question or "")
+    merged = f"{question or ''} {answer or ''}"
+    score = 0
+    for raw_kw in keywords:
+        kw = str(raw_kw or "").strip().lower()
+        if not kw:
+            continue
+        if _matches_domain_keywords(q_text, [kw]):
+            score += 3
+        elif _matches_domain_keywords(merged, [kw]):
+            score += 1
+    return score
+
+AUTO_DOMAIN_HINTS: List[tuple[str, List[str]]] = [
+    ("java", ["java", "spring", "spring boot", "hibernate", "jpa", "maven", "gradle", "jvm", "jdk", "jre"]),
+    ("angular", ["angular", "angularjs", "rxjs", "ngif", "ngfor", "ngoninit", "typescript"]),
+    ("react", ["react", "reactjs", "jsx", "redux", "hooks", "useeffect"]),
+    ("javascript", ["javascript", "node", "nodejs", "ecmascript", "js"]),
+    ("typescript", ["typescript", "tsconfig", "type narrowing"]),
+    ("vue", ["vue", "vuejs", "nuxt"]),
+    ("flutter", ["flutter", "dart", "widget tree"]),
+    ("python", ["python", "django", "flask", "fastapi", "pandas"]),
+    ("sql", ["sql", "mysql", "postgres", "oracle", "database", "jdbc"]),
+    ("devops", ["devops", "docker", "kubernetes", "terraform", "jenkins", "ci/cd"]),
+    ("sales", ["sales", "closing deals", "prospect", "lead generation", "quota"]),
+    ("business_development", ["business development", "bde", "bdm", "pipeline growth"]),
+    ("software_engineering", ["software engineering", "software engineer", "mock interview", "interview question"]),
+]
+
+def _normalize_label_key(text: str, fallback: str = "general") -> str:
+    label = re.sub(r"[^a-z0-9]+", "_", _normalize(text)).strip("_")
+    return label or fallback
+
+def _auto_domain_label(text: str, fallback: str = "general") -> str:
+    hay = _normalize(text)
+    best_label = ""
+    best_score = 0
+    for label, hints in AUTO_DOMAIN_HINTS:
+        score = 0
+        for hint in hints:
+            if _matches_domain_keywords(hay, [hint]):
+                score += 3 if " " in hint else 2
+        if score > best_score:
+            best_score = score
+            best_label = label
+    if best_label:
+        return _normalize_label_key(best_label, fallback=fallback)
+    return _normalize_label_key(fallback, fallback="general")
+
+def _infer_domain_from_source_urls(urls: List[str], fallback: str = "general") -> str:
+    parts: List[str] = []
+    for url in urls:
+        norm_url = _normalize_source_url(url)
+        parsed = urlparse(norm_url)
+        parts.append(unquote(parsed.path.replace("/", " ")))
+    combined = " ".join(parts)
+    return _auto_domain_label(combined, fallback=fallback)
+
+def _compact_stackoverflow_question(text: str, max_words: int = 18) -> str:
+    compact = re.sub(r"\s+", " ", str(text or "")).strip()
+    if not compact:
+        return ""
+    lower = compact.lower()
+    cut = len(compact)
+    markers = [
+        " i've ", " i have ", " i'm ", " i am ", " i try ", " i tried ", " we ", " my ",
+        " when ", " while ", " here ", " stack trace", " error:", " code:", " public ",
+        " class ", " @configuration", " @requestmapping",
+    ]
+    for marker in markers:
+        idx = lower.find(marker)
+        if 30 <= idx <= 220:
+            cut = min(cut, idx)
+    compact = compact[:cut].strip(" :-")
+    words = re.findall(r"\S+", compact)
+    if len(words) > max_words:
+        compact = " ".join(words[:max_words]).rstrip(",:;-")
+    if len(compact) > 160:
+        compact = compact[:160].rsplit(" ", 1)[0].rstrip(",:;-")
+    if compact.endswith("."):
+        compact = compact[:-1].strip()
+    if compact and not compact.endswith("?"):
+        compact += "?"
+    return compact
+
+def _dataset_only_role(role_key: str) -> bool:
+    return bool(DATASET_ONLY_MODE and _normalize(role_key) == "java")
+
+def _default_training_source_set() -> Set[str]:
+    return {_normalize_source_url(url) for url in DEFAULT_ONLINE_TRAINING_SOURCES if str(url).strip()}
+
+def _is_huggingface_dataset_training_request(urls: List[str]) -> bool:
+    normalized_urls = [_normalize_source_url(url) for url in urls if str(url).strip()]
+    return bool(normalized_urls) and all(_guess_online_source_type(url) == "huggingface_dataset" for url in normalized_urls)
+
+def _is_default_dataset_training_request(domain: str, urls: List[str]) -> bool:
+    normalized_urls = {_normalize_source_url(url) for url in urls if str(url).strip()}
+    return bool(_dataset_only_role(domain) and normalized_urls and normalized_urls.issubset(_default_training_source_set()))
+
+def _small_model_source_registry(model_pack: Dict[str, Any]) -> Dict[str, Any]:
+    reg = model_pack.get("sourceRegistry", {}) if isinstance(model_pack, dict) else {}
+    return reg if isinstance(reg, dict) else {}
+
+def _source_already_learned(model_pack: Dict[str, Any], url: str) -> Dict[str, Any]:
+    registry = _small_model_source_registry(model_pack)
+    return registry.get(_normalize_source_url(url), {}) if isinstance(registry, dict) else {}
+
+def _github_repo_parts(url: str) -> tuple[str, str]:
+    parsed = urlparse(_normalize_source_url(url))
+    parts = [p for p in parsed.path.split("/") if p]
+    if len(parts) < 2:
+        return "", ""
+    return parts[0], parts[1]
+
+def _fetch_text_url(url: str, timeout_seconds: Optional[int] = None) -> str:
+    if not requests:
+        return ""
+    try:
+        resp = requests.get(
+            str(url),
+            timeout=timeout_seconds or max(5, RAG_FETCH_TIMEOUT * 3),
+            headers={
+                "User-Agent": "InterviewRAGWorker/5.0",
+                "Accept": "application/json, text/plain, text/html;q=0.9, */*;q=0.8",
+            },
+        )
+        if resp.status_code >= 400:
+            return ""
+        return resp.text or ""
+    except Exception:
+        return ""
+
+def _fetch_json_url(url: str, timeout_seconds: Optional[int] = None) -> Dict[str, Any]:
+    text = _fetch_text_url(url, timeout_seconds=timeout_seconds)
+    if not text:
+        return {}
+    try:
+        data = json.loads(text)
+    except Exception:
+        return {}
+    return data if isinstance(data, dict) else {}
+
+def _github_repo_file_candidates(raw: Any, path_prefix: str = "") -> List[Dict[str, str]]:
+    items: List[Dict[str, str]] = []
+    if isinstance(raw, dict) and raw.get("type") == "file":
+        path = str(raw.get("path", path_prefix)).strip()
+        download = str(raw.get("download_url", "")).strip()
+        if path and download:
+            items.append({"path": path, "download_url": download})
+        return items
+    if isinstance(raw, list):
+        for item in raw:
+            if not isinstance(item, dict):
+                continue
+            typ = str(item.get("type", "")).strip()
+            path = str(item.get("path", "")).strip()
+            if typ == "file":
+                download = str(item.get("download_url", "")).strip()
+                if path and download:
+                    items.append({"path": path, "download_url": download})
+    return items
+
+def _is_repo_training_file(path: str) -> bool:
+    lo = str(path or "").lower()
+    if not lo:
+        return False
+    preferred_names = ("readme", "question", "answer", "interview", "faq", "guide", "docs", "java")
+    preferred_exts = (".md", ".txt", ".rst", ".adoc", ".java")
+    return any(name in lo for name in preferred_names) and lo.endswith(preferred_exts)
+
+def _fetch_github_repo_lines(url: str, max_items: int = 120) -> Dict[str, Any]:
+    owner, repo = _github_repo_parts(url)
+    if not owner or not repo:
+        return {"ok": False, "reason": "invalid_github_repo", "lines": [], "meta": {}}
+    api = f"https://api.github.com/repos/{owner}/{repo}/contents"
+    queue: List[str] = [api]
+    scanned = 0
+    files: List[Dict[str, str]] = []
+    while queue and len(files) < 40 and scanned < 25:
+        endpoint = queue.pop(0)
+        scanned += 1
+        text = _fetch_text_url(endpoint)
+        if not text:
+            continue
+        try:
+            raw = json.loads(text)
+        except Exception:
+            raw = None
+        if isinstance(raw, list):
+            for item in raw:
+                if not isinstance(item, dict):
+                    continue
+                typ = str(item.get("type", "")).strip()
+                path = str(item.get("path", "")).strip()
+                if typ == "dir":
+                    lo = path.lower()
+                    if any(skip in lo for skip in ("/.git", "test", "target", "node_modules")):
+                        continue
+                    sub = str(item.get("url", "")).strip()
+                    if sub:
+                        queue.append(sub)
+                elif typ == "file":
+                    candidate = _github_repo_file_candidates(item)
+                    if candidate and _is_repo_training_file(path):
+                        files.extend(candidate)
+        else:
+            files.extend(_github_repo_file_candidates(raw))
+    selected = files[: max(4, min(20, max_items // 8))]
+    lines: List[str] = []
+    for item in selected:
+        content = _fetch_text_url(item.get("download_url", ""))
+        if not content:
+            continue
+        ext = str(item.get("path", "")).lower()
+        if ext.endswith(".java"):
+            extracted = re.findall(r"/\*\*(.*?)\*/|//\s*(.*)", content, flags=re.DOTALL)
+            flattened: List[str] = []
+            for pair in extracted:
+                flattened.extend([x for x in pair if x])
+            parts = flattened or content.splitlines()
+        else:
+            parts = content.splitlines()
+        lines.extend(_sanitize_cache_lines(parts, max_items=max_items))
+        if len(lines) >= max_items:
+            break
+    return {
+        "ok": bool(lines),
+        "reason": ("ok" if lines else "no_repo_lines"),
+        "lines": lines[:max_items],
+        "meta": {
+            "type": "github",
+            "owner": owner,
+            "repo": repo,
+            "scannedEndpoints": scanned,
+            "selectedFiles": len(selected),
+        },
+    }
+
+def _huggingface_dataset_parts(url: str) -> str:
+    parsed = urlparse(_normalize_source_url(url))
+    parts = [p for p in parsed.path.split("/") if p]
+    if len(parts) >= 3 and parts[0] == "datasets":
+        return f"{parts[1]}/{parts[2]}"
+    return ""
+
+def _hf_rows(dataset_id: str, config: str, split: str = "train", offset: int = 0, length: int = 100) -> List[Dict[str, Any]]:
+    rows_url = (
+        "https://datasets-server.huggingface.co/rows"
+        f"?dataset={quote_plus(dataset_id)}&config={quote_plus(config)}&split={quote_plus(split)}"
+        f"&offset={max(0, offset)}&length={max(1, min(length, 200))}"
+    )
+    data = _fetch_json_url(rows_url, timeout_seconds=max(8, RAG_FETCH_TIMEOUT * 4))
+    rows = data.get("rows", []) if isinstance(data, dict) else []
+    return rows if isinstance(rows, list) else []
+
+def _row_dict(row: Any) -> Dict[str, Any]:
+    if not isinstance(row, dict):
+        return {}
+    inner = row.get("row", None)
+    if "row" in row and isinstance(inner, dict):
+        return inner
+    return row
+
+def _pick_row_value(row: Dict[str, Any], keys: List[str]) -> str:
+    for key in keys:
+        value = row.get(key)
+        if value is None:
+            continue
+        text = re.sub(r"\s+", " ", str(value)).strip()
+        if text:
+            return text
+    return ""
+
+def _download_binary_url(url: str, destination: Path, timeout_seconds: int = 90) -> bool:
+    if not requests or not str(url or "").strip():
+        return False
+    tmp_path = destination.with_suffix(destination.suffix + ".part")
+    try:
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        with requests.get(url, stream=True, timeout=max(20, timeout_seconds)) as resp:
+            if resp.status_code != 200:
+                logger.warning("Dataset download failed status=%s url=%s", resp.status_code, url)
+                return False
+            with tmp_path.open("wb") as handle:
+                for chunk in resp.iter_content(chunk_size=1024 * 256):
+                    if chunk:
+                        handle.write(chunk)
+        if not tmp_path.exists() or tmp_path.stat().st_size < 512:
+            return False
+        tmp_path.replace(destination)
+        return True
+    except Exception as ex:
+        logger.warning("Dataset download exception url=%s err=%s", url, ex)
+        return False
+    finally:
+        try:
+            if tmp_path.exists():
+                tmp_path.unlink()
+        except Exception:
+            pass
+
+def _load_stackoverflow_dataset_records(kind: str) -> List[Dict[str, Any]]:
+    cached = STACKOVERFLOW_QA_TABLE_CACHE.get(kind)
+    if isinstance(cached, list) and cached:
+        return cached
+    dataset_url = STACKOVERFLOW_QA_REMOTE_FILES.get(kind, "")
+    if not dataset_url or pl is None:
+        return []
+    dataset_file = STACKOVERFLOW_QA_CACHE_DIR / f"{kind}.parquet"
+    if not dataset_file.exists() or dataset_file.stat().st_size < 512:
+        if not _download_binary_url(dataset_url, dataset_file):
+            return []
+    try:
+        frame = pl.read_parquet(dataset_file)
+        records = frame.to_dicts()
+        STACKOVERFLOW_QA_TABLE_CACHE[kind] = records
+        return records
+    except Exception as ex:
+        logger.warning("Unable to read StackOverflow dataset parquet kind=%s path=%s err=%s", kind, dataset_file, ex)
+        try:
+            dataset_file.unlink()
+        except Exception:
+            pass
+        return []
+
+def _extract_stackoverflow_dataset_knowledge(dataset_id: str, domain: str, max_pairs: int = 80) -> Dict[str, Any]:
+    domain_keywords = [kw.lower() for kw in _domain_training_keywords(domain)]
+    default_rows = _load_stackoverflow_dataset_records("default") or _hf_rows(dataset_id, "default", "train", 0, max_pairs * 20)
+    query_rows = _load_stackoverflow_dataset_records("queries") or _hf_rows(dataset_id, "queries", "train", 0, max_pairs * 30)
+    corpus_rows = _load_stackoverflow_dataset_records("corpus") or _hf_rows(dataset_id, "corpus", "train", 0, max_pairs * 30)
+
+    query_map: Dict[str, str] = {}
+    for raw in query_rows:
+        row = _row_dict(raw)
+        qid = _pick_row_value(row, ["query-id", "query_id", "_id", "id"])
+        text = _pick_row_value(row, ["text", "query", "body", "question"])
+        if qid and text:
+            query_map[qid] = text
+
+    corpus_map: Dict[str, str] = {}
+    for raw in corpus_rows:
+        row = _row_dict(raw)
+        cid = _pick_row_value(row, ["corpus-id", "corpus_id", "_id", "id"])
+        title = _pick_row_value(row, ["title", "heading"])
+        text = _pick_row_value(row, ["text", "body", "answer", "contents"])
+        combined = re.sub(r"\s+", " ", " ".join(x for x in [title, text] if x)).strip()
+        if cid and combined:
+            corpus_map[cid] = combined
+
+    scored_pairs: List[Dict[str, Any]] = []
+    seen: Set[str] = set()
+    for raw in default_rows:
+        row = _row_dict(raw)
+        qid = _pick_row_value(row, ["query-id", "query_id"])
+        cid = _pick_row_value(row, ["corpus-id", "corpus_id"])
+        question = query_map.get(qid, "")
+        answer = corpus_map.get(cid, "")
+        merged = f"{question} {answer}".lower()
+        if not question or not answer:
+            continue
+        if domain_keywords and not _matches_domain_keywords(merged, domain_keywords):
+            continue
+        if _looks_like_question_dump_line(answer) and not _is_reference_answer_usable(answer):
+            continue
+        question = _compact_stackoverflow_question(question)
+        question = _normalize_question(question) or re.sub(r"\s+", " ", question).strip()
+        answer = _limit_words(answer, 180)
+        if not question or not answer:
+            continue
+        key = _normalize(question)
+        if key in seen:
+            continue
+        seen.add(key)
+        scored_pairs.append({
+            "question": question,
+            "answer": answer,
+            "score": _domain_match_score(question, answer, domain_keywords),
+        })
+
+    scored_pairs.sort(key=lambda item: (int(item.get("score", 0)), len(str(item.get("answer", "")))), reverse=True)
+    qa_pairs: List[Dict[str, str]] = [
+        {"question": str(item.get("question", "")).strip(), "answer": str(item.get("answer", "")).strip()}
+        for item in scored_pairs[:max_pairs]
+        if str(item.get("question", "")).strip() and str(item.get("answer", "")).strip()
+    ]
+
+    if not qa_pairs:
+        # Fallback: use the Java-like query text as question prompts if pairing fails.
+        for raw in query_rows:
+            row = _row_dict(raw)
+            text = _pick_row_value(row, ["text", "query", "body", "question"])
+            if not text:
+                continue
+            if domain_keywords and not _matches_domain_keywords(text, domain_keywords):
+                continue
+            question = _normalize_question(text) or ""
+            if not question:
+                continue
+            qa_pairs.append({"question": question, "answer": ""})
+            if len(qa_pairs) >= max_pairs:
+                break
+
+    context_lines: List[str] = []
+    for pair in qa_pairs:
+        if pair.get("question"):
+            context_lines.append(pair["question"])
+        if pair.get("answer"):
+            context_lines.append(pair["answer"])
+    return {
+        "qaPairs": qa_pairs,
+        "questionBank": [pair["question"] for pair in qa_pairs if pair.get("question")],
+        "contextLines": _filter_answer_context_lines(_sanitize_cache_lines(context_lines, max_items=max_pairs * 3), max_items=max_pairs * 3),
+    }
+
+def _dataset_answer_text_usable(answer: str) -> bool:
+    text = _limit_words(answer, 180)
+    if not text:
+        return False
+    if _looks_like_question_dump_line(text):
+        return False
+    return len(re.findall(r"\S+", text)) >= 4
+
+def _extract_generic_huggingface_dataset_knowledge(
+    dataset_id: str,
+    source_url: str,
+    requested_domain: str = "",
+    max_items: int = 120,
+) -> Dict[str, Any]:
+    info_url = f"https://datasets-server.huggingface.co/info?dataset={quote_plus(dataset_id)}"
+    info = _fetch_json_url(info_url, timeout_seconds=max(8, RAG_FETCH_TIMEOUT * 4))
+    raw_configs = info.get("dataset_info", {}) if isinstance(info, dict) else {}
+    configs = list(raw_configs.keys()) if isinstance(raw_configs, dict) and raw_configs else ["default"]
+    max_row_scan = max(100, min(600, max_items * 6))
+    used_config = ""
+    used_split = ""
+    domain_buckets: Dict[str, Dict[str, Any]] = {}
+    combined_questions: List[str] = []
+    combined_qas: List[Dict[str, str]] = []
+    combined_context: List[str] = []
+    seen_questions: Set[str] = set()
+    seen_qas: Set[str] = set()
+
+    def _bucket(label: str) -> Dict[str, Any]:
+        key = _normalize_label_key(label, fallback="general")
+        node = domain_buckets.get(key)
+        if not isinstance(node, dict):
+            node = {
+                "questionBank": [],
+                "qaPairs": [],
+                "contextLines": [],
+                "_seenQuestions": set(),
+                "_seenQas": set(),
+            }
+            domain_buckets[key] = node
+        return node
+
+    for config in configs[:4]:
+        for split in ("train", "test", "validation"):
+            rows: List[Dict[str, Any]] = []
+            for offset in range(0, max_row_scan, 100):
+                batch = _hf_rows(dataset_id, config, split, offset, min(100, max_row_scan - offset))
+                if not batch:
+                    break
+                rows.extend(batch)
+                if len(batch) < 100:
+                    break
+            if not rows:
+                continue
+            used_config = config
+            used_split = split
+            for raw in rows:
+                row = _row_dict(raw)
+                if not row:
+                    continue
+                instruction = _pick_row_value(row, ["input", "prompt", "instruction", "context", "topic", "category", "classes", "label"])
+                explicit_question = _pick_row_value(row, ["question", "question_text", "query", "title"])
+                explicit_answer = _pick_row_value(row, ["answer", "expected_answer", "ideal_answer", "best_answer", "solution", "explanation"])
+                response = _pick_row_value(row, ["response", "output", "completion", "text"])
+                raw_question = ""
+                raw_answer = ""
+                if explicit_question:
+                    raw_question = explicit_question
+                    if explicit_answer:
+                        raw_answer = explicit_answer
+                    elif response and _normalize(response) != _normalize(explicit_question) and not _normalize_question(response):
+                        raw_answer = response
+                elif response and _normalize_question(_compact_stackoverflow_question(response)):
+                    raw_question = response
+                    raw_answer = explicit_answer
+                elif instruction and response and _normalize_question(_compact_stackoverflow_question(instruction)):
+                    raw_question = instruction
+                    raw_answer = response
+                elif response:
+                    raw_question = response
+                    raw_answer = explicit_answer
+                question = _normalize_question(_compact_stackoverflow_question(raw_question)) or ""
+                answer = _limit_words(raw_answer, 180)
+                if not question:
+                    continue
+                label_hint = requested_domain or _pick_row_value(row, ["classes", "class", "topic", "category", "label"])
+                label = _normalize_label_key(
+                    label_hint or _auto_domain_label(
+                        " ".join([instruction, question, answer]),
+                        fallback=_infer_domain_from_source_urls([source_url], fallback="software_engineering"),
+                    ),
+                    fallback="software_engineering",
+                )
+                bucket = _bucket(label)
+                bucket_seen_q = bucket["_seenQuestions"]
+                question_key = _normalize(question)
+                if question_key not in bucket_seen_q:
+                    bucket_seen_q.add(question_key)
+                    bucket["questionBank"].append(question)
+                if question_key not in seen_questions:
+                    seen_questions.add(question_key)
+                    combined_questions.append(question)
+                if _dataset_answer_text_usable(answer):
+                    if question_key not in bucket["_seenQas"]:
+                        bucket["_seenQas"].add(question_key)
+                        bucket["qaPairs"].append({"question": question, "answer": answer})
+                    if question_key not in seen_qas:
+                        seen_qas.add(question_key)
+                        combined_qas.append({"question": question, "answer": answer})
+                for line in [instruction, question, answer]:
+                    if str(line or "").strip():
+                        bucket["contextLines"].append(str(line).strip())
+                        combined_context.append(str(line).strip())
+            if combined_questions:
+                break
+        if combined_questions:
+            break
+
+    for label, node in list(domain_buckets.items()):
+        node["questionBank"] = [str(q).strip() for q in node.get("questionBank", [])[: max_items * 2] if str(q).strip()]
+        node["qaPairs"] = [item for item in node.get("qaPairs", [])[: max_items * 2] if isinstance(item, dict)]
+        node["contextLines"] = _sanitize_cache_lines(node.get("contextLines", []), max_items=max_items * 3)
+        node.pop("_seenQuestions", None)
+        node.pop("_seenQas", None)
+        domain_buckets[label] = node
+
+    return {
+        "questionBank": combined_questions[: max_items * 2],
+        "qaPairs": combined_qas[: max_items * 2],
+        "contextLines": _sanitize_cache_lines(combined_context, max_items=max_items * 3),
+        "domainBuckets": domain_buckets,
+        "config": used_config,
+        "split": used_split,
+    }
+
+def _fetch_huggingface_dataset_lines(url: str, max_items: int = 120) -> Dict[str, Any]:
+    dataset_id = _huggingface_dataset_parts(url)
+    if not dataset_id:
+        return {"ok": False, "reason": "invalid_huggingface_dataset", "lines": [], "meta": {}}
+    if dataset_id == "mteb/stackoverflow-qa":
+        dataset_knowledge = _extract_stackoverflow_dataset_knowledge(dataset_id, "java", max_pairs=max(30, min(90, max_items)))
+        lines = dataset_knowledge.get("contextLines", [])
+        return {
+            "ok": bool(lines),
+            "reason": ("ok" if lines else "no_dataset_rows"),
+            "lines": lines[:max_items],
+            "meta": {
+                "type": "huggingface_dataset",
+                "datasetId": dataset_id,
+                "qaPairs": dataset_knowledge.get("qaPairs", []),
+                "questionBank": dataset_knowledge.get("questionBank", []),
+                "contextLines": dataset_knowledge.get("contextLines", []),
+            },
+        }
+    generic_knowledge = _extract_generic_huggingface_dataset_knowledge(dataset_id, url, max_items=max_items)
+    candidate_rows = generic_knowledge.get("contextLines", [])
+    if not candidate_rows:
+        fallback = _fetch_text_url(url, timeout_seconds=max(8, RAG_FETCH_TIMEOUT * 4))
+        candidate_rows = _sanitize_cache_lines(fallback.splitlines(), max_items=max_items) if fallback else []
+    return {
+        "ok": bool(candidate_rows),
+        "reason": ("ok" if candidate_rows else "no_dataset_rows"),
+        "lines": candidate_rows[:max_items],
+        "meta": {
+            "type": "huggingface_dataset",
+            "datasetId": dataset_id,
+            "config": generic_knowledge.get("config", ""),
+            "split": generic_knowledge.get("split", ""),
+            "qaPairs": generic_knowledge.get("qaPairs", []),
+            "questionBank": generic_knowledge.get("questionBank", []),
+            "contextLines": generic_knowledge.get("contextLines", []),
+            "domainBuckets": generic_knowledge.get("domainBuckets", {}),
+        },
+    }
+
+def _fetch_online_training_source(url: str, max_items: int = 120) -> Dict[str, Any]:
+    source_type = _guess_online_source_type(url)
+    norm_url = _normalize_source_url(url)
+    started = time.perf_counter()
+    if source_type == "github":
+        result = _fetch_github_repo_lines(norm_url, max_items=max_items)
+    elif source_type == "huggingface_dataset":
+        result = _fetch_huggingface_dataset_lines(norm_url, max_items=max_items)
+    else:
+        result = {"ok": False, "reason": "no_content", "lines": [], "meta": {"type": source_type}}
+        lines = _fetch_url(norm_url) or [_fetch_text_url(norm_url)]
+        flattened: List[str] = []
+        for item in lines:
+            if isinstance(item, list):
+                flattened.extend([str(x) for x in item])
+            else:
+                flattened.append(str(item))
+        result["lines"] = _sanitize_cache_lines(flattened, max_items=max_items)
+        result["ok"] = bool(result["lines"])
+        result["reason"] = "ok" if result["ok"] else "no_web_lines"
+    duration_ms = round((time.perf_counter() - started) * 1000)
+    lines = result.get("lines", []) if isinstance(result, dict) else []
+    clean_lines = _sanitize_cache_lines(lines, max_items=max_items)
+    fingerprint = hashlib.sha256("\n".join(clean_lines[:max_items]).encode("utf-8")).hexdigest()[:20] if clean_lines else ""
+    meta = result.get("meta", {}) if isinstance(result, dict) else {}
+    if not isinstance(meta, dict):
+        meta = {}
+    meta.update({
+        "url": norm_url,
+        "type": source_type,
+        "durationMs": duration_ms,
+        "fingerprint": fingerprint,
+        "lineCount": len(clean_lines),
+    })
+    result["lines"] = clean_lines
+    result["meta"] = meta
+    return result
+
+def _estimate_online_training_source(url: str, model_pack: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    norm_url = _normalize_source_url(url)
+    source_type = _guess_online_source_type(norm_url)
+    learned = _source_already_learned(model_pack or {}, norm_url) if isinstance(model_pack, dict) else {}
+    already = bool(learned)
+    minutes = 2
+    if source_type == "github":
+        minutes = 4
+    elif source_type == "huggingface_dataset":
+        minutes = 10
+    elif source_type == "web":
+        minutes = 2
+    return {
+        "url": norm_url,
+        "type": source_type,
+        "alreadyLearned": already,
+        "estimatedMinutes": 0 if already else minutes,
+        "lastLearnedAt": str(learned.get("learnedAt", "")) if already else "",
+        "fingerprint": str(learned.get("fingerprint", "")) if already else "",
+    }
+
+def _extract_online_training_samples(domain: str, lines: List[str], max_samples: int = 240) -> Dict[str, Any]:
+    cleaned = _sanitize_cache_lines(lines, max_items=max_samples)
+    questions = _extract_questions_from_lines(cleaned, min(60, max(10, max_samples // 4)))
+    question_keys = {_normalize(q) for q in questions}
+    concepts: List[str] = []
+    for line in cleaned:
+        if _normalize(line) in question_keys:
+            continue
+        concepts.append(line)
+        if len(concepts) >= max(30, max_samples // 3):
+            break
+    samples: List[Dict[str, Any]] = []
+    for q in questions:
+        samples.append({"text": f"{domain} [SEP] {q}", "label": 0.95, "kind": "question"})
+    for line in concepts:
+        samples.append({"text": f"{domain} [SEP] {line}", "label": 0.45, "kind": "concept"})
+    if not samples:
+        for line in cleaned[:40]:
+            samples.append({"text": f"{domain} [SEP] {line}", "label": 0.40, "kind": "fallback"})
+    return {
+        "samples": samples[:max_samples],
+        "questions": questions[:60],
+        "concepts": concepts[:60],
+        "lineCount": len(cleaned),
+    }
+
+def _fit_or_update_small_model(model_pack: Optional[Dict[str, Any]], samples: List[Dict[str, Any]]) -> Dict[str, Any]:
+    if HashingVectorizer is None or SGDRegressor is None:
+        return {"ok": False, "reason": "scikit-learn unavailable"}
+    X_text = [str(s.get("text", "")).strip() for s in samples if str(s.get("text", "")).strip()]
+    y = [float(_safe_float(s.get("label"), 0.0)) for s in samples if str(s.get("text", "")).strip()]
+    if not X_text:
+        return {"ok": False, "reason": "no_training_samples"}
+    pack = model_pack if isinstance(model_pack, dict) else {}
+    vectorizer = pack.get("vectorizer")
+    model = pack.get("model")
+    if vectorizer is None:
+        vectorizer = HashingVectorizer(
+            n_features=2 ** 14,
+            alternate_sign=False,
+            norm="l2",
+            ngram_range=(1, 2),
+        )
+    if model is None:
+        model = SGDRegressor(
+            loss="huber",
+            alpha=1e-5,
+            max_iter=1200,
+            tol=1e-3,
+            random_state=42,
+        )
+    X = vectorizer.transform(X_text)
+    try:
+        if hasattr(model, "partial_fit") and hasattr(model, "coef_"):
+            model.partial_fit(X, y)
+        else:
+            model.fit(X, y)
+    except Exception:
+        model.fit(X, y)
+    pack["vectorizer"] = vectorizer
+    pack["model"] = model
+    pack["trainedAt"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    pack["sampleCount"] = max(len(X_text), _safe_int(pack.get("sampleCount"), 0) + len(X_text))
+    pack["trainingMode"] = "online_sources"
+    return {"ok": True, "pack": pack, "sampleCount": len(X_text)}
+
+def _small_model_domain_knowledge(model_pack: Optional[Dict[str, Any]], role_key: str) -> Dict[str, Any]:
+    pack = model_pack if isinstance(model_pack, dict) else (_load_small_model() or {})
+    domains = pack.get("domainKnowledge", {}) if isinstance(pack, dict) else {}
+    if not isinstance(domains, dict):
+        return {}
+    node = domains.get(_normalize(role_key), {})
+    return node if isinstance(node, dict) else {}
+
+def _small_model_has_dataset_knowledge(model_pack: Optional[Dict[str, Any]], role_key: str = "java") -> bool:
+    pack = model_pack if isinstance(model_pack, dict) else (_load_small_model() or {})
+    node = _small_model_domain_knowledge(pack, role_key)
+    registry = _small_model_source_registry(pack)
+    non_dataset_sources = [
+        url for url, meta in registry.items()
+        if not (isinstance(meta, dict) and str(meta.get("type", "")).strip() == "huggingface_dataset")
+    ] if isinstance(registry, dict) else []
+    if non_dataset_sources:
+        return False
+    return bool(
+        isinstance(node, dict)
+        and len(node.get("questionBank", [])) >= INTERVIEW_QUESTION_COUNT
+        and len(node.get("qaBank", [])) >= 5
+    )
+
+def _small_model_question_bank(role_key: str, count: int = INTERVIEW_QUESTION_COUNT) -> List[str]:
+    node = _small_model_domain_knowledge(None, role_key)
+    questions = node.get("questionBank", []) if isinstance(node, dict) else []
+    out: List[str] = []
+    seen: Set[str] = set()
+    for q in questions if isinstance(questions, list) else []:
+        text = _normalize_question(q) or re.sub(r"\s+", " ", str(q or "")).strip()
+        if not text:
+            continue
+        key = _normalize(text)
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(text)
+        if len(out) >= count:
+            break
+    return out
+
+def _small_model_qa_bank(role_key: str) -> List[Dict[str, str]]:
+    node = _small_model_domain_knowledge(None, role_key)
+    qa_bank = node.get("qaBank", []) if isinstance(node, dict) else []
+    out: List[Dict[str, str]] = []
+    seen: Set[str] = set()
+    for item in qa_bank if isinstance(qa_bank, list) else []:
+        if not isinstance(item, dict):
+            continue
+        q = _normalize_question(item.get("question", "")) or ""
+        a = str(item.get("answer", "")).strip()
+        if not q or not a:
+            continue
+        key = _normalize(q)
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append({"question": q, "answer": _limit_words(a, 180)})
+    return out
+
+def _small_model_context_lines(role_key: str, count: int = 60) -> List[str]:
+    node = _small_model_domain_knowledge(None, role_key)
+    lines = node.get("contextLines", []) if isinstance(node, dict) else []
+    return _filter_answer_context_lines([str(x) for x in lines], max_items=count)[:count]
+
+def _merge_small_model_domain_knowledge(
+    pack: Dict[str, Any],
+    role_key: str,
+    question_bank: List[str],
+    qa_bank: List[Dict[str, str]],
+    context_lines: List[str],
+) -> None:
+    domains = pack.setdefault("domainKnowledge", {})
+    if not isinstance(domains, dict):
+        domains = {}
+        pack["domainKnowledge"] = domains
+    key = _normalize(role_key) or "general"
+    existing = domains.get(key, {})
+    if not isinstance(existing, dict):
+        existing = {}
+    merged_questions = list(dict.fromkeys([*(existing.get("questionBank", []) or []), *[str(q).strip() for q in question_bank if str(q).strip()]]))
+    existing_qa = existing.get("qaBank", []) if isinstance(existing.get("qaBank", []), list) else []
+    merged_qa: List[Dict[str, str]] = []
+    seen_qa: Set[str] = set()
+    for item in [*existing_qa, *qa_bank]:
+        if not isinstance(item, dict):
+            continue
+        q = _normalize_question(item.get("question", "")) or ""
+        a = str(item.get("answer", "")).strip()
+        if not q or not a:
+            continue
+        qkey = _normalize(q)
+        if qkey in seen_qa:
+            continue
+        seen_qa.add(qkey)
+        merged_qa.append({"question": q, "answer": _limit_words(a, 180)})
+    merged_lines = _filter_answer_context_lines(
+        [*(existing.get("contextLines", []) or []), *[str(x) for x in context_lines if str(x).strip()]],
+        max_items=240,
+    )
+    existing.update({
+        "questionBank": merged_questions[:240],
+        "qaBank": merged_qa[:240],
+        "contextLines": merged_lines[:240],
+        "updatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+    })
+    domains[key] = existing
+
+def _save_small_model_pack(pack: Dict[str, Any]) -> None:
+    global SMALL_MODEL_HANDLE, LAST_SMALL_MODEL_TRAIN_TS
+    SMALL_MODEL_HANDLE = pack
+    with SMALL_MODEL_FILE.open("wb") as f:
+        pickle.dump(pack, f)
+    LAST_SMALL_MODEL_TRAIN_TS = time.time()
+
+def _current_small_model_sources(model_pack: Optional[Dict[str, Any]] = None) -> List[Dict[str, Any]]:
+    pack = model_pack if isinstance(model_pack, dict) else (_load_small_model() or {})
+    registry = _small_model_source_registry(pack)
+    rows: List[Dict[str, Any]] = []
+    for url, meta in registry.items():
+        if not isinstance(meta, dict):
+            continue
+        row = {"url": url, **meta}
+        rows.append(row)
+    rows.sort(key=lambda x: str(x.get("learnedAt", "")), reverse=True)
+    return rows
+
+def _online_training_status(urls: List[str]) -> Dict[str, Any]:
+    pack = _load_small_model() or {}
+    items: List[Dict[str, Any]] = []
+    learned = 0
+    for url in urls:
+        rec = _source_already_learned(pack, url)
+        items.append({
+            "url": _normalize_source_url(url),
+            "learned": bool(rec),
+            "details": rec if isinstance(rec, dict) else {},
+        })
+        if rec:
+            learned += 1
+    return {
+        "ok": True,
+        "modelPath": str(SMALL_MODEL_FILE),
+        "checked": len(items),
+        "learnedCount": learned,
+        "items": items,
+    }
+
+def _ensure_default_small_model_training() -> Dict[str, Any]:
+    pack = _load_small_model() or {}
+    status = _online_training_status(DEFAULT_ONLINE_TRAINING_SOURCES)
+    missing = [item.get("url", "") for item in status.get("items", []) if not item.get("learned")]
+    source_registry = _small_model_source_registry(pack)
+    foreign_sources = sorted(
+        url for url, meta in source_registry.items()
+        if not (isinstance(meta, dict) and str(meta.get("type", "")).strip() == "huggingface_dataset")
+    )
+    has_dataset_knowledge = _small_model_has_dataset_knowledge(pack, "java")
+    if not missing and has_dataset_knowledge and not foreign_sources:
+        logger.info("[ONLINE_TRAIN][startup] all default sources already learned")
+        return {"ok": True, "skipped": True, "reason": "already_learned_defaults", "modelPath": str(SMALL_MODEL_FILE)}
+    urls_to_train = missing or list(DEFAULT_ONLINE_TRAINING_SOURCES)
+    logger.info(
+        "[ONLINE_TRAIN][startup] training default dataset sources count=%s knowledgeReady=%s foreignSources=%s",
+        len(urls_to_train), has_dataset_knowledge, len(foreign_sources)
+    )
+    return _train_small_model_from_online_sources(OnlineTrainingSetRequest(
+        domain="java",
+        sourceUrls=urls_to_train,
+        estimateOnly=False,
+        forceRetrain=bool(foreign_sources) or not has_dataset_knowledge,
+        maxItemsPerSource=120,
+    ))
+
+def _train_small_model_from_online_sources(payload: OnlineTrainingSetRequest) -> Dict[str, Any]:
+    global WORKER_STARTUP_STATUS
+    if not SMALL_MODEL_ENABLED:
+        return {"ok": False, "reason": "small model disabled"}
+    requested_domain = _normalize_label_key(payload.domain, fallback="") if str(payload.domain or "").strip() else ""
+    urls = list(dict.fromkeys(_normalize_source_url(u) for u in payload.sourceUrls if str(u).strip()))
+    domain = requested_domain or _infer_domain_from_source_urls(urls, fallback="software_engineering")
+    dataset_only_training = _is_default_dataset_training_request(domain, urls) or _is_huggingface_dataset_training_request(urls)
+    if (HashingVectorizer is None or SGDRegressor is None) and not dataset_only_training:
+        return {"ok": False, "reason": "scikit-learn unavailable"}
+    if not urls:
+        return {"ok": False, "reason": "no_source_urls"}
+    existing_pack = _load_small_model() or {}
+    pack = (
+        {"domainKnowledge": {}, "sourceRegistry": {}, "contentMode": "dataset_only"}
+        if dataset_only_training and payload.forceRetrain
+        else copy.deepcopy(existing_pack)
+    )
+    estimates = [_estimate_online_training_source(url, model_pack=pack) for url in urls]
+    estimate_total = sum(_safe_int(item.get("estimatedMinutes"), 0) for item in estimates)
+    if payload.estimateOnly:
+        return {
+            "ok": True,
+            "estimateOnly": True,
+            "domain": domain,
+            "sourceCount": len(urls),
+            "estimatedTotalMinutes": estimate_total,
+            "items": estimates,
+            "modelPath": str(SMALL_MODEL_FILE),
+        }
+
+    started = time.perf_counter()
+    source_registry = _small_model_source_registry(pack)
+    all_samples: List[Dict[str, Any]] = []
+    learned_sources: List[Dict[str, Any]] = []
+    skipped_sources: List[Dict[str, Any]] = []
+    learned_domains: Set[str] = set()
+    merged_question_total = 0
+    for item in estimates:
+        url = str(item.get("url", "")).strip()
+        if not url:
+            continue
+        existing = _source_already_learned(pack, url)
+        if existing and not payload.forceRetrain:
+            logger.info("[ONLINE_TRAIN][%s] source=%s status=skip_already_learned", domain, url)
+            _append_learning_log("online_train_skip", {"domain": domain, "url": url, "reason": "already_learned"})
+            skipped_sources.append({"url": url, "reason": "already_learned", "details": existing})
+            continue
+        logger.info("[ONLINE_TRAIN][%s] source=%s status=fetch_start estimateMinutes=%s", domain, url, item.get("estimatedMinutes", 0))
+        fetched = _fetch_online_training_source(url, max_items=max(40, min(payload.maxItemsPerSource, 240)))
+        meta = fetched.get("meta", {}) if isinstance(fetched, dict) else {}
+        lines = fetched.get("lines", []) if isinstance(fetched, dict) else []
+        if not isinstance(meta, dict):
+            meta = {}
+        if not lines:
+            logger.info("[ONLINE_TRAIN][%s] source=%s status=fetch_empty", domain, url)
+            _append_learning_log("online_train_fail", {"domain": domain, "url": url, "reason": fetched.get("reason", "fetch_empty")})
+            skipped_sources.append({"url": url, "reason": fetched.get("reason", "fetch_empty"), "details": meta})
+            continue
+        raw_domain_buckets = meta.get("domainBuckets", {}) if isinstance(meta.get("domainBuckets", {}), dict) else {}
+        merge_targets: List[tuple[str, Dict[str, Any]]] = []
+        if raw_domain_buckets and not requested_domain:
+            for label, bucket in raw_domain_buckets.items():
+                if not isinstance(bucket, dict):
+                    continue
+                merge_targets.append((_normalize_label_key(label, fallback=domain), bucket))
+        else:
+            merge_targets.append((requested_domain or domain, {
+                "qaPairs": meta.get("qaPairs", []) if isinstance(meta.get("qaPairs", []), list) else [],
+                "questionBank": meta.get("questionBank", []) if isinstance(meta.get("questionBank", []), list) else [],
+                "contextLines": meta.get("contextLines", []) if isinstance(meta.get("contextLines", []), list) else lines,
+            }))
+
+        sample_count = 0
+        source_question_count = 0
+        source_domains: List[str] = []
+        for target_domain, bucket in merge_targets:
+            qa_pairs = bucket.get("qaPairs", []) if isinstance(bucket.get("qaPairs", []), list) else []
+            question_bank = bucket.get("questionBank", []) if isinstance(bucket.get("questionBank", []), list) else []
+            context_bank = bucket.get("contextLines", []) if isinstance(bucket.get("contextLines", []), list) else lines
+            extracted = _extract_online_training_samples(
+                target_domain,
+                [str(line) for line in context_bank if str(line).strip()] or lines,
+                max_samples=max(80, min(payload.maxItemsPerSource * 2, 260)),
+            )
+            source_question_count += max(len(extracted.get("questions", [])), len(question_bank))
+            sample_count += len(extracted.get("samples", []))
+            if not dataset_only_training:
+                all_samples.extend(extracted.get("samples", []))
+            if qa_pairs or question_bank or context_bank:
+                _merge_small_model_domain_knowledge(
+                    pack,
+                    target_domain,
+                    [str(q) for q in question_bank if str(q).strip()],
+                    [entry for entry in qa_pairs if isinstance(entry, dict)],
+                    [str(line) for line in context_bank if str(line).strip()],
+                )
+            if question_bank or qa_pairs:
+                learned_domains.add(target_domain)
+                source_domains.append(target_domain)
+                merged_question_total += len(question_bank)
+        source_rec = {
+            "url": url,
+            "type": meta.get("type", _guess_online_source_type(url)),
+            "domain": (requested_domain or (source_domains[0] if len(source_domains) == 1 else "multi")),
+            "domains": sorted(set(source_domains)),
+            "fingerprint": meta.get("fingerprint", ""),
+            "learnedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+            "lineCount": len(lines),
+            "questionCount": source_question_count,
+            "sampleCount": sample_count,
+            "durationMs": meta.get("durationMs", 0),
+        }
+        source_registry[_normalize_source_url(url)] = source_rec
+        logger.info(
+            "[ONLINE_TRAIN][%s] source=%s status=learned lines=%s questions=%s samples=%s",
+            domain, url, source_rec["lineCount"], source_rec["questionCount"], source_rec["sampleCount"]
+        )
+        _append_learning_log("online_train_source", {
+            "domain": domain,
+            "url": url,
+            "type": source_rec["type"],
+            "lineCount": source_rec["lineCount"],
+            "questionCount": source_rec["questionCount"],
+            "sampleCount": source_rec["sampleCount"],
+        })
+        learned_sources.append(source_rec)
+    if not dataset_only_training and not all_samples:
+        return {
+            "ok": False,
+            "reason": "no_new_samples",
+            "domain": domain,
+            "estimatedTotalMinutes": estimate_total,
+            "skippedSources": skipped_sources,
+            "modelPath": str(SMALL_MODEL_FILE),
+        }
+    if dataset_only_training and not merged_question_total:
+        return {
+            "ok": False,
+            "reason": "no_dataset_questions_found",
+            "domain": domain,
+            "estimatedTotalMinutes": estimate_total,
+            "skippedSources": skipped_sources,
+            "modelPath": str(SMALL_MODEL_FILE),
+        }
+    if dataset_only_training:
+        pack.pop("vectorizer", None)
+        pack.pop("model", None)
+        domain_map = pack.get("domainKnowledge", {}) if isinstance(pack.get("domainKnowledge", {}), dict) else {}
+        total_questions = sum(len((node.get("questionBank", []) or [])) for node in domain_map.values() if isinstance(node, dict))
+        total_answers = sum(len((node.get("qaBank", []) or [])) for node in domain_map.values() if isinstance(node, dict))
+        pack["trainedAt"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+        pack["sampleCount"] = max(total_questions, total_answers, merged_question_total)
+        pack["trainingMode"] = "dataset_only"
+        pack["contentMode"] = "dataset_only"
+        fit_result = {"ok": True, "pack": pack, "sampleCount": pack.get("sampleCount", 0)}
+    else:
+        fit_result = _fit_or_update_small_model(pack, all_samples)
+    if not fit_result.get("ok"):
+        return fit_result
+    pack = fit_result.get("pack", {}) if isinstance(fit_result.get("pack"), dict) else {}
+    pack["sourceRegistry"] = source_registry
+    pack["onlineTrainingSummary"] = {
+        "domain": requested_domain or "auto",
+        "learnedDomains": sorted(learned_domains),
+        "lastTrainedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "lastSourceCount": len(learned_sources),
+        "knownSourceCount": len(source_registry),
+    }
+    _save_small_model_pack(pack)
+    WORKER_STARTUP_STATUS["smallModelReady"] = True
+    WORKER_STARTUP_STATUS["smallModelReason"] = (
+        f"Small model trained online: {fit_result.get('sampleCount', 0)} new samples"
+    )
+    duration_seconds = round(time.perf_counter() - started, 2)
+    _append_learning_log("online_train_done", {
+        "domain": domain,
+        "sourceCount": len(learned_sources),
+        "sampleCount": fit_result.get("sampleCount", 0),
+        "durationSeconds": duration_seconds,
+    })
+    return {
+        "ok": True,
+        "estimateOnly": False,
+        "domain": requested_domain or "auto",
+        "learnedDomains": sorted(learned_domains),
+        "estimatedTotalMinutes": estimate_total,
+        "actualDurationSeconds": duration_seconds,
+        "learnedSources": learned_sources,
+        "skippedSources": skipped_sources,
+        "sampleCount": fit_result.get("sampleCount", 0),
+        "knownSourceCount": len(source_registry),
+        "modelPath": str(SMALL_MODEL_FILE),
+    }
+
 def _load_small_model():
     global SMALL_MODEL_HANDLE
     if not SMALL_MODEL_ENABLED:
@@ -1913,6 +3086,8 @@ def _small_model_predict(role_key: str, question: str) -> float:
 
 def _train_small_model(window_days: int = 365, min_samples: int = 80) -> Dict[str, Any]:
     global SMALL_MODEL_HANDLE, REINFORCEMENT_STATE_MAP, LAST_SMALL_MODEL_TRAIN_TS
+    if DATASET_ONLY_MODE:
+        return {"ok": False, "reason": "dataset_only_mode"}
     if not SMALL_MODEL_ENABLED:
         return {"ok": False, "reason": "small model disabled"}
     if HashingVectorizer is None or SGDRegressor is None:
@@ -1998,16 +3173,17 @@ def _train_small_model(window_days: int = 365, min_samples: int = 80) -> Dict[st
         random_state=42,
     )
     model.fit(X, y)
+    existing_pack = _load_small_model() or {}
     SMALL_MODEL_HANDLE = {
         "vectorizer": vectorizer,
         "model": model,
         "trainedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "windowDays": window_days,
         "sampleCount": len(X_text),
+        "sourceRegistry": _small_model_source_registry(existing_pack),
+        "onlineTrainingSummary": existing_pack.get("onlineTrainingSummary", {}) if isinstance(existing_pack, dict) else {},
     }
-    with SMALL_MODEL_FILE.open("wb") as f:
-        pickle.dump(SMALL_MODEL_HANDLE, f)
-    LAST_SMALL_MODEL_TRAIN_TS = time.time()
+    _save_small_model_pack(SMALL_MODEL_HANDLE)
     return {
         "ok": True,
         "trainedAt": SMALL_MODEL_HANDLE["trainedAt"],
@@ -2020,6 +3196,8 @@ def _train_small_model(window_days: int = 365, min_samples: int = 80) -> Dict[st
 
 def _maybe_auto_train_small_model(trigger: str = "auto", force: bool = False) -> Dict[str, Any]:
     global LAST_SMALL_MODEL_TRAIN_TS, WORKER_STARTUP_STATUS
+    if DATASET_ONLY_MODE:
+        return {"ok": False, "reason": "dataset_only_mode"}
     if not SMALL_MODEL_AUTO_TRAIN_ENABLED and not force:
         return {"ok": False, "reason": "auto train disabled"}
     now = time.time()
@@ -2447,6 +3625,11 @@ def _discover_market_urls(domain: str, limit: int = 12, role: str = "", departme
     return urls[:lim]
 
 def _stored_questions_for_role(role_key: str, count: int = INTERVIEW_QUESTION_COUNT) -> List[str]:
+    model_questions = _small_model_question_bank(role_key, count=count)
+    if model_questions:
+        return model_questions[:count]
+    if _dataset_only_role(role_key):
+        return []
     global TRAINING_STORE_MAP
     domains = TRAINING_STORE_MAP.get("domains", {}) if isinstance(TRAINING_STORE_MAP, dict) else {}
     node = domains.get(role_key, {}) if isinstance(domains, dict) else {}
@@ -2467,6 +3650,11 @@ def _stored_questions_for_role(role_key: str, count: int = INTERVIEW_QUESTION_CO
     return cleaned
 
 def _stored_qa_bank_for_role(role_key: str) -> List[Dict[str, str]]:
+    model_qa = _small_model_qa_bank(role_key)
+    if model_qa:
+        return model_qa
+    if _dataset_only_role(role_key):
+        return []
     global TRAINING_STORE_MAP
     domains = TRAINING_STORE_MAP.get("domains", {}) if isinstance(TRAINING_STORE_MAP, dict) else {}
     node = domains.get(role_key, {}) if isinstance(domains, dict) else {}
@@ -2705,7 +3893,7 @@ def _select_unique_questions_for_candidate(role_key: str, candidate_key: str, po
     by_role = QUESTION_STATE_MAP.setdefault("byRole", {})
     role_bucket = by_role.setdefault(role_key, {})
     cand = role_bucket.setdefault(candidate_key, {"asked": [], "lastUpdated": ""})
-    asked = set(str(x) for x in cand.get("asked", []) if str(x).strip())
+    asked_raw = [str(x).strip() for x in cand.get("asked", []) if str(x).strip()]
     unique_pool: List[str] = []
     seen: Set[str] = set()
     for q in pool:
@@ -2721,6 +3909,8 @@ def _select_unique_questions_for_candidate(role_key: str, candidate_key: str, po
     if len(unique_pool) > 1:
         random.SystemRandom().shuffle(unique_pool)
 
+    valid_keys = {_normalize(q) for q in unique_pool}
+    asked = {item for item in asked_raw if item in valid_keys}
     fresh = [q for q in unique_pool if _normalize(q) not in asked]
     if len(fresh) >= target:
         selected = fresh[:target]
@@ -2760,7 +3950,23 @@ def _infer_role_key(job_title: str, domain_label: str, job_desc: str, department
         kws = [str(k).lower() for k in cfg.get("keywords",[])] or [p for p in key.split("_") if p]
         score = sum(1 for k in kws if k and k in hay)
         if score > 0: scored.append((score, key))
-    if not scored: return "default"
+    model_domains = (_load_small_model() or {}).get("domainKnowledge", {})
+    if isinstance(model_domains, dict):
+        for key in model_domains.keys():
+            norm_key = _normalize_label_key(str(key), fallback="")
+            if not norm_key:
+                continue
+            aliases = [norm_key, norm_key.replace("_", " ")]
+            score = sum(2 for alias in aliases if alias and alias in hay)
+            if score > 0:
+                scored.append((score, norm_key))
+    if not scored:
+        if _matches_domain_keywords(hay, _domain_training_keywords("java")):
+            return "java"
+        auto_label = _auto_domain_label(hay, fallback="")
+        if auto_label:
+            return auto_label
+        return "default"
     return sorted(scored, key=lambda p: (-p[0], p[1]))[0][1]
 
 def _collect_urls(payload: Any, role_key: str) -> List[str]:
@@ -2856,7 +4062,7 @@ def _refresh_url_index() -> None:
     URL_CONTENT_INDEX = index
 
 def _prefetch_rag_cache() -> None:
-    if not RAG_PREFETCH_ON_STARTUP:
+    if not RAG_PREFETCH_ON_STARTUP or not RAG_FETCH_ONLINE:
         return
     started = time.perf_counter()
     urls: List[str] = []
@@ -2905,6 +4111,39 @@ def _sample_rag_lines(role_key: str, question_texts: List[str], count: int = 20)
         if len(picked) >= count:
             break
     return picked[:count]
+
+def _looks_like_question_dump_line(text: str) -> bool:
+    t = re.sub(r"\s+", " ", str(text or "")).strip()
+    if not t:
+        return True
+    lo = t.lower()
+    if lo.count("?") >= 1:
+        return True
+    if "model answer" in lo or "interview questions" in lo or "with answers" in lo:
+        return True
+    if re.search(r"(?:^|\s)\d+\.\s+[A-Za-z]", t):
+        return True
+    if re.search(r"^[0-9#*_\-\s\W]{0,6}(what|how|why|when|where|which|who|difference between)\b", lo):
+        return True
+    return False
+
+def _filter_answer_context_lines(lines: List[str], max_items: int = 80) -> List[str]:
+    out: List[str] = []
+    seen: Set[str] = set()
+    for raw in lines:
+        text = re.sub(r"\s+", " ", str(raw or "")).strip()
+        if not text:
+            continue
+        if _looks_like_question_dump_line(text):
+            continue
+        key = _normalize(text)
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        out.append(text)
+        if len(out) >= max_items:
+            break
+    return out
 
 def _build_snippets(payload: Any) -> List[str]:
     snippets: List[str] = []
@@ -2982,7 +4221,10 @@ def _build_best_answer(question: str, context_lines: List[str], req: BestAnswerR
     if not normalized_question:
         return {"question": question, "bestAnswer": "", "keyPoints": [], "score": 0}
 
-    trimmed_context = [_limit_text_words(line, 30) for line in context_lines if str(line).strip()][:LLM_CONTEXT_LINES]
+    trimmed_context = _filter_answer_context_lines(
+        [_limit_text_words(line, 30) for line in context_lines if str(line).strip()],
+        max_items=LLM_CONTEXT_LINES,
+    )[:LLM_CONTEXT_LINES]
     if ENABLE_LLM:
         prompt = (
             "You are a senior interview coach.\n"
@@ -3035,6 +4277,45 @@ def _build_best_answer(question: str, context_lines: List[str], req: BestAnswerR
     if req.candidateAnswer.strip():
         result["candidateComparison"] = _llm_score_answer(normalized_question, req.candidateAnswer, trimmed_context)
     return result
+
+def _is_reference_answer_usable(answer: str) -> bool:
+    text = _limit_words(str(answer or "").strip(), 180)
+    if not text or _is_nonsense(text):
+        return False
+    if _looks_like_question_dump_line(text):
+        return False
+    return len(re.findall(r"\S+", text)) >= 6
+
+def _best_qa_bank_answer(role_key: str, question: str) -> str:
+    q = _normalize_question(question)
+    if not q:
+        return ""
+    qa_bank = _small_model_qa_bank(role_key)
+    if not qa_bank:
+        return ""
+    q_key = _normalize(q)
+    for qa in qa_bank:
+        stored_q = _normalize_question(qa.get("question", "")) or ""
+        stored_a = str(qa.get("answer", "")).strip()
+        if stored_q and _normalize(stored_q) == q_key and _is_reference_answer_usable(stored_a):
+            return _limit_words(stored_a, 180)
+    q_kws = _keywords(q, top_n=10)
+    ranked: List[tuple[float, str]] = []
+    for qa in qa_bank:
+        stored_q = _normalize_question(qa.get("question", "")) or ""
+        stored_a = str(qa.get("answer", "")).strip()
+        if not stored_q or not _is_reference_answer_usable(stored_a):
+            continue
+        lex = _overlap_ratio(stored_q, q_kws)
+        sem = _semantic_similarity(
+            _semantic_context_text(q, q),
+            _semantic_context_text(q, stored_q),
+        ) if _semantic_ready() else 0.0
+        ranked.append((((0.7 * sem) + (0.3 * lex)), stored_a))
+    ranked.sort(key=lambda item: item[0], reverse=True)
+    if ranked and ranked[0][0] >= 0.12:
+        return _limit_words(ranked[0][1], 180)
+    return ""
 
 # ══════════════════════════════════════════════════════════════════════════════
 # SECTION 4 — ENGINE 1: QuestionEngine
@@ -3178,6 +4459,11 @@ class QuestionEngine:
         )
         # Fast path only when pool is large enough to keep interview sets diverse.
         stored_pool = _stored_questions_for_role(role_key_hint, max(INTERVIEW_QUESTION_COUNT * 3, 40))
+        if _dataset_only_role(role_key_hint) and len(stored_pool) < INTERVIEW_QUESTION_COUNT:
+            _ensure_default_small_model_training()
+            stored_pool = _stored_questions_for_role(role_key_hint, max(INTERVIEW_QUESTION_COUNT * 3, 40))
+            if len(stored_pool) < INTERVIEW_QUESTION_COUNT:
+                raise RuntimeError("Java dataset model is not ready yet")
         min_fast_pool = max(INTERVIEW_QUESTION_COUNT * 2, 28)
         if len(stored_pool) >= min_fast_pool:
             candidate_key = _candidate_key(payload, role_key_hint)
@@ -3188,7 +4474,7 @@ class QuestionEngine:
                 target=INTERVIEW_QUESTION_COUNT,
             )
             selected_items = [{"question": q, "category": "trained"} for q in (unique_for_candidate or stored_pool[:INTERVIEW_QUESTION_COUNT])]
-            if RL_ENABLED and selected_items:
+            if RL_ENABLED and not _dataset_only_role(role_key_hint) and selected_items:
                 selected_items = sorted(
                     selected_items,
                     key=lambda item: (
@@ -3365,7 +4651,7 @@ class QuestionEngine:
             logger.info("[QUESTION][%s][%s] unique_mode applied count=%s", role_key, candidate_key, len(selected_items))
 
         # Reinforcement ranking: prioritize historically better questions while still exploring.
-        if RL_ENABLED and selected_items:
+        if RL_ENABLED and not _dataset_only_role(role_key) and selected_items:
             selected_items = sorted(
                 selected_items,
                 key=lambda item: (
@@ -3863,6 +5149,15 @@ def _bootstrap_models() -> None:
     logger.info("LLM: %s", llm_reason)
     logger.info("SEMANTIC: %s", sem_reason)
     logger.info("SMALL_MODEL: %s", sm_reason)
+    startup_train_result = _ensure_default_small_model_training()
+    if startup_train_result.get("ok") and not startup_train_result.get("skipped"):
+        logger.info(
+            "[ONLINE_TRAIN][startup] defaults trained sources=%s samples=%s",
+            len(startup_train_result.get("learnedSources", [])),
+            startup_train_result.get("sampleCount", 0),
+        )
+    elif startup_train_result.get("reason"):
+        logger.info("[ONLINE_TRAIN][startup] %s", startup_train_result.get("reason"))
     _maybe_auto_train_small_model(trigger="startup")
     logger.info("STT priority mode: %s", STT_PRIORITY_MODE)
     logger.info("STT: %s", stt_reason); logger.info("TTS: %s", tts_reason)
@@ -4045,6 +5340,43 @@ def _generate_simple_ideal_answer(question: str, job_title: str, difficulty: str
     q = str(question or "").strip()
     if not q:
         return ""
+    role_key = _infer_role_key(job_title, "", q, "engineering")
+    role_node = _small_model_domain_knowledge(None, role_key)
+    best_bank_answer = _best_qa_bank_answer(role_key, q)
+    if best_bank_answer:
+        return best_bank_answer
+    if isinstance(role_node, dict) and len(role_node.get("questionBank", []) or []) > 0 and len(role_node.get("qaBank", []) or []) == 0:
+        return ""
+    context_lines: List[str] = []
+    context_lines.extend(_small_model_context_lines(role_key, count=60))
+    if not context_lines and not _dataset_only_role(role_key):
+        context_lines.extend(_sample_rag_lines(role_key, [job_title, q, difficulty], count=40))
+    for qa in _stored_qa_bank_for_role(role_key)[:24]:
+        if not isinstance(qa, dict):
+            continue
+        qq = str(qa.get("question", "")).strip()
+        aa = str(qa.get("answer", "")).strip()
+        if qq:
+            context_lines.append(qq)
+        if aa:
+            context_lines.append(aa)
+    context_lines = _filter_answer_context_lines(_sanitize_cache_lines(context_lines, max_items=120), max_items=80)
+    if context_lines:
+        generated = _build_best_answer(
+            q,
+            context_lines,
+            BestAnswerRequest(
+                domain=role_key,
+                jobTitle=job_title,
+                jobDescription="",
+                maxWords=140,
+            ),
+        ).get("bestAnswer", "")
+        generated = _limit_words(str(generated or "").strip(), 180)
+        if _is_reference_answer_usable(generated):
+            return generated
+    if _dataset_only_role(role_key):
+        return ""
     q_norm = _normalize(q)
 
     def _looks_like_question_dump(text: str) -> bool:
@@ -4123,12 +5455,7 @@ def _generate_simple_ideal_answer(question: str, job_title: str, difficulty: str
                     "A good interview answer should compare definition, core concepts, practical use cases, limitations, and one real example."
                 )
                 return _limit_words(answer, 120)
-        keywords = _keywords(q, top_n=6)
-        kw_text = ", ".join(keywords[:4]) if keywords else "core concepts"
-        answer = (
-            f"A strong answer should define {kw_text}, explain how it works in practice, "
-            "compare trade-offs, and finish with a real project example and measurable outcome."
-        )
+        return ""
     return answer
 
 
@@ -4140,14 +5467,18 @@ def startinterveiw(payload: StartInterveiwRequest) -> Dict[str, Any]:
     role_key = _infer_role_key(role_text, "", role_text, "engineering")
     eff_lang = _effective_language(role_text, "", "javascript")
     snippet_seed = [role_text, payload.difficulty, role_key]
-    snippets = _sample_rag_lines(role_key, snippet_seed, count=60)
+    dataset_questions = _small_model_question_bank(role_key, max(INTERVIEW_QUESTION_COUNT * 3, 40))
+    if _dataset_only_role(role_key) and len(dataset_questions) < INTERVIEW_QUESTION_COUNT:
+        _ensure_default_small_model_training()
+        dataset_questions = _small_model_question_bank(role_key, max(INTERVIEW_QUESTION_COUNT * 3, 40))
+    snippets = _small_model_context_lines(role_key, count=60) if dataset_questions else _sample_rag_lines(role_key, snippet_seed, count=60)
     if not snippets:
         snippets = _split_sentences(
             f"{role_text}. {payload.difficulty}. core concepts, system design, debugging, testing, performance."
         )
 
-    stored_pool = _stored_questions_for_role(role_key, max(INTERVIEW_QUESTION_COUNT * 3, 40))
-    dynamic_pool = _question_engine._build_dynamic(
+    stored_pool = dataset_questions or _stored_questions_for_role(role_key, max(INTERVIEW_QUESTION_COUNT * 3, 40))
+    dynamic_pool = [] if (dataset_questions or _dataset_only_role(role_key)) else _question_engine._build_dynamic(
         role_text,
         eff_lang,
         snippets,
@@ -4170,6 +5501,8 @@ def startinterveiw(payload: StartInterveiwRequest) -> Dict[str, Any]:
             continue
         seen.add(k)
         clean_pool.append(q)
+    if _dataset_only_role(role_key) and not clean_pool:
+        raise HTTPException(status_code=503, detail="Java dataset model is not ready yet")
     candidate_key = _first_non_blank(payload.candidateId, payload.candidateName, f"anon-{session_id}")
     unique_questions = _select_unique_questions_for_candidate(
         role_key=role_key,
@@ -4993,13 +6326,16 @@ def ml_learning_stats() -> Dict[str, Any]:
     return _learning_stats()
 
 
-@app.post("/ml/train-small-model", include_in_schema=False)
-def ml_train_small_model(payload: SmallModelTrainRequest) -> Dict[str, Any]:
-    result = _train_small_model(window_days=max(1, payload.windowDays), min_samples=max(20, payload.minSamples))
-    if result.get("ok"):
-        WORKER_STARTUP_STATUS["smallModelReady"] = True
-        WORKER_STARTUP_STATUS["smallModelReason"] = f"Small model trained: {result.get('sampleCount', 0)} samples"
-    return result
+register_ml_routes(app, {
+    "train_small_model": _train_small_model,
+    "train_online_sources": _train_small_model_from_online_sources,
+    "online_training_status": _online_training_status,
+    "load_small_model": _load_small_model,
+    "small_model_file": SMALL_MODEL_FILE,
+    "safe_int": _safe_int,
+    "worker_startup_status": WORKER_STARTUP_STATUS,
+    "small_model_source_registry": _small_model_source_registry,
+})
 
 
 @app.post("/interview/best-answer", include_in_schema=False)
