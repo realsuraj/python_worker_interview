@@ -30,8 +30,6 @@ jobs:
       CONTAINER_NAME: ${{ secrets.PY_WORKER_CONTAINER_NAME || 'interview-ai-worker' }}
       HOST_PORT: ${{ secrets.PY_WORKER_HOST_PORT || '9000' }}
       CONTAINER_PORT: ${{ secrets.PY_WORKER_CONTAINER_PORT || '9000' }}
-      IMAGE_TAR_NAME: ${{ secrets.PY_WORKER_IMAGE_TAR_NAME || 'ai-worker-image.tar' }}
-      IMAGE_ARCHIVE_NAME: ${{ secrets.PY_WORKER_IMAGE_ARCHIVE_NAME || 'ai-worker-image.tar.gz' }}
       REMOTE_DOCKER: ${{ secrets.REMOTE_DOCKER || 'docker' }}
       ENABLE_STT: ${{ secrets.ENABLE_STT || 'false' }}
       ENABLE_TTS: ${{ secrets.ENABLE_TTS || 'false' }}
@@ -46,22 +44,6 @@ jobs:
           set -euo pipefail
           sudo apt-get update
           sudo apt-get install -y sshpass
-
-      - name: Build ai-worker docker image
-        shell: bash
-        run: |
-          set -euo pipefail
-          IMAGE_REF="${IMAGE_NAME}:${GITHUB_SHA}"
-          docker build -t "$IMAGE_REF" .
-
-      - name: Save compressed ai-worker image archive
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p release
-          IMAGE_REF="${IMAGE_NAME}:${GITHUB_SHA}"
-          docker save "$IMAGE_REF" | gzip -1 > "release/${IMAGE_ARCHIVE_NAME}"
-          ls -lh "release/${IMAGE_ARCHIVE_NAME}"
 
       - name: Trust remote host
         shell: bash
@@ -83,18 +65,27 @@ jobs:
           set -euo pipefail
           sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "set -e; if $REMOTE_DOCKER ps -a --format '{{.Names}}' | grep -qx '$CONTAINER_NAME'; then $REMOTE_DOCKER stop '$CONTAINER_NAME' >/dev/null 2>&1 || true; $REMOTE_DOCKER rm '$CONTAINER_NAME' >/dev/null 2>&1 || true; fi"
 
-      - name: Upload ai-worker image
+      - name: Sync ai-worker source
         shell: bash
         run: |
           set -euo pipefail
-          sshpass -e rsync -avh --progress -e "ssh -p $SSH_PORT" "release/${IMAGE_ARCHIVE_NAME}" "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/${IMAGE_ARCHIVE_NAME}"
+          sshpass -e rsync -avh --progress \
+            --exclude ".git/" \
+            --exclude ".github/" \
+            --exclude ".venv/" \
+            --exclude "_pydeps/" \
+            --exclude "__pycache__/" \
+            --exclude "worker.pid" \
+            --exclude "*.log" \
+            -e "ssh -p $SSH_PORT" \
+            "./" "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
 
-      - name: Load new ai-worker image and prune old tags
+      - name: Build new ai-worker image on remote and prune old tags
         shell: bash
         run: |
           set -euo pipefail
           IMAGE_REF="${IMAGE_NAME}:${GITHUB_SHA}"
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "set -e; cd '$DEPLOY_PATH'; gzip -dc '$IMAGE_ARCHIVE_NAME' | $REMOTE_DOCKER load; rm -f '$IMAGE_ARCHIVE_NAME'; for img in \$($REMOTE_DOCKER images '$IMAGE_NAME' --format '{{.Repository}}:{{.Tag}}' | grep -vFx '$IMAGE_REF' || true); do $REMOTE_DOCKER rmi -f \"\$img\" >/dev/null 2>&1 || true; done"
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "set -e; cd '$DEPLOY_PATH'; $REMOTE_DOCKER build -t '$IMAGE_REF' .; for img in \$($REMOTE_DOCKER images '$IMAGE_NAME' --format '{{.Repository}}:{{.Tag}}' | grep -vFx '$IMAGE_REF' || true); do $REMOTE_DOCKER rmi -f \"\$img\" >/dev/null 2>&1 || true; done"
 
       - name: Run ai-worker container
         shell: bash

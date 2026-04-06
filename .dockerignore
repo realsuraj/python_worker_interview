@@ -11,3 +11,11 @@ venv/
 worker.pid
 .DS_Store
 Thumbs.db
+candidate_question_state.json
+learning_log.json
+learning_policy.json
+reinforcement_state.json
+source_quality.json
+training_store.json
+vector_cache.json
+vector_cache/
