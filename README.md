@@ -62,7 +62,7 @@ Override any of these in a `.env` file next to `docker-compose.yml`:
 | `NOVEL_URL_REPEAT_DAYS` | `21` | Revisit URL only after this many days (novelty-first) |
 | `DAILY_NEW_URL_TARGET` | `20` | Minimum target of new URLs per day before repeats |
 | `SEMANTIC_MATCH_ENABLED` | `true` | Concept/meaning-based answer matching |
-| `SEMANTIC_MODEL_NAME` | `sentence-transformers/all-MiniLM-L6-v2` | Semantic embedding model |
+| `SEMANTIC_MODEL_NAME` | `tfidf-cosine-pkl` | TF-IDF semantic scorer label |
 
 Example `.env`:
 ```env

@@ -44,16 +44,14 @@ except Exception:
     np = None
 
 try:
-    from sentence_transformers import SentenceTransformer
-except Exception:
-    SentenceTransformer = None
-
-try:
-    from sklearn.feature_extraction.text import HashingVectorizer
+    from sklearn.feature_extraction.text import HashingVectorizer, TfidfVectorizer
     from sklearn.linear_model import SGDRegressor
+    from sklearn.metrics.pairwise import cosine_similarity
 except Exception:
     HashingVectorizer = None
     SGDRegressor = None
+    TfidfVectorizer = None
+    cosine_similarity = None
 
 # ── env / config ───────────────────────────────────────────────────────────────
 def _env_bool(key: str, default: str = "true") -> bool:
@@ -138,7 +136,7 @@ FAST_LEARN_WEEKS          = _env_int("FAST_LEARN_WEEKS", 7, 1)
 NOVEL_URL_REPEAT_DAYS     = _env_int("NOVEL_URL_REPEAT_DAYS", 21, 1)
 DAILY_NEW_URL_TARGET      = _env_int("DAILY_NEW_URL_TARGET", 20, 1)
 SEMANTIC_MATCH_ENABLED  = _env_bool("SEMANTIC_MATCH_ENABLED", "true")
-SEMANTIC_MODEL_NAME     = os.getenv("SEMANTIC_MODEL_NAME", "sentence-transformers/all-MiniLM-L6-v2")
+SEMANTIC_MODEL_NAME     = os.getenv("SEMANTIC_MODEL_NAME", "tfidf-cosine-pkl")
 MATCHANSWER_ONLINE_ENABLED = _env_bool("MATCHANSWER_ONLINE_ENABLED", "false")
 MATCHANSWER_ONLINE_MAX_SENTENCES = _env_int("MATCHANSWER_ONLINE_MAX_SENTENCES", 1, 0)
 MATCHANSWER_ONLINE_MAX_URLS = _env_int("MATCHANSWER_ONLINE_MAX_URLS", 1, 0)
@@ -162,6 +160,7 @@ TRAINING_STORE_FILE      = Path(os.getenv("TRAINING_STORE_FILE", Path(__file__).
 CANDIDATE_STATE_FILE     = Path(os.getenv("CANDIDATE_STATE_FILE", Path(__file__).with_name("candidate_question_state.json")))
 REINFORCEMENT_STATE_FILE = Path(os.getenv("REINFORCEMENT_STATE_FILE", Path(__file__).with_name("reinforcement_state.json")))
 SMALL_MODEL_FILE         = Path(os.getenv("SMALL_MODEL_FILE", Path(__file__).with_name("small_question_model.pkl")))
+SEMANTIC_SCORER_FILE     = Path(os.getenv("SEMANTIC_SCORER_FILE", Path(__file__).with_name("semantic_scorer.pkl")))
 SOURCE_QUALITY_FILE      = Path(os.getenv("SOURCE_QUALITY_FILE", Path(__file__).with_name("source_quality.json")))
 LEARNING_LOG_FILE        = Path(os.getenv("LEARNING_LOG_FILE", Path(__file__).with_name("learning_log.json")))
 LEARNING_POLICY_FILE     = Path(os.getenv("LEARNING_POLICY_FILE", Path(__file__).with_name("learning_policy.json")))
@@ -208,7 +207,7 @@ SMALL_MODEL_HANDLE: Any = None
 SOURCE_QUALITY_MAP: Dict[str, Any] = {}
 LEARNING_LOG_MAP: Dict[str, Any] = {}
 LEARNING_POLICY_MAP: Dict[str, Any] = {}
-SEMANTIC_MODEL_HANDLE = None
+SEMANTIC_MODEL_HANDLE: Any = None
 SEMANTIC_EMBED_CACHE: Dict[str, Any] = {}
 LAST_ACTIVITY_TS      = time.time()
 LAST_AUTO_TRAIN_TS    = 0.0
@@ -576,14 +575,111 @@ def _vector_cache_retrieve(url: str, query: str = "", k: int = VECTOR_TOP_K) -> 
     return []
 
 def _semantic_ready() -> bool:
-    return bool(SEMANTIC_MATCH_ENABLED and SentenceTransformer is not None and np is not None)
+    return bool(SEMANTIC_MATCH_ENABLED and TfidfVectorizer is not None and cosine_similarity is not None)
+
+def _semantic_seed_corpus() -> List[str]:
+    # Keep a small generic corpus so the scorer can still start before any training data exists.
+    return [
+        "question answer interview technical explanation example impact tradeoff",
+        "candidate explains concept implementation debugging testing and optimization",
+        "question expected answer candidate answer semantic relevance correctness",
+        "experience project challenge solution result learning outcome communication",
+        "design scalability reliability maintainability performance and security",
+    ]
+
+def _collect_semantic_training_texts() -> List[str]:
+    texts: List[str] = []
+    store = TRAINING_STORE_MAP if isinstance(TRAINING_STORE_MAP, dict) and TRAINING_STORE_MAP else _load_training_store()
+    domains = store.get("domains", {}) if isinstance(store, dict) else {}
+    if isinstance(domains, dict):
+        for role_key, node in domains.items():
+            if not isinstance(node, dict):
+                continue
+            texts.append(str(role_key or "").strip())
+            for q in node.get("questions", []) if isinstance(node.get("questions"), list) else []:
+                qt = str(q or "").strip()
+                if qt:
+                    texts.append(qt)
+            qa_bank = node.get("qaBank", [])
+            if isinstance(qa_bank, list):
+                for item in qa_bank:
+                    if not isinstance(item, dict):
+                        continue
+                    q = str(item.get("question", "")).strip()
+                    a = str(item.get("answer", "")).strip()
+                    if q:
+                        texts.append(q)
+                    if a:
+                        texts.append(a)
+                    if q and a:
+                        texts.append(f"Question: {q}\nAnswer: {a}")
+    source_map = RAG_SOURCE_MAP if isinstance(RAG_SOURCE_MAP, dict) and RAG_SOURCE_MAP else _load_source_map()
+    if isinstance(source_map, dict):
+        for role_key, cfg in source_map.items():
+            if not isinstance(cfg, dict):
+                continue
+            texts.append(str(role_key or "").strip())
+            keywords = [str(x).strip() for x in cfg.get("keywords", []) if str(x).strip()]
+            if keywords:
+                texts.append(" ".join(keywords))
+    unique: List[str] = []
+    seen: Set[str] = set()
+    for raw in texts + _semantic_seed_corpus():
+        norm = _normalize(raw)
+        if not norm or norm in seen:
+            continue
+        seen.add(norm)
+        unique.append(str(raw).strip())
+    return unique
+
+def _build_semantic_scorer() -> Any:
+    if not _semantic_ready():
+        return None
+    corpus = _collect_semantic_training_texts()
+    if len(corpus) < 3:
+        corpus = _semantic_seed_corpus()
+    vectorizer = TfidfVectorizer(
+        lowercase=True,
+        strip_accents="unicode",
+        ngram_range=(1, 2),
+        sublinear_tf=True,
+        min_df=1,
+    )
+    vectorizer.fit(corpus)
+    pack = {
+        "vectorizer": vectorizer,
+        "trainedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "corpusSize": len(corpus),
+        "modelName": SEMANTIC_MODEL_NAME,
+    }
+    try:
+        with SEMANTIC_SCORER_FILE.open("wb") as f:
+            pickle.dump(pack, f)
+    except Exception:
+        logger.warning("Unable to persist semantic scorer: %s", SEMANTIC_SCORER_FILE)
+    return pack
+
+def _semantic_question_answer_text(question: str, answer: str) -> str:
+    return f"Question: {str(question or '').strip()}\nAnswer: {str(answer or '').strip()}"
+
+def _semantic_context_text(question: str, context: str) -> str:
+    return f"Question: {str(question or '').strip()}\nContext: {str(context or '').strip()}"
 
 def _get_semantic_model():
     global SEMANTIC_MODEL_HANDLE
     if not _semantic_ready():
         return None
     if SEMANTIC_MODEL_HANDLE is None:
-        SEMANTIC_MODEL_HANDLE = SentenceTransformer(SEMANTIC_MODEL_NAME)
+        try:
+            if SEMANTIC_SCORER_FILE.exists():
+                with SEMANTIC_SCORER_FILE.open("rb") as f:
+                    loaded = pickle.load(f)
+                if isinstance(loaded, dict) and loaded.get("vectorizer") is not None:
+                    SEMANTIC_MODEL_HANDLE = loaded
+            if SEMANTIC_MODEL_HANDLE is None:
+                SEMANTIC_MODEL_HANDLE = _build_semantic_scorer()
+        except Exception:
+            SEMANTIC_MODEL_HANDLE = _build_semantic_scorer()
     return SEMANTIC_MODEL_HANDLE
 
 def _semantic_embedding(text: str):
@@ -595,9 +691,10 @@ def _semantic_embedding(text: str):
     if t in SEMANTIC_EMBED_CACHE:
         return SEMANTIC_EMBED_CACHE[t]
     model = _get_semantic_model()
-    if model is None:
+    vectorizer = model.get("vectorizer") if isinstance(model, dict) else None
+    if vectorizer is None:
         return None
-    emb = model.encode(t, normalize_embeddings=True)
+    emb = vectorizer.transform([t])
     SEMANTIC_EMBED_CACHE[t] = emb
     if len(SEMANTIC_EMBED_CACHE) > 1200:
         SEMANTIC_EMBED_CACHE.clear()
@@ -609,7 +706,7 @@ def _semantic_similarity(a: str, b: str) -> float:
         eb = _semantic_embedding(b)
         if ea is None or eb is None:
             return 0.0
-        return float(max(0.0, min(1.0, np.dot(ea, eb))))
+        return float(max(0.0, min(1.0, cosine_similarity(ea, eb)[0][0])))
     except Exception:
         return 0.0
 
@@ -1229,7 +1326,18 @@ def _load_training_store() -> Dict[str, Any]:
     return raw
 
 def _save_training_store(store: Dict[str, Any]) -> None:
+    global TRAINING_STORE_MAP, SEMANTIC_MODEL_HANDLE, SEMANTIC_EMBED_CACHE
     TRAINING_STORE_FILE.write_text(json.dumps(store, indent=2), encoding="utf-8")
+    TRAINING_STORE_MAP = store
+    # Rebuild the TF-IDF scorer lazily after training data changes so later answer checks
+    # use the freshest question/answer vocabulary without adding work to the save path.
+    SEMANTIC_MODEL_HANDLE = None
+    SEMANTIC_EMBED_CACHE.clear()
+    try:
+        if SEMANTIC_SCORER_FILE.exists():
+            SEMANTIC_SCORER_FILE.unlink()
+    except Exception:
+        logger.warning("Unable to refresh semantic scorer cache file: %s", SEMANTIC_SCORER_FILE)
 
 def _sanitize_training_store(store: Dict[str, Any]) -> Dict[str, int]:
     stats = {"domains": 0, "questionsDropped": 0, "qaDropped": 0, "changed": 0}
@@ -3491,9 +3599,11 @@ def _evaluate(payload: InterviewRequest) -> Dict[str, Any]:
         else:
             src_match_lex = _overlap_ratio(ans, source_kws[:20])
             q_match_lex   = _overlap_ratio(ans, q_kws[:10])
-            q_match_sem   = _semantic_similarity(ans, qtext)
-            ref_for_sem   = [qtext] + reference[:40]
-            src_match_sem = _best_semantic_similarity(ans, ref_for_sem, cap=20)
+            candidate_sem_text = _semantic_question_answer_text(qtext, ans)
+            question_sem_text = _semantic_context_text(qtext, qtext)
+            ref_for_sem = [question_sem_text] + [_semantic_context_text(qtext, ref) for ref in reference[:40]]
+            q_match_sem   = _semantic_similarity(candidate_sem_text, question_sem_text)
+            src_match_sem = _best_semantic_similarity(candidate_sem_text, ref_for_sem, cap=20)
             # Concept-first blend: semantic similarity carries more weight than exact keyword match.
             match_ratio = (
                 q_match_lex * 0.30 +
@@ -3523,9 +3633,12 @@ def _evaluate(payload: InterviewRequest) -> Dict[str, Any]:
 
             sent_analysis = []
             sent_correct_count = 0
+            sentence_refs = [_semantic_context_text(qtext, ref) for ref in reference[:24]]
             for si, s in enumerate(sentences):
                 qr_lex = _overlap_ratio(s, q_kws[:10]); rr_lex = _overlap_ratio(s, source_kws[:20])
-                qr_sem = _semantic_similarity(s, qtext); rr_sem = _best_semantic_similarity(s, reference[:24], cap=12)
+                sentence_sem_text = _semantic_question_answer_text(qtext, s)
+                qr_sem = _semantic_similarity(sentence_sem_text, question_sem_text)
+                rr_sem = _best_semantic_similarity(sentence_sem_text, sentence_refs, cap=12)
                 sr = (qr_lex * 0.25) + (rr_lex * 0.15) + (qr_sem * 0.40) + (rr_sem * 0.20)
                 correct = sr >= 0.34
                 if correct: sent_correct_count += 1
@@ -3571,7 +3684,10 @@ def _evaluate(payload: InterviewRequest) -> Dict[str, Any]:
         expected_answer = expected_answer_map.get(_normalize(_normalize_question(qtext)))
         if expected_answer and ans.strip():
             lex = _overlap_ratio(ans, _keywords(expected_answer, top_n=20))
-            sem = _semantic_similarity(ans, expected_answer)
+            sem = _semantic_similarity(
+                _semantic_question_answer_text(qtext, ans),
+                _semantic_question_answer_text(qtext, expected_answer),
+            )
             validation_ratio = (lex * 0.45) + (sem * 0.55)
             validation_score = _clamp(int(round(validation_ratio * 100)))
             is_validated = validation_score >= 35
@@ -3763,13 +3879,15 @@ def _ensure_llm() -> tuple[bool, str]:
 def _ensure_semantic_model() -> tuple[bool, str]:
     if not SEMANTIC_MATCH_ENABLED:
         return False, "Semantic match disabled"
-    if SentenceTransformer is None or np is None:
-        return False, "sentence-transformers/numpy unavailable"
+    if TfidfVectorizer is None or cosine_similarity is None:
+        return False, "scikit-learn TF-IDF scorer unavailable"
     try:
-        _get_semantic_model()
-        return True, f"Semantic model ready: {SEMANTIC_MODEL_NAME}"
+        scorer = _get_semantic_model()
+        if not isinstance(scorer, dict) or scorer.get("vectorizer") is None:
+            return False, "semantic scorer unavailable"
+        return True, f"Semantic scorer ready: {SEMANTIC_MODEL_NAME} ({SEMANTIC_SCORER_FILE.name})"
     except Exception as ex:
-        return False, f"Semantic model failed: {ex}"
+        return False, f"Semantic scorer failed: {ex}"
 
 
 # Browser-only voice mode: backend STT/TTS runtime helpers removed.
@@ -4244,10 +4362,11 @@ def matchanswer(payload: MatchAnswerRequest) -> Dict[str, Any]:
         unit_scores: List[float] = []
         online_used = False
         online_budget = max(0, MATCHANSWER_ONLINE_MAX_SENTENCES)
+        local_sem_refs = [_semantic_context_text(question_text, ref) for ref in local_refs[:30]]
         for idx, sent in enumerate(sentences):
             kws = _keywords(sent, top_n=10)
             local_lex = max([_overlap_ratio(ref, kws) for ref in local_refs[:30]] or [0.0])
-            local_sem = _fast_semantic_similarity(sent, local_refs[:30], cap=10)
+            local_sem = _fast_semantic_similarity(_semantic_question_answer_text(question_text, sent), local_sem_refs, cap=10)
             best = max(local_lex, local_sem)
             source = "local"
             if best < 0.42 and online_budget > 0:
@@ -4256,7 +4375,11 @@ def matchanswer(payload: MatchAnswerRequest) -> Dict[str, Any]:
                 if online_refs:
                     online_used = True
                     online_lex = max([_overlap_ratio(ref, kws) for ref in online_refs[:20]] or [0.0])
-                    online_sem = _fast_semantic_similarity(sent, online_refs[:20], cap=8)
+                    online_sem = _fast_semantic_similarity(
+                        _semantic_question_answer_text(question_text, sent),
+                        [_semantic_context_text(question_text, ref) for ref in online_refs[:20]],
+                        cap=8,
+                    )
                     online_best = max(online_lex, online_sem)
                     if online_best > best:
                         best = online_best
@@ -4283,7 +4406,13 @@ def matchanswer(payload: MatchAnswerRequest) -> Dict[str, Any]:
     i_base = len(ideal_tokens) or 1
     lexical_relevance = _clamp(int((q_overlap / q_base) * 100))
     lexical_work = _clamp(int((i_overlap / i_base) * 100))
-    semantic_ideal = _clamp(int(round(_fast_semantic_similarity(answer_text, [ideal_answer], cap=1) * 100))) if ideal_answer else 0
+    semantic_ideal = _clamp(int(round(
+        _fast_semantic_similarity(
+            _semantic_question_answer_text(question_text, answer_text),
+            [_semantic_question_answer_text(question_text, ideal_answer)],
+            cap=1,
+        ) * 100
+    ))) if ideal_answer else 0
     reference_lines = _collect_local_reference_lines()
     reference_score, sentence_checks, evaluation_source = _sentence_match_score(answer_text, reference_lines)
     relevance_score = _clamp(max(lexical_relevance, int(reference_score * 0.85)))
