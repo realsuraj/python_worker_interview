@@ -31,6 +31,7 @@ jobs:
       HOST_PORT: ${{ secrets.PY_WORKER_HOST_PORT || '9000' }}
       CONTAINER_PORT: ${{ secrets.PY_WORKER_CONTAINER_PORT || '9000' }}
       IMAGE_TAR_NAME: ${{ secrets.PY_WORKER_IMAGE_TAR_NAME || 'ai-worker-image.tar' }}
+      IMAGE_ARCHIVE_NAME: ${{ secrets.PY_WORKER_IMAGE_ARCHIVE_NAME || 'ai-worker-image.tar.gz' }}
       REMOTE_DOCKER: ${{ secrets.REMOTE_DOCKER || 'docker' }}
       ENABLE_STT: ${{ secrets.ENABLE_STT || 'false' }}
       ENABLE_TTS: ${{ secrets.ENABLE_TTS || 'false' }}
@@ -53,13 +54,14 @@ jobs:
           IMAGE_REF="${IMAGE_NAME}:${GITHUB_SHA}"
           docker build -t "$IMAGE_REF" .
 
-      - name: Save ai-worker image archive
+      - name: Save compressed ai-worker image archive
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p release
           IMAGE_REF="${IMAGE_NAME}:${GITHUB_SHA}"
-          docker save "$IMAGE_REF" -o "release/${IMAGE_TAR_NAME}"
+          docker save "$IMAGE_REF" | gzip -1 > "release/${IMAGE_ARCHIVE_NAME}"
+          ls -lh "release/${IMAGE_ARCHIVE_NAME}"
 
       - name: Trust remote host
         shell: bash
@@ -85,14 +87,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          sshpass -e rsync -az -e "ssh -p $SSH_PORT" "release/${IMAGE_TAR_NAME}" "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/${IMAGE_TAR_NAME}"
+          sshpass -e rsync -avh --progress -e "ssh -p $SSH_PORT" "release/${IMAGE_ARCHIVE_NAME}" "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/${IMAGE_ARCHIVE_NAME}"
 
       - name: Load new ai-worker image and prune old tags
         shell: bash
         run: |
           set -euo pipefail
           IMAGE_REF="${IMAGE_NAME}:${GITHUB_SHA}"
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "set -e; cd '$DEPLOY_PATH'; $REMOTE_DOCKER load -i '$IMAGE_TAR_NAME'; rm -f '$IMAGE_TAR_NAME'; for img in \$($REMOTE_DOCKER images '$IMAGE_NAME' --format '{{.Repository}}:{{.Tag}}' | grep -vFx '$IMAGE_REF' || true); do $REMOTE_DOCKER rmi -f \"\$img\" >/dev/null 2>&1 || true; done"
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "set -e; cd '$DEPLOY_PATH'; gzip -dc '$IMAGE_ARCHIVE_NAME' | $REMOTE_DOCKER load; rm -f '$IMAGE_ARCHIVE_NAME'; for img in \$($REMOTE_DOCKER images '$IMAGE_NAME' --format '{{.Repository}}:{{.Tag}}' | grep -vFx '$IMAGE_REF' || true); do $REMOTE_DOCKER rmi -f \"\$img\" >/dev/null 2>&1 || true; done"
 
       - name: Run ai-worker container
         shell: bash
