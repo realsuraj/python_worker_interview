@@ -101,8 +101,22 @@ def _ollama_json(method: str, path: str, payload: Optional[Dict[str, Any]] = Non
 def ollama_model_inventory() -> Dict[str, Any]:
     try:
         data = _ollama_json("GET", "/api/tags", timeout=20)
-    except (urllib_error.URLError, urllib_error.HTTPError, TimeoutError, json.JSONDecodeError):
-        return {"ok": False, "models": [], "reason": "ollama_unreachable"}
+    except urllib_error.HTTPError as ex:
+        return {
+            "ok": False,
+            "models": [],
+            "reason": f"ollama_http_error:{ex.code}",
+        }
+    except urllib_error.URLError as ex:
+        return {
+            "ok": False,
+            "models": [],
+            "reason": f"ollama_url_error:{ex.reason}",
+        }
+    except TimeoutError:
+        return {"ok": False, "models": [], "reason": "ollama_timeout"}
+    except json.JSONDecodeError:
+        return {"ok": False, "models": [], "reason": "ollama_invalid_json"}
     models = data.get("models", []) if isinstance(data, dict) else []
     names = [str(item.get("name", "")).strip() for item in models if isinstance(item, dict) and str(item.get("name", "")).strip()]
     return {"ok": True, "models": names}

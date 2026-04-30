@@ -5443,7 +5443,7 @@ def health() -> Dict[str, Any]:
         "ollamaModelsReady": ollama_models_ready,
         "ollamaMissingConfiguredModels": missing_configured_models,
         "ollamaModels": {name: {"available": True} for name in sorted(live_ollama_names)} if live_ollama_inventory.get("ok") else startup_ollama_models,
-        "ollamaReason": "live_inventory_ok" if live_ollama_inventory.get("ok") else WORKER_STARTUP_STATUS.get("ollamaReason", "not_initialized"),
+        "ollamaReason": "live_inventory_ok" if live_ollama_inventory.get("ok") else live_ollama_inventory.get("reason", WORKER_STARTUP_STATUS.get("ollamaReason", "not_initialized")),
         "semanticMatchEnabled": SEMANTIC_MATCH_ENABLED,
         "semanticModel": SEMANTIC_MODEL_NAME,
         "sttEnabled": ENABLE_STT, "ttsEnabled": ENABLE_TTS, "sttModel": STT_MODEL_ID,

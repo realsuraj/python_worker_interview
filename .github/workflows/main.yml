@@ -32,7 +32,7 @@ jobs:
       CONTAINER_NAME: ${{ secrets.PY_WORKER_CONTAINER_NAME || 'interview-ai-worker' }}
       HOST_PORT: ${{ secrets.PY_WORKER_HOST_PORT || '9000' }}
       CONTAINER_PORT: ${{ secrets.PY_WORKER_CONTAINER_PORT || '9000' }}
-      NETWORK_MODE: ${{ secrets.PY_WORKER_NETWORK_MODE || 'bridge' }}
+      NETWORK_MODE: ${{ secrets.PY_WORKER_NETWORK_MODE || 'host' }}
       REMOTE_DOCKER: ${{ secrets.REMOTE_DOCKER || 'docker' }}
       ENABLE_LLM: ${{ secrets.PY_WORKER_ENABLE_LLM || secrets.ENABLE_LLM || 'true' }}
       LLM_API_URL: ${{ secrets.PY_WORKER_LLM_API_URL || secrets.LLM_API_URL || '' }}
@@ -170,7 +170,7 @@ jobs:
             if sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "docker inspect '$CONTAINER_NAME' --format '{{.State.Running}}' 2>/dev/null | grep -q true"; then
               HEALTH_JSON="$(sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "curl -fsS http://127.0.0.1:${HOST_PORT}/health" 2>/dev/null || true)"
               if [ -n "$HEALTH_JSON" ]; then
-                if HEALTH_JSON="$HEALTH_JSON" python -c "import json, os, sys; payload = json.loads(os.environ['HEALTH_JSON']); ready = bool(payload.get('deploymentReady')); reason = payload.get('deploymentReason', 'deployment_not_ready'); reachable = payload.get('ollamaReachable'); configured = payload.get('ollamaConfiguredModels', []); missing = payload.get('ollamaMissingConfiguredModels', []); print('AI worker is healthy and configured Ollama models are ready' if ready else f'{reason} | reachable={reachable} | configured={configured} | missing={missing}'); sys.exit(0 if ready else 1)"
+                if HEALTH_JSON="$HEALTH_JSON" python -c "import json, os, sys; payload = json.loads(os.environ['HEALTH_JSON']); ready = bool(payload.get('deploymentReady')); reason = payload.get('deploymentReason', 'deployment_not_ready'); reachable = payload.get('ollamaReachable'); configured = payload.get('ollamaConfiguredModels', []); missing = payload.get('ollamaMissingConfiguredModels', []); base_url = payload.get('ollamaBaseUrl'); ollama_reason = payload.get('ollamaReason'); print('AI worker is healthy and configured Ollama models are ready' if ready else f'{reason} | reachable={reachable} | baseUrl={base_url} | ollamaReason={ollama_reason} | configured={configured} | missing={missing}'); sys.exit(0 if ready else 1)"
                 then
                   exit 0
                 fi
@@ -187,5 +187,5 @@ jobs:
         shell: bash
         run: |
           set +e
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "echo '=== docker ps ==='; docker ps -a --filter name=$CONTAINER_NAME; echo '=== docker inspect state ==='; docker inspect $CONTAINER_NAME --format '{{json .State}}' 2>/dev/null || true; echo '=== last 200 logs ==='; docker logs --tail 200 $CONTAINER_NAME 2>&1 || true; echo '=== host port check ==='; ss -ltnp | grep :$HOST_PORT || true"
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "echo '=== docker ps ==='; docker ps -a --filter name=$CONTAINER_NAME; echo '=== docker inspect state ==='; docker inspect $CONTAINER_NAME --format '{{json .State}}' 2>/dev/null || true; echo '=== container OLLAMA env ==='; docker inspect $CONTAINER_NAME --format '{{range .Config.Env}}{{println .}}{{end}}' 2>/dev/null | grep OLLAMA || true; echo '=== last 200 logs ==='; docker logs --tail 200 $CONTAINER_NAME 2>&1 || true; echo '=== in-container ollama probe ==='; docker exec $CONTAINER_NAME sh -c 'echo OLLAMA_BASE_URL=\"$OLLAMA_BASE_URL\"; curl -fsS -m 10 \"$OLLAMA_BASE_URL/api/tags\"' 2>&1 || true; echo '=== host port check ==='; ss -ltnp | grep :$HOST_PORT || true"
 
