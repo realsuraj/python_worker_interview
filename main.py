@@ -5371,14 +5371,16 @@ def health() -> Dict[str, Any]:
         (TRAINING_STORE_MAP.get("domains", {}) or {}).keys()
     ) if isinstance(TRAINING_STORE_MAP, dict) else []
     policy = _adaptive_learning_policy()
-    ollama_models = WORKER_STARTUP_STATUS.get("ollamaModels", {})
+    live_ollama_inventory = ollama_model_inventory()
+    live_ollama_names = set(live_ollama_inventory.get("models", [])) if live_ollama_inventory.get("ok") else set()
+    startup_ollama_models = WORKER_STARTUP_STATUS.get("ollamaModels", {})
     configured_model_names = {
         str(resolve_model_profile("candidate_match").get("model", "")).strip(),
         str(resolve_model_profile("interview_evaluation").get("model", "")).strip(),
     }
     configured_model_names = {name for name in configured_model_names if name}
     ollama_models_ready = all(
-        isinstance((ollama_models or {}).get(name), dict) and bool((ollama_models or {}).get(name, {}).get("available"))
+        name in live_ollama_names
         for name in configured_model_names
     ) if configured_model_names else True
     deployment_ready = (not ENABLE_LLM) or (not OLLAMA_PRELOAD_ON_STARTUP) or ollama_models_ready
@@ -5429,8 +5431,11 @@ def health() -> Dict[str, Any]:
         "llmEnabled": ENABLE_LLM,
         "ollamaBaseUrl": str(resolve_model_profile("health").get("baseUrl", "")),
         "ollamaPreloadOnStartup": OLLAMA_PRELOAD_ON_STARTUP,
+        "ollamaReachable": bool(live_ollama_inventory.get("ok")),
         "ollamaConfiguredModels": sorted(configured_model_names),
         "ollamaModelsReady": ollama_models_ready,
+        "ollamaModels": {name: {"available": True} for name in sorted(live_ollama_names)} if live_ollama_inventory.get("ok") else startup_ollama_models,
+        "ollamaReason": "live_inventory_ok" if live_ollama_inventory.get("ok") else WORKER_STARTUP_STATUS.get("ollamaReason", "not_initialized"),
         "semanticMatchEnabled": SEMANTIC_MATCH_ENABLED,
         "semanticModel": SEMANTIC_MODEL_NAME,
         "sttEnabled": ENABLE_STT, "ttsEnabled": ENABLE_TTS, "sttModel": STT_MODEL_ID,
