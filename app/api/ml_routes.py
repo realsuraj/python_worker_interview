@@ -6,6 +6,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 
 from app.schemas.ml import ModelSourceStatusRequest, OnlineTrainingSetRequest, SmallModelTrainRequest
+from app.services.foundation_pipeline import build_foundation_training_corpus, foundation_dataset_status
 
 
 def register_ml_routes(app: FastAPI, deps: Dict[str, Callable[..., Any] | Any]) -> None:
@@ -53,3 +54,11 @@ def register_ml_routes(app: FastAPI, deps: Dict[str, Callable[..., Any] | Any]) 
             "sampleCount": safe_int(pack.get("sampleCount"), 0) if isinstance(pack, dict) else 0,
             "sourceCount": len(source_registry(pack if isinstance(pack, dict) else {})),
         }
+
+    @app.get("/ml/foundation-dataset/status", tags=["ml"])
+    def ml_foundation_dataset_status() -> Dict[str, Any]:
+        return foundation_dataset_status()
+
+    @app.post("/ml/foundation-dataset/build", tags=["ml"])
+    def ml_build_foundation_dataset(minSamples: int = 0) -> Dict[str, Any]:
+        return build_foundation_training_corpus(minSamples)

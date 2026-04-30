@@ -26,10 +26,20 @@ Override any of these in a `.env` file next to `docker-compose.yml`:
 | `WORKER_PUBLIC_PORT` | `9000` | Host port published by Docker (`host:container`) |
 | `WORKER_PORT` | `9000` | Container listen port |
 | `ENABLE_LLM` | `false` | Enable external LLM API calls |
+| `OLLAMA_BASE_URL` | `http://localhost:11434` | Ollama server base URL used for task-routed generation |
+| `OLLAMA_LIGHT_MODEL` | `qwen2:2b-instruct` | Default model for lightweight AI tasks such as resume analysis, matching, suggestions, and job drafting |
+| `OLLAMA_HEAVY_MODEL` | `mistral:7b-instruct` | Default model for heavy interview flows such as question generation, evaluation, counter-questioning, and voice-turn orchestration |
+| `OLLAMA_AUTO_PULL` | `true` | If a selected Ollama model is missing, the worker calls `/api/pull` before falling back |
+| `OLLAMA_PRELOAD_ON_STARTUP` | `true` | Pre-check and pre-pull the light/heavy Ollama models during worker startup |
+| `OLLAMA_PULL_TIMEOUT_SECONDS` | `900` | Maximum wait time for a model pull request to complete |
 | `LLM_MODEL_NAME` | `external-api` | Label shown in API responses |
 | `LLM_API_URL` | empty | External LLM endpoint URL |
 | `LLM_API_KEY` | empty | Bearer token for external LLM endpoint |
 | `LLM_API_TIMEOUT_SECONDS` | `45` | Timeout for external LLM calls |
+| `AI_FOUNDATION_MIN_SAMPLES` | `300` | Minimum cleaned examples required before exporting a training-ready corpus |
+| `AI_FOUNDATION_DATASET_FILE` | `data/ai_foundation_dataset.jsonl` | Cleaned raw capture file for future fine-tuning datasets |
+| `AI_FOUNDATION_EXPORT_FILE` | `data/ai_foundation_training_ready.jsonl` | Training-ready export generated after sample threshold is reached |
+| `AI_FOUNDATION_STATS_FILE` | `data/ai_foundation_dataset_stats.json` | Aggregate stats for the foundation-model dataset pipeline |
 | `ENABLE_STT` | `false` | Browser-side STT mode (backend STT model disabled) |
 | `ENABLE_TTS` | `false` | Browser-side TTS mode (backend TTS model disabled) |
 | `RAG_FETCH_ONLINE` | `true` | Fetch RAG sources from the web |
@@ -76,9 +86,32 @@ Example `.env`:
 ```env
 WORKER_PORT=9000
 WORKER_PUBLIC_PORT=9000
+ENABLE_LLM=true
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_LIGHT_MODEL=qwen2:2b-instruct
+OLLAMA_HEAVY_MODEL=mistral:7b-instruct
+OLLAMA_AUTO_PULL=true
+OLLAMA_PRELOAD_ON_STARTUP=true
+OLLAMA_PULL_TIMEOUT_SECONDS=900
+AI_FOUNDATION_MIN_SAMPLES=500
 ENABLE_STT=false
 ENABLE_TTS=false
 ```
+
+Model routing policy:
+
+- Lightweight platform tasks default to Qwen 2B through Ollama.
+- Interview-grade generation and evaluation tasks default to Mistral 7B through Ollama.
+- On startup, the worker can pre-check and pre-pull both model tags so first-request latency stays low.
+- Before use, the worker checks Ollama `/api/tags`; if the model is missing and `OLLAMA_AUTO_PULL=true`, it calls `/api/pull` for that exact tag.
+- If Ollama is unreachable or the pull fails, the worker keeps external `LLM_API_URL` support as a fallback when configured.
+
+Foundation dataset pipeline:
+
+- Every worker-routed AI request stores a cleaned training example with phone/email masking.
+- Raw cleaned captures accumulate in `ai_foundation_dataset.jsonl`.
+- Once the sample threshold is met, `POST /ml/foundation-dataset/build` exports a training-ready JSONL corpus for future fine-tuning or distillation work.
+- `GET /ml/foundation-dataset/status` reports current counts by task, model, and complexity so you can decide when to train.
 
 ---
 
@@ -87,6 +120,17 @@ ENABLE_TTS=false
 | Method | Path | Description |
 |---|---|---|
 | GET | `/health` | Health check |
+| POST | `/ai/infer` | Generic worker-first task inference entrypoint used by the Java backend |
+| POST | `/ai/resume/analyze` | Resume parsing, OCR-aware intake, ATS scoring, gap analysis |
+| POST | `/ai/candidate/match` | Candidate-job matching, skill gaps, certification guidance |
+| POST | `/ai/behavior/analyze` | Behavioral/communication signal analysis |
+| POST | `/ai/suggestions` | Candidate preparation and career-path suggestions |
+| POST | `/ai/interview/questions` | Structured HR interview pack generation |
+| POST | `/ai/job-draft` | Job draft and JD regeneration support |
+| POST | `/ai/domain/detect` | Resume/domain inference |
+| POST | `/ai/coding/testcases` | Coding testcase generation fallback surface |
+| POST | `/ai/coding/solution-bundle` | Coding starter/editorial bundle fallback surface |
+| POST | `/ai/voice/turn` | Real-time voice-turn orchestration metadata for validation/counter-questioning |
 | POST | `/interview/questions` | Generate interview questions |
 | POST | `/interview/evaluate` | Evaluate candidate answers |
 | POST | `/interview/counter-questions` | Generate follow-up questions |
@@ -99,6 +143,8 @@ ENABLE_TTS=false
 | GET | `/rag/learning-policy` | Adaptive mode/knowledge/novelty status |
 | GET | `/reinforcement/state` | Read reinforcement learning state |
 | GET | `/ml/learning-stats` | 1-week / 1-month / 1-year learning stats |
+| GET | `/ml/foundation-dataset/status` | Inspect cleaned dataset volume, task mix, model mix, and training readiness |
+| POST | `/ml/foundation-dataset/build` | Export the cleaned capture store into a training-ready JSONL corpus once enough samples exist |
 | POST | `/ml/train-small-model` | Train compact reusable ML model from RL events |
 | POST | `/ml/online-training-dataset` | Estimate or train `small_question_model.pkl` from dataset/source URLs; for Hugging Face datasets, `domain` can be left blank and labels are inferred automatically |
 | POST | `/ml/model-source-status` | Check whether the current small model already learned given URLs |
@@ -107,6 +153,39 @@ ENABLE_TTS=false
 | POST | `/speech/transcribe` | Stub response (backend STT disabled) |
 | POST | `/speech/synthesize` | Stub response (backend TTS disabled) |
 | WS | `/speech/ws/stt` | Available, returns disabled-mode responses |
+
+---
+
+## Enterprise Worker-First Flow
+
+The platform now supports a worker-first AI routing model:
+
+- Spring Boot sends AI tasks to `/ai/infer` on this worker first.
+- The worker handles resume intelligence, job matching, interview generation/evaluation, coding-assist fallbacks, and voice-turn orchestration metadata.
+- If the worker is unavailable or returns no usable result, the backend falls back to `HuggingFaceAiService` inference.
+
+This keeps the execution surface centralized in `python_worker_interview` while still preserving a hosted-model fallback path.
+
+Recommended backend properties:
+
+```properties
+app.ai.worker.enabled=true
+app.ai.worker.url=http://localhost:9000
+app.ai.worker.timeout-ms=12000
+```
+
+Resume intake notes:
+
+- Searchable PDF and DOCX parsing is supported directly in the worker.
+- Image/scanned resume OCR uses PaddleOCR when installed, otherwise falls back to Tesseract if available.
+- Browser-side speech remains the active STT/TTS path today; `/ai/voice/turn` returns orchestration metadata for low-latency validation and counter-question prediction.
+
+Scaling direction for this worker:
+
+- Run CPU-first resume/matching tasks on horizontal FastAPI replicas.
+- Keep heavier model-backed routes behind a queue or separate GPU deployment tier.
+- Cache normalized resume/job features and precomputed interview trees to reduce repeated inference cost.
+- Route premium or overflow analysis to larger external models only when the local worker confidence is low.
 
 ---
 

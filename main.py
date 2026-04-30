@@ -33,8 +33,10 @@ if str(LOCAL_PY_DEPS) not in sys.path:
 from fastapi import FastAPI, HTTPException, Request, WebSocket
 from pydantic import BaseModel
 
+from app.api.enterprise_ai_routes import register_enterprise_ai_routes
 from app.api.ml_routes import register_ml_routes
 from app.schemas.ml import ModelSourceStatusRequest, OnlineTrainingSetRequest, SmallModelTrainRequest
+from app.services.foundation_pipeline import OLLAMA_PRELOAD_ON_STARTUP, append_foundation_example, ensure_ollama_model_available, ollama_model_inventory, preload_ollama_models, resolve_model_profile
 
 # ── optional deps ──────────────────────────────────────────────────────────────
 try:
@@ -280,6 +282,9 @@ WORKER_STARTUP_STATUS: Dict[str, Any] = {
     "sttReason": "not initialized", "ttsReason": "not initialized",
     "semanticReason": "not initialized",
     "smallModelReason": "not initialized",
+    "ollamaReachable": False,
+    "ollamaModels": {},
+    "ollamaReason": "not initialized",
 }
 
 app = FastAPI(
@@ -289,6 +294,8 @@ app = FastAPI(
     redoc_url="/redoc",
     openapi_url="/openapi.json",
 )
+
+register_enterprise_ai_routes(app)
 
 # ══════════════════════════════════════════════════════════════════════════════
 # SECTION 1 — Pydantic models
@@ -1025,45 +1032,104 @@ def _extract_first_json_object(text: str) -> Dict[str, Any]:
     except Exception:
         return {}
 
-def _llm_generate_json(prompt: str) -> Dict[str, Any]:
-    if not ENABLE_LLM or not LLM_API_URL or not requests:
-        return {}
+def _ensure_llm_ready(task: str = "general", prompt: str = "", request_payload: Optional[Dict[str, Any]] = None) -> Optional[Dict[str, str]]:
+    if not ENABLE_LLM or not requests:
+        return None
+    route = resolve_model_profile(task, prompt=prompt, payload=request_payload)
+    if route.get("provider") == "ollama" and route.get("baseUrl"):
+        availability = ensure_ollama_model_available(route.get("model", ""))
+        if availability.get("ok"):
+            if availability.get("pulled"):
+                logger.info("Ollama model pulled on demand model=%s", route.get("model"))
+            return route
+        logger.warning(
+            "Ollama model unavailable model=%s reason=%s",
+            route.get("model"),
+            availability.get("reason", "unknown"),
+        )
+    if LLM_API_URL:
+        return {
+            "provider": "external-api",
+            "baseUrl": LLM_API_URL,
+            "complexity": route.get("complexity", "light"),
+            "model": route.get("model", MODEL_NAME),
+        }
+    return None
+
+def _llm_text(
+    prompt: str,
+    temperature: float = 0.2,
+    max_new_tokens: int = 800,
+    task: str = "general",
+    request_payload: Optional[Dict[str, Any]] = None,
+) -> str:
+    route = _ensure_llm_ready(task=task, prompt=prompt, request_payload=request_payload)
+    if route is None:
+        return ""
     started = time.perf_counter()
     try:
         headers = {"Content-Type": "application/json"}
-        if LLM_API_KEY:
+        endpoint = route.get("baseUrl", "")
+        if route.get("provider") == "external-api" and LLM_API_KEY:
             headers["Authorization"] = f"Bearer {LLM_API_KEY}"
-        payload = {"prompt": prompt, "max_tokens": LLM_MAX_NEW_TOKENS, "temperature": 0.2}
-        resp = requests.post(
-            LLM_API_URL,
-            json=payload,
-            headers=headers,
-            timeout=LLM_API_TIMEOUT_SECONDS,
-        )
+        if route.get("provider") == "ollama":
+            endpoint = endpoint.rstrip("/") + "/api/generate"
+            payload = {
+                "model": route.get("model", MODEL_NAME),
+                "prompt": prompt,
+                "stream": False,
+                "options": {
+                    "temperature": temperature,
+                    "num_predict": max_new_tokens,
+                },
+            }
+        else:
+            payload = {
+                "prompt": prompt,
+                "max_tokens": max_new_tokens,
+                "temperature": temperature,
+            }
+        resp = requests.post(endpoint, json=payload, headers=headers, timeout=LLM_API_TIMEOUT_SECONDS)
         if resp.status_code >= 400:
-            logger.warning("External LLM API HTTP %s", resp.status_code)
-            return {}
+            logger.warning("LLM API HTTP %s route=%s model=%s", resp.status_code, route.get("provider"), route.get("model"))
+            return ""
         elapsed = round((time.perf_counter() - started) * 1000)
-        logger.info("LLM generate finished in %sms", elapsed)
+        logger.info("LLM text finished in %sms route=%s model=%s task=%s", elapsed, route.get("provider"), route.get("model"), task)
         data = resp.json() if resp.text.strip() else {}
         if isinstance(data, dict):
+            text = str(data.get("response", "")).strip()
             if isinstance(data.get("choices"), list) and data.get("choices"):
                 choice = data["choices"][0]
-                text = str(choice.get("text", "")).strip()
+                text = str(choice.get("text", "")).strip() or text
                 if not text and isinstance(choice.get("message"), dict):
                     text = str(choice["message"].get("content", "")).strip()
-                parsed = _extract_first_json_object(text)
-                if parsed:
-                    return parsed
             for key in ("response", "text", "output", "content"):
-                if key in data:
-                    parsed = _extract_first_json_object(str(data.get(key, "")))
-                    if parsed:
-                        return parsed
-            return data
+                if not text and key in data:
+                    text = str(data.get(key, "")).strip()
+            append_foundation_example(task, prompt, request_payload, {"text": text}, route.get("model", MODEL_NAME), "llm-text")
+            return text
     except Exception as ex:
-        logger.warning("LLM generation failed: %s", ex)
-    return {}
+        logger.warning("LLM text failed: %s", ex)
+    return ""
+
+def _llm_generate_json(prompt: str, task: str = "general", request_payload: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    raw = _llm_text(
+        prompt,
+        temperature=0.2,
+        max_new_tokens=LLM_MAX_NEW_TOKENS,
+        task=task,
+        request_payload=request_payload,
+    )
+    if not raw:
+        return {}
+    parsed = _extract_first_json_object(raw)
+    if parsed:
+        return parsed
+    try:
+        data = json.loads(raw)
+        return data if isinstance(data, dict) else {}
+    except Exception:
+        return {}
 
 def _normalize_question_mix(questions: List[Dict[str, Any]], target_count: int) -> List[Dict[str, Any]]:
     target_count = max(1, target_count)
@@ -1139,7 +1205,16 @@ def _llm_generate_questions(payload: InterviewQuestionsRequest, snippets: List[s
         f"Job description: {_limit_text_words(payload.jobDescription, 60)}\n\n"
         f"Context:\n{json.dumps(context_lines, ensure_ascii=False)}"
     )
-    parsed = _llm_generate_json(prompt)
+    parsed = _llm_generate_json(
+        prompt,
+        task="interview_question_generation",
+        request_payload={
+            "jobTitle": payload.jobTitle,
+            "department": payload.department,
+            "language": payload.language,
+            "domain": payload.domainLabel or payload.domain,
+        },
+    )
     questions = parsed.get("questions", []) if isinstance(parsed, dict) else []
     if not isinstance(questions, list):
         return []
@@ -1170,7 +1245,17 @@ def _llm_select_questions(pool: List[str], payload: InterviewQuestionsRequest, r
         f"RAG focus:\n{chr(10).join(rag_focus[: max(6, min(len(rag_focus), 24))])}\n\n"
         f"Candidate pool:\n{chr(10).join(f'- {q}' for q in cleaned_pool[:120])}"
     )
-    out = _llm_text(prompt, temperature=0.2, max_new_tokens=800)
+    out = _llm_text(
+        prompt,
+        temperature=0.2,
+        max_new_tokens=800,
+        task="interview_question_selection",
+        request_payload={
+            "jobTitle": payload.jobTitle,
+            "language": payload.language,
+            "difficulty": payload.difficulty,
+        },
+    )
     if not out:
         return []
     parsed = _extract_json(out)
@@ -1202,7 +1287,11 @@ def _llm_select_questions(pool: List[str], payload: InterviewQuestionsRequest, r
         f"Context lines:\n{json.dumps(top_context, ensure_ascii=False)}\n\n"
         f"Candidate pool:\n{json.dumps(pool, ensure_ascii=False)}"
     )
-    parsed = _llm_generate_json(prompt)
+    parsed = _llm_generate_json(
+        prompt,
+        task="interview_answer_evaluation",
+        request_payload={"question": question, "answer": answer},
+    )
     questions = parsed.get("questions", []) if isinstance(parsed, dict) else []
     if not isinstance(questions, list):
         return []
@@ -5159,17 +5248,28 @@ def _bootstrap_models() -> None:
     elif startup_train_result.get("reason"):
         logger.info("[ONLINE_TRAIN][startup] %s", startup_train_result.get("reason"))
     _maybe_auto_train_small_model(trigger="startup")
+    ollama_preload = preload_ollama_models()
+    WORKER_STARTUP_STATUS["ollamaReachable"] = bool(ollama_preload.get("ok")) or any(
+        bool(item.get("available")) for item in (ollama_preload.get("models", {}) or {}).values() if isinstance(item, dict)
+    )
+    WORKER_STARTUP_STATUS["ollamaModels"] = ollama_preload.get("models", {})
+    WORKER_STARTUP_STATUS["ollamaReason"] = "preloaded" if ollama_preload.get("ok") else "partial_or_unavailable"
+    logger.info("OLLAMA preload: %s", json.dumps(ollama_preload, ensure_ascii=True))
     logger.info("STT priority mode: %s", STT_PRIORITY_MODE)
     logger.info("STT: %s", stt_reason); logger.info("TTS: %s", tts_reason)
 
 def _ensure_llm() -> tuple[bool, str]:
     if not ENABLE_LLM:
         return False, "LLM disabled"
-    if not LLM_API_URL:
-        return False, "LLM API not configured"
     if not requests:
         return False, "requests unavailable"
-    return True, f"External LLM API enabled: {MODEL_NAME}"
+    inventory = ollama_model_inventory()
+    if inventory.get("ok"):
+        models = inventory.get("models", []) if isinstance(inventory.get("models"), list) else []
+        return True, f"Ollama reachable ({len(models)} models visible)"
+    if LLM_API_URL:
+        return True, f"External LLM API enabled: {MODEL_NAME}"
+    return False, "Neither Ollama nor external LLM API is available"
 
 def _ensure_semantic_model() -> tuple[bool, str]:
     if not SEMANTIC_MATCH_ENABLED:
@@ -5271,8 +5371,22 @@ def health() -> Dict[str, Any]:
         (TRAINING_STORE_MAP.get("domains", {}) or {}).keys()
     ) if isinstance(TRAINING_STORE_MAP, dict) else []
     policy = _adaptive_learning_policy()
+    ollama_models = WORKER_STARTUP_STATUS.get("ollamaModels", {})
+    configured_model_names = {
+        str(resolve_model_profile("candidate_match").get("model", "")).strip(),
+        str(resolve_model_profile("interview_evaluation").get("model", "")).strip(),
+    }
+    configured_model_names = {name for name in configured_model_names if name}
+    ollama_models_ready = all(
+        isinstance((ollama_models or {}).get(name), dict) and bool((ollama_models or {}).get(name, {}).get("available"))
+        for name in configured_model_names
+    ) if configured_model_names else True
+    deployment_ready = (not ENABLE_LLM) or (not OLLAMA_PRELOAD_ON_STARTUP) or ollama_models_ready
+    deployment_reason = "configured_ollama_models_ready" if deployment_ready else "waiting_for_ollama_models"
     return {
         "status": "ok", "model": MODEL_NAME, "ready": True,
+        "deploymentReady": deployment_ready,
+        "deploymentReason": deployment_reason,
         "ragEnabled": True, "onlineRagEnabled": RAG_FETCH_ONLINE,
         "ragRoles": sorted(RAG_SOURCE_MAP.keys()),
         "trainedDomains": training_domains,
@@ -5313,6 +5427,10 @@ def health() -> Dict[str, Any]:
         "engines": {"question": "QuestionEngine", "counter": "CounterEngine"},
         "counterEnabled": COUNTER_Q_ENABLED, "counterPerAnswer": COUNTER_Q_PER_ANSWER,
         "llmEnabled": ENABLE_LLM,
+        "ollamaBaseUrl": str(resolve_model_profile("health").get("baseUrl", "")),
+        "ollamaPreloadOnStartup": OLLAMA_PRELOAD_ON_STARTUP,
+        "ollamaConfiguredModels": sorted(configured_model_names),
+        "ollamaModelsReady": ollama_models_ready,
         "semanticMatchEnabled": SEMANTIC_MATCH_ENABLED,
         "semanticModel": SEMANTIC_MODEL_NAME,
         "sttEnabled": ENABLE_STT, "ttsEnabled": ENABLE_TTS, "sttModel": STT_MODEL_ID,
@@ -6386,7 +6504,16 @@ def interview_questions(payload: InterviewQuestionsRequest) -> Dict[str, Any]:
     session_key = _mark_interview_session_active(payload, role_key)
     logger.info("[SESSION] active interview session marked key=%s role=%s", session_key, role_key)
     try:
-        return _question_engine.build(payload)
+        result = _question_engine.build(payload)
+        append_foundation_example(
+            "interview_question_generation",
+            payload.jobDescription,
+            payload.model_dump(),
+            result,
+            resolve_model_profile("interview_question_generation", payload=payload.model_dump()).get("model", MODEL_NAME),
+            "interview-route",
+        )
+        return result
     except Exception as ex:
         logger.exception("QuestionEngine build failed; fallback disabled: %s", ex)
         raise HTTPException(status_code=503, detail=f"Interview question generation failed: {type(ex).__name__}")
@@ -6395,7 +6522,16 @@ def interview_questions(payload: InterviewQuestionsRequest) -> Dict[str, Any]:
 # ── Engine 2: counter / follow-up questions ───────────────────────────────────
 @app.post("/interview/counter-questions", include_in_schema=False)
 def interview_counter_questions(payload: CounterQuestionRequest) -> Dict[str, Any]:
-    return _counter_engine.generate(payload)
+    result = _counter_engine.generate(payload)
+    append_foundation_example(
+        "interview_counter_questions",
+        payload.question,
+        payload.model_dump(),
+        result,
+        resolve_model_profile("interview_counter_questions", payload=payload.model_dump()).get("model", MODEL_NAME),
+        "interview-route",
+    )
+    return result
 
 
 # ── Evaluation ────────────────────────────────────────────────────────────────
@@ -6404,6 +6540,14 @@ def interview_evaluate(payload: InterviewRequest) -> Dict[str, Any]:
     _touch_activity()
     role_key = _infer_role_key(payload.jobTitle, payload.domainLabel or payload.domain, payload.jobDescription, payload.department)
     result = _evaluate(payload)
+    append_foundation_example(
+        "interview_evaluation",
+        payload.jobDescription,
+        payload.model_dump(),
+        result,
+        resolve_model_profile("interview_evaluation", payload=payload.model_dump()).get("model", MODEL_NAME),
+        "interview-route",
+    )
     _mark_interview_session_completed(payload, role_key)
     logger.info("[SESSION] interview session completed role=%s", role_key)
     return result
@@ -6446,6 +6590,14 @@ def interview_evaluate_with_followup(payload: InterviewRequest) -> Dict[str, Any
             "questions":  counter_result.get("questions",[]),
         })
     result["counterQuestions"] = counter_map
+    append_foundation_example(
+        "interview_evaluate_with_followup",
+        payload.jobDescription,
+        payload.model_dump(),
+        result,
+        resolve_model_profile("interview_evaluate_with_followup", payload=payload.model_dump()).get("model", MODEL_NAME),
+        "interview-route",
+    )
     _mark_interview_session_completed(payload, role_key)
     logger.info("[SESSION] interview session completed role=%s", role_key)
     return result

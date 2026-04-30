@@ -7,8 +7,10 @@ on:
       - master
     paths:
       - "main.py"
+      - "app/**"
       - "requirements.txt"
       - "Dockerfile"
+      - "docker-compose.yml"
       - ".dockerignore"
       - ".github/workflows/main.yml"
   workflow_dispatch:
@@ -31,6 +33,17 @@ jobs:
       HOST_PORT: ${{ secrets.PY_WORKER_HOST_PORT || '9000' }}
       CONTAINER_PORT: ${{ secrets.PY_WORKER_CONTAINER_PORT || '9000' }}
       REMOTE_DOCKER: ${{ secrets.REMOTE_DOCKER || 'docker' }}
+      ENABLE_LLM: ${{ secrets.PY_WORKER_ENABLE_LLM || secrets.ENABLE_LLM || 'true' }}
+      LLM_API_URL: ${{ secrets.PY_WORKER_LLM_API_URL || secrets.LLM_API_URL || '' }}
+      LLM_API_KEY: ${{ secrets.PY_WORKER_LLM_API_KEY || secrets.LLM_API_KEY || '' }}
+      LLM_API_TIMEOUT_SECONDS: ${{ secrets.PY_WORKER_LLM_API_TIMEOUT_SECONDS || secrets.LLM_API_TIMEOUT_SECONDS || '45' }}
+      OLLAMA_BASE_URL: ${{ secrets.PY_WORKER_OLLAMA_BASE_URL || secrets.OLLAMA_BASE_URL || 'http://host.docker.internal:11434' }}
+      OLLAMA_LIGHT_MODEL: ${{ secrets.PY_WORKER_OLLAMA_LIGHT_MODEL || secrets.OLLAMA_LIGHT_MODEL || 'qwen2:2b-instruct' }}
+      OLLAMA_HEAVY_MODEL: ${{ secrets.PY_WORKER_OLLAMA_HEAVY_MODEL || secrets.OLLAMA_HEAVY_MODEL || 'mistral:7b-instruct' }}
+      OLLAMA_AUTO_PULL: ${{ secrets.PY_WORKER_OLLAMA_AUTO_PULL || secrets.OLLAMA_AUTO_PULL || 'true' }}
+      OLLAMA_PRELOAD_ON_STARTUP: ${{ secrets.PY_WORKER_OLLAMA_PRELOAD_ON_STARTUP || secrets.OLLAMA_PRELOAD_ON_STARTUP || 'true' }}
+      OLLAMA_PULL_TIMEOUT_SECONDS: ${{ secrets.PY_WORKER_OLLAMA_PULL_TIMEOUT_SECONDS || secrets.OLLAMA_PULL_TIMEOUT_SECONDS || '900' }}
+      AI_FOUNDATION_MIN_SAMPLES: ${{ secrets.PY_WORKER_AI_FOUNDATION_MIN_SAMPLES || secrets.AI_FOUNDATION_MIN_SAMPLES || '300' }}
       ENABLE_STT: ${{ secrets.ENABLE_STT || 'false' }}
       ENABLE_TTS: ${{ secrets.ENABLE_TTS || 'false' }}
 
@@ -92,7 +105,7 @@ jobs:
         run: |
           set -euo pipefail
           IMAGE_REF="${IMAGE_NAME}:${GITHUB_SHA}"
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "IMAGE_REF='$IMAGE_REF' CONTAINER_NAME='$CONTAINER_NAME' HOST_PORT='$HOST_PORT' CONTAINER_PORT='$CONTAINER_PORT' REMOTE_DOCKER='$REMOTE_DOCKER' ENABLE_STT='$ENABLE_STT' ENABLE_TTS='$ENABLE_TTS' bash -s" <<'EOF'
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "IMAGE_REF='$IMAGE_REF' CONTAINER_NAME='$CONTAINER_NAME' HOST_PORT='$HOST_PORT' CONTAINER_PORT='$CONTAINER_PORT' REMOTE_DOCKER='$REMOTE_DOCKER' ENABLE_LLM='$ENABLE_LLM' LLM_API_URL='$LLM_API_URL' LLM_API_KEY='$LLM_API_KEY' LLM_API_TIMEOUT_SECONDS='$LLM_API_TIMEOUT_SECONDS' OLLAMA_BASE_URL='$OLLAMA_BASE_URL' OLLAMA_LIGHT_MODEL='$OLLAMA_LIGHT_MODEL' OLLAMA_HEAVY_MODEL='$OLLAMA_HEAVY_MODEL' OLLAMA_AUTO_PULL='$OLLAMA_AUTO_PULL' OLLAMA_PRELOAD_ON_STARTUP='$OLLAMA_PRELOAD_ON_STARTUP' OLLAMA_PULL_TIMEOUT_SECONDS='$OLLAMA_PULL_TIMEOUT_SECONDS' AI_FOUNDATION_MIN_SAMPLES='$AI_FOUNDATION_MIN_SAMPLES' ENABLE_STT='$ENABLE_STT' ENABLE_TTS='$ENABLE_TTS' bash -s" <<'EOF'
           set -euo pipefail
           # Free conflicting Docker containers that already publish HOST_PORT.
           CONFLICT_IDS="$($REMOTE_DOCKER ps -q --filter "publish=${HOST_PORT}" || true)"
@@ -121,6 +134,17 @@ jobs:
             --add-host=host.docker.internal:host-gateway \
             -e WORKER_HOST=0.0.0.0 \
             -e WORKER_PORT="$CONTAINER_PORT" \
+            -e ENABLE_LLM="$ENABLE_LLM" \
+            -e LLM_API_URL="$LLM_API_URL" \
+            -e LLM_API_KEY="$LLM_API_KEY" \
+            -e LLM_API_TIMEOUT_SECONDS="$LLM_API_TIMEOUT_SECONDS" \
+            -e OLLAMA_BASE_URL="$OLLAMA_BASE_URL" \
+            -e OLLAMA_LIGHT_MODEL="$OLLAMA_LIGHT_MODEL" \
+            -e OLLAMA_HEAVY_MODEL="$OLLAMA_HEAVY_MODEL" \
+            -e OLLAMA_AUTO_PULL="$OLLAMA_AUTO_PULL" \
+            -e OLLAMA_PRELOAD_ON_STARTUP="$OLLAMA_PRELOAD_ON_STARTUP" \
+            -e OLLAMA_PULL_TIMEOUT_SECONDS="$OLLAMA_PULL_TIMEOUT_SECONDS" \
+            -e AI_FOUNDATION_MIN_SAMPLES="$AI_FOUNDATION_MIN_SAMPLES" \
             -e ENABLE_STT="$ENABLE_STT" \
             -e ENABLE_TTS="$ENABLE_TTS" \
             -p "$HOST_PORT:$CONTAINER_PORT" \
@@ -132,10 +156,25 @@ jobs:
         run: |
           set -euo pipefail
           for i in {1..60}; do
-            if sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "docker inspect '$CONTAINER_NAME' --format '{{.State.Running}}' 2>/dev/null | grep -q true" \
-              && sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "curl -fsS http://127.0.0.1:${HOST_PORT}/health > /dev/null 2>&1"; then
-              echo "AI worker is healthy"
-              exit 0
+            if sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "docker inspect '$CONTAINER_NAME' --format '{{.State.Running}}' 2>/dev/null | grep -q true"; then
+              HEALTH_JSON="$(sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "curl -fsS http://127.0.0.1:${HOST_PORT}/health" 2>/dev/null || true)"
+              if [ -n "$HEALTH_JSON" ]; then
+                if HEALTH_JSON="$HEALTH_JSON" python - <<'PY'
+import json
+import os
+import sys
+
+payload = json.loads(os.environ["HEALTH_JSON"])
+if payload.get("deploymentReady"):
+    print("AI worker is healthy and configured Ollama models are ready")
+    sys.exit(0)
+print(payload.get("deploymentReason", "deployment_not_ready"))
+sys.exit(1)
+PY
+                then
+                  exit 0
+                fi
+              fi
             fi
             echo "Waiting for ai-worker... ($i/60)"
             sleep 3
