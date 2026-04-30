@@ -39,7 +39,7 @@ jobs:
       LLM_API_KEY: ${{ secrets.PY_WORKER_LLM_API_KEY || secrets.LLM_API_KEY || '' }}
       LLM_API_TIMEOUT_SECONDS: ${{ secrets.PY_WORKER_LLM_API_TIMEOUT_SECONDS || secrets.LLM_API_TIMEOUT_SECONDS || '45' }}
       OLLAMA_BASE_URL: ${{ secrets.PY_WORKER_OLLAMA_BASE_URL || secrets.OLLAMA_BASE_URL || 'http://host.docker.internal:11434' }}
-      OLLAMA_LIGHT_MODEL: ${{ secrets.PY_WORKER_OLLAMA_LIGHT_MODEL || secrets.OLLAMA_LIGHT_MODEL || 'qwen2:2b-instruct' }}
+      OLLAMA_LIGHT_MODEL: ${{ secrets.PY_WORKER_OLLAMA_LIGHT_MODEL || secrets.OLLAMA_LIGHT_MODEL || 'qwen2:1.5b' }}
       OLLAMA_HEAVY_MODEL: ${{ secrets.PY_WORKER_OLLAMA_HEAVY_MODEL || secrets.OLLAMA_HEAVY_MODEL || 'mistral:7b-instruct' }}
       OLLAMA_AUTO_PULL: ${{ secrets.PY_WORKER_OLLAMA_AUTO_PULL || secrets.OLLAMA_AUTO_PULL || 'true' }}
       OLLAMA_PRELOAD_ON_STARTUP: ${{ secrets.PY_WORKER_OLLAMA_PRELOAD_ON_STARTUP || secrets.OLLAMA_PRELOAD_ON_STARTUP || 'true' }}

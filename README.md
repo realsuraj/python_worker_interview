@@ -27,7 +27,7 @@ Override any of these in a `.env` file next to `docker-compose.yml`:
 | `WORKER_PORT` | `9000` | Container listen port |
 | `ENABLE_LLM` | `false` | Enable external LLM API calls |
 | `OLLAMA_BASE_URL` | `http://localhost:11434` | Ollama server base URL used for task-routed generation |
-| `OLLAMA_LIGHT_MODEL` | `qwen2:2b-instruct` | Default model for lightweight AI tasks such as resume analysis, matching, suggestions, and job drafting |
+| `OLLAMA_LIGHT_MODEL` | `qwen2:1.5b` | Default model for lightweight AI tasks such as resume analysis, matching, suggestions, and job drafting |
 | `OLLAMA_HEAVY_MODEL` | `mistral:7b-instruct` | Default model for heavy interview flows such as question generation, evaluation, counter-questioning, and voice-turn orchestration |
 | `OLLAMA_AUTO_PULL` | `true` | If a selected Ollama model is missing, the worker calls `/api/pull` before falling back |
 | `OLLAMA_PRELOAD_ON_STARTUP` | `true` | Pre-check and pre-pull the light/heavy Ollama models during worker startup |
@@ -89,7 +89,7 @@ WORKER_PORT=9000
 WORKER_PUBLIC_PORT=9000
 ENABLE_LLM=true
 OLLAMA_BASE_URL=http://localhost:11434
-OLLAMA_LIGHT_MODEL=qwen2:2b-instruct
+OLLAMA_LIGHT_MODEL=qwen2:1.5b
 OLLAMA_HEAVY_MODEL=mistral:7b-instruct
 OLLAMA_AUTO_PULL=true
 OLLAMA_PRELOAD_ON_STARTUP=true
@@ -111,7 +111,7 @@ Linux server note:
 
 - If the worker runs in Docker and Ollama runs on the same Linux host bound to `127.0.0.1:11434`, set the GitHub secret `PY_WORKER_NETWORK_MODE=host`.
 - If you stay on bridge mode, make sure Ollama listens on a host-reachable address such as `0.0.0.0:11434`.
-- Your worker will only auto-pull the exact configured model tags. If `ollama list` does not show `qwen2:2b-instruct` and `mistral:7b-instruct`, the pull step will try those exact names after connectivity is fixed.
+- Your worker will only auto-pull the exact configured model tags. If `ollama list` does not show `qwen2:1.5b` and `mistral:7b-instruct`, the pull step will try those exact names after connectivity is fixed.
 
 Foundation dataset pipeline:
 

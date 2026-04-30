@@ -26,7 +26,7 @@ def _path_from_env(env_key: str, filename: str) -> Path:
 
 
 OLLAMA_BASE_URL = str(os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")).strip().rstrip("/")
-OLLAMA_LIGHT_MODEL = str(os.getenv("OLLAMA_LIGHT_MODEL", "qwen2:2b-instruct")).strip() or "qwen2:2b-instruct"
+OLLAMA_LIGHT_MODEL = str(os.getenv("OLLAMA_LIGHT_MODEL", "qwen2:1.5b")).strip() or "qwen2:1.5b"
 OLLAMA_HEAVY_MODEL = str(os.getenv("OLLAMA_HEAVY_MODEL", "mistral:7b-instruct")).strip() or "mistral:7b-instruct"
 OLLAMA_AUTO_PULL = str(os.getenv("OLLAMA_AUTO_PULL", "true")).strip().lower() in {"1", "true", "yes", "on"}
 OLLAMA_PRELOAD_ON_STARTUP = str(os.getenv("OLLAMA_PRELOAD_ON_STARTUP", "true")).strip().lower() in {"1", "true", "yes", "on"}
