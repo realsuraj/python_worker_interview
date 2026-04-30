@@ -108,10 +108,13 @@ jobs:
           IMAGE_REF="${IMAGE_NAME}:${GITHUB_SHA}"
           sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "IMAGE_REF='$IMAGE_REF' CONTAINER_NAME='$CONTAINER_NAME' HOST_PORT='$HOST_PORT' CONTAINER_PORT='$CONTAINER_PORT' NETWORK_MODE='$NETWORK_MODE' REMOTE_DOCKER='$REMOTE_DOCKER' ENABLE_LLM='$ENABLE_LLM' LLM_API_URL='$LLM_API_URL' LLM_API_KEY='$LLM_API_KEY' LLM_API_TIMEOUT_SECONDS='$LLM_API_TIMEOUT_SECONDS' OLLAMA_BASE_URL='$OLLAMA_BASE_URL' OLLAMA_LIGHT_MODEL='$OLLAMA_LIGHT_MODEL' OLLAMA_HEAVY_MODEL='$OLLAMA_HEAVY_MODEL' OLLAMA_AUTO_PULL='$OLLAMA_AUTO_PULL' OLLAMA_PRELOAD_ON_STARTUP='$OLLAMA_PRELOAD_ON_STARTUP' OLLAMA_PULL_TIMEOUT_SECONDS='$OLLAMA_PULL_TIMEOUT_SECONDS' AI_FOUNDATION_MIN_SAMPLES='$AI_FOUNDATION_MIN_SAMPLES' ENABLE_STT='$ENABLE_STT' ENABLE_TTS='$ENABLE_TTS' bash -s" <<'EOF'
           set -euo pipefail
+          EFFECTIVE_NETWORK_MODE="$NETWORK_MODE"
           EFFECTIVE_OLLAMA_BASE_URL="$OLLAMA_BASE_URL"
-          if [ "$NETWORK_MODE" = "host" ] && [ "$OLLAMA_BASE_URL" = "http://host.docker.internal:11434" ]; then
+          if [ "$OLLAMA_BASE_URL" = "http://host.docker.internal:11434" ]; then
+            EFFECTIVE_NETWORK_MODE="host"
             EFFECTIVE_OLLAMA_BASE_URL="http://127.0.0.1:11434"
           fi
+          echo "Starting ai-worker with networkMode=${EFFECTIVE_NETWORK_MODE} ollamaBaseUrl=${EFFECTIVE_OLLAMA_BASE_URL}"
           # Free conflicting Docker containers that already publish HOST_PORT.
           CONFLICT_IDS="$($REMOTE_DOCKER ps -q --filter "publish=${HOST_PORT}" || true)"
           if [ -n "${CONFLICT_IDS}" ]; then
@@ -153,7 +156,7 @@ jobs:
             -e ENABLE_STT="$ENABLE_STT"
             -e ENABLE_TTS="$ENABLE_TTS"
           )
-          if [ "$NETWORK_MODE" = "host" ]; then
+          if [ "$EFFECTIVE_NETWORK_MODE" = "host" ]; then
             RUN_ARGS+=(--network host)
           else
             RUN_ARGS+=(--add-host=host.docker.internal:host-gateway -p "$HOST_PORT:$CONTAINER_PORT")
@@ -187,5 +190,5 @@ jobs:
         shell: bash
         run: |
           set +e
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "echo '=== docker ps ==='; docker ps -a --filter name=$CONTAINER_NAME; echo '=== docker inspect state ==='; docker inspect $CONTAINER_NAME --format '{{json .State}}' 2>/dev/null || true; echo '=== container OLLAMA env ==='; docker inspect $CONTAINER_NAME --format '{{range .Config.Env}}{{println .}}{{end}}' 2>/dev/null | grep OLLAMA || true; echo '=== last 200 logs ==='; docker logs --tail 200 $CONTAINER_NAME 2>&1 || true; echo '=== in-container ollama probe ==='; docker exec $CONTAINER_NAME sh -c 'echo OLLAMA_BASE_URL=\"$OLLAMA_BASE_URL\"; curl -fsS -m 10 \"$OLLAMA_BASE_URL/api/tags\"' 2>&1 || true; echo '=== host port check ==='; ss -ltnp | grep :$HOST_PORT || true"
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "echo '=== docker ps ==='; docker ps -a --filter name=$CONTAINER_NAME; echo '=== docker inspect state ==='; docker inspect $CONTAINER_NAME --format '{{json .State}}' 2>/dev/null || true; echo '=== docker inspect network mode ==='; docker inspect $CONTAINER_NAME --format '{{.HostConfig.NetworkMode}}' 2>/dev/null || true; echo '=== container OLLAMA env ==='; docker inspect $CONTAINER_NAME --format '{{range .Config.Env}}{{println .}}{{end}}' 2>/dev/null | grep OLLAMA || true; echo '=== last 200 logs ==='; docker logs --tail 200 $CONTAINER_NAME 2>&1 || true; echo '=== in-container ollama probe ==='; docker exec $CONTAINER_NAME sh -c 'echo OLLAMA_BASE_URL=\"$OLLAMA_BASE_URL\"; curl -fsS -m 10 \"$OLLAMA_BASE_URL/api/tags\"' 2>&1 || true; echo '=== host port check ==='; ss -ltnp | grep :$HOST_PORT || true"
 
