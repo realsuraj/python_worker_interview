@@ -5379,12 +5379,19 @@ def health() -> Dict[str, Any]:
         str(resolve_model_profile("interview_evaluation").get("model", "")).strip(),
     }
     configured_model_names = {name for name in configured_model_names if name}
+    missing_configured_models = sorted(
+        name for name in configured_model_names if name not in live_ollama_names
+    )
     ollama_models_ready = all(
         name in live_ollama_names
         for name in configured_model_names
     ) if configured_model_names else True
     deployment_ready = (not ENABLE_LLM) or (not OLLAMA_PRELOAD_ON_STARTUP) or ollama_models_ready
-    deployment_reason = "configured_ollama_models_ready" if deployment_ready else "waiting_for_ollama_models"
+    deployment_reason = "configured_ollama_models_ready" if deployment_ready else (
+        "waiting_for_ollama_models:" + ",".join(missing_configured_models)
+        if missing_configured_models else
+        "waiting_for_ollama_models"
+    )
     return {
         "status": "ok", "model": MODEL_NAME, "ready": True,
         "deploymentReady": deployment_ready,
@@ -5434,6 +5441,7 @@ def health() -> Dict[str, Any]:
         "ollamaReachable": bool(live_ollama_inventory.get("ok")),
         "ollamaConfiguredModels": sorted(configured_model_names),
         "ollamaModelsReady": ollama_models_ready,
+        "ollamaMissingConfiguredModels": missing_configured_models,
         "ollamaModels": {name: {"available": True} for name in sorted(live_ollama_names)} if live_ollama_inventory.get("ok") else startup_ollama_models,
         "ollamaReason": "live_inventory_ok" if live_ollama_inventory.get("ok") else WORKER_STARTUP_STATUS.get("ollamaReason", "not_initialized"),
         "semanticMatchEnabled": SEMANTIC_MATCH_ENABLED,

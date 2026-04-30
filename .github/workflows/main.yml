@@ -170,7 +170,7 @@ jobs:
             if sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "docker inspect '$CONTAINER_NAME' --format '{{.State.Running}}' 2>/dev/null | grep -q true"; then
               HEALTH_JSON="$(sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "curl -fsS http://127.0.0.1:${HOST_PORT}/health" 2>/dev/null || true)"
               if [ -n "$HEALTH_JSON" ]; then
-                if HEALTH_JSON="$HEALTH_JSON" python -c "import json, os, sys; payload = json.loads(os.environ['HEALTH_JSON']); ready = bool(payload.get('deploymentReady')); print('AI worker is healthy and configured Ollama models are ready' if ready else payload.get('deploymentReason', 'deployment_not_ready')); sys.exit(0 if ready else 1)"
+                if HEALTH_JSON="$HEALTH_JSON" python -c "import json, os, sys; payload = json.loads(os.environ['HEALTH_JSON']); ready = bool(payload.get('deploymentReady')); reason = payload.get('deploymentReason', 'deployment_not_ready'); reachable = payload.get('ollamaReachable'); configured = payload.get('ollamaConfiguredModels', []); missing = payload.get('ollamaMissingConfiguredModels', []); print('AI worker is healthy and configured Ollama models are ready' if ready else f'{reason} | reachable={reachable} | configured={configured} | missing={missing}'); sys.exit(0 if ready else 1)"
                 then
                   exit 0
                 fi
