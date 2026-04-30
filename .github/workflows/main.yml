@@ -32,6 +32,7 @@ jobs:
       CONTAINER_NAME: ${{ secrets.PY_WORKER_CONTAINER_NAME || 'interview-ai-worker' }}
       HOST_PORT: ${{ secrets.PY_WORKER_HOST_PORT || '9000' }}
       CONTAINER_PORT: ${{ secrets.PY_WORKER_CONTAINER_PORT || '9000' }}
+      NETWORK_MODE: ${{ secrets.PY_WORKER_NETWORK_MODE || 'bridge' }}
       REMOTE_DOCKER: ${{ secrets.REMOTE_DOCKER || 'docker' }}
       ENABLE_LLM: ${{ secrets.PY_WORKER_ENABLE_LLM || secrets.ENABLE_LLM || 'true' }}
       LLM_API_URL: ${{ secrets.PY_WORKER_LLM_API_URL || secrets.LLM_API_URL || '' }}
@@ -105,8 +106,12 @@ jobs:
         run: |
           set -euo pipefail
           IMAGE_REF="${IMAGE_NAME}:${GITHUB_SHA}"
-          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "IMAGE_REF='$IMAGE_REF' CONTAINER_NAME='$CONTAINER_NAME' HOST_PORT='$HOST_PORT' CONTAINER_PORT='$CONTAINER_PORT' REMOTE_DOCKER='$REMOTE_DOCKER' ENABLE_LLM='$ENABLE_LLM' LLM_API_URL='$LLM_API_URL' LLM_API_KEY='$LLM_API_KEY' LLM_API_TIMEOUT_SECONDS='$LLM_API_TIMEOUT_SECONDS' OLLAMA_BASE_URL='$OLLAMA_BASE_URL' OLLAMA_LIGHT_MODEL='$OLLAMA_LIGHT_MODEL' OLLAMA_HEAVY_MODEL='$OLLAMA_HEAVY_MODEL' OLLAMA_AUTO_PULL='$OLLAMA_AUTO_PULL' OLLAMA_PRELOAD_ON_STARTUP='$OLLAMA_PRELOAD_ON_STARTUP' OLLAMA_PULL_TIMEOUT_SECONDS='$OLLAMA_PULL_TIMEOUT_SECONDS' AI_FOUNDATION_MIN_SAMPLES='$AI_FOUNDATION_MIN_SAMPLES' ENABLE_STT='$ENABLE_STT' ENABLE_TTS='$ENABLE_TTS' bash -s" <<'EOF'
+          sshpass -e ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "IMAGE_REF='$IMAGE_REF' CONTAINER_NAME='$CONTAINER_NAME' HOST_PORT='$HOST_PORT' CONTAINER_PORT='$CONTAINER_PORT' NETWORK_MODE='$NETWORK_MODE' REMOTE_DOCKER='$REMOTE_DOCKER' ENABLE_LLM='$ENABLE_LLM' LLM_API_URL='$LLM_API_URL' LLM_API_KEY='$LLM_API_KEY' LLM_API_TIMEOUT_SECONDS='$LLM_API_TIMEOUT_SECONDS' OLLAMA_BASE_URL='$OLLAMA_BASE_URL' OLLAMA_LIGHT_MODEL='$OLLAMA_LIGHT_MODEL' OLLAMA_HEAVY_MODEL='$OLLAMA_HEAVY_MODEL' OLLAMA_AUTO_PULL='$OLLAMA_AUTO_PULL' OLLAMA_PRELOAD_ON_STARTUP='$OLLAMA_PRELOAD_ON_STARTUP' OLLAMA_PULL_TIMEOUT_SECONDS='$OLLAMA_PULL_TIMEOUT_SECONDS' AI_FOUNDATION_MIN_SAMPLES='$AI_FOUNDATION_MIN_SAMPLES' ENABLE_STT='$ENABLE_STT' ENABLE_TTS='$ENABLE_TTS' bash -s" <<'EOF'
           set -euo pipefail
+          EFFECTIVE_OLLAMA_BASE_URL="$OLLAMA_BASE_URL"
+          if [ "$NETWORK_MODE" = "host" ] && [ "$OLLAMA_BASE_URL" = "http://host.docker.internal:11434" ]; then
+            EFFECTIVE_OLLAMA_BASE_URL="http://127.0.0.1:11434"
+          fi
           # Free conflicting Docker containers that already publish HOST_PORT.
           CONFLICT_IDS="$($REMOTE_DOCKER ps -q --filter "publish=${HOST_PORT}" || true)"
           if [ -n "${CONFLICT_IDS}" ]; then
@@ -128,27 +133,33 @@ jobs:
             exit 1
           fi
 
-          $REMOTE_DOCKER run -d \
-            --name "$CONTAINER_NAME" \
-            --restart unless-stopped \
-            --add-host=host.docker.internal:host-gateway \
-            -e WORKER_HOST=0.0.0.0 \
-            -e WORKER_PORT="$CONTAINER_PORT" \
-            -e ENABLE_LLM="$ENABLE_LLM" \
-            -e LLM_API_URL="$LLM_API_URL" \
-            -e LLM_API_KEY="$LLM_API_KEY" \
-            -e LLM_API_TIMEOUT_SECONDS="$LLM_API_TIMEOUT_SECONDS" \
-            -e OLLAMA_BASE_URL="$OLLAMA_BASE_URL" \
-            -e OLLAMA_LIGHT_MODEL="$OLLAMA_LIGHT_MODEL" \
-            -e OLLAMA_HEAVY_MODEL="$OLLAMA_HEAVY_MODEL" \
-            -e OLLAMA_AUTO_PULL="$OLLAMA_AUTO_PULL" \
-            -e OLLAMA_PRELOAD_ON_STARTUP="$OLLAMA_PRELOAD_ON_STARTUP" \
-            -e OLLAMA_PULL_TIMEOUT_SECONDS="$OLLAMA_PULL_TIMEOUT_SECONDS" \
-            -e AI_FOUNDATION_MIN_SAMPLES="$AI_FOUNDATION_MIN_SAMPLES" \
-            -e ENABLE_STT="$ENABLE_STT" \
-            -e ENABLE_TTS="$ENABLE_TTS" \
-            -p "$HOST_PORT:$CONTAINER_PORT" \
-            "$IMAGE_REF"
+          RUN_ARGS=(
+            -d
+            --name "$CONTAINER_NAME"
+            --restart unless-stopped
+            -e WORKER_HOST=0.0.0.0
+            -e WORKER_PORT="$CONTAINER_PORT"
+            -e ENABLE_LLM="$ENABLE_LLM"
+            -e LLM_API_URL="$LLM_API_URL"
+            -e LLM_API_KEY="$LLM_API_KEY"
+            -e LLM_API_TIMEOUT_SECONDS="$LLM_API_TIMEOUT_SECONDS"
+            -e OLLAMA_BASE_URL="$EFFECTIVE_OLLAMA_BASE_URL"
+            -e OLLAMA_LIGHT_MODEL="$OLLAMA_LIGHT_MODEL"
+            -e OLLAMA_HEAVY_MODEL="$OLLAMA_HEAVY_MODEL"
+            -e OLLAMA_AUTO_PULL="$OLLAMA_AUTO_PULL"
+            -e OLLAMA_PRELOAD_ON_STARTUP="$OLLAMA_PRELOAD_ON_STARTUP"
+            -e OLLAMA_PULL_TIMEOUT_SECONDS="$OLLAMA_PULL_TIMEOUT_SECONDS"
+            -e AI_FOUNDATION_MIN_SAMPLES="$AI_FOUNDATION_MIN_SAMPLES"
+            -e ENABLE_STT="$ENABLE_STT"
+            -e ENABLE_TTS="$ENABLE_TTS"
+          )
+          if [ "$NETWORK_MODE" = "host" ]; then
+            RUN_ARGS+=(--network host)
+          else
+            RUN_ARGS+=(--add-host=host.docker.internal:host-gateway -p "$HOST_PORT:$CONTAINER_PORT")
+          fi
+          RUN_ARGS+=("$IMAGE_REF")
+          $REMOTE_DOCKER run "${RUN_ARGS[@]}"
           EOF
 
       - name: Health check

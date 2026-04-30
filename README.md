@@ -32,6 +32,7 @@ Override any of these in a `.env` file next to `docker-compose.yml`:
 | `OLLAMA_AUTO_PULL` | `true` | If a selected Ollama model is missing, the worker calls `/api/pull` before falling back |
 | `OLLAMA_PRELOAD_ON_STARTUP` | `true` | Pre-check and pre-pull the light/heavy Ollama models during worker startup |
 | `OLLAMA_PULL_TIMEOUT_SECONDS` | `900` | Maximum wait time for a model pull request to complete |
+| `PY_WORKER_NETWORK_MODE` | `bridge` | GitHub deployment mode for the server container: use `host` on Linux when Ollama is only reachable via `127.0.0.1:11434` on the host |
 | `LLM_MODEL_NAME` | `external-api` | Label shown in API responses |
 | `LLM_API_URL` | empty | External LLM endpoint URL |
 | `LLM_API_KEY` | empty | Bearer token for external LLM endpoint |
@@ -105,6 +106,12 @@ Model routing policy:
 - On startup, the worker can pre-check and pre-pull both model tags so first-request latency stays low.
 - Before use, the worker checks Ollama `/api/tags`; if the model is missing and `OLLAMA_AUTO_PULL=true`, it calls `/api/pull` for that exact tag.
 - If Ollama is unreachable or the pull fails, the worker keeps external `LLM_API_URL` support as a fallback when configured.
+
+Linux server note:
+
+- If the worker runs in Docker and Ollama runs on the same Linux host bound to `127.0.0.1:11434`, set the GitHub secret `PY_WORKER_NETWORK_MODE=host`.
+- If you stay on bridge mode, make sure Ollama listens on a host-reachable address such as `0.0.0.0:11434`.
+- Your worker will only auto-pull the exact configured model tags. If `ollama list` does not show `qwen2:2b-instruct` and `mistral:7b-instruct`, the pull step will try those exact names after connectivity is fixed.
 
 Foundation dataset pipeline:
 

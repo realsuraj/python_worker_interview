@@ -4,6 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
     image: interview-ai-worker:latest
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       - "${WORKER_PUBLIC_PORT:-9000}:${WORKER_PORT:-9000}"
     environment:
