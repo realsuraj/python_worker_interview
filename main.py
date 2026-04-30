@@ -21,6 +21,7 @@ import re
 import sys
 import threading
 import time
+import tempfile
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set
 from urllib.parse import parse_qs, quote_plus, unquote, urlparse
@@ -46,8 +47,10 @@ except Exception:
     requests = None
     BeautifulSoup = None
 
-# Browser-only voice mode: backend Whisper STT is intentionally disabled.
-WhisperModel = None
+try:
+    from faster_whisper import WhisperModel
+except Exception:
+    WhisperModel = None
 
 try:
     import numpy as np
@@ -189,10 +192,14 @@ COUNTER_Q_ENABLED         = _env_bool("COUNTER_Q_ENABLED", "true")
 COUNTER_Q_PER_ANSWER      = _env_int("COUNTER_Q_PER_ANSWER", 2, 1)
 COUNTER_Q_DEPTH_THRESHOLD = _env_int("COUNTER_Q_DEPTH_THRESHOLD", 40, 0)   # score below → probe harder
 
-ENABLE_STT              = False
-ENABLE_TTS              = False
-STT_MODEL_ID            = "disabled-browser-only"
-STT_PRIORITY_MODE       = "browser_only"
+ENABLE_STT              = _env_bool("ENABLE_STT", "true")
+ENABLE_TTS              = _env_bool("ENABLE_TTS", "false")
+STT_MODEL_ID            = os.getenv("STT_MODEL_ID", "base").strip() or "base"
+STT_PRIORITY_MODE       = os.getenv("STT_PRIORITY_MODE", "worker_first").strip() or "worker_first"
+STT_DEVICE              = os.getenv("STT_DEVICE", "cpu").strip() or "cpu"
+STT_COMPUTE_TYPE        = os.getenv("STT_COMPUTE_TYPE", "int8").strip() or "int8"
+STT_BEAM_SIZE           = _env_int("STT_BEAM_SIZE", 1, 1)
+STT_MIN_CHUNK_BYTES     = _env_int("STT_MIN_CHUNK_BYTES", 1024, 256)
 CORE_JAVA_REFERENCE_URL  = "https://www.interviewbit.com/java-interview-questions/"
 TRAINING_STORE_FILE      = _state_file_path("TRAINING_STORE_FILE", "training_store.json")
 CANDIDATE_STATE_FILE     = _state_file_path("CANDIDATE_STATE_FILE", "candidate_question_state.json")
@@ -253,6 +260,7 @@ TRAINING_STORE_MAP:   Dict[str, Any] = {}
 QUESTION_STATE_MAP:   Dict[str, Any] = {}
 REINFORCEMENT_STATE_MAP: Dict[str, Any] = {}
 SMALL_MODEL_HANDLE: Any = None
+WHISPER_HANDLE: Any = None
 SOURCE_QUALITY_MAP: Dict[str, Any] = {}
 LEARNING_LOG_MAP: Dict[str, Any] = {}
 LEARNING_POLICY_MAP: Dict[str, Any] = {}
@@ -5181,10 +5189,101 @@ _counter_engine  = CounterEngine()
 # ══════════════════════════════════════════════════════════════════════════════
 
 def _ensure_whisper() -> tuple[bool, str]:
-    return False, "STT disabled in worker (browser Web Speech API mode; use Google Chrome)"
+    global WHISPER_HANDLE
+    if not ENABLE_STT:
+        return False, "Worker STT disabled"
+    if WhisperModel is None:
+        return False, "faster-whisper dependency unavailable"
+    if WHISPER_HANDLE is not None:
+        return True, f"Whisper ready: {STT_MODEL_ID} ({STT_DEVICE}/{STT_COMPUTE_TYPE})"
+    try:
+        WHISPER_HANDLE = WhisperModel(
+            STT_MODEL_ID,
+            device=STT_DEVICE,
+            compute_type=STT_COMPUTE_TYPE,
+        )
+        return True, f"Whisper ready: {STT_MODEL_ID} ({STT_DEVICE}/{STT_COMPUTE_TYPE})"
+    except Exception as ex:
+        WHISPER_HANDLE = None
+        return False, f"Whisper init failed: {ex}"
 
 def _ensure_piper() -> tuple[bool, str]:
     return False, "TTS disabled in worker (browser Web Speech API mode; use Google Chrome)"
+
+
+def _normalize_stt_language(value: str) -> Optional[str]:
+    language = str(value or "").strip().lower()
+    if not language:
+        return None
+    if language in {"auto", "detect", "default"}:
+        return None
+    if "-" in language:
+        language = language.split("-", 1)[0]
+    return language or None
+
+
+def _audio_suffix_for_content_type(content_type: str) -> str:
+    normalized = str(content_type or "").strip().lower()
+    if "webm" in normalized:
+        return ".webm"
+    if "ogg" in normalized or "opus" in normalized:
+        return ".ogg"
+    if "wav" in normalized:
+        return ".wav"
+    if "mpeg" in normalized or "mp3" in normalized:
+        return ".mp3"
+    if "mp4" in normalized or "aac" in normalized or "m4a" in normalized:
+        return ".m4a"
+    return ".webm"
+
+
+def _transcribe_audio_path(audio_path: str, language: str = "") -> Dict[str, Any]:
+    ok, reason = _ensure_whisper()
+    if not ok or WHISPER_HANDLE is None:
+        return {"ok": False, "reason": reason}
+    try:
+        segments, info = WHISPER_HANDLE.transcribe(
+            audio_path,
+            language=_normalize_stt_language(language),
+            beam_size=STT_BEAM_SIZE,
+            best_of=1,
+            temperature=0.0,
+            vad_filter=True,
+            condition_on_previous_text=False,
+            word_timestamps=False,
+        )
+        text = " ".join(str(segment.text or "").strip() for segment in segments).strip()
+        return {
+            "ok": True,
+            "text": text,
+            "language": getattr(info, "language", None) or _normalize_stt_language(language) or "",
+            "duration": getattr(info, "duration", 0.0) or 0.0,
+            "model": STT_MODEL_ID,
+            "provider": "python-worker",
+        }
+    except Exception as ex:
+        return {"ok": False, "reason": f"transcription_failed:{ex}"}
+
+
+def _transcribe_audio_bytes(audio_bytes: bytes, content_type: str = "", language: str = "") -> Dict[str, Any]:
+    if not audio_bytes or len(audio_bytes) < STT_MIN_CHUNK_BYTES:
+        return {"ok": True, "text": "", "provider": "python-worker", "model": STT_MODEL_ID}
+    suffix = _audio_suffix_for_content_type(content_type)
+    temp_path = ""
+    try:
+        with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as handle:
+            handle.write(audio_bytes)
+            handle.flush()
+            temp_path = handle.name
+        return _transcribe_audio_path(temp_path, language)
+    except Exception as ex:
+        return {"ok": False, "reason": f"transcription_io_failed:{ex}"}
+    finally:
+        if temp_path:
+            try:
+                Path(temp_path).unlink(missing_ok=True)
+            except Exception:
+                pass
 
 def _bootstrap_models() -> None:
     global RAG_SOURCE_MAP, TRAINING_STORE_MAP, QUESTION_STATE_MAP, REINFORCEMENT_STATE_MAP
@@ -6619,20 +6718,80 @@ def interview_evaluate_with_followup(payload: InterviewRequest) -> Dict[str, Any
 # ── STT ───────────────────────────────────────────────────────────────────────
 @app.post("/speech/transcribe", include_in_schema=False)
 def speech_transcribe(payload: SpeechTranscribeRequest) -> Dict[str, Any]:
-    return {
-        "ok": False,
-        "reason": "Backend STT is disabled. This app uses browser Web Speech API. Use Google Chrome for best performance."
-    }
+    audio_base64 = str(payload.audioBase64 or "").strip()
+    audio_path = str(payload.audioPath or "").strip()
+    if audio_base64:
+        try:
+            audio_bytes = base64.b64decode(audio_base64)
+        except Exception as ex:
+            return {"ok": False, "reason": f"invalid_audio_base64:{ex}"}
+        return _transcribe_audio_bytes(audio_bytes, payload.contentType, payload.language)
+    if audio_path:
+        return _transcribe_audio_path(audio_path, payload.language)
+    return {"ok": False, "reason": "audioBase64 or audioPath is required"}
 
 
 @app.websocket("/speech/ws/stt")
 async def speech_ws_stt(websocket: WebSocket):
+    global ACTIVE_STT_WS_COUNT
     await websocket.accept()
+    ACTIVE_STT_WS_COUNT += 1
+    generation = 0
+    language = ""
+    content_type = "audio/webm"
+    stt_ok, stt_reason = _ensure_whisper()
+    if not stt_ok:
+        await websocket.send_json({"type": "ack", "ok": False, "reason": stt_reason})
+        await websocket.close()
+        ACTIVE_STT_WS_COUNT = max(0, ACTIVE_STT_WS_COUNT - 1)
+        return
     await websocket.send_json({
-        "ok": False,
-        "reason": "Backend STT is disabled. This app uses browser Web Speech API. Use Google Chrome for best performance."
+        "type": "ack",
+        "ok": True,
+        "provider": "python-worker",
+        "model": STT_MODEL_ID,
+        "sttPriorityMode": STT_PRIORITY_MODE,
     })
-    await websocket.close()
+    try:
+        while True:
+            message = await websocket.receive()
+            if message.get("type") == "websocket.disconnect":
+                break
+            text_payload = message.get("text")
+            bytes_payload = message.get("bytes")
+            if text_payload is not None:
+                try:
+                    payload = json.loads(str(text_payload or "{}"))
+                except Exception:
+                    continue
+                event_type = str(payload.get("type") or "").strip().lower()
+                if event_type == "ping":
+                    await websocket.send_json({"type": "pong", "ok": True})
+                    continue
+                if event_type == "meta":
+                    generation = int(payload.get("generation") or generation or 0)
+                    language = str(payload.get("language") or language or "")
+                    content_type = str(payload.get("contentType") or content_type or "audio/webm")
+                    await websocket.send_json({"type": "ack", "ok": True, "generation": generation})
+                    continue
+                continue
+            if bytes_payload is None:
+                continue
+            result = await asyncio.to_thread(_transcribe_audio_bytes, bytes(bytes_payload), content_type, language)
+            result.setdefault("type", "transcript")
+            result.setdefault("generation", generation)
+            await websocket.send_json(result)
+    except Exception as ex:
+        try:
+            await websocket.send_json({"type": "error", "ok": False, "reason": str(ex)})
+        except Exception:
+            pass
+    finally:
+        ACTIVE_STT_WS_COUNT = max(0, ACTIVE_STT_WS_COUNT - 1)
+        try:
+            await websocket.close()
+        except Exception:
+            pass
 
 
 # ── TTS ───────────────────────────────────────────────────────────────────────

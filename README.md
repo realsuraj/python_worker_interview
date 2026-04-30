@@ -41,8 +41,12 @@ Override any of these in a `.env` file next to `docker-compose.yml`:
 | `AI_FOUNDATION_DATASET_FILE` | `data/ai_foundation_dataset.jsonl` | Cleaned raw capture file for future fine-tuning datasets |
 | `AI_FOUNDATION_EXPORT_FILE` | `data/ai_foundation_training_ready.jsonl` | Training-ready export generated after sample threshold is reached |
 | `AI_FOUNDATION_STATS_FILE` | `data/ai_foundation_dataset_stats.json` | Aggregate stats for the foundation-model dataset pipeline |
-| `ENABLE_STT` | `false` | Browser-side STT mode (backend STT model disabled) |
+| `ENABLE_STT` | `true` | Enable worker-side realtime STT over `/speech/ws/stt` and `/speech/transcribe` |
 | `ENABLE_TTS` | `false` | Browser-side TTS mode (backend TTS model disabled) |
+| `STT_MODEL_ID` | `base` | Faster-Whisper model used for live transcription |
+| `STT_PRIORITY_MODE` | `worker_first` | Advertised voice routing mode for worker-first STT |
+| `STT_DEVICE` | `cpu` | Faster-Whisper inference device |
+| `STT_COMPUTE_TYPE` | `int8` | Faster-Whisper compute mode |
 | `RAG_FETCH_ONLINE` | `true` | Fetch RAG sources from the web |
 | `COUNTER_Q_ENABLED` | `true` | Enable counter/follow-up questions |
 | `AUTO_TRAIN_ENABLED` | `true` | Auto-train in idle time |
@@ -95,8 +99,12 @@ OLLAMA_AUTO_PULL=true
 OLLAMA_PRELOAD_ON_STARTUP=true
 OLLAMA_PULL_TIMEOUT_SECONDS=900
 AI_FOUNDATION_MIN_SAMPLES=500
-ENABLE_STT=false
+ENABLE_STT=true
 ENABLE_TTS=false
+STT_MODEL_ID=base
+STT_PRIORITY_MODE=worker_first
+STT_DEVICE=cpu
+STT_COMPUTE_TYPE=int8
 ```
 
 Model routing policy:
@@ -157,9 +165,9 @@ Foundation dataset pipeline:
 | POST | `/ml/model-source-status` | Check whether the current small model already learned given URLs |
 | GET | `/ml/export-model` | Return model export metadata or download `small_question_model.pkl` |
 | POST | `/interview/best-answer` | Generate best interview answers from trained store + URLs |
-| POST | `/speech/transcribe` | Stub response (backend STT disabled) |
+| POST | `/speech/transcribe` | Worker-side transcription for uploaded/base64 audio |
 | POST | `/speech/synthesize` | Stub response (backend TTS disabled) |
-| WS | `/speech/ws/stt` | Available, returns disabled-mode responses |
+| WS | `/speech/ws/stt` | Worker-side realtime transcription websocket for browser voice interview chunks |
 
 ---
 
