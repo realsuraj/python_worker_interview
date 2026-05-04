@@ -2,9 +2,10 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# System deps
+# System deps — ffmpeg is required by faster-whisper to decode
+# Chrome's audio/webm;codecs=opus format from MediaRecorder
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    curl ca-certificates \
+    curl ca-certificates ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
 # Python deps first (layer cache)
