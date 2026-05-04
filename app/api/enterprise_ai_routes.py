@@ -582,10 +582,32 @@ def _interview_evaluation(payload: Dict[str, Any], prompt: str) -> Dict[str, Any
 
 
 def _mock_turn_evaluation(payload: Dict[str, Any], prompt: str) -> Dict[str, Any]:
-    question_text = _text(payload.get("question") or payload.get("questionText"))
-    answer_text = _text(payload.get("answer") or payload.get("answerText"))
+    # Support both flat keys (question/answer) and Java's nested format
+    # (currentQuestion.question / candidateAnswer).
+    current_q = payload.get("currentQuestion") or {}
+    if not isinstance(current_q, dict):
+        current_q = {}
+    question_text = _text(
+        payload.get("question") or
+        payload.get("questionText") or
+        current_q.get("question", "")
+    )
+    answer_text = _text(
+        payload.get("answer") or
+        payload.get("answerText") or
+        payload.get("candidateAnswer", "")
+    )
     score = min(95, max(15, int(28 + _overlap(_tokens(answer_text), _tokens(question_text)) * 50 + min(len(_tokens(answer_text)) // 5, 18))))
     probe = score < 75
+    # Generate a contextual counter question based on the actual interview question.
+    if probe:
+        q_focus = (question_text[:120] if question_text else "your previous answer").strip()
+        if score < 50:
+            counter_q = f"You missed some key points. Can you explain {q_focus} in more detail with a practical example?"
+        else:
+            counter_q = f"Good start. Can you go deeper on {q_focus} and include one real-world trade-off or limitation?"
+    else:
+        counter_q = ""
     return {
         "accuracyScore": score,
         "accuracyLevel": "high" if score >= 75 else "medium" if score >= 50 else "low",
@@ -593,7 +615,7 @@ def _mock_turn_evaluation(payload: Dict[str, Any], prompt: str) -> Dict[str, Any
         "assessment": "Answer addresses the question clearly." if score >= 75 else "Answer is partially correct but needs more precise evidence.",
         "strengths": ["Relevant concepts detected in the answer."] if score >= 60 else [],
         "gaps": ["Add missing technical depth and concrete evidence."] if probe else [],
-        "counterQuestion": "What would you change if this had to operate at 10x scale in production?" if probe else "",
+        "counterQuestion": counter_q,
     }
 
 

@@ -5248,7 +5248,7 @@ def _transcribe_audio_path(audio_path: str, language: str = "") -> Dict[str, Any
             beam_size=STT_BEAM_SIZE,
             best_of=1,
             temperature=0.0,
-            vad_filter=True,
+            vad_filter=False,
             condition_on_previous_text=False,
             word_timestamps=False,
         )
