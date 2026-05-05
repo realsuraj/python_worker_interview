@@ -6754,6 +6754,28 @@ def interview_evaluate_with_followup(payload: InterviewRequest) -> Dict[str, Any
     return result
 
 
+# ── AI Inference proxy (used by Java AiWorkerInferenceClient) ─────────────────
+@app.post("/ai/infer", include_in_schema=False)
+async def ai_infer_endpoint(request: Request):
+    """Proxy LLM inference to Ollama for the Java backend AiWorkerInferenceClient."""
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    task = str(body.get("task") or "general")
+    prompt = str(body.get("prompt") or "")
+    model_hint = str(body.get("model") or "")
+    max_tokens = int(body.get("maxTokens") or body.get("max_tokens") or 900)
+    if not prompt:
+        return {"task": task, "model": model_hint, "text": "", "provider": "ollama", "ok": False, "reason": "empty prompt"}
+    try:
+        text = await asyncio.to_thread(_llm_text, prompt, 0.2, max_tokens, task, body)
+        return {"task": task, "model": model_hint, "text": text, "provider": "ollama", "ok": bool(text)}
+    except Exception as ex:
+        logger.warning("ai_infer_endpoint failed: %s", ex)
+        return {"task": task, "model": model_hint, "text": "", "provider": "ollama", "ok": False, "reason": str(ex)}
+
+
 # ── STT ───────────────────────────────────────────────────────────────────────
 @app.post("/speech/transcribe", include_in_schema=False)
 def speech_transcribe(payload: SpeechTranscribeRequest) -> Dict[str, Any]:
