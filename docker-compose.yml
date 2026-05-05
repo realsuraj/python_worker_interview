@@ -25,13 +25,23 @@ services:
       AI_FOUNDATION_MIN_SAMPLES: "${AI_FOUNDATION_MIN_SAMPLES:-300}"
       ENABLE_STT: "${ENABLE_STT:-true}"
       ENABLE_TTS: "${ENABLE_TTS:-false}"
-      STT_MODEL_ID: "${STT_MODEL_ID:-base}"
+      STT_MODEL_ID: "${STT_MODEL_ID:-large-v3-turbo}"
+      STT_BEAM_SIZE: "${STT_BEAM_SIZE:-5}"
       STT_PRIORITY_MODE: "${STT_PRIORITY_MODE:-worker_first}"
-      STT_DEVICE: "${STT_DEVICE:-cpu}"
-      STT_COMPUTE_TYPE: "${STT_COMPUTE_TYPE:-int8}"
+      STT_DEVICE: "${STT_DEVICE:-cuda}"
+      STT_COMPUTE_TYPE: "${STT_COMPUTE_TYPE:-float16}"
       RAG_FETCH_ONLINE: "${RAG_FETCH_ONLINE:-true}"
       COUNTER_Q_ENABLED: "${COUNTER_Q_ENABLED:-true}"
+      MISTRAL_API_KEY: "${MISTRAL_API_KEY:-}"
+      VOXTRAL_MODEL: "${VOXTRAL_MODEL:-voxtral-mini-transcribe-realtime-2602}"
     restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     healthcheck:
       test: ["CMD", "curl", "-fsS", "http://localhost:${WORKER_PORT:-9000}/health"]
       interval: 15s

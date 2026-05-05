@@ -62,6 +62,41 @@ try:
 except Exception:
     pl = None
 
+try:
+    import edge_tts as _edge_tts_mod
+    _edge_tts_communicate = _edge_tts_mod.Communicate
+except Exception:
+    _edge_tts_communicate = None
+
+try:
+    try:
+        from mistralai.client import Mistral as _MistralClient
+        from mistralai.client.models import (
+            AudioFormat as _VoxtralAudioFormat,
+            RealtimeTranscriptionSessionCreated as _VoxtralSessionCreated,
+            TranscriptionStreamTextDelta as _VoxtralTextDelta,
+            TranscriptionStreamDone as _VoxtralDone,
+            RealtimeTranscriptionError as _VoxtralError,
+        )
+    except ImportError:
+        from mistralai import Mistral as _MistralClient
+        from mistralai.models import (
+            AudioFormat as _VoxtralAudioFormat,
+            RealtimeTranscriptionSessionCreated as _VoxtralSessionCreated,
+            TranscriptionStreamTextDelta as _VoxtralTextDelta,
+            TranscriptionStreamDone as _VoxtralDone,
+            RealtimeTranscriptionError as _VoxtralError,
+        )
+    from mistralai.extra.realtime import UnknownRealtimeEvent as _VoxtralUnknown
+except Exception:
+    _MistralClient = None
+    _VoxtralAudioFormat = None
+    _VoxtralSessionCreated = None
+    _VoxtralTextDelta = None
+    _VoxtralDone = None
+    _VoxtralError = None
+    _VoxtralUnknown = None
+
 if os.getenv("DATASET_ONLY_MODE", "true").strip().lower() in {"1", "true", "yes", "on"}:
     HashingVectorizer = None
     SGDRegressor = None
@@ -194,12 +229,15 @@ COUNTER_Q_DEPTH_THRESHOLD = _env_int("COUNTER_Q_DEPTH_THRESHOLD", 40, 0)   # sco
 
 ENABLE_STT              = _env_bool("ENABLE_STT", "true")
 ENABLE_TTS              = _env_bool("ENABLE_TTS", "false")
-STT_MODEL_ID            = os.getenv("STT_MODEL_ID", "base").strip() or "base"
+STT_MODEL_ID            = os.getenv("STT_MODEL_ID", "large-v3-turbo").strip() or "large-v3-turbo"
 STT_PRIORITY_MODE       = os.getenv("STT_PRIORITY_MODE", "worker_first").strip() or "worker_first"
 STT_DEVICE              = os.getenv("STT_DEVICE", "cpu").strip() or "cpu"
 STT_COMPUTE_TYPE        = os.getenv("STT_COMPUTE_TYPE", "int8").strip() or "int8"
-STT_BEAM_SIZE           = _env_int("STT_BEAM_SIZE", 1, 1)
+STT_BEAM_SIZE           = _env_int("STT_BEAM_SIZE", 5, 1)
 STT_MIN_CHUNK_BYTES     = _env_int("STT_MIN_CHUNK_BYTES", 512, 256)
+MISTRAL_API_KEY         = os.getenv("MISTRAL_API_KEY", "").strip()
+VOXTRAL_MODEL           = os.getenv("VOXTRAL_MODEL", "voxtral-mini-transcribe-realtime-2602").strip()
+ENABLE_VOXTRAL          = bool(_MistralClient and MISTRAL_API_KEY)
 CORE_JAVA_REFERENCE_URL  = "https://www.interviewbit.com/java-interview-questions/"
 TRAINING_STORE_FILE      = _state_file_path("TRAINING_STORE_FILE", "training_store.json")
 CANDIDATE_STATE_FILE     = _state_file_path("CANDIDATE_STATE_FILE", "candidate_question_state.json")
@@ -5248,7 +5286,8 @@ def _transcribe_audio_path(audio_path: str, language: str = "") -> Dict[str, Any
             beam_size=STT_BEAM_SIZE,
             best_of=1,
             temperature=0.0,
-            vad_filter=False,
+            vad_filter=True,           # Silero VAD — drops silent segments before decoding
+            vad_parameters={"min_silence_duration_ms": 300},
             condition_on_previous_text=False,
             word_timestamps=False,
         )
@@ -6801,6 +6840,239 @@ def speech_synthesize(payload: SpeechSynthesizeRequest) -> Dict[str, Any]:
         "ok": False,
         "reason": "Backend TTS is disabled. This app uses browser Web Speech API. Use Google Chrome for best performance."
     }
+
+
+# Available edge-tts voices (free Microsoft Neural voices).
+# The client can override by sending {"type":"meta","voice":"<name>"} first.
+_TTS_DEFAULT_VOICE = "en-US-AriaNeural"
+_TTS_ALLOWED_VOICES: Set[str] = {
+    "en-US-AriaNeural",
+    "en-US-JennyNeural",
+    "en-US-ChristopherNeural",
+    "en-US-GuyNeural",
+    "en-US-MichelleNeural",
+    "en-GB-SoniaNeural",
+    "en-GB-RyanNeural",
+}
+
+
+@app.websocket("/speech/ws/tts")
+async def speech_ws_tts(websocket: WebSocket):
+    """Streaming TTS via edge-tts (Microsoft Neural voices, free).
+
+    Protocol:
+      Client → Server (text):  {"type": "meta", "voice": "en-US-AriaNeural"}   (optional)
+      Client → Server (text):  {"type": "speak", "text": "Hello, world"}
+      Server → Client (bytes): raw MP3 audio chunks as they are generated
+      Server → Client (text):  {"type": "done"}  when streaming is complete
+      Server → Client (text):  {"type": "error", "reason": "..."}  on failure
+    """
+    await websocket.accept()
+
+    if _edge_tts_communicate is None:
+        await websocket.send_json({"type": "error", "reason": "edge-tts unavailable on this worker"})
+        await websocket.close()
+        return
+
+    await websocket.send_json({"type": "ack", "ok": True, "provider": "edge-tts", "voice": _TTS_DEFAULT_VOICE})
+
+    selected_voice = _TTS_DEFAULT_VOICE
+    try:
+        while True:
+            message = await websocket.receive()
+            if message.get("type") == "websocket.disconnect":
+                break
+            text_payload = message.get("text")
+            if text_payload is None:
+                continue
+            try:
+                payload = json.loads(str(text_payload or "{}"))
+            except Exception:
+                continue
+            event_type = str(payload.get("type") or "").strip().lower()
+            if event_type == "ping":
+                await websocket.send_json({"type": "pong", "ok": True})
+                continue
+            if event_type == "meta":
+                voice = str(payload.get("voice") or "").strip()
+                if voice in _TTS_ALLOWED_VOICES:
+                    selected_voice = voice
+                await websocket.send_json({"type": "ack", "ok": True, "voice": selected_voice})
+                continue
+            if event_type == "speak":
+                text = str(payload.get("text") or "").strip()
+                if not text:
+                    await websocket.send_json({"type": "done"})
+                    continue
+                try:
+                    communicate = _edge_tts_communicate(text, selected_voice)
+                    async for chunk in communicate.stream():
+                        if chunk["type"] == "audio":
+                            await websocket.send_bytes(chunk["data"])
+                    await websocket.send_json({"type": "done"})
+                except Exception as ex:
+                    logger.warning("[TTS] edge-tts error: %s", ex)
+                    await websocket.send_json({"type": "error", "reason": str(ex)})
+                continue
+    except Exception as ex:
+        try:
+            await websocket.send_json({"type": "error", "reason": str(ex)})
+        except Exception:
+            pass
+    finally:
+        try:
+            await websocket.close()
+        except Exception:
+            pass
+
+
+@app.websocket("/speech/ws/voxtral")
+async def speech_ws_voxtral(websocket: WebSocket):
+    """Proxy for Mistral Voxtral Realtime speech-to-text.
+
+    Protocol:
+      Client → Server (text):  {"type": "meta", "sampleRate": 16000}   (send before first PCM bytes)
+      Client → Server (bytes): raw PCM s16le mono audio chunks
+      Client → Server (text):  {"type": "ping"}  → {"type": "pong"}
+      Client → Server (text):  {"type": "stop"}  → ends stream
+      Server → Client (text):  {"type": "ack", "ok": true, "provider": "voxtral", "model": "..."}
+      Server → Client (text):  {"type": "session_created"}  when Mistral session opens
+      Server → Client (text):  {"type": "transcript_delta", "text": "..."}  real-time text chunks
+      Server → Client (text):  {"type": "transcript_final"}  when model finalizes session
+      Server → Client (text):  {"type": "error", "reason": "..."}  on failure
+    """
+    await websocket.accept()
+
+    if _MistralClient is None or _VoxtralAudioFormat is None:
+        await websocket.send_json({
+            "type": "error",
+            "reason": "mistralai[realtime] SDK not installed. Run: pip install 'mistralai[realtime]'",
+        })
+        await websocket.close()
+        return
+
+    if not MISTRAL_API_KEY:
+        await websocket.send_json({
+            "type": "error",
+            "reason": "MISTRAL_API_KEY not configured on this worker.",
+        })
+        await websocket.close()
+        return
+
+    await websocket.send_json({
+        "type": "ack",
+        "ok": True,
+        "provider": "voxtral",
+        "model": VOXTRAL_MODEL,
+    })
+
+    audio_queue: asyncio.Queue = asyncio.Queue(maxsize=500)
+    sample_rate_holder: list = [16000]
+    transcribe_task_holder: list = [None]
+
+    async def audio_iter():
+        while True:
+            chunk = await audio_queue.get()
+            if chunk is None:
+                break
+            yield chunk
+
+    async def run_voxtral_stream() -> None:
+        try:
+            client = _MistralClient(api_key=MISTRAL_API_KEY)
+            audio_format = _VoxtralAudioFormat(
+                encoding="pcm_s16le",
+                sample_rate=sample_rate_holder[0],
+            )
+            async for event in client.audio.realtime.transcribe_stream(
+                audio_stream=audio_iter(),
+                model=VOXTRAL_MODEL,
+                audio_format=audio_format,
+                target_streaming_delay_ms=300,
+            ):
+                if _VoxtralSessionCreated and isinstance(event, _VoxtralSessionCreated):
+                    try:
+                        await websocket.send_json({"type": "session_created", "ok": True})
+                    except Exception:
+                        break
+                elif _VoxtralTextDelta and isinstance(event, _VoxtralTextDelta):
+                    try:
+                        await websocket.send_json({"type": "transcript_delta", "text": event.text})
+                    except Exception:
+                        break
+                elif _VoxtralDone and isinstance(event, _VoxtralDone):
+                    try:
+                        await websocket.send_json({"type": "transcript_final"})
+                    except Exception:
+                        pass
+                    break
+                elif _VoxtralError and isinstance(event, _VoxtralError):
+                    try:
+                        await websocket.send_json({"type": "error", "reason": str(event)})
+                    except Exception:
+                        pass
+                    break
+                elif _VoxtralUnknown and isinstance(event, _VoxtralUnknown):
+                    continue
+        except Exception as ex:
+            logger.warning("[Voxtral] stream error: %s", ex)
+            try:
+                await websocket.send_json({"type": "error", "reason": str(ex)})
+            except Exception:
+                pass
+
+    try:
+        while True:
+            message = await websocket.receive()
+            if message.get("type") == "websocket.disconnect":
+                break
+            bytes_payload = message.get("bytes")
+            if bytes_payload is not None:
+                if transcribe_task_holder[0] is None:
+                    transcribe_task_holder[0] = asyncio.create_task(run_voxtral_stream())
+                if not audio_queue.full():
+                    audio_queue.put_nowait(bytes(bytes_payload))
+                continue
+            text_payload = message.get("text")
+            if text_payload is None:
+                continue
+            try:
+                payload = json.loads(str(text_payload))
+            except Exception:
+                continue
+            event_type = str(payload.get("type") or "").strip().lower()
+            if event_type == "ping":
+                await websocket.send_json({"type": "pong"})
+            elif event_type == "meta":
+                sr = int(payload.get("sampleRate") or payload.get("sample_rate") or 16000)
+                if sr in (8000, 16000, 22050, 44100, 48000):
+                    sample_rate_holder[0] = sr
+                if transcribe_task_holder[0] is None:
+                    transcribe_task_holder[0] = asyncio.create_task(run_voxtral_stream())
+                await websocket.send_json({"type": "ack", "ok": True, "sampleRate": sample_rate_holder[0]})
+            elif event_type == "stop":
+                break
+    except Exception as ex:
+        logger.warning("[Voxtral WS] error: %s", ex)
+        try:
+            await websocket.send_json({"type": "error", "reason": str(ex)})
+        except Exception:
+            pass
+    finally:
+        try:
+            audio_queue.put_nowait(None)
+        except Exception:
+            pass
+        task = transcribe_task_holder[0]
+        if task is not None:
+            try:
+                await asyncio.wait_for(task, timeout=3.0)
+            except Exception:
+                task.cancel()
+        try:
+            await websocket.close()
+        except Exception:
+            pass
 
 
 # ══════════════════════════════════════════════════════════════════════════════

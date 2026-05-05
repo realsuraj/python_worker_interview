@@ -1,11 +1,14 @@
-FROM python:3.11-slim
+FROM nvidia/cuda:12.4.1-cudnn9-runtime-ubuntu22.04
 
 WORKDIR /app
 
-# System deps — ffmpeg is required by faster-whisper to decode
-# Chrome's audio/webm;codecs=opus format from MediaRecorder
+# System deps — Python 3.11, ffmpeg (required by faster-whisper to decode
+# Chrome's audio/webm;codecs=opus from MediaRecorder)
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3.11 python3.11-dev python3-pip \
     curl ca-certificates ffmpeg \
+    && ln -sf python3.11 /usr/bin/python3 \
+    && ln -sf python3 /usr/bin/python \
     && rm -rf /var/lib/apt/lists/*
 
 # Python deps first (layer cache)
