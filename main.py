@@ -5291,7 +5291,19 @@ def _transcribe_audio_path(audio_path: str, language: str = "") -> Dict[str, Any
             condition_on_previous_text=False,
             word_timestamps=False,
         )
-        text = " ".join(str(segment.text or "").strip() for segment in segments).strip()
+        # Filter out hallucinated / low-confidence segments.
+        # no_speech_prob > 0.6 means Whisper itself doubts speech was present.
+        # avg_logprob < -1.0 means extremely low confidence — classic hallucination.
+        kept = []
+        for seg in segments:
+            no_speech = getattr(seg, "no_speech_prob", 0.0) or 0.0
+            avg_logprob = getattr(seg, "avg_logprob", 0.0) or 0.0
+            if no_speech > 0.6 or avg_logprob < -1.0:
+                continue
+            t = str(seg.text or "").strip()
+            if t:
+                kept.append(t)
+        text = " ".join(kept).strip()
         return {
             "ok": True,
             "text": text,
