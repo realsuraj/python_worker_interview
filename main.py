@@ -5287,22 +5287,40 @@ def _transcribe_audio_path(audio_path: str, language: str = "") -> Dict[str, Any
             best_of=1,
             temperature=0.0,
             vad_filter=True,           # Silero VAD — drops silent segments before decoding
-            vad_parameters={"min_silence_duration_ms": 300},
+            vad_parameters={"min_silence_duration_ms": 300, "threshold": 0.4},
             condition_on_previous_text=False,
             word_timestamps=False,
+            no_speech_threshold=0.4,   # Whisper built-in: discard segments above this no_speech_prob
+            suppress_blank=True,       # Never emit blank/whitespace-only segments
         )
+        # Known Whisper hallucinations emitted on near-silent or very short audio.
+        _HALLUCINATION_PHRASES = frozenset({
+            "thank you.", "thank you", "thanks.", "thanks",
+            "thank you for watching.", "thank you for watching",
+            "bye.", "bye", "bye bye.", "bye bye",
+            "goodbye.", "goodbye", "see you.", "see you",
+            "hello.", "hello", "hi.", "hi", "hey.", "hey",
+            "yes.", "yes", "no.", "no", "okay.", "okay", "ok.", "ok",
+            "i don't know.", "i don't know", "i'm sorry.", "i'm sorry",
+            "sorry.", "sorry", "...", ".", "you", "i",
+            "yes. hello hello. i know. what's going on?",
+            "yes. hello hello. i know.",
+        })
         # Filter out hallucinated / low-confidence segments.
-        # no_speech_prob > 0.6 means Whisper itself doubts speech was present.
-        # avg_logprob < -1.0 means extremely low confidence — classic hallucination.
+        # no_speech_prob > 0.45: Whisper doubts speech was present (was 0.6).
+        # avg_logprob < -0.75: low confidence — classic hallucination on noise (was -1.0).
         kept = []
         for seg in segments:
             no_speech = getattr(seg, "no_speech_prob", 0.0) or 0.0
             avg_logprob = getattr(seg, "avg_logprob", 0.0) or 0.0
-            if no_speech > 0.6 or avg_logprob < -1.0:
+            if no_speech > 0.45 or avg_logprob < -0.75:
                 continue
             t = str(seg.text or "").strip()
-            if t:
-                kept.append(t)
+            if not t:
+                continue
+            if t.lower() in _HALLUCINATION_PHRASES:
+                continue
+            kept.append(t)
         text = " ".join(kept).strip()
         return {
             "ok": True,
@@ -6878,13 +6896,20 @@ def speech_synthesize(payload: SpeechSynthesizeRequest) -> Dict[str, Any]:
 
 # Available edge-tts voices (free Microsoft Neural voices).
 # The client can override by sending {"type":"meta","voice":"<name>"} first.
-_TTS_DEFAULT_VOICE = "en-US-AriaNeural"
+_TTS_DEFAULT_VOICE = "en-IN-NeerjaNeural"   # Warm Indian-English female — best fit for an interviewer
 _TTS_ALLOWED_VOICES: Set[str] = {
+    # Indian English — primary interviewer voices
+    "en-IN-NeerjaNeural",     # Female, warm and professional (default)
+    "en-IN-PriyaNeural",      # Female, natural Indian accent
+    "en-IN-AnanyaNeural",     # Female, expressive
+    "en-IN-AaravNeural",      # Male, Indian accent
+    # US English
     "en-US-AriaNeural",
     "en-US-JennyNeural",
     "en-US-ChristopherNeural",
     "en-US-GuyNeural",
     "en-US-MichelleNeural",
+    # British English
     "en-GB-SoniaNeural",
     "en-GB-RyanNeural",
 }
