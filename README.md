@@ -26,7 +26,7 @@ Override any of these in a `.env` file next to `docker-compose.yml`:
 | `WORKER_PUBLIC_PORT` | `9000` | Host port published by Docker (`host:container`) |
 | `WORKER_PORT` | `9000` | Container listen port |
 | `ENABLE_LLM` | `false` | Enable external LLM API calls |
-| `OLLAMA_BASE_URL` | `http://localhost:11434` | Ollama server base URL used for task-routed generation |
+| `OLLAMA_BASE_URL` | `http://172.17.0.1:11434` | Ollama server base URL used for task-routed generation |
 | `OLLAMA_LIGHT_MODEL` | `qwen2:1.5b` | Default model for lightweight AI tasks such as resume analysis, matching, suggestions, and job drafting |
 | `OLLAMA_HEAVY_MODEL` | `mistral:7b-instruct` | Default model for heavy interview flows such as question generation, evaluation, counter-questioning, and voice-turn orchestration |
 | `OLLAMA_AUTO_PULL` | `true` | If a selected Ollama model is missing, the worker calls `/api/pull` before falling back |
@@ -92,7 +92,7 @@ Example `.env`:
 WORKER_PORT=9000
 WORKER_PUBLIC_PORT=9000
 ENABLE_LLM=true
-OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_BASE_URL=http://172.17.0.1:11434
 OLLAMA_LIGHT_MODEL=qwen2:1.5b
 OLLAMA_HEAVY_MODEL=mistral:7b-instruct
 OLLAMA_AUTO_PULL=true
