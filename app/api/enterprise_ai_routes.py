@@ -569,7 +569,7 @@ def _interview_evaluation(payload: Dict[str, Any], prompt: str) -> Dict[str, Any
             "question": question_text,
             "answer": answer_text,
             "score": score,
-            "assessment": "Strong evidence and specificity." if score >= 75 else "Answer needs more depth, metrics, or concrete examples.",
+            "assessment": "Strong evidence and specificity." if score >= 75 else "This answer can be stronger with more concrete examples, metrics, or outcomes.",
         })
     overall = int(sum(scores) / max(1, len(scores))) if scores else 42
     return {
@@ -603,7 +603,7 @@ def _mock_turn_evaluation(payload: Dict[str, Any], prompt: str) -> Dict[str, Any
     if probe:
         q_focus = (question_text[:120] if question_text else "your previous answer").strip()
         if score < 50:
-            counter_q = f"You missed some key points. Can you explain {q_focus} in more detail with a practical example?"
+            counter_q = f"Let us look at that once more. Can you explain {q_focus} with a practical example?"
         else:
             counter_q = f"Good start. Can you go deeper on {q_focus} and include one real-world trade-off or limitation?"
     else:
@@ -612,9 +612,9 @@ def _mock_turn_evaluation(payload: Dict[str, Any], prompt: str) -> Dict[str, Any
         "accuracyScore": score,
         "accuracyLevel": "high" if score >= 75 else "medium" if score >= 50 else "low",
         "shouldAskCounterQuestion": probe,
-        "assessment": "Answer addresses the question clearly." if score >= 75 else "Answer is partially correct but needs more precise evidence.",
+        "assessment": "Answer addresses the question clearly." if score >= 75 else "This answer is on the right track and can be stronger with more precise evidence.",
         "strengths": ["Relevant concepts detected in the answer."] if score >= 60 else [],
-        "gaps": ["Add missing technical depth and concrete evidence."] if probe else [],
+        "gaps": ["Add one concrete example, technical detail, or measurable outcome."] if probe else [],
         "counterQuestion": counter_q,
     }
 
