@@ -5294,17 +5294,16 @@ def _transcribe_audio_path(audio_path: str, language: str = "") -> Dict[str, Any
             suppress_blank=True,       # Never emit blank/whitespace-only segments
         )
         # Known Whisper hallucinations emitted on near-silent or very short audio.
+        # Do not blacklist common valid words like "hello" or "yes" here;
+        # those can be legitimate answers and are already handled by the
+        # confidence / no-speech filters above.
         _HALLUCINATION_PHRASES = frozenset({
             "thank you.", "thank you", "thanks.", "thanks",
             "thank you for watching.", "thank you for watching",
-            "bye.", "bye", "bye bye.", "bye bye",
-            "goodbye.", "goodbye", "see you.", "see you",
-            "hello.", "hello", "hi.", "hi", "hey.", "hey",
-            "yes.", "yes", "no.", "no", "okay.", "okay", "ok.", "ok",
-            "i don't know.", "i don't know", "i'm sorry.", "i'm sorry",
-            "sorry.", "sorry", "...", ".", "you", "i",
+            "bye.", "bye bye.",
             "yes. hello hello. i know. what's going on?",
             "yes. hello hello. i know.",
+            "...", ".",
         })
         # Filter out hallucinated / low-confidence segments.
         # no_speech_prob > 0.45: Whisper doubts speech was present (was 0.6).
