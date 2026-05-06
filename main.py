@@ -5287,10 +5287,10 @@ def _transcribe_audio_path(audio_path: str, language: str = "") -> Dict[str, Any
             best_of=1,
             temperature=0.0,
             vad_filter=True,           # Silero VAD — drops silent segments before decoding
-            vad_parameters={"min_silence_duration_ms": 300, "threshold": 0.4},
+            vad_parameters={"min_silence_duration_ms": 180, "threshold": 0.28},
             condition_on_previous_text=False,
             word_timestamps=False,
-            no_speech_threshold=0.4,   # Whisper built-in: discard segments above this no_speech_prob
+            no_speech_threshold=0.55,  # Keep softer speech that Whisper rates as borderline speech/noise
             suppress_blank=True,       # Never emit blank/whitespace-only segments
         )
         # Known Whisper hallucinations emitted on near-silent or very short audio.
@@ -5306,13 +5306,14 @@ def _transcribe_audio_path(audio_path: str, language: str = "") -> Dict[str, Any
             "...", ".",
         })
         # Filter out hallucinated / low-confidence segments.
-        # no_speech_prob > 0.45: Whisper doubts speech was present (was 0.6).
-        # avg_logprob < -0.75: low confidence — classic hallucination on noise (was -1.0).
+        # no_speech_prob > 0.62: Whisper strongly doubts speech was present.
+        # avg_logprob < -1.05: low confidence — keeps softer real speech while
+        # still filtering obvious hallucinations from background noise.
         kept = []
         for seg in segments:
             no_speech = getattr(seg, "no_speech_prob", 0.0) or 0.0
             avg_logprob = getattr(seg, "avg_logprob", 0.0) or 0.0
-            if no_speech > 0.45 or avg_logprob < -0.75:
+            if no_speech > 0.62 or avg_logprob < -1.05:
                 continue
             t = str(seg.text or "").strip()
             if not t:
