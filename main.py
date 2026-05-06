@@ -1078,10 +1078,16 @@ def _extract_first_json_object(text: str) -> Dict[str, Any]:
     except Exception:
         return {}
 
-def _ensure_llm_ready(task: str = "general", prompt: str = "", request_payload: Optional[Dict[str, Any]] = None) -> Optional[Dict[str, str]]:
+def _ensure_llm_ready(
+    task: str = "general",
+    prompt: str = "",
+    request_payload: Optional[Dict[str, Any]] = None,
+    requested_model: str = "",
+    allow_external_fallback: bool = True,
+) -> Optional[Dict[str, str]]:
     if not ENABLE_LLM or not requests:
         return None
-    route = resolve_model_profile(task, prompt=prompt, payload=request_payload)
+    route = resolve_model_profile(task, requested_model=requested_model, prompt=prompt, payload=request_payload)
     if route.get("provider") == "ollama" and route.get("baseUrl"):
         availability = ensure_ollama_model_available(route.get("model", ""))
         if availability.get("ok"):
@@ -1093,7 +1099,7 @@ def _ensure_llm_ready(task: str = "general", prompt: str = "", request_payload: 
             route.get("model"),
             availability.get("reason", "unknown"),
         )
-    if LLM_API_URL:
+    if allow_external_fallback and LLM_API_URL:
         return {
             "provider": "external-api",
             "baseUrl": LLM_API_URL,
@@ -1108,8 +1114,16 @@ def _llm_text(
     max_new_tokens: int = 800,
     task: str = "general",
     request_payload: Optional[Dict[str, Any]] = None,
+    requested_model: str = "",
+    allow_external_fallback: bool = True,
 ) -> str:
-    route = _ensure_llm_ready(task=task, prompt=prompt, request_payload=request_payload)
+    route = _ensure_llm_ready(
+        task=task,
+        prompt=prompt,
+        request_payload=request_payload,
+        requested_model=requested_model,
+        allow_external_fallback=allow_external_fallback,
+    )
     if route is None:
         return ""
     started = time.perf_counter()
@@ -6796,10 +6810,20 @@ async def ai_infer_endpoint(request: Request):
     prompt = str(body.get("prompt") or "")
     model_hint = str(body.get("model") or "")
     max_tokens = int(body.get("maxTokens") or body.get("max_tokens") or 900)
+    allow_external_fallback = bool(body.get("allowExternalFallback", False))
     if not prompt:
         return {"task": task, "model": model_hint, "text": "", "provider": "ollama", "ok": False, "reason": "empty prompt"}
     try:
-        text = await asyncio.to_thread(_llm_text, prompt, 0.2, max_tokens, task, body)
+        text = await asyncio.to_thread(
+            _llm_text,
+            prompt,
+            0.2,
+            max_tokens,
+            task,
+            body,
+            model_hint,
+            allow_external_fallback,
+        )
         return {"task": task, "model": model_hint, "text": text, "provider": "ollama", "ok": bool(text)}
     except Exception as ex:
         logger.warning("ai_infer_endpoint failed: %s", ex)

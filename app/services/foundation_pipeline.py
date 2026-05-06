@@ -70,7 +70,11 @@ def resolve_model_profile(
 ) -> Dict[str, str]:
     requested = str(requested_model or "").strip()
     complexity = task_complexity(task, prompt=prompt, payload=payload)
-    model_name = requested or (OLLAMA_HEAVY_MODEL if complexity == "heavy" else OLLAMA_LIGHT_MODEL)
+    # Java callers may pass Hugging Face model ids like owner/model-name.
+    # Those are invalid Ollama tags, so keep Ollama routing on the configured
+    # local model unless the requested model already looks like an Ollama tag.
+    use_requested = bool(requested) and "/" not in requested
+    model_name = requested if use_requested else (OLLAMA_HEAVY_MODEL if complexity == "heavy" else OLLAMA_LIGHT_MODEL)
     return {
         "provider": "ollama",
         "baseUrl": OLLAMA_BASE_URL,
