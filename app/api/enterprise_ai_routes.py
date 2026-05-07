@@ -5,6 +5,7 @@ import base64
 import hashlib
 import io
 import json
+import logging
 import os
 import re
 from datetime import datetime, timezone
@@ -48,6 +49,9 @@ except Exception:
 
 router = APIRouter(tags=["enterprise-ai"])
 _OCR_ENGINE = None
+logger = logging.getLogger("interview-ai-worker.enterprise")
+_WORKER_LLM_ENABLED = os.getenv("ENABLE_LLM", "false").strip().lower() in {"1", "true", "yes", "on"}
+_WORKER_STT_ENABLED = os.getenv("ENABLE_STT", "true").strip().lower() in {"1", "true", "yes", "on"}
 _TTS_ENABLED = os.getenv("ENABLE_TTS", "false").strip().lower() in {"1", "true", "yes", "on"}
 _INTERVIEW_AUDIO_OUTPUT_DIR = os.getenv("INTERVIEW_AUDIO_OUTPUT_DIR", "generated_audio").strip() or "generated_audio"
 _INTERVIEW_AUDIO_URL_PREFIX = (os.getenv("INTERVIEW_AUDIO_URL_PREFIX", "/audio/interview").strip() or "/audio/interview").rstrip("/")
@@ -964,7 +968,9 @@ TASK_BUILDERS = {
 def _dispatch(task: str, payload: Dict[str, Any], prompt: str) -> Dict[str, Any]:
     builder = TASK_BUILDERS.get(task)
     if builder is None:
+        logger.warning("[ENTERPRISE-AI] task=%s route=enterprise builder=missing llmEnabled=%s sttEnabled=%s ttsEnabled=%s", task, _WORKER_LLM_ENABLED, _WORKER_STT_ENABLED, _TTS_ENABLED)
         return {"summary": f"No specialized worker builder found for task '{task}'.", "provider": "python-worker", "promptEcho": _text(prompt)[:800]}
+    logger.info("[ENTERPRISE-AI] task=%s route=enterprise builder=hit llmEnabled=%s sttEnabled=%s ttsEnabled=%s payloadKeys=%s", task, _WORKER_LLM_ENABLED, _WORKER_STT_ENABLED, _TTS_ENABLED, sorted((payload or {}).keys()))
     result = builder(payload, prompt)
     result.setdefault("provider", "python-worker")
     result.setdefault("task", task)
@@ -974,6 +980,7 @@ def _dispatch(task: str, payload: Dict[str, Any], prompt: str) -> Dict[str, Any]
 def _infer_result(task: str, model: str, prompt: str, payload: Dict[str, Any]) -> Dict[str, Any]:
     selected_model = resolve_model_profile(task, requested_model=model, prompt=prompt, payload=payload)
     structured = _dispatch(task, payload, prompt)
+    logger.info("[ENTERPRISE-AI] task=%s selectedModel=%s complexity=%s provider=%s textLike=%s", task, selected_model.get("model", model or "enterprise-heuristic-worker"), selected_model.get("complexity", "light"), structured.get("provider", "python-worker"), bool(structured))
     append_foundation_example(task, prompt, payload, structured, selected_model.get("model", model or "enterprise-heuristic-worker"), "enterprise-worker")
     return {
         "provider": "python-worker",
@@ -990,6 +997,7 @@ def _infer_result(task: str, model: str, prompt: str, payload: Dict[str, Any]) -
 @router.post("/ai/infer", include_in_schema=False)
 def ai_infer(body: EnterpriseInferRequest) -> Dict[str, Any]:
     payload = dict(body.request or {}) or _extract_embedded_request(body.prompt)
+    logger.info("[ENTERPRISE-AI] endpoint=/ai/infer task=%s requestedModel=%s maxTokens=%s", body.task, body.model, body.maxTokens)
     return _infer_result(body.task, body.model, body.prompt, payload)
 
 
