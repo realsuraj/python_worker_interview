@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 import base64
+import hashlib
 import io
 import json
+import os
 import re
 from datetime import datetime, timezone
 from typing import Any, Dict, List
@@ -447,6 +449,205 @@ def _mock_interview_questions(payload: Dict[str, Any], prompt: str) -> Dict[str,
     return {"questions": questions}
 
 
+def _hash_text(value: str) -> str:
+    return hashlib.sha256((value or "").encode("utf-8")).hexdigest()
+
+
+def _stable_embedding(value: str, size: int = 384) -> List[float]:
+    base = (value or " ").encode("utf-8")
+    digest = hashlib.sha256(base).digest()
+    values: List[float] = []
+    while len(values) < size:
+        digest = hashlib.sha256(digest + base).digest()
+        for index in range(0, len(digest), 2):
+            chunk = digest[index:index + 2]
+            number = int.from_bytes(chunk, "big", signed=False)
+            normalized = round((number / 65535.0) * 2.0 - 1.0, 6)
+            values.append(normalized)
+            if len(values) >= size:
+                break
+    return values
+
+
+def _question_key(payload: Dict[str, Any], sequence_no: int) -> str:
+    scope = _text(payload.get("applicationId") or payload.get("jobId") or payload.get("candidateId") or "pack")
+    slug = re.sub(r"[^a-z0-9]+", "-", scope.lower()).strip("-") or "pack"
+    return f"{slug}-q{sequence_no}"
+
+
+def _duration_ms(text_value: str, minimum: int = 1800) -> int:
+    word_count = max(1, len(_tokens(text_value)))
+    return max(minimum, min(9000, word_count * 420))
+
+
+def _audio_asset(audio_key: str, text_value: str, category: str, voice_profile: str, emotion_tone: str = "neutral") -> Dict[str, Any]:
+    checksum = _hash_text(f"{audio_key}:{text_value}:{voice_profile}")
+    base_path = os.path.join("generated_audio", voice_profile)
+    file_name = f"{audio_key}.mp3"
+    return {
+        "audioKey": audio_key,
+        "category": category,
+        "voiceProfile": voice_profile,
+        "emotionTone": emotion_tone,
+        "text": text_value,
+        "localPath": os.path.join(base_path, file_name).replace("\\", "/"),
+        "staticUrl": f"/audio/interview/{voice_profile}/{file_name}",
+        "durationMs": _duration_ms(text_value),
+        "checksumSha256": checksum,
+        "metadata": {
+            "generated": False,
+            "engine": "manifest-only",
+            "format": "mp3",
+        },
+    }
+
+
+def _transition_bundle(question_key: str, voice_profile: str) -> Dict[str, Dict[str, Any]]:
+    return {
+        "positive": _audio_asset(f"{question_key}-positive", "Good answer. Let us move to the next question.", "transition", voice_profile, "encouraging"),
+        "neutral": _audio_asset(f"{question_key}-neutral", "Thank you. Here is the next question.", "transition", voice_profile, "neutral"),
+        "corrective": _audio_asset(f"{question_key}-corrective", "Take a moment and focus on the core trade-off in your answer.", "transition", voice_profile, "supportive"),
+    }
+
+
+def _mandatory_keywords(focus_area: str, payload: Dict[str, Any]) -> List[str]:
+    keywords = [focus_area]
+    keywords.extend(_extract_skills(" ".join([
+        _text(payload.get("jobDescription")),
+        _text(payload.get("title") or payload.get("jobTitle")),
+        _text(payload.get("resumeText") or payload.get("resume")),
+    ]))[:4])
+    return _unique(keywords)[:5]
+
+
+def _optional_keywords(focus_area: str, payload: Dict[str, Any]) -> List[str]:
+    family = _role_family(payload)
+    baseline = ROLE_BASELINES.get(family, ROLE_BASELINES["backend"])
+    extras = [item for item in baseline if item.lower() != focus_area.lower()]
+    extras.extend(_extract_skills(_text(payload.get("jobDescription")))[:4])
+    return _unique(extras)[:6]
+
+
+def _rubric(question_type: str, focus_area: str, difficulty: str) -> Dict[str, Any]:
+    return {
+        "questionType": question_type,
+        "difficulty": difficulty,
+        "dimensions": [
+            {"name": "relevance", "weight": 0.35, "expectation": f"Answer stays anchored to {focus_area}."},
+            {"name": "specificity", "weight": 0.30, "expectation": "Answer includes concrete implementation details or examples."},
+            {"name": "impact", "weight": 0.20, "expectation": "Answer explains measurable outcome, trade-off, or learning."},
+            {"name": "communication", "weight": 0.15, "expectation": "Answer is structured and easy to follow."},
+        ],
+        "passSignals": [
+            f"Names the role of {focus_area} in a real project or production decision.",
+            "Connects action to outcome using metrics, reliability, user impact, or delivery speed.",
+            "Explains a trade-off, limitation, or lesson learned.",
+        ],
+        "failSignals": [
+            "Response stays generic and does not mention an actual example.",
+            "Important technical or business constraints are missing.",
+        ],
+    }
+
+
+def _adaptive_mappings(question_keys: List[str], voice_profile: str) -> List[Dict[str, Any]]:
+    mappings: List[Dict[str, Any]] = []
+    for index in range(len(question_keys) - 1):
+        transition_key = f"{question_keys[index]}-neutral"
+        mappings.append({
+            "fromQuestionKey": question_keys[index],
+            "toQuestionKey": question_keys[index + 1],
+            "decisionBand": "average",
+            "priority": (index + 1) * 10,
+            "transitionAudioKey": transition_key,
+            "conditions": {
+                "minScore": 0.45,
+                "maxScore": 0.79,
+                "voiceProfile": voice_profile,
+            },
+        })
+    return mappings
+
+
+def _interview_pack_generation(payload: Dict[str, Any], prompt: str) -> Dict[str, Any]:
+    requested_count = int(payload.get("questionCount") or payload.get("requestedQuestionCount") or 8)
+    count = max(3, min(requested_count, 10))
+    base_questions = _question_bank(payload, count)
+    voice_profile = _text(payload.get("activeVoiceProfile") or "hr_friendly_indian_en") or "hr_friendly_indian_en"
+    round_tag = _text(payload.get("roundTag") or payload.get("tag") or "technical") or "technical"
+    role = _text(payload.get("jobTitle") or payload.get("title") or "Candidate") or "Candidate"
+    family = _role_family(payload)
+
+    questions: List[Dict[str, Any]] = []
+    transition_audios: List[Dict[str, Any]] = []
+    question_keys: List[str] = []
+    for index, item in enumerate(base_questions, start=1):
+        question_key = _question_key(payload, index)
+        question_keys.append(question_key)
+        question_text = _text(item.get("question"))
+        expected_answer = _text(item.get("answer"))
+        focus_area = _text(item.get("focus") or ROLE_BASELINES.get(family, ["problem solving"])[0]) or "problem solving"
+        mandatory_keywords = _mandatory_keywords(focus_area, payload)
+        optional_keywords = _optional_keywords(focus_area, payload)
+        transitions = _transition_bundle(question_key, voice_profile)
+        transition_audios.extend(list(transitions.values()))
+        question_audio = _audio_asset(
+            f"{question_key}-question",
+            question_text,
+            "question",
+            voice_profile,
+            "professional",
+        )
+        questions.append({
+            "questionKey": question_key,
+            "sequenceNo": index,
+            "roundTag": round_tag,
+            "questionType": "intro" if index == 1 else "main",
+            "difficulty": _text(item.get("difficulty") or payload.get("difficulty") or "medium") or "medium",
+            "topic": focus_area,
+            "subtopic": role,
+            "question": question_text,
+            "questionText": question_text,
+            "expectedAnswer": expected_answer,
+            "idealAnswerSummary": expected_answer,
+            "mandatoryKeywords": mandatory_keywords,
+            "optionalKeywords": optional_keywords,
+            "keywords": _unique(mandatory_keywords + optional_keywords)[:8],
+            "evaluationRubric": _rubric(_text(item.get("competency") or "technical"), focus_area, _text(item.get("difficulty") or "medium") or "medium"),
+            "audioManifest": {
+                "question": question_audio,
+                "transitions": transitions,
+            },
+            "metadata": {
+                "role": role,
+                "roleFamily": family,
+                "focus": focus_area,
+                "trigger": _text(payload.get("trigger")),
+                "language": _text(payload.get("language") or "en") or "en",
+            },
+            "embeddings": {
+                "question": _stable_embedding(question_text),
+                "expectedAnswer": _stable_embedding(expected_answer),
+            },
+        })
+
+    adaptive_mappings = _adaptive_mappings(question_keys, voice_profile)
+    pack_version = int(datetime.now(timezone.utc).timestamp())
+    pack_hash = _hash_text(json.dumps(questions, ensure_ascii=True, sort_keys=True))
+    return {
+        "title": f"{role} interview pack",
+        "provider": "python-worker",
+        "questionPackVersion": pack_version,
+        "packHash": pack_hash,
+        "voiceProfile": voice_profile,
+        "roundTag": round_tag,
+        "questions": questions,
+        "adaptiveMappings": adaptive_mappings,
+        "transitionAudios": transition_audios,
+        "summary": f"Generated {len(questions)} persisted interview questions for {role}.",
+    }
+
+
 def _job_draft(payload: Dict[str, Any], prompt: str) -> Dict[str, Any]:
     description_only = bool(payload.get("descriptionOnly") or payload.get("jdOnly"))
     role = _text(payload.get("title") or payload.get("jobTitle") or "Software Engineer") or "Software Engineer"
@@ -672,6 +873,7 @@ TASK_BUILDERS = {
     "interview_evaluation": _interview_evaluation,
     "mock_interview_turn_evaluation": _mock_turn_evaluation,
     "mock_interview_questions": _mock_interview_questions,
+    "interview_pack_generation": _interview_pack_generation,
     "realtime_performance": _realtime_performance,
     "keyword_detection": _keyword_detection,
     "session_summary": _session_summary,
