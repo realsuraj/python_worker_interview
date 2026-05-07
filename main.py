@@ -32,6 +32,7 @@ if str(LOCAL_PY_DEPS) not in sys.path:
     sys.path.insert(0, str(LOCAL_PY_DEPS))
 
 from fastapi import FastAPI, HTTPException, Request, WebSocket
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from app.api.enterprise_ai_routes import register_enterprise_ai_routes
@@ -333,12 +334,22 @@ WORKER_STARTUP_STATUS: Dict[str, Any] = {
     "ollamaReason": "not initialized",
 }
 
+INTERVIEW_AUDIO_OUTPUT_DIR = Path(os.getenv("INTERVIEW_AUDIO_OUTPUT_DIR", "generated_audio"))
+INTERVIEW_AUDIO_URL_PREFIX = (os.getenv("INTERVIEW_AUDIO_URL_PREFIX", "/audio/interview").strip() or "/audio/interview").rstrip("/")
+INTERVIEW_AUDIO_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
 app = FastAPI(
     title="Interview AI Worker",
     version="5.0.0",
     docs_url="/swagger",
     redoc_url="/redoc",
     openapi_url="/openapi.json",
+)
+
+app.mount(
+    INTERVIEW_AUDIO_URL_PREFIX,
+    StaticFiles(directory=str(INTERVIEW_AUDIO_OUTPUT_DIR), check_dir=False),
+    name="interview-audio",
 )
 
 register_enterprise_ai_routes(app)
@@ -5260,7 +5271,11 @@ def _ensure_whisper() -> tuple[bool, str]:
         return False, f"Whisper init failed: {ex}"
 
 def _ensure_piper() -> tuple[bool, str]:
-    return False, "TTS disabled in worker (browser Web Speech API mode; use Google Chrome)"
+    if not ENABLE_TTS:
+        return False, "TTS disabled in worker; interview pack generation will emit manifest-only audio metadata"
+    if _edge_tts_communicate is None:
+        return False, "ENABLE_TTS is true but edge-tts is unavailable on this worker"
+    return True, f"edge-tts ready; generated interview audio served from {INTERVIEW_AUDIO_URL_PREFIX}"
 
 
 def _normalize_stt_language(value: str) -> Optional[str]:

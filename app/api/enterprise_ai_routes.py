@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import base64
 import hashlib
 import io
@@ -38,9 +39,28 @@ try:
 except Exception:
     pytesseract = None
 
+try:
+    import edge_tts as _edge_tts_mod
+    _edge_tts_communicate = _edge_tts_mod.Communicate
+except Exception:
+    _edge_tts_communicate = None
+
 
 router = APIRouter(tags=["enterprise-ai"])
 _OCR_ENGINE = None
+_TTS_ENABLED = os.getenv("ENABLE_TTS", "false").strip().lower() in {"1", "true", "yes", "on"}
+_INTERVIEW_AUDIO_OUTPUT_DIR = os.getenv("INTERVIEW_AUDIO_OUTPUT_DIR", "generated_audio").strip() or "generated_audio"
+_INTERVIEW_AUDIO_URL_PREFIX = (os.getenv("INTERVIEW_AUDIO_URL_PREFIX", "/audio/interview").strip() or "/audio/interview").rstrip("/")
+_VOICE_PROFILE_TO_EDGE_VOICE: Dict[str, str] = {
+    "hr_friendly_indian_en": "en-IN-NeerjaNeural",
+    "hr_friendly_indian_male": "en-IN-AaravNeural",
+    "indian_professional_female": "en-IN-PriyaNeural",
+    "indian_expressive_female": "en-IN-AnanyaNeural",
+    "global_professional_female": "en-US-AriaNeural",
+    "global_professional_male": "en-US-GuyNeural",
+    "uk_professional_female": "en-GB-SoniaNeural",
+    "uk_professional_male": "en-GB-RyanNeural",
+}
 
 SKILL_GROUPS: Dict[str, List[str]] = {
     "backend": ["java", "spring", "spring boot", "python", "django", "flask", "node", "express", "microservices", "rest api", "sql", "postgresql", "mysql", "docker", "kubernetes"],
@@ -480,23 +500,83 @@ def _duration_ms(text_value: str, minimum: int = 1800) -> int:
     return max(minimum, min(9000, word_count * 420))
 
 
+def _edge_voice_for_profile(voice_profile: str) -> str:
+    normalized = _text(voice_profile).lower().replace("-", "_").replace(" ", "_")
+    if normalized in _VOICE_PROFILE_TO_EDGE_VOICE:
+        return _VOICE_PROFILE_TO_EDGE_VOICE[normalized]
+    if voice_profile in _VOICE_PROFILE_TO_EDGE_VOICE.values():
+        return voice_profile
+    return _VOICE_PROFILE_TO_EDGE_VOICE["hr_friendly_indian_en"]
+
+
+def _audio_destination(audio_key: str, voice_profile: str) -> str:
+    return os.path.join(_INTERVIEW_AUDIO_OUTPUT_DIR, voice_profile, f"{audio_key}.mp3")
+
+
+async def _synthesize_audio_file(text_value: str, voice_name: str, output_path: str) -> bool:
+    if _edge_tts_communicate is None:
+        return False
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    communicate = _edge_tts_communicate(text_value, voice_name)
+    await communicate.save(output_path)
+    return os.path.exists(output_path) and os.path.getsize(output_path) > 512
+
+
+def _ensure_audio_file(audio_key: str, text_value: str, voice_profile: str) -> Dict[str, Any]:
+    if not _TTS_ENABLED:
+        return {"enabled": False, "generated": False, "reason": "ENABLE_TTS is false"}
+    if _edge_tts_communicate is None:
+        return {"enabled": False, "generated": False, "reason": "edge-tts dependency unavailable"}
+    output_path = _audio_destination(audio_key, voice_profile)
+    if os.path.exists(output_path) and os.path.getsize(output_path) > 512:
+        return {
+            "enabled": True,
+            "generated": True,
+            "reason": "audio already exists",
+            "localPath": output_path.replace("\\", "/"),
+            "sizeBytes": os.path.getsize(output_path),
+        }
+    try:
+        created = asyncio.run(_synthesize_audio_file(text_value, _edge_voice_for_profile(voice_profile), output_path))
+        return {
+            "enabled": True,
+            "generated": created,
+            "reason": "audio synthesized" if created else "edge-tts did not produce a valid file",
+            "localPath": output_path.replace("\\", "/"),
+            "sizeBytes": os.path.getsize(output_path) if os.path.exists(output_path) else 0,
+        }
+    except Exception as ex:
+        return {
+            "enabled": True,
+            "generated": False,
+            "reason": str(ex),
+            "localPath": output_path.replace("\\", "/"),
+        }
+
+
 def _audio_asset(audio_key: str, text_value: str, category: str, voice_profile: str, emotion_tone: str = "neutral") -> Dict[str, Any]:
     checksum = _hash_text(f"{audio_key}:{text_value}:{voice_profile}")
-    base_path = os.path.join("generated_audio", voice_profile)
+    synthesis = _ensure_audio_file(audio_key, text_value, voice_profile)
+    base_path = os.path.join(_INTERVIEW_AUDIO_OUTPUT_DIR, voice_profile)
     file_name = f"{audio_key}.mp3"
+    local_path = synthesis.get("localPath") if isinstance(synthesis.get("localPath"), str) else os.path.join(base_path, file_name).replace("\\", "/")
     return {
         "audioKey": audio_key,
         "category": category,
         "voiceProfile": voice_profile,
         "emotionTone": emotion_tone,
         "text": text_value,
-        "localPath": os.path.join(base_path, file_name).replace("\\", "/"),
-        "staticUrl": f"/audio/interview/{voice_profile}/{file_name}",
+        "localPath": local_path,
+        "staticUrl": f"{_INTERVIEW_AUDIO_URL_PREFIX}/{voice_profile}/{file_name}",
         "durationMs": _duration_ms(text_value),
         "checksumSha256": checksum,
         "metadata": {
-            "generated": False,
-            "engine": "manifest-only",
+            "generated": bool(synthesis.get("generated")),
+            "engine": "edge-tts" if bool(synthesis.get("generated")) else "manifest-only",
+            "ttsEnabled": bool(synthesis.get("enabled")),
+            "reason": _text(synthesis.get("reason")),
+            "edgeVoice": _edge_voice_for_profile(voice_profile),
+            "sizeBytes": synthesis.get("sizeBytes") or 0,
             "format": "mp3",
         },
     }
