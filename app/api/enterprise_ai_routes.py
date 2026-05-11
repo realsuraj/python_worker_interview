@@ -1117,6 +1117,69 @@ def _voice_turn(payload: Dict[str, Any], prompt: str) -> Dict[str, Any]:
     }
 
 
+def _audio_batch_synthesis(payload: Dict[str, Any], prompt: str) -> Dict[str, Any]:
+    """Batch edge-tts audio synthesis.
+
+    Called by the Java scheduler after it generates Java-fallback questions so that
+    audio files are pre-generated without delay. Each item in ``payload["items"]``
+    looks like::
+
+        {"key": "qKey-question", "text": "...", "category": "question",
+         "voiceProfile": "hr_friendly_indian_en", "emotion": "professional"}
+
+    Returns::
+
+        {"audioItems": {"qKey-question": <audioAsset>, ...}, "count": N}
+    """
+    items = payload.get("items") or []
+    default_voice = _text(payload.get("voiceProfile") or "hr_friendly_indian_en") or "hr_friendly_indian_en"
+
+    if not items:
+        print("[AUDIO-BATCH] No items received — nothing to synthesize")
+        return {"audioItems": {}, "provider": "python-worker", "count": 0}
+
+    print(
+        f"\n{'='*60}\n"
+        f"[AUDIO-BATCH] *** BATCH AUDIO SYNTHESIS STARTED ***\n"
+        f"[AUDIO-BATCH] items={len(items)} | defaultVoice={default_voice} | ttsEnabled={_TTS_ENABLED}\n"
+        f"{'='*60}"
+    )
+    logger.info("[AUDIO-BATCH][START] items=%d | voice=%s | ttsEnabled=%s", len(items), default_voice, _TTS_ENABLED)
+
+    audio_items: Dict[str, Any] = {}
+    for item in items:
+        key = _text(item.get("key"))
+        text = _text(item.get("text"))
+        category = _text(item.get("category") or "question")
+        voice = _text(item.get("voiceProfile") or default_voice) or default_voice
+        emotion = _text(item.get("emotion") or "neutral") or "neutral"
+
+        if not key or not text:
+            continue
+
+        print(f"[AUDIO-BATCH] Synthesizing | key={key} | category={category} | voice={voice} | emotion={emotion} | text='{text[:70]}...'")
+        logger.info("[AUDIO-BATCH] Synthesizing | key=%s | category=%s | voice=%s", key, category, voice)
+
+        asset = _audio_asset(key, text, category, voice, emotion)
+        audio_items[key] = asset
+
+        generated = asset.get("metadata", {}).get("generated", False)
+        print(f"[AUDIO-BATCH] {'✓ generated' if generated else '✗ failed/skipped'} | key={key} | url={asset.get('staticUrl', '')}")
+
+    print(
+        f"\n[AUDIO-BATCH] *** BATCH AUDIO SYNTHESIS COMPLETE ***\n"
+        f"[AUDIO-BATCH] processed={len(audio_items)}/{len(items)} | voice={default_voice}\n"
+        f"{'='*60}\n"
+    )
+    logger.info("[AUDIO-BATCH][DONE] processed=%d/%d | voice=%s", len(audio_items), len(items), default_voice)
+    return {
+        "audioItems": audio_items,
+        "provider": "python-worker",
+        "count": len(audio_items),
+        "voiceProfile": default_voice,
+    }
+
+
 TASK_BUILDERS = {
     "resume_analysis": _resume_analysis,
     "candidate_match": _candidate_match,
@@ -1131,6 +1194,7 @@ TASK_BUILDERS = {
     "mock_interview_turn_evaluation": _mock_turn_evaluation,
     "mock_interview_questions": _mock_interview_questions,
     "interview_pack_generation": _interview_pack_generation,
+    "audio_batch_synthesis": _audio_batch_synthesis,
     "realtime_performance": _realtime_performance,
     "keyword_detection": _keyword_detection,
     "session_summary": _session_summary,
