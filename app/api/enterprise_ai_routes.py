@@ -433,16 +433,30 @@ def _suggestions(payload: Dict[str, Any], prompt: str) -> Dict[str, Any]:
 
 def _question_bank(payload: Dict[str, Any], count: int) -> List[Dict[str, Any]]:
     family = _role_family(payload)
-    focus = _extract_skills(_text(payload.get("jobDescription")) + " " + _text(payload.get("resume")))[:4] or ROLE_BASELINES.get(family, ["problem solving", "delivery"])
+    # Use pre-resolved skills list sent by Java scheduler (from candidate resume + job) when available
+    pre_resolved = [s for s in (payload.get("skills") or []) if isinstance(s, str) and s.strip()]
+    extracted = _extract_skills(_text(payload.get("jobDescription")) + " " + _text(payload.get("resume")))[:4]
+    focus = pre_resolved[:4] or extracted or ROLE_BASELINES.get(family, ["problem solving", "delivery"])
     role = _text(payload.get("role") or payload.get("jobTitle") or family.title()) or family.title()
     seniority = _text(payload.get("seniority") or payload.get("experienceLevel") or "mid") or "mid"
+    question_templates = [
+        lambda fa: f"Describe a production situation where you used {fa} to improve outcomes for the {role} team.",
+        lambda fa: f"What trade-offs would you consider when using {fa} in a {seniority} {role} role?",
+        lambda fa: f"How have you applied {fa} to solve a scalability or performance challenge?",
+        lambda fa: f"Walk me through how you would debug a critical issue involving {fa} in a live system.",
+        lambda fa: f"What is your approach to testing and ensuring reliability when working with {fa}?",
+        lambda fa: f"How do you stay current with best practices for {fa}, and what did you change in your last project?",
+    ]
     questions: List[Dict[str, Any]] = []
     for index in range(count):
         focus_area = focus[index % len(focus)]
-        question = f"Describe a production situation where you used {focus_area} to improve outcomes for the {role} team." if index % 2 == 0 else f"What trade-offs would you consider when using {focus_area} in a {seniority} {role} role?"
+        question = question_templates[index % len(question_templates)](focus_area)
         questions.append({
             "question": question,
-            "answer": f"A strong answer should explain context, why {focus_area} mattered, the decision made, measurable impact, and what the candidate would improve next.",
+            "answer": (
+                f"A strong answer explains context (why {focus_area} was chosen), the specific decision made, "
+                f"measurable impact (performance, reliability, velocity), and what the candidate would improve next."
+            ),
             "focus": focus_area,
             "difficulty": "medium" if seniority in {"junior", "mid"} else "high",
             "competency": "technical" if family != "business" else "business",
@@ -499,6 +513,74 @@ def _question_key(payload: Dict[str, Any], sequence_no: int) -> str:
     return f"{slug}-q{sequence_no}"
 
 
+def _cosine_similarity_score(vec_a: List[float], vec_b: List[float]) -> float:
+    """Pure-Python cosine similarity — no sklearn required."""
+    dot = sum(a * b for a, b in zip(vec_a, vec_b))
+    norm_a = sum(a * a for a in vec_a) ** 0.5
+    norm_b = sum(b * b for b in vec_b) ** 0.5
+    if norm_a < 1e-9 or norm_b < 1e-9:
+        return 0.0
+    return round(dot / (norm_a * norm_b), 4)
+
+
+def _build_counter_questions(
+    question_key: str,
+    question_text: str,
+    expected_answer: str,
+    focus_area: str,
+    voice_profile: str,
+    question_index: int,
+) -> List[Dict[str, Any]]:
+    """Pre-generate 2 cosine-similarity-ranked counter questions for each main question."""
+    probes = [
+        (
+            "counter-probe-1",
+            f"Can you give me a concrete example from your own experience where you applied {focus_area} in a real project?",
+            "curious",
+        ),
+        (
+            "counter-probe-2",
+            f"What trade-offs or limitations did you face when working with {focus_area}, and how did you resolve them?",
+            "analytical",
+        ),
+    ]
+    q_embedding = _stable_embedding(question_text)
+    a_embedding = _stable_embedding(expected_answer)
+
+    counter_questions: List[Dict[str, Any]] = []
+    for cq_suffix, cq_text, emotion in probes:
+        cq_key = f"{question_key}-{cq_suffix}"
+        cq_embedding = _stable_embedding(cq_text)
+        sim_to_q = _cosine_similarity_score(cq_embedding, q_embedding)
+        sim_to_a = _cosine_similarity_score(cq_embedding, a_embedding)
+        combined_sim = round((sim_to_q + sim_to_a) / 2, 4)
+
+        print(
+            f"[SCHEDULER][COUNTER-Q #{question_index}] '{cq_text[:90]}'"
+            f" | cosine_sim={combined_sim:.4f} | voice={voice_profile} | emotion={emotion}"
+        )
+        logger.info(
+            "[INTERVIEW-PACK][COUNTER-Q] question=%s | key=%s | cosine_sim=%.4f | emotion=%s | text='%s'",
+            question_key, cq_key, combined_sim, emotion, cq_text[:90],
+        )
+
+        cq_audio = _audio_asset(cq_key, cq_text, "counter_question", voice_profile, emotion)
+        counter_questions.append({
+            "questionKey": cq_key,
+            "parentKey": question_key,
+            "text": cq_text,
+            "emotion": emotion,
+            "cosineSimilarity": combined_sim,
+            "triggerThreshold": 0.50,
+            "audio": cq_audio,
+            "embedding": cq_embedding,
+        })
+
+    # Best-ranked probe first (highest combined cosine similarity)
+    counter_questions.sort(key=lambda x: x["cosineSimilarity"], reverse=True)
+    return counter_questions
+
+
 def _duration_ms(text_value: str, minimum: int = 1800) -> int:
     word_count = max(1, len(_tokens(text_value)))
     return max(minimum, min(9000, word_count * 420))
@@ -521,18 +603,32 @@ async def _synthesize_audio_file(text_value: str, voice_name: str, output_path: 
     if _edge_tts_communicate is None:
         return False
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    print(f"[TTS][SYNTHESIZE] voice={voice_name} | path={output_path} | text='{text_value[:80]}...'")
+    logger.info("[TTS][SYNTHESIZE] voice=%s | path=%s | text='%s'", voice_name, output_path, text_value[:80])
     communicate = _edge_tts_communicate(text_value, voice_name)
     await communicate.save(output_path)
-    return os.path.exists(output_path) and os.path.getsize(output_path) > 512
+    success = os.path.exists(output_path) and os.path.getsize(output_path) > 512
+    size_bytes = os.path.getsize(output_path) if os.path.exists(output_path) else 0
+    if success:
+        print(f"[TTS][DONE] Audio saved | path={output_path} | size={size_bytes} bytes")
+        logger.info("[TTS][DONE] Audio saved | path=%s | size=%d bytes", output_path, size_bytes)
+    else:
+        print(f"[TTS][WARN] Audio file missing or too small | path={output_path} | size={size_bytes} bytes")
+        logger.warning("[TTS][WARN] Audio file missing or too small | path=%s | size=%d bytes", output_path, size_bytes)
+    return success
 
 
 def _ensure_audio_file(audio_key: str, text_value: str, voice_profile: str) -> Dict[str, Any]:
     if not _TTS_ENABLED:
+        print(f"[TTS][SKIP] ENABLE_TTS=false — skipping audio for key={audio_key}")
         return {"enabled": False, "generated": False, "reason": "ENABLE_TTS is false"}
     if _edge_tts_communicate is None:
+        print(f"[TTS][SKIP] edge-tts not installed — skipping audio for key={audio_key}")
         return {"enabled": False, "generated": False, "reason": "edge-tts dependency unavailable"}
     output_path = _audio_destination(audio_key, voice_profile)
     if os.path.exists(output_path) and os.path.getsize(output_path) > 512:
+        print(f"[TTS][CACHE] Audio already exists | key={audio_key} | path={output_path} | size={os.path.getsize(output_path)} bytes")
+        logger.info("[TTS][CACHE] Audio already exists | key=%s | path=%s", audio_key, output_path)
         return {
             "enabled": True,
             "generated": True,
@@ -540,6 +636,8 @@ def _ensure_audio_file(audio_key: str, text_value: str, voice_profile: str) -> D
             "localPath": output_path.replace("\\", "/"),
             "sizeBytes": os.path.getsize(output_path),
         }
+    print(f"[TTS][START] Generating audio | key={audio_key} | voice={_edge_voice_for_profile(voice_profile)} | text='{text_value[:80]}...'")
+    logger.info("[TTS][START] Generating audio | key=%s | voice=%s | text='%s'", audio_key, _edge_voice_for_profile(voice_profile), text_value[:80])
     try:
         created = asyncio.run(_synthesize_audio_file(text_value, _edge_voice_for_profile(voice_profile), output_path))
         return {
@@ -550,6 +648,8 @@ def _ensure_audio_file(audio_key: str, text_value: str, voice_profile: str) -> D
             "sizeBytes": os.path.getsize(output_path) if os.path.exists(output_path) else 0,
         }
     except Exception as ex:
+        print(f"[TTS][ERROR] Audio synthesis failed | key={audio_key} | error={ex}")
+        logger.error("[TTS][ERROR] Audio synthesis failed | key=%s | error=%s", audio_key, ex)
         return {
             "enabled": True,
             "generated": False,
@@ -661,10 +761,28 @@ def _interview_pack_generation(payload: Dict[str, Any], prompt: str) -> Dict[str
     round_tag = _text(payload.get("roundTag") or payload.get("tag") or "technical") or "technical"
     role = _text(payload.get("jobTitle") or payload.get("title") or "Candidate") or "Candidate"
     family = _role_family(payload)
+    candidate_id = _text(payload.get("candidateId") or "")
+    job_id = _text(payload.get("jobId") or "")
+    application_id = _text(payload.get("applicationId") or "")
+    trigger = _text(payload.get("trigger") or "scheduler")
+
+    print(
+        f"\n{'='*70}\n"
+        f"[SCHEDULER] *** INTERVIEW PACK GENERATION STARTED ***\n"
+        f"[SCHEDULER] jobId={job_id} | applicationId={application_id} | candidateId={candidate_id}\n"
+        f"[SCHEDULER] role='{role}' | voice={voice_profile} | roundTag={round_tag}\n"
+        f"[SCHEDULER] questions={count} | trigger={trigger} | ttsEnabled={_TTS_ENABLED}\n"
+        f"{'='*70}"
+    )
+    logger.info(
+        "[INTERVIEW-PACK][START] jobId=%s applicationId=%s candidateId=%s role='%s' voice=%s questions=%d trigger=%s ttsEnabled=%s",
+        job_id, application_id, candidate_id, role, voice_profile, count, trigger, _TTS_ENABLED,
+    )
 
     questions: List[Dict[str, Any]] = []
     transition_audios: List[Dict[str, Any]] = []
     question_keys: List[str] = []
+
     for index, item in enumerate(base_questions, start=1):
         question_key = _question_key(payload, index)
         question_keys.append(question_key)
@@ -673,8 +791,22 @@ def _interview_pack_generation(payload: Dict[str, Any], prompt: str) -> Dict[str
         focus_area = _text(item.get("focus") or ROLE_BASELINES.get(family, ["problem solving"])[0]) or "problem solving"
         mandatory_keywords = _mandatory_keywords(focus_area, payload)
         optional_keywords = _optional_keywords(focus_area, payload)
+
+        print(f"\n[SCHEDULER][Q#{index:02d}] focus='{focus_area}' | key={question_key}")
+        print(f"[SCHEDULER][Q#{index:02d}] QUESTION : {question_text}")
+        print(f"[SCHEDULER][Q#{index:02d}] ANSWER   : {expected_answer}")
+        logger.info(
+            "[INTERVIEW-PACK][QUESTION #%d] key=%s | focus='%s' | text='%s' | answer='%s'",
+            index, question_key, focus_area, question_text[:120], expected_answer[:120],
+        )
+
+        # Transition audio clips (Indian woman voice, different emotion tones)
         transitions = _transition_bundle(question_key, voice_profile)
         transition_audios.extend(list(transitions.values()))
+
+        # Question audio (Indian woman voice, professional tone)
+        print(f"[SCHEDULER][Q#{index:02d}][AUDIO] Generating QUESTION audio | voice={voice_profile} | emotion=professional")
+        logger.info("[INTERVIEW-PACK][AUDIO-Q] Generating question audio | key=%s | voice=%s", question_key, voice_profile)
         question_audio = _audio_asset(
             f"{question_key}-question",
             question_text,
@@ -682,6 +814,28 @@ def _interview_pack_generation(payload: Dict[str, Any], prompt: str) -> Dict[str
             voice_profile,
             "professional",
         )
+        q_audio_generated = question_audio.get("metadata", {}).get("generated", False)
+        print(f"[SCHEDULER][Q#{index:02d}][AUDIO] QUESTION audio {'✓ generated' if q_audio_generated else '✗ skipped/failed'} | url={question_audio.get('staticUrl', '')}")
+
+        # Answer audio (Indian woman voice, warm tone — for review/model answer playback)
+        print(f"[SCHEDULER][Q#{index:02d}][AUDIO] Generating ANSWER audio | voice={voice_profile} | emotion=warm")
+        logger.info("[INTERVIEW-PACK][AUDIO-A] Generating answer audio | key=%s | voice=%s", question_key, voice_profile)
+        answer_audio = _audio_asset(
+            f"{question_key}-answer",
+            expected_answer,
+            "answer",
+            voice_profile,
+            "warm",
+        )
+        a_audio_generated = answer_audio.get("metadata", {}).get("generated", False)
+        print(f"[SCHEDULER][Q#{index:02d}][AUDIO] ANSWER audio {'✓ generated' if a_audio_generated else '✗ skipped/failed'} | url={answer_audio.get('staticUrl', '')}")
+
+        # Counter questions — pre-generated with cosine similarity ranking (Indian woman voice, curious/analytical tone)
+        print(f"[SCHEDULER][Q#{index:02d}][COUNTER-Q] Pre-generating 2 counter questions via cosine similarity ...")
+        counter_qs = _build_counter_questions(
+            question_key, question_text, expected_answer, focus_area, voice_profile, index
+        )
+
         questions.append({
             "questionKey": question_key,
             "sequenceNo": index,
@@ -700,24 +854,43 @@ def _interview_pack_generation(payload: Dict[str, Any], prompt: str) -> Dict[str
             "evaluationRubric": _rubric(_text(item.get("competency") or "technical"), focus_area, _text(item.get("difficulty") or "medium") or "medium"),
             "audioManifest": {
                 "question": question_audio,
+                "answer": answer_audio,
                 "transitions": transitions,
+                "counterQuestions": {cq["questionKey"]: cq["audio"] for cq in counter_qs},
             },
             "metadata": {
                 "role": role,
                 "roleFamily": family,
                 "focus": focus_area,
-                "trigger": _text(payload.get("trigger")),
+                "trigger": trigger,
                 "language": _text(payload.get("language") or "en") or "en",
+                "followups": {cq["questionKey"]: {"text": cq["text"], "emotion": cq["emotion"], "cosineSimilarity": cq["cosineSimilarity"], "triggerThreshold": cq["triggerThreshold"]} for cq in counter_qs},
             },
             "embeddings": {
                 "question": _stable_embedding(question_text),
                 "expectedAnswer": _stable_embedding(expected_answer),
+                "counterQuestions": [{"key": cq["questionKey"], "embedding": cq["embedding"], "cosineSimilarity": cq["cosineSimilarity"]} for cq in counter_qs],
             },
         })
+        print(f"[SCHEDULER][Q#{index:02d}] ✓ Complete — {len(counter_qs)} counter question(s) pre-generated with cosine similarity")
 
     adaptive_mappings = _adaptive_mappings(question_keys, voice_profile)
     pack_version = int(datetime.now(timezone.utc).timestamp())
     pack_hash = _hash_text(json.dumps(questions, ensure_ascii=True, sort_keys=True))
+
+    print(
+        f"\n{'='*70}\n"
+        f"[SCHEDULER] *** INTERVIEW PACK GENERATION COMPLETE ***\n"
+        f"[SCHEDULER] jobId={job_id} | applicationId={application_id} | role='{role}'\n"
+        f"[SCHEDULER] totalQuestions={len(questions)} | packVersion={pack_version}\n"
+        f"[SCHEDULER] voice={voice_profile} | ttsEnabled={_TTS_ENABLED}\n"
+        f"{'='*70}\n"
+    )
+    logger.info(
+        "[INTERVIEW-PACK][DONE] jobId=%s applicationId=%s role='%s' totalQuestions=%d packVersion=%d voice=%s",
+        job_id, application_id, role, len(questions), pack_version, voice_profile,
+    )
+
     return {
         "title": f"{role} interview pack",
         "provider": "python-worker",
@@ -728,7 +901,7 @@ def _interview_pack_generation(payload: Dict[str, Any], prompt: str) -> Dict[str
         "questions": questions,
         "adaptiveMappings": adaptive_mappings,
         "transitionAudios": transition_audios,
-        "summary": f"Generated {len(questions)} persisted interview questions for {role}.",
+        "summary": f"Generated {len(questions)} interview questions with audio (voice={voice_profile}) and counter questions for {role}.",
     }
 
 
